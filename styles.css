@@ -15,6 +15,7 @@
   font-size: 11.5pt;
   font-weight:normal;
   text-align: left;
+  min-width: 150px;
 
   width: 100%;
 
@@ -59,6 +60,7 @@
   min-width: 400px;
 
 }
+/*NAVBAR text*/
 .navbarItem{
   display: block;
   background-color: inherit;
@@ -67,16 +69,67 @@
   padding: 14px 16px;
   text-decoration: none;
 }
+/*NAVBAR block*/
 .navbarBlock{
   float: right;
   background-color: inherit;
+  transition: 0.3s;
 }
+/*Navbar hover effect*/
 .navbarBlock:hover{
   background-color: #0484c1;
 }
 .navbarBlockActive{
   display: inline-block;
   background-color: inherit;
-
   background-color: #0484c1;
 }
+
+
+/* Link block button - animated */
+/* Base button */
+.linkButton{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #065d86;
+  display:grid;
+  cursor: pointer;
+  margin: 10px;
+  padding: 20px;
+  width: 250px;
+  transition: all 0.5s;
+  border:none;
+  border-radius: 10px;
+}
+/*Hover color change*/
+.linkButton:hover{
+  background-color: #0484c1;
+}
+/*Button animation with text*/
+.linkButton:hover span{
+  padding-right: 30px;
+  content: 'test';
+}
+.linkButton span{
+  font-size: 30;
+  color: white;
+  cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+.linkButton span::after{
+ content: '\00bb';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.5s;
+}
+.linkButton:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+/*End Link Button */

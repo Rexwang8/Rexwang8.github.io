@@ -4,28 +4,30 @@
 <html lang = "en-US">
 <head>
   <title> Rex's Website </title>
-<link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
 
-<style>
+  <style>
 
-</style>
+  </style>
 </head>
 
-<div class = "sec">
-  <body style="background-color:Azure;">
-    <!-- NAVBAR -->
-    <div class = "navbar">
-    <ul class = "navbar">
- <li class = "navbarBlockActive"><a class = "navbarItem"  href="index.html">Home </a></li>
- <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Projects </a></li>
- <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Contact </a></li>
- <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Skills </a></li>
- <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">About </a></li>
-<!-- NAVBAR  <li><a href="contact.asp">Contact</a></li>-->
- <!-- NAVBAR <li><a href="about.asp">About</a></li>-->
-</ul>
-</div>
 
+<body style="background-color:Azure;">
+
+  <!-- NAVBAR ------------------------>
+  <div class = "navbar">
+    <ul class = "navbar">
+      <li class = "navbarBlockActive"><a class = "navbarItem"  href="index.html">Home </a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Projects </a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Contact </a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Skills </a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">About </a></li>
+    </ul>
+  </div>
+  <!-- ENDNAVBAR ------------------>
+
+
+  <div class = "sec">
     <h1>Rex Wang</h1>
     <p>Portfolio Page</p>
     <img src = "Images\Face.jpg"
@@ -44,50 +46,54 @@
 
   <div class = "sec">
     <h2> Contact </h2>
-    <p>E-mail: wang5009@purdue.edu</p>
+    <p class = "body">E-mail: wang5009@purdue.edu</p>
   </div>
 
   <hr>
 
   <div class = "sec">
     <h2>Links</h2>
-    <a class = "link" href = "https://github.com/Rexwang8/">Github </a> <br>
-    <a class = "link" href = "https://rexwang.itch.io/">Itch.io </a>
+    <button class = "linkButton" onClick="location.href='https://github.com/Rexwang8/'" target="_new">
+      <span>Github</span>
+     </button>
+     <button class = "linkButton" onClick="location.href='https://rexwang.itch.io/'" target="_new">
+       <span>Itch.io</span>
+      </button>
   </div>
 
   <hr>
 
-      <!-- Experience -->
-      <div class = "sec">
-        <h2> Experience </h2>
-        <p class = "body"> Internships here </p>
-      </div>
-      <hr>
-
-      <!-- Education -->
-      <div class = "sec">
-        <h2> Education </h2>
-        <p class = "body"> Purdue  </p>
-      </div>
-
-      <hr>
-
-      <!-- Skills -->
-      <div class = "sec">
-        <h2> Skills </h2>
-        <p class = "body"> Software: C, C#, Matlab, Unity, Rhino 5, Auto-Cad, LTSpice, GitHub, Microsoft Office <br>
-          Hardware: Breadboard, Electronic Laboratory Equipment (DMM, Oscilloscope, Function Generator, Power Supply)  </p>
-        </div>
-
-
-
-<div>
+  <!-- Experience -->
+  <div class = "sec">
+    <h2> Experience </h2>
+    <p class = "body"> Internships here </p>
+  </div>
   <hr>
-  <p id="footerID" class = "footer"> Footer </p>
-  <script src = "javafunct.js" onload="getFooter()"> </script>
+
+  <!-- Education -->
+  <div class = "sec">
+    <h2> Education </h2>
+    <p class = "body"> Purdue  </p>
   </div>
 
+  <hr>
+
+  <!-- Skills -->
+  <div class = "sec">
+    <h2> Skills </h2>
+    <p class = "body"> Software: C, C#, Matlab, Unity, Rhino 5, Auto-Cad, LTSpice, GitHub, Microsoft Office <br>
+      Hardware: Breadboard, Electronic Laboratory Equipment (DMM, Oscilloscope, Function Generator, Power Supply)  </p>
+    </div>
 
 
-      </body>
-      </html>
+
+    <div>
+      <hr>
+      <p id="footerID" class = "footer"> Footer </p>
+      <script src = "javafunct.js" onload="getFooter()"> </script>
+    </div>
+
+
+
+  </body>
+  </html>

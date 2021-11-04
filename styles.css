@@ -1,30 +1,49 @@
 .project {
-  background-color: Lightcyan;
+  background-color: #94b8db;
   color: black;
-  border: 4px solid black;
-  margin: 30px;
-  padding: 10px;
+  border: 1px solid black;
+  margin:auto;
+  min-width: 400px;
   font-size: 13pt;
   font-weight:normal;
   text-align: center;
-  margin: auto;
-  width: 80%;
+  width: 90%;
   margin-bottom: inherit;
 }
 .body {
-  font-size: 11.5pt;
+  font-size: 13pt;
   font-weight:normal;
   text-align: left;
-  min-width: 150px;
-
+  min-width: 400px;
+  font-family: sans-serif;
   width: 100%;
-
+  margin: auto;
+  text-indent: 40px;
 }
 
 .sec {
   text-align: center;
   margin: auto;
   width: 90%;
+}
+.footer{
+  text-align: center;
+  font-size: 12pt;
+}
+
+.secheader{
+  width: 100%;
+margin-bottom: 10px;
+min-width: 400px;
+}
+.secheadertext{
+  font-size: 32;
+  color: white;
+  padding: 5px;
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 400;
+  background-color: #065d86;
 }
 
 /*For links and urls */
@@ -43,10 +62,7 @@
   color: green;
 }
 
-.footer{
-  text-align: center;
-  font-size: 12pt;
-}
+
 
 
 /*NAVBAR*/
@@ -84,21 +100,23 @@
   background-color: inherit;
   background-color: #0484c1;
 }
+/*END navbar*/
 
 
 /* Link block button - animated */
 /* Base button */
 .linkButton{
-  list-style-type: none;
-  margin: 0;
+  margin: auto;
   padding: 0;
   text-align: center;
   background-color: #065d86;
   display:grid;
   cursor: pointer;
-  margin: 10px;
+  margin: auto;
+  margin-bottom: 16px;
   padding: 20px;
-  width: 250px;
+  width: 220px;
+  height: auto;
   transition: all 0.5s;
   border:none;
   border-radius: 10px;
@@ -113,7 +131,7 @@
   content: 'test';
 }
 .linkButton span{
-  font-size: 30;
+  font-size: 26;
   color: white;
   cursor: pointer;
  display: inline-block;
@@ -129,6 +147,57 @@
  transition: 0.5s;
 }
 .linkButton:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+/*End Link Button */
+
+/* Resume block button - animated */
+/* Base button */
+.resumeButton{
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  background-color: #065d86;
+  display:grid;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding: 20px;
+  width: 300px;
+  height: auto;
+  transition: all 0.5s;
+  border:none;
+  border-radius: 10px;
+}
+/*Hover color change*/
+.resumeButton:hover{
+  background-color: #0484c1;
+}
+/*Button animation with text*/
+.resumeButton:hover span{
+  padding-right: 30px;
+  content: 'test';
+}
+.resumeButton span{
+  font-size: 24;
+  color: white;
+  cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+.resumeButton span::after{
+ content: '\00ab';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.5s;
+}
+
+.resumeButton:hover span::after {
   opacity: 1;
   right: 0;
 }

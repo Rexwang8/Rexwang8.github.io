@@ -1,0 +1,43 @@
+.project {
+  background-color: Lightcyan;
+  color: black;
+  border: 4px solid black;
+  margin: 30px;
+  padding: 10px;
+  font-size: 13pt;
+  font-weight:normal;
+  text-align: center;
+  margin: auto;
+  width: 80%;
+  margin-bottom: inherit;
+}
+.body {
+  font-size: 11.5pt;
+  font-weight:normal;
+  text-align: left;
+
+  width: 100%;
+
+}
+
+.sec {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+}
+
+/*For links and urls */
+.link:link{
+  color: blue;
+  font-size: 100%;
+}
+
+.link:hover{
+  color: green;
+}
+.link:visited{
+  color: midnightblue;
+}
+.link:active{
+  color: green;
+}

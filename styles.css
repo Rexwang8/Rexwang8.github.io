@@ -11,14 +11,13 @@
   margin-bottom: inherit;
 }
 .body {
-  font-size: 13pt;
+  font-size: 1em;
   font-weight:normal;
   text-align: left;
   min-width: 380px;
   font-family: sans-serif;
   width: 100%;
   margin: auto;
-  text-indent: 40px;
 }
 
 .sec {
@@ -28,28 +27,32 @@
 }
 .footer{
   text-align: center;
-  font-size: 12pt;
+  font-size: 1em;
 }
 
 .secheader{
   width: 100%;
 margin-bottom: 10px;
 min-width: 400px;
+
 }
 .secheadertext{
-  font-size: 32;
+  font-size: 2.2em;
   color: white;
   padding: 5px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
   font-family: sans-serif;
   font-weight: 400;
   background-color: #065d86;
+  justify-content:center;
 }
 
 .img{
   border-radius: 50%;
-  height: 250;
-  width: 250;
+  max-height: 250;
+  max-width: 250;
   border: 1px solid black;
   border-right: 4px solid black;
   border-bottom: 4px solid black;

@@ -41,3 +41,42 @@
 .link:active{
   color: green;
 }
+
+.footer{
+  text-align: center;
+  font-size: 12pt;
+}
+
+
+/*NAVBAR*/
+.navbar{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: left;
+  background-color: #065d86;
+  width: 100%;
+  min-width: 400px;
+
+}
+.navbarItem{
+  display: block;
+  background-color: inherit;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+.navbarBlock{
+  float: right;
+  background-color: inherit;
+}
+.navbarBlock:hover{
+  background-color: #0484c1;
+}
+.navbarBlockActive{
+  display: inline-block;
+  background-color: inherit;
+
+  background-color: #0484c1;
+}

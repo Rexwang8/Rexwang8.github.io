@@ -2,6 +2,7 @@
 light blue - #9ed0de
 darkish blue - #4a8aa7
 dark blue - #065d86
+light blue highlight - #0484c1
 */
 .project {
   background-color: #9ed0de;
@@ -32,7 +33,7 @@ dark blue - #065d86
 }
 .footer{
   text-align: center;
-  font-size: 1.5vw;
+  font-size: 1em;
   font-family: sans-serif;
 }
 
@@ -43,7 +44,7 @@ min-width: 400px;
 
 }
 .secheadertext{
-  font-size: 3.1vw;
+  font-size: 2.2em;
   color: white;
   padding: 5px;
   padding-top: 10px;
@@ -151,7 +152,7 @@ min-width: 400px;
   content: 'test';
 }
 .linkButton span{
-  font-size: 2.5vw;
+  font-size: 1.6em;
   color: white;
   cursor: pointer;
  display: inline-block;
@@ -201,7 +202,7 @@ min-width: 400px;
   content: 'test';
 }
 .resumeButton span{
-  font-size: 2.2vw;
+  font-size: 1.6em;
   color: white;
   cursor: pointer;
  display: inline-block;
@@ -251,7 +252,7 @@ min-width: 400px;
   content: 'test';
 }
 .smallLinkButton span{
-  font-size: 2.3vw;
+  font-size: 1.4em;
   color: white;
   cursor: pointer;
  display: inline-block;
@@ -324,3 +325,4 @@ min-width: 400px;
 .slide:hover{
   transform: scale(1.05);
 }
+/* Image Sliding Carrosel*/

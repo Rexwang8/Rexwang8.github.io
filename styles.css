@@ -1,3 +1,8 @@
+/*
+light blue - #9ed0de
+darkish blue - #4a8aa7
+dark blue - #065d86
+*/
 .project {
   background-color: #9ed0de;
   color: black;
@@ -16,7 +21,7 @@
   text-align: left;
   min-width: 380px;
   font-family: sans-serif;
-  width: 100%;
+  width: 95%;
   margin: auto;
 }
 
@@ -38,11 +43,11 @@ min-width: 400px;
 
 }
 .secheadertext{
-  font-size: 3.3vw;
+  font-size: 3.1vw;
   color: white;
   padding: 5px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-align: center;
   font-family: sans-serif;
   font-weight: 400;
@@ -98,7 +103,7 @@ min-width: 400px;
   padding: 14px 16px;
   text-decoration: none;
   font-family: sans-serif;
-  font-size: 1.4vw;
+  font-size: 1.2em;
 }
 /*NAVBAR block*/
 .navbarBlock{
@@ -211,7 +216,6 @@ min-width: 400px;
  right: -20px;
  transition: 0.5s;
 }
-
 .resumeButton:hover span::after {
   opacity: 1;
   right: 0;
@@ -247,7 +251,7 @@ min-width: 400px;
   content: 'test';
 }
 .smallLinkButton span{
-  font-size: 3vw;
+  font-size: 2.3vw;
   color: white;
   cursor: pointer;
  display: inline-block;
@@ -255,16 +259,68 @@ min-width: 400px;
  transition: 0.3s;
 }
 .smallLinkButton span::after{
- content: '\00ab';
+ content: '\00bb';
  position: absolute;
  opacity: 0;
  top: 0;
  right: -20px;
  transition: 0.5s;
 }
-
 .smallLinkButton:hover span::after {
   opacity: 1;
   right: 0;
 }
 /*End smallLinkButton Button */
+
+/* Image Sliding Carrosel*/
+.slider {
+  width: 80%;
+  min-width: 300px;
+  height: 78%;
+  min-height: 300px;
+  display: flex;
+  overflow-x: auto;
+  margin:auto;
+  -webkit-overflow-scrolling: touch;
+  scroll-snap-type: x mandatory;
+  .slide > div {
+  scroll-snap-align: start;
+}
+}
+.slide {
+  width: 400px;
+  flex-shrink: 0;
+  height: 80%;
+  background-color: #4a8aa7;
+  margin: 12px;
+  border: 2px solid black;
+  border-radius: 5%;
+  scroll-snap-align: start;
+  scroll-behavior: smooth;
+  transition: all 0.4s;
+}
+.slideItem {
+  width: 90%;
+  height: auto;
+  border: 1px solid black;
+  border-radius: 25%;
+}
+.slideItemHeader {
+  color: white;
+  text-align: center;
+  font-size: 2em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: sans-serif;
+}
+.slideItemDesc {
+  color: white;
+  text-align: center;
+  font-size: 1.35em;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  font-family: sans-serif;
+}
+.slide:hover{
+  transform: scale(1.05);
+}

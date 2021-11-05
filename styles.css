@@ -27,7 +27,8 @@
 }
 .footer{
   text-align: center;
-  font-size: 1vw;
+  font-size: 1.5vw;
+  font-family: sans-serif;
 }
 
 .secheader{
@@ -215,4 +216,55 @@ min-width: 400px;
   opacity: 1;
   right: 0;
 }
-/*End Link Button */
+/*End Resume Button */
+
+/* smallLinkButton block button - animated */
+/* Base button */
+.smallLinkButton{
+  margin: auto;
+  padding: 0;
+  text-align: center;
+  background-color: #065d86;
+  display:inline;
+  cursor: pointer;
+  margin: auto;
+  margin-bottom: 16px;
+  margin-top: 16px;
+  padding: 20px;
+  width: 160px;
+  height: auto;
+  transition: all 0.3s;
+  border:none;
+  border-radius: 10px;
+}
+/*Hover color change*/
+.smallLinkButton:hover{
+  background-color: #0484c1;
+}
+/*Button animation with text*/
+.smallLinkButton:hover span{
+  padding-right: 30px;
+  content: 'test';
+}
+.smallLinkButton span{
+  font-size: 3vw;
+  color: white;
+  cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.3s;
+}
+.smallLinkButton span::after{
+ content: '\00ab';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.5s;
+}
+
+.smallLinkButton:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+/*End smallLinkButton Button */

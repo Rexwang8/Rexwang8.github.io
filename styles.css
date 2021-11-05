@@ -276,29 +276,32 @@ min-width: 400px;
 /* Image Sliding Carrosel*/
 .slider {
   width: 80%;
-  min-width: 300px;
-  height: 78%;
-  min-height: 300px;
+  min-width: 400px;
+  height: auto;
+  min-height: 400px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: scroll;
+  overflow-y: hidden;
   margin:auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-  .slide > div {
-  scroll-snap-align: start;
+
+
 }
+.slide > div {
+scroll-snap-align: start;
 }
 .slide {
   width: 400px;
   flex-shrink: 0;
-  height: 80%;
+  height: auto;
   background-color: #4a8aa7;
   margin: 12px;
   border: 2px solid black;
   border-radius: 5%;
-  scroll-snap-align: start;
   scroll-behavior: smooth;
   transition: all 0.4s;
+
 }
 .slideItem {
   width: 90%;

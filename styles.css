@@ -61,7 +61,7 @@ min-width: 400px;
 
 }
 .secheadertext{
-  font-size: 2.2em;
+  font-size: 2em;
   color: white;
   padding: 5px;
   padding-top: 10px;
@@ -80,6 +80,27 @@ min-width: 400px;
   border: 1px solid black;
   border-right: 5px solid black;
   border-bottom: 5px solid black;
+}
+.logoSmall{
+  border-radius: 50%;
+  width: 7%;
+  height: 70%;
+  border: 1px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  min-width: 64px;
+
+  margin: auto;
+  margin-left: 7px;
+  margin-right: 7px;
+}
+.logoLarge{
+  border-radius: 50%;
+  width: auto;
+  height: 80%;
+  border: 1px solid black;
+  border-right: 6px solid black;
+  border-bottom: 6px solid black;
 }
 
 /*For links and urls */
@@ -134,9 +155,10 @@ min-width: 400px;
   background-color: #0484c1;
 }
 .navbarBlockActive{
-  display: inline-block;
+  display: inline-flex;
   background-color: inherit;
   background-color: #0484c1;
+  max-width: 20%;
 }
 /*END navbar*/
 

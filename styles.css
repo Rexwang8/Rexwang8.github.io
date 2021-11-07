@@ -4,7 +4,26 @@ darkish blue - #4a8aa7
 dark blue - #065d86
 light blue highlight - #0484c1
 */
+.projectContainer{
+  display:inline-grid;
+  grid-template-columns: auto auto;
+  padding: 5px;
+}
 .project {
+  background-color: #9ed0de;
+  color: black;
+  border: 2px solid black;
+  margin:auto;
+  min-width: 450px;
+  font-size: 1em;
+  font-weight:normal;
+  text-align: center;
+  margin-bottom: inherit;
+  width: 35%;
+  height:auto;
+margin: 5px;
+}
+.base{
   background-color: #9ed0de;
   color: black;
   border: 1px solid black;
@@ -13,8 +32,6 @@ light blue highlight - #0484c1
   font-size: 1em;
   font-weight:normal;
   text-align: center;
-  width: 90%;
-  margin-bottom: inherit;
 }
 .body {
   font-size: 1em;

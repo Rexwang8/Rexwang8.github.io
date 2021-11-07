@@ -156,6 +156,7 @@ min-width: 400px;
 }
 .navbarBlockActive{
   display: inline-flex;
+  vertical-align: top;
   background-color: inherit;
   background-color: #0484c1;
   max-width: 20%;

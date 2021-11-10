@@ -4,7 +4,7 @@
 <html lang = "en-US">
 <!-- HEADER================= -->
 <head>
-  <title> Contact </title>
+  <title> ContactH </title>
   <link rel="stylesheet" href="styles.css">
   <link rel="shortcut icon" type="image/png" href="Images\rwlogo.png"/>
 </head>
@@ -28,22 +28,36 @@
 
   <!-- HEADER================= -->
   <div class = "secheader">
-    <p class = "secheadertext" style="font-size:2.5em">About Me</p>
+    <p class = "secheadertext" style="font-size:2.5em">Contact</p>
   </div>
   <!-- end HEADER================= -->
 
   <!-- About================= -->
 
   <div class = "sec">
-    <div class = "sec">
-      <img class = "img" src = "Images\Face.jpg"
-      alt = "Profile Picture" >
-    </div>
-    <hr>
-    <p class = "body">Rex Wang is currently a sophmore at Purdue University, pursuing a bachelor's in Computer Engineering </p>
-
+    <p class = "body">Email: wang5009@purdue.edu</p>
   </div>
   <!-- End About================= -->
+
+  
+ <hr>
+ <form action=”mailto:wang5009@purdue.com”
+
+ method=”POST”
+
+ enctype=”multipart/form-data”
+
+ name=”EmailForm”>
+
+ Name:<br>
+
+ <input type=”text” size=”19″ name=”ContactName”><br><br>
+
+ Message:<br> <textarea name=”ContactCommentt” rows=”6″ cols=”20″>
+
+ </textarea><br><br> <button type=”submit” value=”Submit”> Submit</button>
+ </form>
+
 
   <!-- FOOTER -->
   <footer>

@@ -332,8 +332,7 @@ light blue highlight - #0484c1
   margin:auto;
   -webkit-overflow-scrolling: touch;
   scroll-snap-type: x mandatory;
-animation: slideIn 1s ease-in-out forwards;
-
+animation: appear 1s ease-in-out forwards;
 }
 .slide > div {
 scroll-snap-align: start;

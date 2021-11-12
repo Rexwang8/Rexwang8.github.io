@@ -1,124 +1,163 @@
-/*
-light blue - #9ed0de
-darkish blue - #4a8aa7
-dark blue - #065d86
-light blue highlight - #0484c1
-*/
-.projectContainer{
-  display:inline-grid;
-  grid-template-columns: auto auto;
-  padding: 5px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.project {
-  background-color: #9ed0de;
-  color: black;
-  border: 2px solid black;
-  margin:auto;
-  min-width: 450px;
-  font-size: 1em;
-  font-weight:normal;
-  text-align: center;
-  margin-bottom: inherit;
-  width: auto;
-  height:auto;
-  margin: 5px;
+
+:root {
+  --secondary-color: #061c32;
+  --contrast-color: #6925a1;
+  --background-color: #340d54;
+  --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.base{
-  background-color: #9ed0de;
-  color: black;
-  border: 1px solid black;
-  margin:auto;
-  min-width: 400px;
-  font-size: 1em;
-  font-weight:normal;
-  text-align: center;
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  z-index: -10;
+  background-color: var(--background-color);
 }
-.body {
-  font-size: 1em;
-  font-weight:normal;
-  text-align: left;
-  min-width: 380px;
-  font-family: sans-serif;
-  width: 95%;
-  margin: auto;
+
+.container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  font-family: var(--font);
+  transition: all .8s ease;
 }
-.sec {
-  text-align: center;
-  margin: auto;
+
+.container_content {
+ width: 50%;
+}
+
+.container_content_inner {
   width: 90%;
+  margin-left: 80px;
 }
-.footer{
-  text-align: center;
-  font-size: 1em;
-  font-family: sans-serif;
+
+.container_outer_img {
+  margin: 50px;
+  width: 50%;
+  overflow: hidden;
 }
-.secheader{
-  width: 100%;
-  margin-bottom: 10px;
-  min-width: 400px;
-}
-.secheadertext{
-  font-size: 2em;
-  color: white;
-  padding: 5px;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  text-align: center;
-  font-family: sans-serif;
-  font-weight: 400;
-  background-color: #065d86;
-  justify-content:center;
-}
-.img{
+
+.container_img {
+  width: 65%;
+  animation: slideIn 1.5s ease-in-out forwards;
   border-radius: 50%;
-  width: 25vw;
-  height: auto;
   border: 1px solid black;
   border-right: 5px solid black;
   border-bottom: 5px solid black;
 }
-.logoSmall{
-  border-radius: 50%;
-  width: 7%;
-  height: 70%;
-  border: 1px solid black;
-  border-right: 3px solid black;
-  border-bottom: 3px solid black;
-  min-width: 64px;
 
-  margin: auto;
-  margin-left: 7px;
-  margin-right: 7px;
-}
-.logoFooter{
-  border-radius: 50%;
-  width: auto;
-  height: 4%;
-  border: 1px solid black;
-  border-right: 3px solid black;
-  border-bottom: 3px solid black;
-  min-width: 64px;
-  margin: auto;
-  margin-left: 7px;
-  margin-right: 7px;
-
+.par {
+  height: auto;
+  overflow: hidden;
 }
 
-/*For links and urls */
-.link:link{
-  color: blue;
-  font-size: 100%;
-}
-.link:hover{
-  color: green;
-}
-.link:visited{
-  color: midnightblue;
-}
-.link:active{
-  color: green;
+.par p{
+  line-height: 28px;
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
 }
 
+.btns {
+  height: 100%;
+  position: relative;
+  width: 150px;
+  overflow: hidden;
+}
+
+.btns_more {
+  background: transparent;
+  border: 1px solid var(--contrast-color);
+  border-radius: 60px;
+  padding: 10px 14px;
+  color: #BF307F;
+  font-size: 16px;
+  text-transform: uppercase;
+  position: relative;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  outline: none;
+  transform: translateY(50px);
+  animation: slideUp .8s ease-in-out  forwards 1s;
+}
+/* Resume block button - animated */
+/*Hover color change*/
+.btns_more:hover{
+  background-color: var(--contrast-color);
+}
+/*Button animation with text*/
+.btns_more:hover span{
+  padding-right: 30px;
+}
+.btns_more span{
+  cursor: pointer;
+ display: inline-block;
+ position: relative;
+ transition: 0.5s;
+}
+.btns_more span::after{
+ content: '\00ab';
+ position: absolute;
+ opacity: 0;
+ top: 0;
+ right: -20px;
+ transition: 0.5s;
+}
+.btns_more:hover span::after {
+  opacity: 1;
+  right: 0;
+}
+/*End Resume Button */
+.title {
+  overflow: hidden;
+  height: auto;
+}
+
+h1 {
+    font-size: 60px;
+    color: var(--contrast-color);
+    margin-bottom: 20px;
+    transform: translateY(110px);
+    animation: slideUp .8s ease forwards .5s;
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateX(500px) scale(.2);
+  }
+  100% {
+    transform: translateX(0px) scale(1);
+  }
+}
+
+@keyframes slideUp {
+  0% {
+    transform: translateY(300px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes expand {
+  0% {
+    transform: translateX(1400px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
 
 /*NAVBAR*/
 .navbar{
@@ -126,7 +165,7 @@ light blue highlight - #0484c1
   margin: 0;
   padding: 0;
   text-align: left;
-  background-color: #065d86;
+  background-color: var(--background-color);
   width: 100%;
   min-width: 400px;
 
@@ -150,380 +189,62 @@ light blue highlight - #0484c1
 }
 /*Navbar hover effect*/
 .navbarBlock:hover{
-  background-color: #0484c1;
+  background-color: var(--contrast-color);
 }
 .navbarBlockActive{
   display: inline-flex;
   vertical-align: top;
-  background-color: inherit;
-  background-color: #0484c1;
+  background-color: var(--contrast-color);
   max-width: 20%;
 }
 /*END navbar*/
 
-
-/* Link block button - animated */
-/* Base button */
-.linkButton{
-  margin: auto;
-  padding: 0;
-  text-align: center;
-  background-color: #065d86;
-  display:grid;
-  cursor: pointer;
-  margin: auto;
-  margin-bottom: 16px;
-  padding: 20px;
-  width: 240px;
+.img{
+  border-radius: 50%;
+  width: 25vw;
   height: auto;
-  transition: all 0.5s;
-  border:none;
-  border-radius: 10px;
+  border: 1px solid var(--secondary-color);
+  border-right: 5px solid var(--secondary-color);
+  border-bottom: 5px solid var(--secondary-color);
+  animation: slideIn 1s ease-in-out forwards;
 }
-/*Hover color change*/
-.linkButton:hover{
-  background-color: #0484c1;
-}
-/*Button animation with text*/
-.linkButton:hover span{
-  padding-right: 30px;
-  content: 'test';
-}
-.linkButton span{
-  font-size: 1.6em;
-  color: white;
-  cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.5s;
-}
-.linkButton span::after{
- content: '\00bb';
- position: absolute;
- opacity: 0;
- top: 0;
- right: -20px;
- transition: 0.5s;
-}
-.linkButton:hover span::after {
-  opacity: 1;
-  right: 0;
-}
-/*End Link Button */
-
-/* Resume block button - animated */
-/* Base button */
-.resumeButton{
-  margin: auto;
-  padding: 0;
-  text-align: center;
-  background-color: #065d86;
-  display:grid;
-  cursor: pointer;
-  margin: auto;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  padding: 20px;
-  width: 320px;
-  height: auto;
-  transition: all 0.5s;
-  border:none;
-  border-radius: 10px;
-}
-/*Hover color change*/
-.resumeButton:hover{
-  background-color: #0484c1;
-}
-/*Button animation with text*/
-.resumeButton:hover span{
-  padding-right: 30px;
-  content: 'test';
-}
-.resumeButton span{
-  font-size: 1.6em;
-  color: white;
-  cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.5s;
-}
-.resumeButton span::after{
- content: '\00ab';
- position: absolute;
- opacity: 0;
- top: 0;
- right: -20px;
- transition: 0.5s;
-}
-.resumeButton:hover span::after {
-  opacity: 1;
-  right: 0;
-}
-/*End Resume Button */
-
-/* smallLinkButton block button - animated */
-/* Base button */
-.smallLinkButton{
-  margin: auto;
-  padding: 0;
-  text-align: center;
-  background-color: #065d86;
-  display:inline;
-  cursor: pointer;
-  margin: auto;
-  margin-bottom: 16px;
-  margin-top: 16px;
-  padding: 20px;
-  width: 160px;
-  height: auto;
-  transition: all 0.3s;
-  border:none;
-  border-radius: 10px;
-}
-/*Hover color change*/
-.smallLinkButton:hover{
-  background-color: #0484c1;
-}
-/*Button animation with text*/
-.smallLinkButton:hover span{
-  padding-right: 30px;
-  content: 'test';
-}
-.smallLinkButton span{
-  font-size: 1.4em;
-  color: white;
-  cursor: pointer;
- display: inline-block;
- position: relative;
- transition: 0.3s;
-}
-.smallLinkButton span::after{
- content: '\00bb';
- position: absolute;
- opacity: 0;
- top: 0;
- right: -20px;
- transition: 0.5s;
-}
-.smallLinkButton:hover span::after {
-  opacity: 1;
-  right: 0;
-}
-/*End smallLinkButton Button */
-
-/* Image Sliding Carrosel*/
-.slider {
-  width: 80%;
-  min-width: 400px;
-  height: auto;
-  min-height: 400px;
-  display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  margin:auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-
-
-}
-.slide > div {
-scroll-snap-align: start;
-}
-.slide {
-  width: 400px;
-  flex-shrink: 0;
-  height: auto;
-  background-color: #4a8aa7;
-  margin: 12px;
-  border: 2px solid black;
-  border-radius: 5%;
-  scroll-behavior: smooth;
-  transition: all 0.4s;
-
-}
-.slideItem {
-  width: 90%;
-  height: auto;
+.logoSmall{
+  border-radius: 50%;
+  width: 7%;
+  height: 70%;
   border: 1px solid black;
-  border-radius: 25%;
-}
-.slideItemHeader {
-  color: white;
-  text-align: center;
-  font-size: 2em;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: sans-serif;
-}
-.slideItemDesc {
-  color: white;
-  text-align: center;
-  font-size: 1.35em;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: sans-serif;
-}
-.slide:hover{
-  transform: scale(1.05);
-}
-/* Image Sliding Carrosel*/
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  min-width: 64px;
 
-/* RIP GITHUB PHP FORM
-#fcf-form {
-    display:block;
+  margin: auto;
+  margin-left: 7px;
+  margin-right: 7px;
 }
-form for contact
-  .fcf-body {
-      margin: 0;
-      font-family: -apple-system, Arial, sans-serif;
-      font-size: 1.1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #212529;
-      text-align: left;
-      background-color: ##9ed0de;
-      padding: 30px;
-      padding-bottom: 10px;
-      border: 1px solid #ced4da;
-      border-radius: 0.25rem;
-      max-width: 100%;
-  }
-  .fcf-form-group {
-      margin-bottom: 1rem;
-  }
-  .fcf-input-group {
-      position: relative;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -ms-flex-align: stretch;
-      align-items: stretch;
-      width: 100%;
-  }
-  .fcf-form-control {
-      display: block;
-      width: 100%;
-      height: calc(1.5em + 0.75rem + 2px);
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      font-weight: 400;
-      line-height: 1.5;
-      color: #495057;
-      background-color: #fff;
-      background-clip: padding-box;
-      border: 1px solid #ced4da;
-      outline: none;
-      border-radius: 0.25rem;
-      transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  .fcf-form-control:focus {
-      border: 1px solid #313131;
-  }
-  select.fcf-form-control[size], select.fcf-form-control[multiple] {
-      height: auto;
-  }
-  textarea.fcf-form-control {
-      font-family: -apple-system, Arial, sans-serif;
-      height: auto;
-  }
-  label.fcf-label {
-      display: inline-block;
-      margin-bottom: 0.5rem;
-  }
-  .fcf-credit {
-      padding-top: 10px;
-      font-size: 0.6rem;
-      color: #545b62;
-  }
-  .fcf-credit a {
-      color: #545b62;
-      text-decoration: underline;
-  }
-  .fcf-credit a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-  }
-  .fcf-btn {
-      display: inline-block;
-      font-weight: 400;
-      color: #212529;
-      text-align: center;
-      vertical-align: middle;
-      cursor: pointer;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      background-color: transparent;
-      border: 1px solid transparent;
-      padding: 0.375rem 0.75rem;
-      font-size: 1rem;
-      line-height: 1.5;
-      border-radius: 0.25rem;
-      transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-  }
-  @media (prefers-reduced-motion: reduce) {
-      .fcf-btn {
-          transition: none;
-      }
-  }
-  .fcf-btn:hover {
-      color: #212529;
-      text-decoration: none;
-  }
-  .fcf-btn:focus, .fcf-btn.focus {
-      outline: 0;
-      box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-  }
-  .fcf-btn-primary {
-      color: #fff;
-      background-color: #007bff;
-      border-color: #007bff;
-  }
-  .fcf-btn-primary:hover {
-      color: #fff;
-      background-color: #0069d9;
-      border-color: #0062cc;
-  }
-  .fcf-btn-primary:focus, .fcf-btn-primary.focus {
-      color: #fff;
-      background-color: #0069d9;
-      border-color: #0062cc;
-      box-shadow: 0 0 0 0.2rem rgba(38, 143, 255, 0.5);
-  }
-  .fcf-btn-lg, .fcf-btn-group-lg>.fcf-btn {
-      padding: 0.5rem 1rem;
-      font-size: 1.25rem;
-      line-height: 1.5;
-      border-radius: 0.3rem;
-  }
-  .fcf-btn-block {
-      display: block;
-      width: 100%;
-  }
-  .fcf-btn:hover span{
-    padding-right: 30px;
-    content: 'test';
-  }
-  .fcf-btn span{
-    font-size: 1.4em;
-    color: white;
-    cursor: pointer;
-   display: inline-block;
-   position: relative;
-   transition: 0.3s;
-  }
-  .fcf-btn span::after{
-   content: '\00bb';
-   position: absolute;
-   opacity: 0;
-   top: 0;
-   right: -40px;
-   transition: 0.5s;
-  }
-  .fcf-btn:hover span::after {
-    opacity: 1;
-    right: 0;
-  }
-  /*form for contact*/
+.logoFooter{
+  border-radius: 50%;
+  height: 2%;
+  border: 1px solid black;
+  border-right: 3px solid black;
+  border-bottom: 3px solid black;
+  min-width: 24px;
+  margin: auto;
+
+}
+
+.container-small {
+  display: flex;
+  height: 20vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  background-color: var(--secondary-color);
+  position: relative;
+  font-family: var(--font);
+  transition: all .8s ease;
+}
+.containerContainer{
+  display:grid;
+  align-items: center;
+}

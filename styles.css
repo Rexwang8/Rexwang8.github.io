@@ -86,8 +86,8 @@
   overflow: hidden;
 }
 .btns_more {
-  background: transparent;
-  border: 1px solid var(--contrast-color);
+  background-color: rgba(105, 37, 161, 0.2);
+  border: 2px solid var(--contrast-color-light);
   border-radius: 60px;
   padding: 10px 14px;
   color: #BF307F;
@@ -114,6 +114,7 @@
  display: inline-block;
  position: relative;
  transition: 0.5s;
+ opacity: 100%;
 }
 .btns_more span::after{
  content: '\00ab';
@@ -414,4 +415,35 @@ background-color: lightgreen;
   display: block;
   margin-left: auto;
   margin-right: auto;
+}
+
+.c1{
+  padding: 20px;
+  min-height: 110vh;
+  align-content: items;
+  display: grid;
+  grid-template-columns: auto auto;
+  background-color: red;
+  font-family: var(--font);
+}
+
+.c2{
+  background-color: green;
+  padding: 20px;
+  width: 85%
+}
+
+.c3{
+  background-color: yellow;
+  overflow: hidden;
+  height: auto;
+
+}
+.c4{
+height: 25%;
+}
+.c3 p{
+  line-height: 28px;
+  transform: translateY(300px);
+  animation: slideUp .8s ease-in-out forwards .8s;
 }

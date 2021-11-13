@@ -11,15 +11,29 @@
   --background-color: #340d54;
   --font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
+.body {
+   min-height: 100%
+  }
+.html {
+  height: 100%
+}
+
 .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 100%;
   z-index: -10;
   background-color: var(--background-color);
+
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 
 .container {
@@ -34,22 +48,18 @@
   font-family: var(--font);
   transition: all .8s ease;
 }
-
 .container_content {
  width: 50%;
 }
-
 .container_content_inner {
   width: 90%;
   margin-left: 80px;
 }
-
 .container_outer_img {
   margin: 50px;
   width: 50%;
   overflow: hidden;
 }
-
 .container_img {
   width: 65%;
   animation: slideIn 1.5s ease-in-out forwards;
@@ -63,7 +73,6 @@
   height: auto;
   overflow: hidden;
 }
-
 .par p{
   line-height: 28px;
   transform: translateY(300px);
@@ -76,7 +85,6 @@
   width: 150px;
   overflow: hidden;
 }
-
 .btns_more {
   background: transparent;
   border: 1px solid var(--contrast-color);
@@ -92,7 +100,7 @@
   transform: translateY(75px);
   animation: slideUp .8s ease-in-out  forwards 1s;
 }
-/* Resume block button - animated */
+/*Button - animated */
 /*Hover color change*/
 .btns_more:hover{
   background-color: var(--contrast-color);
@@ -119,7 +127,7 @@
   opacity: 1;
   right: 0;
 }
-/*End Resume Button */
+/*End Button */
 .title {
   overflow: hidden;
   height: auto;
@@ -132,6 +140,12 @@ h1 {
     transform: translateY(110px);
     animation: slideUp .8s ease forwards .5s;
 }
+h2 {
+    font-size: 40px;
+    color: var(--contrast-color);
+    margin-bottom: 20px;
+
+}
 
 @keyframes slideIn {
   0% {
@@ -141,7 +155,6 @@ h1 {
     transform: translateX(0px) scale(1);
   }
 }
-
 @keyframes slideUp {
   0% {
     transform: translateY(300px);
@@ -150,7 +163,6 @@ h1 {
     transform: translateY(0px);
   }
 }
-
 @keyframes expand {
   0% {
     transform: translateX(1400px);
@@ -250,61 +262,41 @@ h1 {
   align-items: center;
 }
 
-/* Image Sliding Carrosel*/
-.slider {
-  width: 80%;
-  min-width: 400px;
-  height: auto;
-  min-height: 400px;
+.container_projects {
   display: flex;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  margin:auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-animation: appear 1s ease-in-out forwards;
-}
-.slide > div {
-scroll-snap-align: start;
-}
-.slide {
-  width: 400px;
-  flex-shrink: 0;
-  height: auto;
-  background-color: #4a8aa7;
-  margin: 12px;
-  border: 2px solid black;
-  border-radius: 5%;
-  scroll-behavior: smooth;
-  transition: all 0.4s;
+  height: 110vh;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  animation: expand .8s ease forwards;
+  position: relative;
+  font-family: var(--font);
+  transition: all .8s ease;
 
 }
-.slideItem {
-  width: 90%;
-  height: auto;
-  border: 1px solid black;
-  border-radius: 25%;
+
+.backgroundOverlay{
+  background-image: url("Images/Aquacat.jpg");
+  background-position: scroll;
+  background-size: 100%;
+  min-height: 300px;
+
+  background-repeat: repeat;
+  z-index: -9;
+  animation: expand .8s ease forwards;
+  background-attachment: fixed;
 }
-.slideItemHeader {
-  color: white;
-  text-align: center;
-  font-size: 2em;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: sans-serif;
-}
-.slideItemDesc {
-  color: white;
-  text-align: center;
-  font-size: 1.35em;
-  margin-top: 5%;
-  margin-bottom: 5%;
-  font-family: sans-serif;
-}
-.slide:hover{
-  transform: scale(1.05);
-}
-/* Image Sliding Carrosel*/
+.backgroundOverlay::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    background-color: rgba(30, 30, 80, 0.75);
+    z-index: -9;
+  }
+
 
 .container_outer_grid {
   margin: 50px;
@@ -315,13 +307,18 @@ scroll-snap-align: start;
   padding: 5px;
   animation: appear 1s ease-in-out forwards;
   color: white;
-  z-index: 1;
+  z-index: 2;
 }
 .grid-container{
     height: auto;
     overflow: hidden;
     margin-bottom: 15px;
     cursor:pointer;
+}
+.grid-container:hover{
+  transition: 1.2s;
+  transform: translateX(30px) scale(1.1);
+  z-index: 10;
 }
 .grid-title{
   font-size: 26px;
@@ -331,28 +328,90 @@ scroll-snap-align: start;
   margin-bottom: 10px;
   color: white;
 }
-.container_projects {
-  display: flex;
-  height: 110vh;
-  justify-content: space-around;
-  align-items: center;
-  color: #fff;
-  animation: expand .8s ease forwards;
-  background-color: var(--secondary-color);
-  position: relative;
-  font-family: var(--font);
-  transition: all .8s ease;
 
-  background-image: url("Images/Aquacat.jpg");
-  background-size: cover;
+.containerContainer_projects{
+  display: inline-grid;
+  align-items: center;
+  grid-template-columns: auto auto;
+}
+.wr{
 
 }
-.container_projects::before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    bottom: 0px;
-    left: 0px;
-    background-color: rgba(30, 30, 80, 0.8);
-  }
+.wr_proj{
+
+margin:auto;
+color:red;
+width: 40%;
+margin-left: 30px;
+background-color: lightgreen;
+}
+.proj_title{
+  font-size: 22pt;
+}
+.proj_row_wrapper{
+    padding: 20px;
+    min-height: 86vh;
+    align-content: items;
+    padding-bottom: 0;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.proj_wrapper{
+  width: 94%;
+  min-height: 90%;
+  float: left;
+  border: 2px solid red;
+  margin: 20px;
+  border: 1px solid red;
+  color: white;
+  font-family: var(--font);
+  background-color: var(--secondary-color);
+}
+
+.proj_title_wrapper{
+  width: 80%
+  min-height: 10vh;
+  border: 2px solid red;
+  margin: 5px;
+
+}
+
+.proj_title_wrapper h2{
+  margin: 5px;
+  margin-left: 10px;
+}
+
+.proj_img_wrapper{
+  width: 80%
+  background-color: red;
+  min-height: 40vh;
+  border: 2px solid red;
+  margin: 5px;
+}
+.proj_img_wrapper img{
+  margin: 20px;
+  margin-left: 35px;
+}
+
+.proj_desc{
+  width: 80%
+  background-color: red;
+  min-height: 20vh;
+  border: 2px solid red;
+  margin: 5px;
+}
+.proj_desc p{
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.proj_img{
+  width: 90%;
+  height: auto;
+  border: 2px solid var(--contrast-color);
+  border-radius: 20%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

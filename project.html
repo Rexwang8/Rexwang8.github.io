@@ -8,7 +8,7 @@
 </head>
 <!-- HEADER================= -->
 <body>
-<div  class="overlay"> </div>
+<div  class="overlay"></div>
 
 <!-- NAVBAR ------------------------>
 <div class = "navbar">
@@ -22,14 +22,18 @@
   </ul>
 </div>
 <!-- ENDNAVBAR ------------------>
+<div class = "backgroundOverlay">
 
-<div class = "containerContainer">
-  <div class= 'container_projects'>
-    <div class="container_content">
+  <div class = "containerContainer_projects">
+   <div class = 'wr'>
+    <div class = "container_projects">
+     <div class="container_content">
       <div class="container_content_inner">
+
         <div class="title">
           <h1>Projects</h1>
         </div>
+
         <div class="par">
           <p>
             What I have been tinkering with...
@@ -39,16 +43,17 @@
         <div class="btns">
           <button class='btns_more' onClick="location.href='#Project-1'"> <span>See more</span> </button>
         </div>
-      </div>
-    </div>
 
-    <div class="container_outer_grid">
+      </div>
+  </div>
+
+     <div class="container_outer_grid">
 
       <div class="grid-container"onClick="location.href='#Project-1'" >
         <div class = "grid-title">
         <p>This Website </p>
        </div>
-        <img src='Images\Face.jpg'  alt="" class="container_img" />
+        <img src='Images\websitepng.png'  alt="" class="container_img" />
         <p>HTML, CSS and More... </p>
       </div>
 
@@ -115,86 +120,103 @@
         <img src='Images\Face.jpg'  alt="" class="container_img" />
         <p>HTML, CSS and More... </p>
       </div>
-    </div>
+     </div>
+</div>
+
+  <div class = "proj_row_wrapper">
+
+
+    <div class = "proj_wrapper" id = "Project-1">
+        <div class = "proj_title_wrapper">
+        <h2 class = "proj_title"> CSVtoOFX </h2>
+       </div>
+       <div class = "proj_img_wrapper">
+         <img class = "proj_img" src = "Images\csvofx.PNG"
+         alt = "CSVtoOFX Picture" >
+        </div>
+       <div class = "proj_desc">
+        <p> CSV to OFX is a tool that that converts financial documents in CSV (comma seperated value) format to OFX (Open Financial Exchange) Format. This is used to aid in the importing of online banking statements to an old accounting program called Microsoft Money 2010.
+          <br><br></p>
+          <p>Unity GameEngine was used to create the program. GitHub was used for Version Control. </p>
+        </div>
+
+      </div>
+
+    <div class = "proj_wrapper" id = "Project-2">
+          <div class = "proj_title_wrapper">
+          <h2 class = "proj_title"> Aquacat </h2>
+         </div>
+         <div class = "proj_img_wrapper">
+           <img class = "proj_img" src = "Images\Aquacat.jpg"
+           alt = "Aquacat Picture" >
+          </div>
+         <div class = "proj_desc">
+          <p> AquaCat is a colorful side-scrolling arcade minigame, based off of a cover of Nyancat.
+            <br><br></p>
+            <p>It was built in Unity GameEngine and has been ported to Windows, Android, and WebGL (itch.io). </p>
+          </div>
+
+        </div>
+
+
+
+
+  </div>
+  <div class = "proj_row_wrapper">
+
+
+    <div class = "proj_wrapper" id = "Project-3">
+        <div class = "proj_title_wrapper">
+        <h2 class = "proj_title"> CSVtoOFX </h2>
+       </div>
+       <div class = "proj_img_wrapper">
+         <img class = "proj_img" src = "Images\csvofx.PNG"
+         alt = "CSVtoOFX Picture" >
+        </div>
+       <div class = "proj_desc">
+        <p> CSV to OFX is a tool that that converts financial documents in CSV (comma seperated value) format to OFX (Open Financial Exchange) Format. This is used to aid in the importing of online banking statements to an old accounting program called Microsoft Money 2010.
+          <br><br></p>
+          <p>Unity GameEngine was used to create the program. GitHub was used for Version Control. </p>
+        </div>
+
+      </div>
+
+    <div class = "proj_wrapper" id = "Project-4">
+          <div class = "proj_title_wrapper">
+          <h2 class = "proj_title"> Aquacat </h2>
+         </div>
+         <div class = "proj_img_wrapper">
+           <img class = "proj_img" src = "Images\Aquacat.jpg"
+           alt = "Aquacat Picture" >
+          </div>
+         <div class = "proj_desc">
+          <p> AquaCat is a colorful side-scrolling arcade minigame, based off of a cover of Nyancat.
+            <br><br></p>
+            <p>It was built in Unity GameEngine and has been ported to Windows, Android, and WebGL (itch.io). </p>
+          </div>
+
+        </div>
+
 
   </div>
 
-   <div class = "projectContainer">
-     <!--CSV to OFX project -->
-      <div class = "project" id = "Project-1">
-        <div class = "secheader">
-          <p class = "secheadertext">CSV to OFX</p>
-        </div>
-        <div>
-          <button class = "smallLinkButton" onClick="location.href='https://github.com/Rexwang8/CSVtoOFX'" target="_new">
-            <span>Github</span> </button>
+</div>
 
-            <p class = "body">CSV to OFX is a tool that that converts financial documents in CSV (comma seperated value) format to OFX (Open Financial Exchange) Format. This is used to aid in the importing of online banking statements to an old accounting program called Microsoft Money 2010.
-              <br><br>Unity GameEngine was used to create the program. GitHub was used for Version Control.<br></p>
-            </div>
-          </div>
-      <!--CSV to OFX project -->
 
-      <!--AquaCat project -->
-        <div class = "project" id = "Project-2">
-         <div class = "secheader">
-          <p class = "secheadertext">AquaCat</p>
-         </div>
 
-         <div>
-          <button class = "smallLinkButton" onClick="location.href='https://rexwang.itch.io/aqua-cat/'" target="_new">
-            <span>Itch.io</span> </button>
 
-            <p class = "body">AquaCat is a colorful side-scrolling arcade minigame, based off of a cover of Nyancat. <br><br>It was built in Unity GameEngine and has been ported to Windows, Android, and WebGL (itch.io).<br></p>
-          </div>
-        </div>
-        <!--AquaCat project -->
 
-        <!--PekoraQuest project -->
-        <div class = "project" id = "Project-3">
-          <div class = "secheader">
-            <p class = "secheadertext">PekoraQuest</p>
-          </div>
 
-          <div>
-            <p class = "body">PekoraQuest is a grand 2D RPG that was a fangame for Hololive productions. It has a playtime of over 2 hours and many features seen in classic games of the genre like Earthbound. <br><br>Pekora Quest was made in Gamemaker 2, a derivative of C.<br></p>
-          </div>
-        </div>
-        <!--PekoraQuest project -->
 
-        <!--Virtual Incremental project -->
-        <div class = "project" id = "Project-4">
-          <div class = "secheader">
-            <p class = "secheadertext">(WIP)Virtual Incremental</p>
-          </div>
 
-          <div>
-            <p class = "body">Virtual Incremental is an Incremental genre game heavily inspired by the game Progress Knight. It makes heavy usage of progress bars to represent progress in job and skill training. <br><br>Written in Unity GameEngine.<br></p>
-          </div>
-        </div>
-        <!--Virtual Incremental project -->
-
-        <!--SmartFish project -->
-        <div class = "project" id = "Project-5">
-          <div class = "secheader">
-            <p class = "secheadertext">(WIP)SmartFish</p>
-          </div>
-
-          <div>
-            <p class = "body">SmartFish is an attempt at creating an evolutional machine-learning program where the "tank" of fish will slowly learn how to best find their food.<br><br> Written in Unity GameEngine.<br></p>
-          </div>
-        </div>
-        <!--SmartFish project -->
-       </div>
-
-    <!-- FOOTER -->
-    <!-- FOOTER -->
+<hr>
+<!-- FOOTER -->
   <footer>
     <p id="footerID" class = "footer"> Footer </p>
     <script src = "Java\javafunct.js" onload="getFooter()"> </script>
    </footer>
    <!-- ENDFOOTER -->
-</div>
+   <!-- FOOTER -->
 
 
 </body>

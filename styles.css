@@ -419,31 +419,45 @@ background-color: lightgreen;
 
 .c1{
   padding: 20px;
-  min-height: 110vh;
+  min-height: 150vh;
   align-content: items;
   display: grid;
   grid-template-columns: auto auto;
-  background-color: red;
+  background-color: var(--secondary-color);
   font-family: var(--font);
 }
 
 .c2{
-  background-color: green;
   padding: 20px;
+    margin-right: 500px;
   width: 85%
+
 }
 
 .c3{
-  background-color: yellow;
   overflow: hidden;
   height: auto;
-
+  padding-left: 20px;
+color: white;
 }
 .c4{
-height: 25%;
+height: 20%;
 }
 .c3 p{
   line-height: 28px;
+  font-size: 20px;
   transform: translateY(300px);
   animation: slideUp .8s ease-in-out forwards .8s;
+}
+.c5{
+  display: inline;
+  height: 100%;
+}
+
+.c3 img{
+  width: 50%;
+}
+.footer{
+  text-align: center;
+  color: white;
 }

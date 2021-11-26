@@ -414,7 +414,7 @@ background-color: lightgreen;
   margin-right: auto;
 }
 
-.c1{
+.LRcontainer{
   padding: 20px;
   min-height: 150vh;
   align-content: items;
@@ -424,35 +424,35 @@ background-color: lightgreen;
   font-family: var(--font);
 }
 
-.c2{
+.LRwrapper{
   padding: 20px;
     margin-right: 500px;
   width: 85%
 
 }
 
-.c3{
+.LRbox{
   overflow: hidden;
   height: auto;
   padding-left: 20px;
 color: white;
 }
-.c4{
+.LRTitle{
 height: 20%;
 overflow: hidden;
 }
-.c3 p{
+.LRbox p{
   line-height: 28px;
   font-size: 20px;
   transform: translateY(300px);
   animation: slideUp .8s ease-in-out forwards .8s;
 }
-.c5{
+.RBox{
   display: inline;
   height: 100%;
 }
 
-.c3 img{
+.LRbox img{
   width: 50%;
 }
 .footer{

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+
+<html lang = "en-US">
+<!-- HEADER================= -->
+<head>
+  <title> Contact </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/png" href="Images\rwlogo.png"/>
+</head>
+<!-- HEADER================= -->
+
+<!-- Body================= -->
+<body class = "base" >
+
+  <div  class="overlay">
+  </div>
+  <!-- NAVBAR ------------------------>
+  <div class = "navbar">
+    <ul class = "navbar">
+      <li class = "navbarBlock"><a class = "navbarItem"  href="index.html">Home</a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Projects </a></li>
+      <li class = "navbarBlockActive"><img class = "logoSmall" src = "Images\rwlogo.png"
+      alt = "Logo" ><a class = "navbarItem"  href="contact.html">Contact </a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Skills </a></li>
+      <li class = "navbarBlock"><a class = "navbarItem"  href="about.html">About </a></li>
+    </ul>
+  </div>
+  <!-- ENDNAVBAR ------------------>
+
+
+<div class = "row_wrapper">
+
+</div>
+
+
+
+  <!-- HEADER================= -->
+  <div class = "secheader">
+    <p class = "secheadertext" style="font-size:2.5em">Contact</p>
+  </div>
+  <!-- end HEADER================= -->
+
+  <!-- About================= -->
+
+  <div class = "sec">
+    <p class = "body">Email: wang5009@purdue.edu</p>
+  </div>
+  <!-- End About================= -->
+
+  <div class = "secheader">
+    <p class = "secheadertext">Contact Form</p>
+  </div>
+<!-- RIP PHP IN GITHUB
+ <div class="fcf-body">
+     <div id="fcf-form">
+     <form id="fcf-form-id" class="fcf-form-class" method="post" action="contact-form-process.php">
+
+         <div class="fcf-form-group">
+             <label for="Name" class="fcf-label">Your name</label>
+             <div class="fcf-input-group">
+                 <input type="text" id="Name" name="Name" class="fcf-form-control" required>
+             </div>
+         </div>
+
+         <div class="fcf-form-group">
+             <label for="Email" class="fcf-label">Your email address</label>
+             <div class="fcf-input-group">
+                 <input type="email" id="Email" name="Email" class="fcf-form-control" required>
+             </div>
+         </div>
+
+         <div class="fcf-form-group">
+             <label for="Message" class="fcf-label">Your message</label>
+             <div class="fcf-input-group">
+                 <textarea id="Message" name="Message" class="fcf-form-control" rows="6" maxlength="3000" required></textarea>
+             </div>
+         </div>
+
+         <div class="fcf-form-group">
+             <button type="submit" id="fcf-button" class="fcf-btn fcf-btn-primary fcf-btn-lg fcf-btn-block"><span>Send Message</span></button>
+         </div>
+
+         <div class="fcf-credit" id="fcf-credit">
+         Simple HTML email form provided by: <a href="https://www.freecontactform.com" target="_blank">FreeContactForm.com</a>
+         </div>
+
+     </form>
+     </div>
+
+ </div>
+-->
+<!-- Sample HTML Form -->
+<form action="mailto:wang5009@purdue.edu"
+method="POST"
+enctype="multipart/form-data"
+name="EmailForm">
+    Name:<br>
+    <input type="text" size="19" name="Contact-Name"><br><br>
+    Email:<br>
+    <input type="email" name="Contact-Email"><br><br>
+    Message:<br>
+    <textarea name="Contact-Message" rows="6″ cols="20″>
+    </textarea><br><br>
+    <button type="submit" value="Submit">Send</button>
+</form>
+<!-- Simple HTML Form that “Triggers” an Email.-->
+  <!-- FOOTER -->
+  <footer>
+    <hr>
+    <img class = "logoFooter" src = "Images\rwlogo.png"
+    alt = "Logo" >
+    <p id="footerID" class = "footer"> Footer </p>
+    <script src = "Java\javafunct.js" onload="getFooter()"> </script>
+  </footer>
+  <!-- ENDFOOTER -->
+
+  </body>
+  <!-- body================= -->
+  </html>

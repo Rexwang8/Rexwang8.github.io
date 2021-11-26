@@ -439,6 +439,7 @@ color: white;
 }
 .c4{
 height: 20%;
+overflow: hidden;
 }
 .c3 p{
   line-height: 28px;

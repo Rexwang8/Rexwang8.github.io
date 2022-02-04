@@ -1,0 +1,104 @@
+:root {
+    --color-red: #b23850;
+    --color-blue: #3b8beb;
+    --color-light: #e7e3d4;
+    --color-light-blue: #c4dbf6;
+    --color-dark: #8590AA;
+    --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .background {
+background-color: var(--color-light-blue);
+height: 100%;
+width: 100%;
+overflow-x: hidden;
+  }
+
+  .section {
+      height: fit-content;
+      width: fit-content;
+      max-width: 60%;
+      background-color: var(--color-dark);;
+      margin: 4%;
+      margin-left: 6%;
+      transition-duration: 1.25s;
+  }
+
+  .section:hover{
+      position: relative;
+      transition-duration: 1.5s;
+      transform: translateX(15%);
+  }
+
+.secHead {
+    margin: 5%;
+    padding-top: 1%;
+    font-family: var(--font);
+    font-size: 120%;
+}
+
+.secText {
+    margin: 5%;
+    padding-top: 1%;
+    font-family: var(--font);
+    padding-bottom: 3%;
+}
+
+.secFace {
+    margin: auto;
+    padding: 2%;
+    height: 20vw;
+    width: auto;
+    border-radius: 10%;
+}
+
+.link {
+    color:blue;
+    font-size: 110%;
+    text-decoration: underline;
+}
+.link:hover {
+    color: var(--color-red);
+}
+.link:visited {
+    color: var(--color-red);
+}
+
+/*NAVBAR*/
+.navbar{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    background-color: var(--color-blue);
+    width: 98%;
+  
+  }
+  /*NAVBAR text*/
+  .navbarItem{
+    display: block;
+    background-color: inherit;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 1.2em;
+  }
+  /*NAVBAR block*/
+  .navbarBlock{
+    float: right;
+    background-color: inherit;
+    transition: 0.3s;
+  }
+  /*Navbar hover effect*/
+  .navbarBlock:hover{
+    background-color: var(--color-red);
+  }
+  .navbarBlockActive{
+    display: inline-flex;
+    vertical-align: top;
+    background-color: var(--color-red);
+    max-width: 20%;
+  }
+  /*END navbar*/

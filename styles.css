@@ -1,5 +1,6 @@
 :root {
     --color-red: #b23850;
+    --color-light-red: #cb5a70;
     --color-blue: #3b8beb;
     --color-light: #e7e3d4;
     --color-light-blue: #c4dbf6;
@@ -143,3 +144,68 @@
     text-align: center;
     display: block;
   }
+
+  .iconLink {
+    width: 32px;
+    margin: 1%;
+    transition-duration: 0.5s;
+    cursor: pointer;
+  }
+
+  .iconLink:hover {
+    transform: scale(120%);
+  }
+
+  @keyframes iconExpand {
+    from {
+      size: 32px;
+    }
+
+    to {
+      size: 40px;
+    }
+  }
+
+  .iconShelf {
+    padding: 6px;
+    margin: 4%;
+    border: 1px solid black;
+  }
+
+  .tab {
+    border: 1px solid #ccc;
+    width: 100%;
+    background-color: var(--color-blue);
+  }
+
+  .tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    width: 25%;
+    color: white;
+    font-size: large;
+  }
+
+  /* Change background color of buttons on hover */
+.tab button:hover {
+  background-color: var(--color-light-red);
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+  background-color: var(--color-red);
+}
+
+/* Style the tab content */
+.tabcontent {
+  background-color: var(--color-dark);
+  display: none;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+}

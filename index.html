@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 
 
-<html lang = "en-US">
+<html lang="en-US">
 
 <!-- HEADER================= -->
+
 <head>
-    <title> Rex's Website </title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" type="image/svg" href="Images\RW-Logo.svg"/>
-  </head>
-  <!-- HEADER================= -->
+  <title> Rex's Website </title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" type="image/svg" href="Images\RW-Logo.svg" />
+</head>
+<!-- HEADER================= -->
 
-  <body class="background">
+<body class="background">
 
+  <div class="spacing"></div>
   <!-- NAVBAR ------------------------>
-  <div class = "navbar">
-    <ul class = "navbar">
-      <li class = "navbarBlockActive"><a class = "navbarItem">Rex Wang</a></li>
-      
-      <li class = "navbarBlock"><a class = "navbarItem"  href="index.html">Home </a></li>
+  <div class="navbar">
+    <ul class="navbar">
+      <li class="navbarBlockActive"><a class="navbarItem">Rex Wang</a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="index.html">Home </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="project.html">This Site </a></li>
       <!--
-      <li class = "navbarBlock"><a class = "navbarItem"  href="project.html">Projects </a></li>
       <li class = "navbarBlock"><a class = "navbarItem"  href="contact.html">Contact </a></li>
       <li class = "navbarBlock"><a class = "navbarItem"  href="skills.html">Skills </a></li>
       <li class = "navbarBlock"><a class = "navbarItem"  href="about.html">About </a></li>
@@ -28,66 +29,82 @@
     </ul>
   </div>
   <!-- ENDNAVBAR ------------------>
+  
 
-      <div class="section">
-        <img class = "secFace" src = "Images\rex1.jpg">
+  <div class="wrapper">
+    <div class="spacing"></div>
+    <div class="left">
+      <div class="center">
+        <div class="imageWrapper">
+          <img class="secFace" src="Images/casual.png">
+          <img class="secFace" src="Images/face.jpg">
+        </div>
 
-          <div class = "secHead">
-            <h1>Hello! I'm Rex, <br>A Computer Engineering Sophomore</h1>
-          </div>
+        <div class="secHead">
+          <h1>Hello! I'm Rex!</h1>
+        </div>
 
-          <div class = "secText">
-            <p>I'm Rex Wang, A Sophomore majoring in Computer Engineering, studying at Purdue University.</p>
-          </div>
-
-      </div>
-
-      <div class="section">
-        <div class = "secHead">
-            <h1>Resume and Other Links</h1>
-          </div>
-
-          <div class = "secText">
-              <a class = "link" onClick="location.href='Docs/Wang Resume Software 2022 V3.2.pdf'" target="_blank" rel="noopener noreferrer">My current resume, focusing on Software Engineering.</a>
-            <br>
-            <a class = "link" onClick="location.href='https://github.com/Rexwang8'" target="_blank" rel="noopener noreferrer">My Github Account.</a>
-            <br>
-            <a class = "link" onClick="location.href='https://www.linkedin.com/in/rex-wang-6019b4220/'" target="_blank" rel="noopener noreferrer">My LinkedIn Account.</a>
-          </div>
-      </div>
-
-      <div class="section">
-        <div class = "secHead">
-            <h1>Projects</h1>
-          </div>
-
-          <div class = "secText">
-              <h2>CSV to OFX</h2>
-              <img class = "secFace" src = "Images\csvofx.PNG">
-            <p>A conversion software that is designed to convert .CSV files into .OFX files. This allows for automating of saving bank data from online banking to a local program called Microsoft Money.</p>
-            <p>Technology Used - C# / Unity.</p>
-          </div>
-
-          <div class = "secText">
-            <h2>AquaCat</h2>
-              <img class = "secFace" src = "Images\aquacat.jpg">
-            <p>A small 2D arcade game where the player controls a sprite in a side-scrolling adventure. Inspired by Minato Aqua's Aquacat video.</p>
-            <p>Technology Used - C# / Unity.</p>
-          </div>
+        <div class="secText">
+          <p>I'm Rex Wang, A Sophomore majoring in Computer Engineering, studying at Purdue University.</p>
+        </div>
 
       </div>
+    </div>
 
-      <!---
-      <div class="section">
-        <div class = "secHead">
-            <h1>Resume and Other Links</h1>
-          </div>
-
-          <div class = "secText">
-            <p>I'm Rex Wang, A Sophomore majoring in Computer Engineering, studying at Purdue University.</p>
-          </div>
+    <div class="right">
+      <div class="center"> 
+        <div class="secHead">
+          <h1>Resume and Other Links</h1>
+        </div>
+    
+        <div class="secText">
+          <a class="link" onClick="location.href='Docs/Wang Resume Software 2022 V3.2.pdf'" target="_blank"
+            rel="noopener noreferrer">My current resume, focusing on Software Engineering.</a>
+          <br>
+          <a class="link" onClick="location.href='https://github.com/Rexwang8'" target="_blank" rel="noopener noreferrer">My
+            Github Account.</a>
+          <br>
+          <a class="link" onClick="location.href='https://www.linkedin.com/in/rex-wang-6019b4220/'" target="_blank"
+            rel="noopener noreferrer">My LinkedIn Account.</a>
+        </div>
       </div>
+    </div>
+
+
+  </div>
+
+<div class="wrapper">
+
+
+</div>
+ 
+
+<!--
+
+  <div class="section">
+    <div class="secHead">
+      <h1>Projects</h1>
+    </div>
+
+    <div class="secText">
+      <h2>CSV to OFX</h2>
+      <img class="secFace" src="Images\csvofx.PNG">
+      <p>A conversion software that is designed to convert .CSV files into .OFX files. This allows for automating of
+        saving bank data from online banking to a local program called Microsoft Money.</p>
+      <p>Technology Used - C# / Unity.</p>
+    </div>
+
+    <div class="secText">
+      <h2>AquaCat</h2>
+      <img class="secFace" src="Images\aquacat.jpg">
+      <p>A small 2D arcade game where the player controls a sprite in a side-scrolling adventure. Inspired by Minato
+        Aqua's Aquacat video.</p>
+      <p>Technology Used - C# / Unity.</p>
+    </div>
+  -->
+  <!---
+      <a href="https://www.flaticon.com/free-icons/linkedin" title="linkedin icons">Linkedin icons created by Pixel perfect - Flaticon</a>
 --->
 
-      
-  </body>
+<script src="main.js"></script>
+</body>

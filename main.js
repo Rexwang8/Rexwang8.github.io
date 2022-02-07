@@ -1,3 +1,10 @@
+//Update resume label info
+const resumeVersion = "3.2";
+const resumeDate = "February 2022";
+const resumeFocus = "Software Engineering";
+const resumeLabel = document.getElementById("resumeLabel");
+resumeLabel.innerHTML = `Current Version: V${resumeVersion}, ${resumeDate} <br> Focus: ${resumeFocus}.`;
+
 const today = new Date();
 const year = today.getFullYear();
 
@@ -9,7 +16,7 @@ const github = document.getElementById("Github");
 
 
 //Activate first tab
-const active = document.getElementById("Tab1");
+const active = document.getElementById("ProjectsTab");
 active.style.display = "block";
 console.log(active);
 

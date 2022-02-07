@@ -9,10 +9,7 @@
     background-image: url("Images/1049.png");
     overflow-x: hidden;
   }
-.spacing {
-  margin-top: 3%;
-  margin-bottom: 3%;
-}
+
   .background {
   background-color: var(--color-light-blue);
   height: fit-content;
@@ -31,13 +28,6 @@
       margin-left: 6%;
       transition-duration: 1.25s;
   }
-/*
-  .section:hover{
-      position: relative;
-      transition-duration: 1.5s;
-      transform: translateX(15%);
-  }*/
-
 .secHead {
     padding-top: 1%;
     font-family: var(--font);
@@ -48,6 +38,8 @@
     padding-top: 1%;
     font-family: var(--font);
     padding-bottom: 3%;
+    width: 80%;
+    margin-left: 10%;
 }
 
 .secFace {
@@ -169,6 +161,8 @@
     padding: 6px;
     margin: 4%;
     border: 1px solid black;
+    width: 30%;
+    margin: 0 auto;
   }
 
   .tab {
@@ -207,4 +201,51 @@
   padding: 6px 12px;
   border: 1px solid #ccc;
   border-top: none;
+}
+
+.gridproj {
+  height: fit-content;
+  grid-template-columns: repeat(4, 1fr);
+  display: grid;
+  position: relative;
+  margin: 5%
+}
+
+.griditem {
+  margin: 4%;
+  display: block;
+  min-height: 80px;
+  height: fit-content;
+}
+
+.griditem img {
+  width: 100%;
+  height: auto;
+  border-radius: 25%;
+  transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.griditem h3 {
+  font-size: large;
+  margin: 2%;
+  text-align: center;
+  font-family: var(--font);
+}
+
+.griditem img:hover {
+  transform: scale(104%);
+}
+
+.projheader {
+  margin: 4%;
+  padding-top: 2%;
+  margin-bottom: 2%;
+  font-family: var(--font);
+}
+.projtext {
+  margin: 2%;
+  margin-left: 4%;
+  margin-top: 0%;
+  font-family: var(--font);
 }

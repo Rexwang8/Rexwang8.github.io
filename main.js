@@ -16,9 +16,9 @@ const github = document.getElementById("Github");
 
 
 //Activate first tab
-const active = document.getElementById("ProjectsTab");
-active.style.display = "block";
-console.log(active);
+//const active = document.getElementById("ProjectsTab");
+//active.style.display = "block";
+//console.log(active);
 
 function openTab(event, tabName) {
     // Declare all variables

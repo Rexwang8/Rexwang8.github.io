@@ -219,15 +219,23 @@
 }
 
 .griditem img {
-  width: 100%;
-  height: auto;
+  width: 196px;
+  height: 196px;
   border-radius: 25%;
   transition-duration: 0.4s;
     cursor: pointer;
+    object-fit: cover;
 }
 
 .griditem h3 {
   font-size: large;
+  margin: 2%;
+  text-align: center;
+  font-family: var(--font);
+}
+
+.griditem h4 {
+  font-size: normal;
   margin: 2%;
   text-align: center;
   font-family: var(--font);

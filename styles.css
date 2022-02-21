@@ -257,3 +257,18 @@
   margin-top: 0%;
   font-family: var(--font);
 }
+
+/*For links and urls */
+.link:link{
+  color: blue;
+  font-size: 100%;
+}
+.link:hover{
+  color: green;
+}
+.link:visited{
+  color: midnightblue;
+}
+.link:active{
+  color: green;
+}

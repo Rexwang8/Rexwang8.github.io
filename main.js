@@ -1,5 +1,5 @@
 //Update resume label info
-const resumeVersion = "3.2";
+const resumeVersion = "3.4";
 const resumeDate = "February 2022";
 const resumeFocus = "Software Engineering";
 const resumeLabel = document.getElementById("resumeLabel");

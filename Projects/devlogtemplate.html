@@ -39,13 +39,13 @@
       <img class="fullimg" src="/Images/Aquacat.jpg">
       <br>
       <div>
-        <h3>  Link Goes here. --></h3>
-        <h3>  Link Goes here. --></h3>
-        <h3>  Link Goes here. --></h3>
-        <br>
+        <ul style="list-style-type:square; line-height:110%">
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Topic 1: Some text</a></li>
+          <li> <a class="link" onClick="location.href='#Topic2'" target="_blank" rel="noopener noreferrer">Topic 2: Some more text</a></li>
+        </ul>
       </div>
 
-      <div class="textleft">
+      <div class="textleft" id="Topic1">
         <h2>Topic 1 - something</h2>
         <img class="halfimg" src="/Images/Aquacat.jpg">
         <h4>Problem: </h4>
@@ -70,7 +70,7 @@
         </code></pre>
       </div>
       <br>
-      <div class="textleft">
+      <div class="textleft" id="Topic2">
         <h2>Topic 2 - something</h2>
         <img class="halfimg" src="/Images/Aquacat.jpg">
         <h4>Problem: </h4>
@@ -96,7 +96,25 @@
       </div>
       <br>
 
-      
+      <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+    this.page.url = devlogtemplate.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = devlogtemplate; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://rexwang8.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
   </div>
 
@@ -104,8 +122,10 @@
   <script src="main.js"></script>
 
   <!--Highlight.js-->
-  <link rel="stylesheet" href="/highlight.js/styles/base16/isotope.min.css">
-<script src="/highlight.js/highlight.min.js"></script>
+  <link rel="stylesheet" href="/highlight.js/styles/base16/espresso.min.css">
+  <script src="/highlight.js/highlight.min.js"></script>
   <script>hljs.highlightAll();</script>
   
+  <!--Disqus-->
+  <script id="dsq-count-scr" src="//rexwang8.disqus.com/count.js" async></script>
 </body>

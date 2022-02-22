@@ -135,6 +135,7 @@
   .center {
     margin: auto;
     text-align: center;
+    font-family: var(--font);
     display: block;
   }
 
@@ -291,8 +292,6 @@
 }
 
 .textleft {
-  
-
   width: 80%;
   margin: auto;
   padding-left: 12px;

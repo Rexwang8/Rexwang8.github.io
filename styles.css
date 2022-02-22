@@ -292,7 +292,7 @@
 }
 
 .textleft {
-  width: 80%;
+  width: 85%;
   margin: auto;
   padding-left: 12px;
   border-left: var(--color-dark) 7px solid;
@@ -301,4 +301,22 @@
   margin-bottom: 0;
   padding-bottom: 0;
   padding-top: 0;
+}
+
+.infobox {
+  border-left: var(--color-dark) 7px solid;
+  padding: 0;
+  width: 80%;
+  margin-left: 7%;
+  display: flex;
+}
+.infobox-left {
+  margin-left: 5%;
+  text-align: left;
+  flex: 1;
+}
+.infobox-right {
+  margin-right: 5%;
+  text-align: right;
+  flex: 1;
 }

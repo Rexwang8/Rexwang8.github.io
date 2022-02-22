@@ -82,8 +82,10 @@
 
       <button class="tablinks" onclick="openTab(event, 'ProjectsTab')"><i class="fas fa-paper-plane"></i>  Projects</button>
       <button class="tablinks" onclick="openTab(event, 'GamesTab')"><i class="fas fa-gamepad"></i>  Games</button>
+      <button class="tablinks" onclick="openTab(event, 'DevTab')"><i class="fas fa-hammer"></i>   Devlogs</button>
       <button class="tablinks" onclick="openTab(event, 'ResumeTab')"><i class="fas fa-file-alt"></i>  Resume</button>
       <button class="tablinks" onclick="openTab(event, 'ContactTab')"><i class="fas fa-envelope"></i>   Contact</button>
+      
 
       <!-- Tab content -->
       <div id="ProjectsTab" class="tabcontent">
@@ -94,10 +96,23 @@
           <p>Noteworthy projects that I have made that don't consider as a game. Click the icons to go to each individual page for more details. (WIP)</p>
         </div>
         <div class="gridproj">
-          
+
           <!--Row 1 Item 1 -->
           <div class="griditem">
-            <a onClick="location.href='#'" target="_blank" rel="noopener noreferrer"><img src="Images/csvofx.PNG"></a>
+            <a onClick="location.href='/siteinfo.html'" target="_blank" rel="noopener noreferrer"><img src="/Images/site.PNG"></a>
+            <div>
+              <h3>Portfolio Website</h3>
+              <h4>Timeframe: Summer 2021 - Present</h4>
+            </div>
+
+            <div class="secText">
+          <p>Portfolio Website made from HTML, CSS and some JS. Hosted on Github Pages.</p>
+        </div>
+          </div>
+          
+          <!--Row 1 Item 2 -->
+          <div class="griditem">
+            <a onClick="location.href='#'" target="_blank" rel="noopener noreferrer"><img src="/Images/csvofx.PNG"></a>
             <div>
               <h3>CSV to OFX</h3>
               <h4>Timeframe: Summer 2021</h4>
@@ -107,6 +122,9 @@
           <p>.CSV to .OFX conversion tool. Useful for converting and importing bank statements to Microsoft Money 2010.</p>
         </div>
           </div>
+
+          
+
           <!--
           <div class="griditem">
             <a onClick="location.href='#'" target="_blank" rel="noopener noreferrer"><img src="Images/face.jpg"></a>
@@ -192,7 +210,7 @@
           </div>
           <!--Row 1 Item 2 -->
           <div class="griditem">
-            <a onClick="location.href='#'" target="_blank" rel="noopener noreferrer"><img src="Images/Aquacat.jpg"></a>
+            <a onClick="location.href='Projects/aquacat.html'" target="_blank" rel="noopener noreferrer"><img src="Images/Aquacat.jpg"></a>
             <div>
               <h3>AquaCat</h3>
               <h4>Timeframe: Summer 2021</h4>
@@ -253,6 +271,11 @@
               -->
         </div>
 
+      </div>
+
+      <!-- Dev tab-->
+      <div id="DevTab" class="tabcontent">
+       <h2>devtab</h2>
       </div>
 
       <div id="ResumeTab" class="tabcontent">

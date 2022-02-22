@@ -8,6 +8,7 @@
     --font: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-image: url("Images/1049.png");
     overflow-x: hidden;
+    font-family: var(--font);
   }
 
   .background {
@@ -179,7 +180,7 @@
     cursor: pointer;
     padding: 14px 16px;
     transition: 0.3s;
-    width: 25%;
+    width: 20%;
     color: white;
     font-size: large;
   }
@@ -216,6 +217,7 @@
   display: block;
   min-height: 80px;
   height: fit-content;
+  
 }
 
 .griditem img {
@@ -223,6 +225,7 @@
   height: 196px;
   border-radius: 25%;
   transition-duration: 0.4s;
+  border: 1px black solid;
     cursor: pointer;
     object-fit: cover;
 }
@@ -271,4 +274,25 @@
 }
 .link:active{
   color: green;
+}
+
+.fullimg {
+  width: 80%;
+  height: auto;
+  border-radius: 5%/10%;
+  border: var(--color-dark) 4px solid
+}
+
+.textleft {
+  
+
+  width: 80%;
+  margin: auto;
+  padding-left: 12px;
+  border-left: var(--color-dark) 7px solid;
+  text-align: left;
+  font-family: var(--font);
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-top: 0;
 }

@@ -283,6 +283,13 @@
   border: var(--color-dark) 4px solid
 }
 
+.halfimg {
+  width: 65%;
+  height: auto;
+  border-radius: 5%/10%;
+  border: var(--color-dark) 3px solid
+}
+
 .textleft {
   
 

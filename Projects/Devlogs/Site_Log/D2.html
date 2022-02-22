@@ -4,7 +4,7 @@
 <!-- HEADER================= -->
 
 <head>
-  <title> D1 - Site </title>
+  <title> D2 - Site </title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="shortcut icon" type="image/svg" href="/Images\RW-Logo.svg" />
   <script src="https://kit.fontawesome.com/7ee27ad3c6.js" crossorigin="anonymous"></script>
@@ -28,49 +28,54 @@
 
   <div class="wrapper">
     <div class="center">
-      <h1> Portfolio Site - Devlog 001 - Hello World!</h1>
+      <h1> Portfolio Site - Devlog 002 - Structuring the Site</h1>
       <div class="infobox">
         <div class="infobox-left">
           <h4>Date: 2/22/2022</h4>
-          <h4>Timespan: 2/22/2022</h4>
+          <h4>Timespan: 2/22/2022 - 2/22/2022</h4>
           <h4>Author: Rex Wang</h4>
         </div>
 
         <div class="infobox-right">
-          <a class="link" onClick="location.href='/Projects/Devlogs/Site_Log/D2.html'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
+          <a class="link" onClick="location.href='#'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
           <br>
           <a class="link" onClick="location.href='/Projects/siteinfo.html'" target="_blank" rel="noopener noreferrer">Project Home</a>
           <br>
-          <a class="link" onClick="location.href='#'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
+          <a class="link" onClick="location.href='/Projects/Devlogs/Site_Log/D1.html'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
         </div>
         
       </div>
-      <img class="fullimg" src="D1.PNG">
+      
       <br>
       <div>
         <ul style="list-style-type:square; line-height:110%">
-          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Hello World!</a></li>
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Structuring the site</a></li>
         </ul>
       </div>
 
       <div class="textleft" id="Topic1">
-        <h2>And we're Live!</h2>
-        <img class="halfimg" src="D1.PNG">
-        <h4>The start of a great adventure!</h4>
-        <pre><code class="language-cs">
-            Console.Log("Hello World!");
+        <h2>Structuring the site</h2>
+
+        <h4>More pages!</h4>
+        <p>Continuing to work on adding more pages and populating them. I need a project page for every major recent project. The projects that I'm currently working on also need a ToC for devlogs.
+          I'm experimenting with backend formatting and considering importing a JSX library so I don't have to change half a dozen locations for every page change.
+
+        </p>
+        <pre><code>
+          &lt;div&gt;
+            &lt;a class="link" rel="noopener noreferrer" href="/Projects/Devlogs/Site_Log/ToC_Makeshift.html"&gt;
+            Devlog ToC &lt;/a&gt; &lt;br&gt;
+            &lt;a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/Rexwang8/Rexwang8.github.io"&gt;
+            Github REPO &lt;/a&gt;
+            &lt;br&gt;
+          &lt;/div&gt;
         </code></pre>
-        <p>Welcome everyone to the start of a great new adventure! It just occurred to me to start recording my adventures through building my website as well as a bunch of other projects that I will have and inevitably abandon.
-          I have just finished setting up my devlog system. It includes it's own custom (janky and poorly written) template. Now with features like highlight.js and Disqus. The general plan is to write a devlog every week AND once I make some decent progress.
-          I'm not too sure about what format to go with exactly, but I'll run with this format and see where it leads. I like the code highlighting plugin I have so far, but I'm not too sure on Disqus. The lack of actual usage aside, the dashboard is a bit confusing.
-          I have to compliment both plugins on how easy it was to import and setup though. I also wanted to thank Kenny Park from Purdue IGDC club for letting me steal all his ideas.
-        </p>
 
-        <h4>A Portfolio</h4>
-        <p>As I mentioned earlier, I wanted this website to be a professional portfolio of sorts where I can show off my resume and the projects I have worked on to curious job recruiters that accidentally clicked on the link when trying to recycle my resume. 
-          As of the time of writing, I am currently looking for a paid Summer 2022 internship anywhere in the US. (hint hint...)
+        <h4>Formatting pitfalls</h4>
+        <p> As usual, doing anything other then directly copy-pasting a previous page involves some difficulties and pitfalls. 
+          For one, making a code block too horizontally wide will mess up the alignment of the entire page. 
+          Another difficulty is messing up Disqus's PAGE_URL variable to use the full relative path will just prevent it from appearing.
         </p>
-
       </div>
       
       <br>
@@ -84,8 +89,8 @@
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     
     var disqus_config = function () {
-    this.page.url = D1.html;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = SiteD1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = D2.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = dev; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE

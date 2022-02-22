@@ -9,16 +9,7 @@ const today = new Date();
 const year = today.getFullYear();
 
 
-//console.log(year);
-
 const github = document.getElementById("Github");
-//console.log(github);
-
-
-//Activate first tab
-//const active = document.getElementById("ProjectsTab");
-//active.style.display = "block";
-//console.log(active);
 
 function openTab(event, tabName) {
     // Declare all variables
@@ -46,3 +37,5 @@ function openTab(event, tabName) {
     event.currentTarget.className += " active";
     console.log(tl.className);
   } 
+
+

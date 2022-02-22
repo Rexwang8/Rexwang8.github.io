@@ -1,0 +1,7 @@
+To make a new devlog
+    Copy from template
+    Fill out template
+    Update disqus variables
+    Link devlog to ToC
+    Link devlog to other devlog navbuttons
+    Add devlog to most recent in index.html

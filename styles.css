@@ -163,6 +163,7 @@
     padding: 6px;
     margin: 4%;
     border: 1px solid black;
+    border-bottom: 0;
     width: 30%;
     margin: 0 auto;
   }

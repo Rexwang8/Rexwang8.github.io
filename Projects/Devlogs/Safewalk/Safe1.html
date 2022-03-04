@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- HEADER================= -->
+
+<head>
+  <title> 001 - Safewalk </title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="shortcut icon" type="image/svg" href="/Images\RW-Logo.svg" />
+  <script src="https://kit.fontawesome.com/7ee27ad3c6.js" crossorigin="anonymous"></script>
+</head>
+<!-- HEADER================= -->
+
+<body class="background">
+
+  <div class="spacing"></div>
+  <!-- NAVBAR ------------------------>
+  <div class="navbar">
+    <ul class="navbar">
+      <li class="navbarBlockActive"><a class="navbarItem">Rex Wang</a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/index.html">Home </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/siteinfo.html">This Site </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/Devlogs/Project_ToC.html"><i class="fas fa-hammer"></i> Devlogs</a></li>
+    </ul>
+  </div>
+  <!-- ENDNAVBAR ------------------>
+
+
+  <div class="wrapper">
+    <div class="center">
+      <h1> Safewalk - Devlog 001 - A tricky challenge.</h1>
+      <div class="infobox">
+        <div class="infobox-left">
+          <h4>Date: 2/25/2022</h4>
+          <h4>Timespan: 2/22/2022 - 3/3/2022</h4>
+          <h4>Author: Rex Wang</h4>
+        </div>
+
+        <div class="infobox-right">
+          <a class="link" onClick="location.href='/Projects/Devlogs/Safewalk/Safe2.html'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
+          <br>
+          <a class="link" onClick="location.href='/Projects/Safewalk.html'" target="_blank" rel="noopener noreferrer">Project Home</a>
+          <br>
+          <a class="link" onClick="location.href='#'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
+        </div>
+        
+      </div>
+      <img class="fullimg" src="walk1.png">
+      <br>
+      <div>
+        <ul style="list-style-type:square; line-height:110%">
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">An interesting new club</a></li>
+          <li> <a class="link" onClick="location.href='#Topic2'" target="_blank" rel="noopener noreferrer">A tricky challenge</a></li>
+        </ul>
+      </div>
+
+      <div class="textleft" id="Topic1">
+        <h2>An interesting new club</h2>
+        <img class="halfimg" src="sigapp_upscaled.png">
+        <h4>What is ACM SIGAPP?</h4>
+        <p>The new club that I'm interested in is called *drumroll* ACM SIGAPP. I found them from mention of a member of the IGDC club. Reading directly from their website,
+          (https://sigapp.club/), They are the "Special Interest Group - Application in applied computing." What this really means is that they are a software engineering focused club. 
+          As of writing, I have gone to one 1-hour meeting and met the current team and found that I liked their atmosphere and that they were all quite knowledgeable.
+        </p>
+
+        <h4>Safewalk</h4>
+        <p>The current main project that they are working on is called Safewalk. In Purdue, the local police station has a program that allows for you to call a special safewalk number to request
+          a police officer walk you home. I'm sure this is a fairly common local police program. 2 years ago, the local police station reached out to SIGAPP to develop a program that extends this.
+          The idea was to have a phone app that allowed you to press a button and send your location and personal info to a internet server where the police officers could look at a website and assign a police officer
+           to carry out a walk, displayed on a map. It appears the development of the project has been a bit rocky with all of the original students that were working on the project already graduating. The project uses 
+           React for it's web portion, Flutter for the application portion and Rest API for the server portion. Consequently, the SIGAPP team split up into 3 smaller teams to work on each individual portion. 
+           I wanted to learn more about React and their members offered to teach me what they knew, despite admitting that the web portion was their weakest team.
+        </p>
+
+      </div>
+
+      <div class="textleft" id="Topic2">
+        <h2>A tricky challenge</h2>
+        <h4>The state at the start</h4>
+        <p>It's never easy to get on-boarded into a new codebase, especially for someone like me who isn't exactly experienced. It took me and the SIGAPP team over two hours to even setup and build their react site and deploy it on localhost.
+          At first, I was pretty confused at just about the entire structure and code of the project. There wasn't much more documentation then a few line comments per file, and there were dozens of files and imports. After looking at it for a few more days,
+           I can confidently say I am still confused, but slightly less then before. To my best guess, the general format is based off of the npx create-react-app command, where there is one almost empty index.html file, and react 
+           is used to create literally everything else from page to individual widgets. Each page has it's own files and each widget also has it's own files. In total, I'm looking at over 50 files, and over 20 .js files. Having very little react experience, 
+           could barely even track the flow of data or what a block of code even does. (It's formatted very differently from languages like C# or Python. There are lambda operators and react-specific synatax everywhere.) Luckily, the SIGAPP group seems pretty knowledgeable 
+           in basic aspects like this. Over the next few weeks, I'm going to attempt to understand the code base and make a few commits, adding documentation where I can.
+        </p>
+
+
+      </div>
+      
+      <br>
+
+
+
+      <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+    this.page.url = Safe1.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Safe1; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://rexwang8.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+
+  <!--Highlight.js-->
+  <link rel="stylesheet" href="/highlight.js/styles/base16/espresso.min.css">
+  <script src="/highlight.js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <!--Disqus
+  <script id="dsq-count-scr" src="//rexwang8.disqus.com/count.js" async></script>
+  -->
+</body>

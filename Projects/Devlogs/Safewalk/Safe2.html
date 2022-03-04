@@ -4,7 +4,7 @@
 <!-- HEADER================= -->
 
 <head>
-  <title> D2 - Site </title>
+  <title> 002 - Safewalk </title>
   <link rel="stylesheet" href="/styles.css">
   <link rel="shortcut icon" type="image/svg" href="/Images\RW-Logo.svg" />
   <script src="https://kit.fontawesome.com/7ee27ad3c6.js" crossorigin="anonymous"></script>
@@ -28,56 +28,47 @@
 
   <div class="wrapper">
     <div class="center">
-      <h1> Portfolio Site - Devlog 002 - Structuring the Site</h1>
+      <h1> Safewalk - Devlog 002 - Getting somewhere.</h1>
       <div class="infobox">
         <div class="infobox-left">
-          <h4>Date: 2/22/2022</h4>
-          <h4>Timespan: 2/22/2022 - 2/22/2022</h4>
+          <h4>Date: 03/04/2022</h4>
+          <h4>Timespan: 03/04/22 - 03/15/2022</h4>
           <h4>Author: Rex Wang</h4>
         </div>
 
         <div class="infobox-right">
-          <a class="link" onClick="location.href='#'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
+          <a class="link" onClick="location.href='/Projects/Devlogs/Safewalk/Safe3.html'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
           <br>
-          <a class="link" onClick="location.href='/Projects/siteinfo.html'" target="_blank" rel="noopener noreferrer">Project Home</a>
+          <a class="link" onClick="location.href='/Projects/Safewalk.html'" target="_blank" rel="noopener noreferrer">Project Home</a>
           <br>
-          <a class="link" onClick="location.href='/Projects/Devlogs/Site_Log/D1.html'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
+          <a class="link" onClick="location.href='/Projects/Devlogs/Safewalk/Safe1.html'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
         </div>
         
       </div>
-      
+      <img class="fullimg" src="google-maps-api.jpg">
       <br>
       <div>
         <ul style="list-style-type:square; line-height:110%">
-          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Structuring the site</a></li>
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Getting somewhere.</a></li>
         </ul>
       </div>
 
       <div class="textleft" id="Topic1">
-        <h2>Structuring the site</h2>
-
-        <h4>More pages!</h4>
-        <p>Continuing to work on adding more pages and populating them. I need a project page for every major recent project. The projects that I'm currently working on also need a ToC for devlogs.
-          I'm experimenting with backend formatting and considering importing a JSX library so I don't have to change half a dozen locations for every page change.
-
+        <h2>Getting somewhere.</h2>
+        <img class="halfimg" src="sigapp_upscaled.png">
+        <h4>JSON and CORS</h4>
+        <p>Safewalk uses Firebase as their databse (I think). The website uses fetch() to read and write JSON data from the server. On my quest to contribute something,
+          I found that the "Delete" buttons scattered throughout the site actually didn't work. After a few hours of tracking it down, I found that the delete fetch() code was formatted correctly, 
+          however delete is considered an unsafe operation by the server, and thus required a special option (Access-Control-Allow-Origin) in CORS (Cross-Origin Resource Sharing) to be enabled. After the last meeting, it was enabled and deleting users now works!
         </p>
-        <pre><code>
-          &lt;div&gt;
-            &lt;a class="link" rel="noopener noreferrer" href="/Projects/Devlogs/Site_Log/Site_Log_Toc.html"&gt;
-            Devlog ToC &lt;/a&gt; &lt;br&gt;
-            &lt;a class="link" target="_blank" rel="noopener noreferrer" href="https://github.com/Rexwang8/Rexwang8.github.io"&gt;
-            Github REPO &lt;/a&gt;
-            &lt;br&gt;
-          &lt;/div&gt;
-        </code></pre>
 
-        <h4>Formatting pitfalls</h4>
-        <p> As usual, doing anything other then directly copy-pasting a previous page involves some difficulties and pitfalls. 
-          For one, making a code block too horizontally wide will mess up the alignment of the entire page. 
-          Another difficulty is messing up Disqus's PAGE_URL variable to use the full relative path will just prevent it from appearing.
+        <h4>React-Google-Maps</h4>
+        <p>Safewalk uses a react extension called react-google-maps in order to interface with the google maps api and display one of those giant page to page google maps you see everywhere. The idea was to display both walks and officers
+          on the page and be able to click them for more options and info. I have just finished writing the code to show a little info window (Using the InfoWindow component) to show this. It includes modern ammenities like dashes in phone numbers, and colored status text. Truely modern.
+          More work will have to be done in order for the Assign button to work from the map though, as it was built to work in a table.
         </p>
+
       </div>
-      
       <br>
 
 
@@ -89,8 +80,8 @@
     *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
     
     var disqus_config = function () {
-    this.page.url = D2.html;  // Replace PAGE_URL with your page's canonical URL variable
-    this.page.identifier = dev; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    this.page.url = Safe2.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Safe2; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
     };
     
     (function() { // DON'T EDIT BELOW THIS LINE

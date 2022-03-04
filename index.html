@@ -22,7 +22,8 @@
       <li class="navbarBlockActive"><a class="navbarItem">Rex Wang</a></li>
       <li class="navbarBlock"><a class="navbarItem" href="/index.html">Home </a></li>
       <li class="navbarBlock"><a class="navbarItem" href="/Projects/siteinfo.html">This Site </a></li>
-      <li class="navbarBlock"><a class="navbarItem" href="/Projects/Devlogs/ToC_Makeshift.html"><i class="fas fa-hammer"></i> Devlogs</a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/Devlogs/Project_ToC.html"><i
+            class="fas fa-hammer"></i> Devlogs</a></li>
       <!--
       <li class = "navbarBlock"><a class = "navbarItem"  href="contact.html">Contact </a></li>
       <li class = "navbarBlock"><a class = "navbarItem"  href="skills.html">Skills </a></li>
@@ -55,14 +56,18 @@
         </div>
 
         <div class="secText">
-          <p>I'm Rex Wang, A Sophomore majoring in Computer Engineering, studying at Purdue University. 
-            I'm currently working on this website and a unity game in the background. 
+          <p>I'm Rex Wang, A Sophomore majoring in Computer Engineering, studying at Purdue University.
+            I'm currently working on this website and a unity game in the background.
             In my free time, I like to play video games and read books. I also sometimes cook food.</p>
-              <h3>Most recent Devlogs</h3>
-              <a href="/Projects/Devlogs/Site_Log/D1.html" target="_blank" rel="noopener noreferrer">
-                <i class="fas fa-hammer"></i> 2/22/22 - Portfolio Website - Structuring the site(WIP) - 002</a><br>
-            <a href="/Projects/Devlogs/Site_Log/D1.html" target="_blank" rel="noopener noreferrer">
-              <i class="fas fa-hammer"></i> 2/22/22 - Portfolio Website - Hello World! - 001</a>
+          <h3>Most recent Devlogs</h3>
+          <a href="/Projects/Devlogs/Safewalk/Safe2.html" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-hammer"></i> Safewalk - 2/25/22 - 002 - Getting somewhere.(WIP)</a><br>
+          <a href="/Projects/Devlogs/Safewalk/Safe1.html" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-hammer"></i> Safewalk - 2/25/22 - 001 - A tricky challenge.</a><br>
+          <a href="/Projects/Devlogs/Site_Log/D2.html" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-hammer"></i> 2/22/22 - Portfolio Website - Structuring the site(WIP) - 002</a><br>
+          <a href="/Projects/Devlogs/Site_Log/D1.html" target="_blank" rel="noopener noreferrer">
+            <i class="fas fa-hammer"></i> 2/22/22 - Portfolio Website - Hello World! - 001</a>
 
 
 
@@ -72,8 +77,7 @@
         <div class="iconShelf">
           <a onClick=href="https://github.com/Rexwang8" target="_blank" rel="noopener noreferrer">
             <i id="Github" class="iconLink fab fa-github fa-2x"></i></a>
-          <a onClick=href="https://www.linkedin.com/in/rex-wang-6019b4220/" target="_blank"
-            rel="noopener noreferrer">
+          <a onClick=href="https://www.linkedin.com/in/rex-wang-6019b4220/" target="_blank" rel="noopener noreferrer">
             <i id="Linkedin" class="iconLink fab fa-linkedin fa-2x"></i></a>
           <a onClick=href="https://www.facebook.com/profile.php?id=100073156185864" target="_blank"
             rel="noopener noreferrer">
@@ -93,11 +97,12 @@
     <!-- Tab links -->
     <div class="tab">
 
-      <button class="tablinks" onclick="openTab(event, 'ProjectsTab')"><i class="fas fa-paper-plane"></i>  Projects</button>
-      <button class="tablinks" onclick="openTab(event, 'GamesTab')"><i class="fas fa-gamepad"></i>  Games</button>
-      <button class="tablinks" onclick="openTab(event, 'ResumeTab')"><i class="fas fa-file-alt"></i>  Resume</button>
-      <button class="tablinks" onclick="openTab(event, 'ContactTab')"><i class="fas fa-envelope"></i>   Contact</button>
-      
+      <button class="tablinks" onclick="openTab(event, 'ProjectsTab')"><i class="fas fa-paper-plane"></i>
+        Projects</button>
+      <button class="tablinks" onclick="openTab(event, 'GamesTab')"><i class="fas fa-gamepad"></i> Games</button>
+      <button class="tablinks" onclick="openTab(event, 'ResumeTab')"><i class="fas fa-file-alt"></i> Resume</button>
+      <button class="tablinks" onclick="openTab(event, 'ContactTab')"><i class="fas fa-envelope"></i> Contact</button>
+
 
       <!-- Tab content -->
       <div id="ProjectsTab" class="tabcontent">
@@ -105,24 +110,41 @@
           <h2>Projects</h2>
         </div>
         <div class="projtext">
-          <p>Noteworthy projects that I have made that don't consider as a game. Click the icons to go to each individual page for more details. (WIP)</p>
+          <p>Noteworthy projects that I have made that don't consider as a game. Click the icons to go to each
+            individual page for more details. (WIP)</p>
         </div>
         <div class="gridproj">
 
           <!--Row 1 Item 1 -->
           <div class="griditem">
-            <a onClick="location.href='/Projects/siteinfo.html'" target="_blank" rel="noopener noreferrer"><img src="/Images/site.PNG"></a>
+            <a href="/Projects/Safewalk.html" target="_blank" rel="noopener noreferrer"><img
+                src="/Projects/Devlogs/Safewalk/sigapp_upscaled.png"></a>
+            <div>
+              <h3>SIGAPP - Safewalk</h3>
+              <h4>Timeframe: Spring 2022 - Present</h4>
+            </div>
+
+            <div class="secText">
+              <p>Application that allows the requesting a walk, carried out by a local police officer.</p>
+            </div>
+          </div>
+
+
+          <!--Row 1 Item 2 -->
+          <div class="griditem">
+            <a onClick="location.href='/Projects/siteinfo.html'" target="_blank" rel="noopener noreferrer"><img
+                src="/Images/site.PNG"></a>
             <div>
               <h3>Portfolio Website</h3>
               <h4>Timeframe: Summer 2021 - Present</h4>
             </div>
 
             <div class="secText">
-          <p>Portfolio Website made from HTML, CSS and some JS. Hosted on Github Pages.</p>
-        </div>
+              <p>Portfolio Website made from HTML, CSS and some JS. Hosted on Github Pages.</p>
+            </div>
           </div>
-          
-          <!--Row 1 Item 2 -->
+
+          <!--Row 1 Item 3 -->
           <div class="griditem">
             <a onClick="location.href='#'" target="_blank" rel="noopener noreferrer"><img src="/Images/csvofx.PNG"></a>
             <div>
@@ -131,11 +153,12 @@
             </div>
 
             <div class="secText">
-          <p>.CSV to .OFX conversion tool. Useful for converting and importing bank statements to Microsoft Money 2010.</p>
-        </div>
+              <p>.CSV to .OFX conversion tool. Useful for converting and importing bank statements to Microsoft Money
+                2010.</p>
+            </div>
           </div>
 
-          
+
 
           <!--
           <div class="griditem">
@@ -204,10 +227,11 @@
           <h2>Games</h2>
         </div>
         <div class="projtext">
-          <p>My game creations. Mostly made in Unity C#. Click the icons to go to each individual page for more details. (WIP)</p>
+          <p>My game creations. Mostly made in Unity C#. Click the icons to go to each individual page for more details.
+            (WIP)</p>
         </div>
         <div class="gridproj">
-          
+
           <!--Row 1 Item 1 -->
           <div class="griditem">
             <a onClick="location.href='#'" target="_blank" rel="noopener noreferrer"><img src="Images/Aquacat.jpg"></a>
@@ -217,23 +241,24 @@
             </div>
 
             <div class="secText">
-          <p>Top down scifi arena game. - Work in progress</p>
-        </div>
+              <p>Top down scifi arena game. - Work in progress</p>
+            </div>
           </div>
           <!--Row 1 Item 2 -->
           <div class="griditem">
-            <a onClick="location.href='Projects/aquacat.html'" target="_blank" rel="noopener noreferrer"><img src="Images/Aquacat.jpg"></a>
+            <a onClick="location.href='Projects/aquacat.html'" target="_blank" rel="noopener noreferrer"><img
+                src="Images/Aquacat.jpg"></a>
             <div>
               <h3>AquaCat</h3>
               <h4>Timeframe: Summer 2021</h4>
             </div>
 
             <div class="secText">
-          <p>Arcade style side-scrolling infinite runner game based on Minato Aqua's Aquacat song cover.</p>
-        </div>
+              <p>Arcade style side-scrolling infinite runner game based on Minato Aqua's Aquacat song cover.</p>
+            </div>
           </div>
-          
-          
+
+
 
           <!--
           <div class="griditem">
@@ -291,9 +316,10 @@
           <h2>Development Logs (WIP)</h2>
         </div>
         <div class="projtext">
-          <a class="link" target="_blank" rel="noopener noreferrer" href="/Projects/Devlogs/Site_Log/ToC_Makeshift.html">Portfolio Website </a>
+          <a class="link" target="_blank" rel="noopener noreferrer"
+            href="/Projects/Devlogs/Site_Log/Site_Log_Toc.html">Portfolio Website </a>
         </div>
-       
+
       </div>
 
       <div id="ResumeTab" class="tabcontent">
@@ -304,7 +330,7 @@
           <p id="resumeLabel">Current Version: V3.2, February 2022 <br> Focus: Software Engineering.</p>
         </div>
         <div id="pdfwrapper">
-          <embed src="Docs/Wang Resume Software 2022 V3.4.pdf" type="application/pdf" width="100%" height="1000px"> 
+          <embed src="Docs/Wang Resume Software 2022 V3.4.pdf" type="application/pdf" width="100%" height="1000px">
         </div>
       </div>
 

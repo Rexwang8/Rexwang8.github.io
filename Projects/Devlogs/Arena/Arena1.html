@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- HEADER================= -->
+
+<head>
+  <title> 001 - Arena </title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="shortcut icon" type="image/svg" href="/Images\RW-Logo.svg" />
+  <script src="https://kit.fontawesome.com/7ee27ad3c6.js" crossorigin="anonymous"></script>
+</head>
+<!-- HEADER================= -->
+
+<body class="background">
+
+  <div class="spacing"></div>
+  <!-- NAVBAR ------------------------>
+  <div class="navbar">
+    <ul class="navbar">
+      <li class="navbarBlockActive"><a class="navbarItem">Rex Wang</a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/index.html">Home </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/siteinfo.html">This Site </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/Devlogs/Project_ToC.html"><i class="fas fa-hammer"></i> Devlogs</a></li>
+    </ul>
+  </div>
+  <!-- ENDNAVBAR ------------------>
+
+
+  <div class="wrapper">
+    <div class="center">
+      <h1> Arena - Devlog 001 - Random Ideas</h1>
+      <div class="infobox">
+        <div class="infobox-left">
+          <h4>Date: 03/06/2022</h4>
+          <h4>Timespan: 03/06/2022 - 03/12/2022</h4>
+          <h4>Author: Rex Wang</h4>
+        </div>
+
+        <div class="infobox-right">
+          <a class="link" onClick="location.href='/Projects/Devlogs/Arena/Arena2.html'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
+          <br>
+          <a class="link" onClick="location.href='/Projects/Devlogs/Arena/Arena_ToC.html'" target="_blank" rel="noopener noreferrer">Project Home</a>
+          <br>
+          <a class="link" onClick="location.href='#'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
+        </div>
+        
+      </div>
+      <img class="fullimg" src="projectiles.png">
+      <br>
+      <div>
+        <ul style="list-style-type:square; line-height:110%">
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Random Ideas</a></li>
+          <li> <a class="link" onClick="location.href='#Topic2'" target="_blank" rel="noopener noreferrer">The plans</a></li>
+        </ul>
+      </div>
+
+      <div class="textleft" id="Topic1">
+        <h2>Random Ideas</h2>
+        <h4>The Idea</h4>
+        <p>I currently have a general idea of what I want this game to be, but am still fuzzy on the exact details. The idea is a game somewhat in between Hades and Magic Survival in concept, where the world is seperated into rooms which are either procedurally generated.
+           or premade and randomly taped together. The general theme of the game is to have a Sci-fi thematic, where the player is on a space station and was hired to clean it out after an accident. 
+        </p>
+
+        
+
+      </div>
+
+      <div class="textleft" id="Topic2">
+        <h2>The plans</h2>
+        <h4>What I have already done</h4>
+        <p>So far, I have made a lot of progress on the physics engine, and the basic gun weapon system. Bullets shoot with the correct attributes and do damage. Popups appear properly and everything is happy, though the game lacks almost all content.
+        </p>
+
+        <h4>What I plan on doing</h4>
+        <p>The immediate task is to make melee combat at least sort of work. After that, I want to design a small test room prefab and try to get multiple rooms to appear together. Graphics and sprites and the like are very low on priority.
+        </p>
+
+      </div>
+      
+      <br>
+
+
+
+      <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+    this.page.url = Arena1.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Arena; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://rexwang8.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+
+  <!--Highlight.js-->
+  <link rel="stylesheet" href="/highlight.js/styles/base16/espresso.min.css">
+  <script src="/highlight.js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <!--Disqus
+  <script id="dsq-count-scr" src="//rexwang8.disqus.com/count.js" async></script>
+  -->
+</body>

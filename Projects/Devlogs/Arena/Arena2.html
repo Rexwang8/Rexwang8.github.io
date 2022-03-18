@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- HEADER================= -->
+
+<head>
+  <title> 002 - Arena </title>
+  <link rel="stylesheet" href="/styles.css">
+  <link rel="shortcut icon" type="image/svg" href="/Images\RW-Logo.svg" />
+  <script src="https://kit.fontawesome.com/7ee27ad3c6.js" crossorigin="anonymous"></script>
+</head>
+<!-- HEADER================= -->
+
+<body class="background">
+
+  <div class="spacing"></div>
+  <!-- NAVBAR ------------------------>
+  <div class="navbar">
+    <ul class="navbar">
+      <li class="navbarBlockActive"><a class="navbarItem">Rex Wang</a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/index.html">Home </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/siteinfo.html">This Site </a></li>
+      <li class="navbarBlock"><a class="navbarItem" href="/Projects/Devlogs/Project_ToC.html"><i class="fas fa-hammer"></i> Devlogs</a></li>
+    </ul>
+  </div>
+  <!-- ENDNAVBAR ------------------>
+
+
+  <div class="wrapper">
+    <div class="center">
+      <h1> Arena - Devlog 002 - Fun with infinite rooms</h1>
+      <div class="infobox">
+        <div class="infobox-left">
+          <h4>Date: 03/17/2022</h4>
+          <h4>Timespan: 03/12/2022 - 03/31/2022</h4>
+          <h4>Author: Rex Wang</h4>
+        </div>
+
+        <div class="infobox-right">
+          <a class="link" onClick="location.href='/Projects/Devlogs/Arena/Arena3.html'" target="_blank" rel="noopener noreferrer">Next Devlog</a>
+          <br>
+          <a class="link" onClick="location.href='/Projects/Devlogs/Arena/Arena_ToC.html'" target="_blank" rel="noopener noreferrer">Project Home</a>
+          <br>
+          <a class="link" onClick="location.href='/Projects/Devlogs/Arena/Arena1.html'" target="_blank" rel="noopener noreferrer">Previous Devlog</a>
+        </div>
+        
+      </div>
+      <img class="fullimg" src="rooms1.PNG">
+      <br>
+      <div>
+        <ul style="list-style-type:square; line-height:110%">
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">Room Generation</a></li>
+          <li> <a class="link" onClick="location.href='#Topic1'" target="_blank" rel="noopener noreferrer">The plans</a></li>
+        </ul>
+      </div>
+
+      <div class="textleft" id="Topic1">
+        <h2>Room Generation</h2>
+        <h4>Basic generation</h4>
+        <p>I decided that I wanted to have a room-based generation. I followed this tutorial https://www.youtube.com/watch?v=eR74EjkA_4s for my basic structure.
+          The limitations are that the rooms must be the same size and connected via a door from 1 of 4 directions, however, the tutorial was quite intuative and easy to use.
+        </p>
+
+        <h4>Problems</h4>
+        <img class="halfimg" src="rooms2.PNG">
+        <p>The first problem I faced was the following: every room's door has a spawn point which creates a grid of potential spawn locations. (I marked red spots as rooms that have finished generation, green spots as rooms that still have spawners active and blue spots as spawners.)
+          When a spawn point overlaps with another spawn point, it will delete both spawnpoints using the OnTrigger2D event method. I solved this issue by comparing the direction of the spawn point of both the collisions and deleting one of them based on the direction enum cast to an integer.
+
+          <pre><code class = language-cs>
+            private void OnTriggerEnter2D(Collider2D collision) {
+
+        if(collision.gameObject.CompareTag("Spawnpoint") && Door != doorDir.center)
+        {
+            RoomSpawner other = collision.GetComponent&lt;RoomSpawner&gt;();
+            print("Double occupied spawnpoints: " + other.Door + " Name:  " + gameObject.name);
+
+            if((int)other.Door &gt; (int)Door)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                Destroy(collision.gameObject);
+            }
+            
+        }
+    }
+}
+          </code></pre>
+          
+        </p>
+      <br>
+
+
+
+      <div id="disqus_thread"></div>
+<script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    
+    var disqus_config = function () {
+    this.page.url = Arena2.html;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = Arena; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://rexwang8.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </div>
+
+
+  <script src="main.js"></script>
+
+  <!--Highlight.js-->
+  <link rel="stylesheet" href="/highlight.js/styles/base16/espresso.min.css">
+  <script src="/highlight.js/highlight.min.js"></script>
+  <script>hljs.highlightAll();</script>
+  
+  <!--Disqus
+  <script id="dsq-count-scr" src="//rexwang8.disqus.com/count.js" async></script>
+  -->
+</body>

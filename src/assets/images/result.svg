@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50mm" height="50mm" version="1.1" viewBox="0 0 50 50" xmlns="http://www.w3.org/2000/svg" xmlns:cc="http://creativecommons.org/ns#" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+<metadata>
+<rdf:RDF>
+<cc:Work rdf:about="">
+<dc:format>image/svg+xml</dc:format>
+<dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+<dc:title/>
+</cc:Work>
+</rdf:RDF>
+</metadata>
+<g transform="translate(0,-247)" display="none">
+<path d="m23.47 269.62-3.8817 2.2523v10.188l3.8817 2.2523v-14.692" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path transform="scale(1,-1)" d="m25-295.09 20 11.547v23.094l-20 11.547-20-11.547 6e-7 -23.094z" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path transform="scale(1,-1)" d="m25-294.81 19.75 11.403-1e-6 22.805-19.75 11.403-19.75-11.403 6e-7 -22.805z" fill="#fff" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path d="m14.932 259.17-4.8817 2.8194v21.582l4.8817 2.8194v-27.221" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m25 251.79 4.8817 2.8192v9.8048l-4.8817 2.8192v-15.443" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m25 251.79-17.5 10.103v0.52968l17.5-10.103z" fill="#fff" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path d="m28.915 247.59 4.25-1e-5 7e-6 2.117-4.25-1e-5z" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m9.23 251.59 4.9-1e-5 2e-6 0.89999h-4.9z" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path transform="scale(1,-1)" d="m25-292.21 17.5 10.104v20.207l-17.5 10.104-17.5-10.104 5e-7 -20.207z" fill="#fff" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path d="m25 266.71-10.068 5.8128v0.52967l10.068-5.8128z" fill="#fff" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path d="m22.82 268.48-3.8817 2.2523v10.188l3.8817 2.2523v-14.692" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m25 268.28-4.8817 2.8194v18.293l4.8817 2.8194v-23.932" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m8.3479 289.67-4.2352-2.4452 0.32498-0.5629 4.2352 2.4452z" fill="none" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m37.618 259.08 4.8817 2.8192v20.207l-4.8817 2.8192v-25.846" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m32.618 276.41 5 2.881-12.624 12.913-4.8755-2.8158 12.5-12.978" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+<path d="m37.618 259.08 4.8817 2.8192v20.207l-4.8817-2.8128v-20.214" fill="#fff" stroke="#000" stroke-linecap="square" stroke-width=".1" style="paint-order:fill markers stroke"/>
+</g>
+<g>
+<path transform="matrix(1,0,0,-1,0,-247)" d="m25-295.09 20 11.547v23.094l-20 11.547-20-11.547 6e-7 -23.094z" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path transform="scale(1,-1)" d="m25-47.517 19.5 11.258v22.517l-19.5 11.258-19.5-11.258 6e-7 -22.517z" fill="#fff" style="paint-order:fill markers stroke"/>
+<path transform="scale(.26458)" d="m94.488 80.41-18.451 10.656v69.141l18.428 10.641 0.023437 0.01367v-0.03711l47.691-48.779-18.898-10.889-28.793 29.895v-60.641z" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path transform="translate(0,-247)" d="m37.618 259.08 4.8817 2.8192v20.207l-4.8817-2.8128v-20.214" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path transform="translate(0,-247)" d="m19.588 270.37v11.689l3.8817 2.2523v-16.193" fill="#fff" stroke-width="0" style="paint-order:fill markers stroke"/>
+<path transform="scale(.26458)" d="m94.488 18.115-66.143 38.186v2.002l66.143-38.186v54.363l-38.053 21.969v-50.439l-18.451 10.656v81.57l18.451 10.656v-50.441l15.143-8.7422v38.506l14.67 8.5117v-55.486l8.2402-4.7578 18.451-10.656v-37.057l-18.451-10.654z" stroke-width="0" style="paint-order:fill markers stroke"/>
+</g>
+</svg>

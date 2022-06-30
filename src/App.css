@@ -111,3 +111,23 @@
   appearance: button;
   border-color: #e9ecef #e9ecef #dee2e6;
 }
+
+.iconButton{
+  background-color: wheat;
+  border-radius: 1vw;
+  color: black;
+  margin: 5vw;
+}
+
+.teapot
+{
+  height: 100px;
+  width: auto;
+}
+
+.accordCenter
+{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}

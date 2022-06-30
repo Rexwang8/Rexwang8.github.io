@@ -16,11 +16,10 @@ import {
 } from "react-bootstrap";
 import { Accordion } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/result.png";
-import casual from "../assets/images/casual.png";
 
 
 import HomeTab from "./subpage/homeTab";
+import AboutTab from "./subpage/aboutTab";
 
 function MainPage(props) {
   console.log(props);
@@ -72,13 +71,7 @@ function MainPage(props) {
               </Navbar.Collapse>
               <div>
                 <Breadcrumb>
-                  <Link
-                    to={{
-                      pathname: "/",
-                    }}
-                  >
-                    <Breadcrumb.Item>Home</Breadcrumb.Item>
-                  </Link>
+                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Home</Breadcrumb.Item>
                 </Breadcrumb>
               </div>
             </Container>
@@ -94,67 +87,7 @@ function MainPage(props) {
                 <HomeTab />
               </Tab>
               <Tab eventKey="profile" title="Profile">
-                <div>
-                  <Container fluid="md">
-                    <Row>
-                      <Col>
-                        <h2
-                          style={{
-                            textAlign: "center",
-                            justifyContent: "center",
-                          }}
-                        >
-                          About Me
-                        </h2>
-                      </Col>
-                    </Row>
-                    <Row>
-                      <Col>
-                      <div className="profileW">
-
-                      <Figure>
-          <Figure.Image
-            width={640}
-            height={270}
-            alt="pfp img"
-            src={casual}
-            className="mainPFP"
-          />
-          <Figure.Caption size="lg">
-            <p>Caribbean Cruise 2022</p>
-          </Figure.Caption>
-        </Figure>
-
-                      </div>
-                      
-                      </Col>
-                      <Col xs={6}>
-                      <div className="aboutMeW">
-                      <Accordion>
-  <Accordion.Item eventKey="0">
-    <Accordion.Header>Background</Accordion.Header>
-    <Accordion.Body>
-    Rex Wang was born in St. Joseph, Michigan. His father is Jizhong Wang, 
-                          An acclaimed PhD in mathematical modeling of physiology and the director of technology at Broad Ocean Motors. His mother is Fengxia Wang, an acclaimed and famous architect from China.
-                          Rex moved to Bolingbrook, Illinois shortly after 6th grade and attended Neuqua Valley High school (D204). Growing up, he has always loved technology and computers, and with his father's employment,
-                          has had the resources to explore this passion. Now, Rex is a sophomore at Purdue University, majoring in Computer Engineering.
-    </Accordion.Body>
-  </Accordion.Item>
-</Accordion>
-                      </div>
-
-                      
-                     
-                      </Col>
-                    </Row>
-                    <Row>
-                    <Col>More Text</Col>
-                    </Row>
-                    <Row>
-                    <Col>Socials</Col>
-                    </Row>
-                  </Container>
-                </div>
+                <AboutTab />
               </Tab>
               <Tab eventKey="contact" title="Contact">
                 <p>aaa</p>

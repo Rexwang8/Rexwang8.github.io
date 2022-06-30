@@ -9,7 +9,7 @@ import RoutingPage from './pages/RoutingPage';
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <HashRouter>
+    <HashRouter basename={`/rexwang8.github.io`}>
     <ThemeProvider>
     <RoutingPage />
     </ThemeProvider>

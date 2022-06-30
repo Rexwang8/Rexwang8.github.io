@@ -6,9 +6,9 @@ function RoutingPage()
 
   return(
       <Routes>
-        <Route path="/" element={<MainPage />} />
-        <Route path="expenses" element={<App />} />
-        <Route path="invoices" element={<App />} />
+        <Route path="/"  element={<MainPage title="Main"/>} />
+        <Route path="/blog" element={<App />} />
+        <Route path="/dev" element={<App />} />
       </Routes>
   );
 

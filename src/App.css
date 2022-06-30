@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -35,4 +36,78 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.aspect
+{
+  aspect-ratio: 16/9;
+  height: 100vh;
+  background-color: #61dafb;
+  justify-content: center;
+  margin: auto;
+  overflow-x: hidden;
+}
+
+.bg1{
+  background-color: wheat;
+  height: fit-content;
+}
+
+.bg2{
+  background-image: url(./assets/images/1049.png);
+  background-color: rgba(30,30,45,0.5);
+}
+
+.mainFace{
+  text-align: center;
+  margin: auto;
+  justify-content: center;
+}
+
+.mainPFP
+{
+  border-radius: 10%;
+}
+
+.mainTXT
+{
+  color: grey;
+  font-size: large;
+}
+.mainTXTTitle
+{
+  color: grey;
+  font-size: x-large;
+}
+
+.mainTXTW
+{
+  padding: 5vw;
+}
+
+.mainPDFW
+{
+  background-color: #282c34;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  
+}
+
+.profileW{
+  margin: 1.5vw;
+}
+
+.aboutMeW
+{
+  margin-top: 10vh;
+  margin-right: 10vw;
+  line-height: 3.2vh;
+}
+
+.accordion-button
+{
+  width: 80%;
+  box-shadow: none;
+  appearance: button;
+  border-color: #e9ecef #e9ecef #dee2e6;
 }

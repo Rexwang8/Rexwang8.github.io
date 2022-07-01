@@ -42,7 +42,7 @@
 {
   aspect-ratio: 16/9;
   height: 100vh;
-  background-color: #61dafb;
+  background-color: wheat;
   justify-content: center;
   margin: auto;
   overflow-x: hidden;
@@ -121,7 +121,7 @@
 
 .teapot
 {
-  height: 100px;
+  height: 110px;
   width: auto;
 }
 
@@ -130,4 +130,43 @@
   justify-content: center;
   margin: auto;
   text-align: center;
+}
+
+.textAICenter
+{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.styleDivide
+{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+}
+.teapotExample
+{
+  justify-content: center;
+  justify-self: center;
+  justify-items: center;
+  margin: auto;
+  text-align: center;
+
+  width: 25%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 3%;
+  margin-top: 3%;
+}
+
+.footer
+{
+  padding-top: 7vh;
+  padding-bottom: 3vh;
+  margin-left: 5vw;
+  margin-right: 5vw;
 }

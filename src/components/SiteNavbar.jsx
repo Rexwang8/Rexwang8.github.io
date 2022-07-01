@@ -47,18 +47,20 @@ function SiteNavbar(props) {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Link
-                to={{
-                  pathname: "/",
-                }}
-              >
-                <Nav.Link>Home</Nav.Link>
-              </Link>
-
-              <Nav.Link href="#link">Link</Nav.Link>
-
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+              <Nav.Link href="/resource/ai/teapot">Teapots</Nav.Link>
+ 
+            
+          </Navbar.Collapse>
+          <div>
+            <Breadcrumb>{breadcrumbs}</Breadcrumb>
+          </div>
+        </Container>
+      </Navbar>
+    </div>
+  );
+}
+/*
+  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
                 <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
                 <NavDropdown.Item href="#action/3.2">
                   Another action
@@ -71,15 +73,6 @@ function SiteNavbar(props) {
                   Separated link
                 </NavDropdown.Item>
               </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-          <div>
-            <Breadcrumb>{breadcrumbs}</Breadcrumb>
-          </div>
-        </Container>
-      </Navbar>
-    </div>
-  );
-}
+              */
 
 export default SiteNavbar;

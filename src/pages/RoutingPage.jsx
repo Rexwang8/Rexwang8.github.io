@@ -11,7 +11,7 @@ function RoutingPage()
         <Route path="/"  element={<MainPage title="Main"/>} />
         <Route path="/blog" element={<App />} />
         <Route path="/dev" element={<App />} />
-        <Route path="/resource/ai/styles" element={<AIStylePage title="AI Styles"/>} />
+        <Route path="/resource/ai/teapot" element={<AIStylePage title="Teapots"/>} />
         <Route path="*"  element={<MainPage title="Main"/>} />
       </Routes>
   );

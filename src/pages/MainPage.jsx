@@ -20,6 +20,7 @@ import { Link } from "react-router-dom";
 
 import HomeTab from "./subpage/homeTab";
 import AboutTab from "./subpage/aboutTab";
+import SiteNavbar from "../components/SiteNavbar";
 
 function MainPage(props) {
   console.log(props);
@@ -29,53 +30,7 @@ function MainPage(props) {
     <div className="bg2">
       <div className="aspect">
         <div className="bg1">
-          <Navbar bg="light" expand="lg">
-            <Container>
-              <Link
-                to={{
-                  pathname: "/",
-                }}
-              >
-                <Navbar.Brand>Home Page</Navbar.Brand>
-              </Link>
-
-              <Navbar.Toggle aria-controls="basic-navbar-nav" />
-              <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                  <Link
-                    to={{
-                      pathname: "/",
-                    }}
-                  >
-                    <Nav.Link>Home</Nav.Link>
-                  </Link>
-
-                  <Nav.Link href="#link">Link</Nav.Link>
-
-                  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">
-                      Action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2">
-                      Another action
-                    </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">
-                      Something
-                    </NavDropdown.Item>
-                    <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action/3.4">
-                      Separated link
-                    </NavDropdown.Item>
-                  </NavDropdown>
-                </Nav>
-              </Navbar.Collapse>
-              <div>
-                <Breadcrumb>
-                <Breadcrumb.Item linkAs={Link} linkProps={{ to: "/" }}>Home</Breadcrumb.Item>
-                </Breadcrumb>
-              </div>
-            </Container>
-          </Navbar>
+          <SiteNavbar url="/"></SiteNavbar>
 
           <div>
             <Tabs

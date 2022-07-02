@@ -2,8 +2,6 @@ import { Navbar, Container, Button, Accordion, Nav, NavDropdown, Breadcrumb, Row
 import { Link } from "react-router-dom";
 import SiteNavbar from "../components/SiteNavbar";
 
-import baseteapot from "../teapots/base.png";
-import TeapotCard from "../components/teapotCard";
 import MJTab from "./subpage/MJTab";
 import DalleTab from "./subpage/DalleTab";
 

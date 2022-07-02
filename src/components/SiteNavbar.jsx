@@ -48,9 +48,10 @@ function SiteNavbar(props) {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
               <Nav.Link href="/resource/ai/teapot">Teapots</Nav.Link>
- 
+              <Nav.Link href="/resource/ai/prompts">Prompts</Nav.Link>
             
           </Navbar.Collapse>
+          
           <div>
             <Breadcrumb>{breadcrumbs}</Breadcrumb>
           </div>

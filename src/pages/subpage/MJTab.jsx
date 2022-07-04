@@ -1,5 +1,5 @@
 
-import { Navbar, Container, Button, Accordion, Nav, NavDropdown, Breadcrumb, Row, Col } from "react-bootstrap";
+import {  Container, Accordion, Row, Col } from "react-bootstrap";
 
 import TeapotCard from "../../components/teapotCard";
 
@@ -292,6 +292,15 @@ function MJTab() {
                     </Col>
                     <Col>
                       <TeapotCard img={images["newspaper.png"]} prompt='Utah Teapot, Newspaper' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["gopro.png"]} prompt='Utah Teapot, Gopro' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["trailcam.png"]} prompt='Utah Teapot, Trail Cam' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["dashcam.png"]} prompt='Utah Teapot, Dashcam' />
                     </Col>
 
                   </Row>
@@ -617,6 +626,35 @@ function MJTab() {
                     <Col>
                       <TeapotCard img={images["chromatic.png"]} prompt='Utah Teapot, digital art, Chromatic Abberation' />
                     </Col>
+                  </Row>
+                  <Row>
+                  <Col>
+                      <TeapotCard img={images["fog.png"]} prompt='Utah Teapot, digital art, Fog Effect' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["dof.png"]} prompt='Utah Teapot, digital art, Depth of Field effect' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["grain.png"]} prompt='Utah Teapot, digital art, Grain Effect' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["distortion.png"]} prompt='Utah Teapot, digital art, Lens Distortion Effect' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["mblur.png"]} prompt='Utah Teapot, digital art, Motion Blur Effect' />
+                    </Col>
+                  </Row>
+                  <Row>
+                  <Col>
+                      <TeapotCard img={images["panini.png"]} prompt='Utah Teapot, digital art, Panini Effect Effect' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["vignette.png"]} prompt='Utah Teapot, digital art, Vignette effect' />
+                    </Col>
+                    <Col>
+                      <TeapotCard img={images["grain.png"]} prompt='Utah Teapot, digital art, Grain Effect' />
+                    </Col>
+
                   </Row>
                   <Row>
                     <h3 className='styleDivide'>Misc Effects</h3>

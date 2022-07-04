@@ -43,6 +43,8 @@ function AIStylePage(props) {
             <Link to='/resource/ai/prompts'>
               <Button>Prompts</Button>
             </Link>
+
+            <p>Teapot Count, MJ: 229 DALLE-2: 5</p>
           </div>
           <img src='https://s.mj.run/PD_i8SNJkdg' alt='teapot' className='teapotExample'></img>
 

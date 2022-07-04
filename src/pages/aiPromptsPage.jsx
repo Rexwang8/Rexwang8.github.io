@@ -281,7 +281,7 @@ function AIPromptsPage(props) {
                       <TeapotCardLarge img={images["weighting_woodteapot_10.png"]} prompt='/imagine Utah Teapot::.2 Wood::.9 --ar 16:9 –-seed 1' />
                     </Col>
                     <Col>
-                      <TeapotCardLarge img={images["weighting_woodteapot_11.png"]} prompt='/imagine Utah Teapot::.2 Wood::1 --ar 16:9 –-seed 1' />
+                      <TeapotCardLarge img={images["weighting_woodteapot_11.png"]} prompt='/imagine Utah Teapot::1 Wood::1 --ar 16:9 –-seed 1' />
                     </Col>
                   </Row>
 

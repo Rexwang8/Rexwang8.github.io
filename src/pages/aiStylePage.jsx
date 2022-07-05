@@ -5,8 +5,6 @@ import SiteNavbar from "../components/SiteNavbar";
 import MJTab from "./subpage/MJTab";
 import DalleTab from "./subpage/DalleTab";
 
-
-
 function AIStylePage(props) {
   document.title = props.title;
 
@@ -48,21 +46,15 @@ function AIStylePage(props) {
           </div>
           <img src='https://s.mj.run/PD_i8SNJkdg' alt='teapot' className='teapotExample'></img>
 
-          <Tabs
-              defaultActiveKey="mj"
-              id="uncontrolled-tab-example"
-              className="mb-3"
-            >
-              <Tab eventKey="mj" title="MidJourney">
-                <MJTab></MJTab>
-              </Tab>
-              <Tab eventKey="dalle2" title="DALLE-2">
-                <DalleTab></DalleTab>
-              </Tab>
+          <Tabs defaultActiveKey='mj' id='uncontrolled-tab-example' className='mb-3'>
+            <Tab eventKey='mj' title='MidJourney'>
+              <MJTab></MJTab>
+            </Tab>
+            <Tab eventKey='dalle2' title='DALLE-2'>
+              <DalleTab></DalleTab>
+            </Tab>
+          </Tabs>
 
-            </Tabs>
-
-          
           <div className='footer'>
             <p>Portfolio Website for Rex Wang, Coded in React framework in 2022.</p>
           </div>

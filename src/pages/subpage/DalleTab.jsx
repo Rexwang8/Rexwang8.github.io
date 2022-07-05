@@ -1,7 +1,6 @@
-
 import { Navbar, Container, Button, Accordion, Nav, NavDropdown, Breadcrumb, Row, Col } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
-
+import RowStyleDiv from "../../components/rowdiv";
 
 function importAll(r) {
   let images = {};
@@ -15,368 +14,180 @@ function DalleTab() {
   const images = importAll(require.context("../../teapots_dalle", true, /\.(png|jpe?g|svg)$/));
   return (
     <div>
-      <h3>Note: DALLE2 Teapots do not use image prompts, as it will take it as the Initial Image instead of the Prompt Image. DALLE-2 generates 1024x1024 images which I downscaled to 256x256 for space concerns.
-        DALLE2 is free but allows only limited prompts per day, so this page will be empty for a while.
+      <h3>
+        Note: DALLE2 Teapots do not use image prompts, as it will take it as the Initial Image instead of the Prompt Image. DALLE-2 generates 1024x1024 images which I downscaled to 256x256 for space
+        concerns. DALLE2 is free but allows only limited prompts per day, so this page will be empty for a while.
       </h3>
-<Accordion defaultActiveKey='0' className='accordCenter'>
+      <Accordion defaultActiveKey='0' className='accordCenter'>
             <Accordion.Item eventKey='0'>
               <Accordion.Header>Medium</Accordion.Header>
               <Accordion.Body>
                 <Container>
+                    <RowStyleDiv title="Physical Mediums" desc="Things that are drawn or printed."></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>Physical Mediums</h3>
-                  </Row>
-                  <Row>
-                    <Col>
                       <TeapotCard img={images["base.png"]} prompt='Utah Teapot' />
-                    </Col>
-
-                    <Col>
                       <TeapotCard img={images["illustration.png"]} prompt='Utah Teapot, Illustration' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["sketch.png"]} prompt='Utah Teapot, Sketch' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["oilPainting.png"]} prompt='Utah Teapot, Oil Painting' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["glassPaint.png"]} prompt='Utah Teapot, Glass Paint' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["charcoal.png"]} prompt='Utah Teapot, Charcoal' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["watercolor.png"]} prompt='Utah Teapot, Watercolor' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["chalk.png"]} prompt='Utah Teapot, Chalk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["tempera.png"]} prompt='Utah Teapot, Tempera' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["pastel.png"]} prompt='Utah Teapot, Pastel' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["inkPen.png"]} prompt='Utah Teapot, Ink and Pen' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["graphitePencil.png"]} prompt='Utah Teapot, Graphite Pencil' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["colorPencil.png"]} prompt='Utah Teapot, Color Pencil' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["goache.png"]} prompt='Utah Teapot, Goache' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["acrylic.png"]} prompt='Utah Teapot, Acrylic' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["conte.png"]} prompt='Utah Teapot, Conte' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["marker.png"]} prompt='Utah Teapot, Marker' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["glaze.png"]} prompt='Utah Teapot, Glaze' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["crayon.png"]} prompt='Utah Teapot, Crayon' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["latex.png"]} prompt='Utah Teapot, Latex' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["glitter.png"]} prompt='Utah Teapot, Glitter' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["sprayPaint.png"]} prompt='Utah Teapot, Spray Paint' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["glassPaint.png"]} prompt='Utah Teapot, Glass Paint' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["latte2.png"]} prompt='Utah Teapot, Latte Art' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["illumanu.png"]} prompt='Utah Teapot, Illuminated Manuscript' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["blueprint.png"]} prompt='Utah Teapot, Blueprint' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["blueprint2.png"]} prompt='A blueprint of the Utah Teapot' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["concept.png"]} prompt='Utah Teapot, Concept Art' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["storyboard.png"]} prompt='Utah Teapot, Storyboard' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["quilt.png"]} prompt='Utah Teapot, Quilt' />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
                       <TeapotCard img={images["collage.png"]} prompt='Utah Teapot, Collage' />
-                    </Col>
-                    <Col>
+                  </Row>
+                  <Row>
+                  <TeapotCard img={images["block.png"]} prompt='Utah Teapot, Block Printing' />
                       <TeapotCard img={images["line.png"]} prompt='Utah Teapot, Line Art' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["prop.png"]} prompt='Utah Teapot, Propaganda Poster' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["sears.png"]} prompt='Utah Teapot, Sears Catalog' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["prod.png"]} prompt='Utah Teapot, Product Photo' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["elecPhoto.png"]} prompt='Utah Teapot, Election Photo' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["elecPoster.png"]} prompt='Utah Teapot, Election Poster' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["screen.png"]} prompt='Utah Teapot, Screen Painting' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["mono.png"]} prompt='Utah Teapot, Mono Printing' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["block.png"]} prompt='Utah Teapot, Block Printing' />
-                    </Col>
-                  </Row>
-                  <Row>
-                    <Col>
-                      <TeapotCard img={images["etching.png"]} prompt='Utah Teapot, Etching' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["litho.png"]} prompt='Utah Teapot, Lithography' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["installation.png"]} prompt='Utah Teapot, Installation Art' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["airbrush.png"]} prompt='Utah Teapot, Airbrush' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["foundobj.png"]} prompt='Utah Teapot, Found Objects' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
-                      <TeapotCard img={images["calligraphy.png"]} prompt='Utah Teapot, Calligraphy' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["inkpainting.png"]} prompt='Utah Teapot, Ink Painting' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["scroll.png"]} prompt='Utah Teapot, Scroll Painting' />
-                    </Col>
-                    <Col>
+                      <TeapotCard img={images["etching.png"]} prompt='Utah Teapot, Etching' />
+                      <TeapotCard img={images["litho.png"]} prompt='Utah Teapot, Lithography' />
+                      <TeapotCard img={images["installation.png"]} prompt='Utah Teapot, Installation Art' />
+                      <TeapotCard img={images["airbrush.png"]} prompt='Utah Teapot, Airbrush' />
                       <TeapotCard img={images["anatomical.png"]} prompt='Utah Teapot, Anatomical Drawing' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["lace.png"]} prompt='Utah Teapot, Lace' />
-                    </Col>
                   </Row>
-
                   <Row>
-                    <Col>
-                      <TeapotCard img={images["embroidery.png"]} prompt='Utah Teapot, Embroidery' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["macrame.png"]} prompt='Utah Teapot, Macrame' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["knitted.png"]} prompt='Utah Teapot, Knitted' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["rug.png"]} prompt='Utah Teapot, Rug' />
-                    </Col>
-                    <Col>
+                      <TeapotCard img={images["calligraphy.png"]} prompt='Utah Teapot, Calligraphy' />
+                      <TeapotCard img={images["inkpainting.png"]} prompt='Utah Teapot, Ink Painting' />
+                      <TeapotCard img={images["scroll.png"]} prompt='Utah Teapot, Scroll Painting' />
                       <TeapotCard img={images["tattoo.png"]} prompt='Utah Teapot, Tattoo' />
-                    </Col>
-                  </Row>
-
-                  <Row>
-                    <Col>
-                      <TeapotCard img={images["weave.png"]} prompt='Utah Teapot, Weave' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["felted.png"]} prompt='Utah Teapot, Felted' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["crochet.png"]} prompt='Utah Teapot, Crochet' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["applique.png"]} prompt='Utah Teapot, Applique' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["crossstitch.png"]} prompt='Utah Teapot, Cross Stich' />
-                    </Col>
+                      
                   </Row>
-
                   <Row>
-                    <Col>
-                      <TeapotCard img={images["crewl.png"]} prompt='Utah Teapot, Crewl Embroidery' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["needlepoint.png"]} prompt='Utah Teapot, Needlepoint' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["patch.png"]} prompt='Utah Teapot, Patch' />
-                    </Col>
-                    <Col>
+
                       <TeapotCard img={images["enameled.png"]} prompt='Utah Teapot, Enameled' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["jewelry.png"]} prompt='Utah Teapot, Jewelry' />
-                    </Col>
-                  </Row>
-
-                  <Row>
-                    <Col>
                       <TeapotCard img={images["azulejo.png"]} prompt='Utah Teapot, Azulejo' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["stamp.png"]} prompt='Utah Teapot, Stamp' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["stopmotion.png"]} prompt='Utah Teapot, Stop Motion' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["goldleaf.png"]} prompt='Utah Teapot, Gold Leaf' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["postage.png"]} prompt='Utah Teapot, Postage' />
-                    </Col>
                   </Row>
 
                   <Row>
-                    <Col>
-                      <TeapotCard img={images["lacquer.png"]} prompt='Utah Teapot, Carved Lacquer' />
-                    </Col>
-                    <Col>
+                      
+                      
+                  <TeapotCard img={images["lacquer.png"]} prompt='Utah Teapot, Carved Lacquer' />
                       <TeapotCard img={images["scientificdiagram.png"]} prompt='Utah Teapot, Scientific Diagram' />
-                    </Col>
-                    <Col>
-                      <TeapotCard img={images["photoshoot.png"]} prompt='Utah Teapot, Photoshoot' />
-                    </Col>
-                    <Col>
+                      
                       <TeapotCard img={images["magazine.png"]} prompt='Utah Teapot, Magazine' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["ad.png"]} prompt='Utah Teapot, Advertisement' />
-                    </Col>
+                      
+                      <TeapotCard img={images["postage.png"]} prompt='Utah Teapot, Postage' />
                   </Row>
 
                   <Row>
-                    <Col>
                       <TeapotCard img={images["woodblock.png"]} prompt='Utah Teapot, Wood Block Print' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["newspaper.png"]} prompt='Utah Teapot, Newspaper' />
-                    </Col>
+                      
 
                   </Row>
 
+                  <RowStyleDiv title="Fabric Mediums" desc="Physical things that are knitted, sewn or otherwise made from fabric."></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>Digital</h3>
+                  <TeapotCard img={images["quilt.png"]} prompt='Utah Teapot, Quilt' />
+                  <TeapotCard img={images["lace.png"]} prompt='Utah Teapot, Lace' />
+                  <TeapotCard img={images["embroidery.png"]} prompt='Utah Teapot, Embroidery' />
+                      <TeapotCard img={images["macrame.png"]} prompt='Utah Teapot, Macrame' />
+                      <TeapotCard img={images["knitted.png"]} prompt='Utah Teapot, Knitted' />
                   </Row>
                   <Row>
-                    <Col>
+                  <TeapotCard img={images["rug.png"]} prompt='Utah Teapot, Rug' />
+                  <TeapotCard img={images["weave.png"]} prompt='Utah Teapot, Weave' />
+                      <TeapotCard img={images["felted.png"]} prompt='Utah Teapot, Felted' />
+                      <TeapotCard img={images["crochet.png"]} prompt='Utah Teapot, Crochet' />
+                      
+                      <TeapotCard img={images["crossstitch.png"]} prompt='Utah Teapot, Cross Stich' />
+                  </Row>
+<Row>
+                  <TeapotCard img={images["crewl.png"]} prompt='Utah Teapot, Crewl Embroidery' />
+                      <TeapotCard img={images["needlepoint.png"]} prompt='Utah Teapot, Needlepoint' />
+                      <TeapotCard img={images["patch.png"]} prompt='Utah Teapot, Patch' />
+
+                      </Row>
+                  <RowStyleDiv title="Photographic Mediums" desc="Things that are or appear to be photographed."></RowStyleDiv>
+                  <Row>
+                  <TeapotCard img={images["stopmotion.png"]} prompt='Utah Teapot, Stop Motion' />
+                  <TeapotCard img={images["photoshoot.png"]} prompt='Utah Teapot, Photoshoot' />
+                  <TeapotCard img={images["gopro.png"]} prompt='Utah Teapot, Gopro' />
+                      <TeapotCard img={images["trailcam.png"]} prompt='Utah Teapot, Trail Cam' />
+                      <TeapotCard img={images["dashcam.png"]} prompt='Utah Teapot, Dashcam' />
+                  </Row>
+                  
+
+                  <RowStyleDiv title="Digital Mediums" desc="Things that are drawn or generated digitally."></RowStyleDiv>
+                  <Row>
                       <TeapotCard img={images["digitalArt.png"]} prompt='Utah Teapot, Digital Art' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["pixel.png"]} prompt='Utah Teapot, PixelArt' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["pixel2.png"]} prompt='A pixel art of the Utah Teapot' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["anime.png"]} prompt='Utah Teapot, Anime' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["texture.png"]} prompt='Utah Teapot, Texture' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["fractal.png"]} prompt='Utah Teapot, Fractal' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["algo.png"]} prompt='Utah Teapot, Algorithmic' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["datamosh.png"]} prompt='Utah Teapot, Data Moshing' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["dynamic.png"]} prompt='Utah Teapot, Dynamic Painting' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["3dmodel.png"]} prompt='Utah Teapot, 3D Model' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["logo.png"]} prompt='Utah Teapot, Logo' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["icon.png"]} prompt='Utah Teapot, Icon' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["digitalphotography.png"]} prompt='Utah Teapot, Digital Photography' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["vector.png"]} prompt='Utah Teapot, Vector Art' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["tilemap.png"]} prompt='Utah Teapot, Tilemap' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["mspaint.png"]} prompt='Utah Teapot, Microsoft Paint' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["raster.png"]} prompt='Utah Teapot, Raster Art' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["geometric.png"]} prompt='Utah Teapot, Geometric' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["photoshop.png"]} prompt='Utah Teapot, Photoshop' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["isometric.png"]} prompt='Utah Teapot, Isometric' />
-                    </Col>
                   </Row>
 
                   <Row>
-                    <Col>
                       <TeapotCard img={images["depthmap.png"]} prompt='Utah Teapot, Depth Map' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["animation.png"]} prompt='Utah Teapot, Animation' />
-                    </Col>
                   </Row>
                 </Container>
               </Accordion.Body>
@@ -386,102 +197,47 @@ function DalleTab() {
               <Accordion.Header>Physical Media</Accordion.Header>
               <Accordion.Body>
                 <Container>
+                <RowStyleDiv title="Physical Media" desc="Materials that the object is physically made out of."></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>Physical Media</h3>
-                  </Row>
-                  <Row>
-                    <Col>
                       <TeapotCard img={images["wood.png"]} prompt='Utah Teapot made out of Wood' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["glass.png"]} prompt='Utah Teapot made out of Glass' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["stainedGlass.png"]} prompt='Utah Teapot made out of Stained Glass' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["concrete.png"]} prompt='Utah Teapot made out of Concrete' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["metal.png"]} prompt='Utah Teapot made out of Metal' />
-                    </Col>
                   </Row>
 
                   <Row>
-                    <Col>
                       <TeapotCard img={images["boneChina.png"]} prompt='Utah Teapot made out of Bone China' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["porcelain.png"]} prompt='Utah Teapot made out of Porcelain' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["flowers.png"]} prompt='Utah Teapot made out of Flowers' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["pottery.png"]} prompt='Utah Teapot made out of Pottery' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["paper.png"]} prompt='Utah Teapot made out of Paper' />
-                    </Col>
                   </Row>
 
                   <Row>
-                    <Col>
                       <TeapotCard img={images["stone.png"]} prompt='Utah Teapot made out of Stone' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["marble.png"]} prompt='Utah Teapot made out of Marble' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["fruit.png"]} prompt='Utah Teapot made out of Fruit' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["bronze.png"]} prompt='Utah Teapot made out of Bronze' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["plastic.png"]} prompt='Utah Teapot made out of Plastic' />
-                    </Col>
                   </Row>
 
                   <Row>
-                    <Col>
                       <TeapotCard img={images["water.png"]} prompt='Utah Teapot made out of Water' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["yarn.png"]} prompt='Utah Teapot made out of Yarn' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["ice.png"]} prompt='Utah Teapot made out of Ice' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["wax.png"]} prompt='Utah Teapot made out of Wax' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["ivory.png"]} prompt='Utah Teapot made out of Ivory' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["soysauce.png"]} prompt='Utah Teapot made out of Soy Sauce' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["vegetation.png"]} prompt='Utah Teapot made out of Vegetation' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["tile.png"]} prompt='Utah Teapot made out of Tile' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["pewter.png"]} prompt='Utah Teapot made out of Pewter' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["origami.png"]} prompt='Utah Teapot made out of Origami' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["styrofoam.png"]} prompt='Utah Teapot made out of Styrofoam' />
-                    </Col>
-
                   </Row>
                 </Container>
               </Accordion.Body>
@@ -491,92 +247,42 @@ function DalleTab() {
               <Accordion.Header>Artistic Styles</Accordion.Header>
               <Accordion.Body>
                 <Container>
+                <RowStyleDiv title="-Punk Styles" desc="Most popular are steampunk and cyberpunk."></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>-Punk</h3>
-                  </Row>
-                  <Row>
-                    <Col>
                       <TeapotCard img={images["steampunk.png"]} prompt='Utah Teapot in the style of steampunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["cyberpunk.png"]} prompt='Utah Teapot in the style of cyberpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["solarpunk.png"]} prompt='Utah Teapot in the style of solarpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["steelpunk.png"]} prompt='Utah Teapot in the style of cyberpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["bronzepunk.png"]} prompt='Utah Teapot in the style of bronzepunk' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["dieselpunk.png"]} prompt='Utah Teapot in the style of dieselpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["piedieselpunk.png"]} prompt='Utah Teapot in the style of Piecraftian dieselpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["ottodieselpunk.png"]} prompt='Utah Teapot in the style of Ottensian dieselpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["decopunk.png"]} prompt='Utah Teapot in the style of decopunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["atompunk.png"]} prompt='Utah Teapot in the style of atompunk' />
-                    </Col>
                   </Row>
                   <Row>
-                    <Col>
                       <TeapotCard img={images["biopunk.png"]} prompt='Utah Teapot in the style of biopunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["cuberpunk.png"]} prompt='Utah Teapot in the style of cuberpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["postcyberpunk.png"]} prompt='Utah Teapot in the style of postcyberpunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["cybernoir.png"]} prompt='Utah Teapot in the style of cybernoir' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["clockpunk.png"]} prompt='Utah Teapot in the style of clockpunk' />
-                    </Col>
                   </Row>
 
                   <Row>
-                    <Col>
                       <TeapotCard img={images["decopunk.png"]} prompt='Utah Teapot in the style of decopunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["atompunk.png"]} prompt='Utah Teapot in the style of atompunk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["formicapunk.png"]} prompt='Utah Teapot in the style of formicapunk' />
-                    </Col>
                   </Row>
 
+                  <RowStyleDiv title="-Wave Styles" desc="Most popular are synthwave and vaporwave."></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>-Wave</h3>
-                  </Row>
-                  <Row>
-                    <Col>
                       <TeapotCard img={images["synthwave.png"]} prompt='Utah Teapot in the style of synthwave' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["vaporwave.png"]} prompt='Utah Teapot in the style of vaporwave' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["retrowave.png"]} prompt='Utah Teapot in the style of retrowave' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["futurefunk.png"]} prompt='Utah Teapot in the style of Future Funk' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["outrun.png"]} prompt='Utah Teapot in the style of Outrun' />
-                    </Col>
                   </Row>
                 </Container>
               </Accordion.Body>
@@ -586,42 +292,36 @@ function DalleTab() {
               <Accordion.Header>Photo Effects</Accordion.Header>
               <Accordion.Body>
                 <Container>
+                <RowStyleDiv title="Resolution" desc="Resolution Keywords"></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>Resolution</h3>
-                  </Row>
-                  <Row>
-                  <Col>
                       <TeapotCard img={images["4k.png"]} prompt='Utah Teapot, digital art, 4k' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["8k.png"]} prompt='Utah Teapot, digital art, 8k' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["16k.png"]} prompt='Utah Teapot, digital art, 16k' />
-                    </Col>
                   </Row>
+                  <RowStyleDiv title="Post Processing" desc="Common post processing effects like bloom."></RowStyleDiv>
                   <Row>
-                    <h3 className='styleDivide'>Post Processing</h3>
-                  </Row>
-                  <Row>
-                  <Col>
                       <TeapotCard img={images["aliasing.png"]} prompt='Utah Teapot, digital art, Anti-Aliasing' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["occlusion.png"]} prompt='Utah Teapot, digital art, Ambient Occlusion' />
-                    </Col>
+                      <TeapotCard img={images["exposure.png"]} prompt='Utah Teapot, digital art, Exposure' />
+                      <TeapotCard img={images["bloom.png"]} prompt='Utah Teapot, digital art, Bloom' />
+                      <TeapotCard img={images["chromatic.png"]} prompt='Utah Teapot, digital art, Chromatic Abberation' />
                   </Row>
                   <Row>
-                    <h3 className='styleDivide'>Misc Effects</h3>
+                      <TeapotCard img={images["fog.png"]} prompt='Utah Teapot, digital art, Fog Effect' />
+                      <TeapotCard img={images["dof.png"]} prompt='Utah Teapot, digital art, Depth of Field effect' />
+                      <TeapotCard img={images["grain.png"]} prompt='Utah Teapot, digital art, Grain Effect' />
+                      <TeapotCard img={images["distortion.png"]} prompt='Utah Teapot, digital art, Lens Distortion Effect' />
+                      <TeapotCard img={images["mblur.png"]} prompt='Utah Teapot, digital art, Motion Blur Effect' />
                   </Row>
                   <Row>
-                  <Col>
+                      <TeapotCard img={images["panini.png"]} prompt='Utah Teapot, digital art, Panini Effect Effect' />
+                      <TeapotCard img={images["vignette.png"]} prompt='Utah Teapot, digital art, Vignette effect' />
+                      <TeapotCard img={images["grain.png"]} prompt='Utah Teapot, digital art, Grain Effect' />
+                  </Row>
+                  <RowStyleDiv title="Misc Effects" desc="Unsorted camera effects."></RowStyleDiv>
+                  <Row>
                       <TeapotCard img={images["hdr.png"]} prompt='Utah Teapot, digital art, hdr' />
-                    </Col>
-                    <Col>
                       <TeapotCard img={images["cinematic.png"]} prompt='Utah Teapot, digital art, cinematic' />
-                    </Col>
-                   
                   </Row>
                 </Container>
               </Accordion.Body>

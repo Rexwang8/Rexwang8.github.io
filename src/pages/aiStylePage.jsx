@@ -26,23 +26,16 @@ function AIStylePage(props) {
                 Teapot Image Link
               </a>
             </p>
-            <a href='https://docs.google.com/spreadsheets/d/1j7zaDi_PkndizQ2pL8B_yMcwfKUdE6tSMhL31bYtJNs/edit#gid=0' alt='sheet link'>
-              Useful Excel Sheet
-            </a>
-            <a href='https://arc.tencent.com/en/ai-demos/faceRestoration' alt='face tool link'>
-              Useful Face Fixer
-            </a>
-            <a href='https://sweet-hall-e72.notion.site/A-Traveler-s-Guide-to-the-Latent-Space-85efba7e5e6a40e5bd3cae980f30235f' alt="Traveler's guide latent spaces link">
-              Traveler's guide latent spaces
-            </a>
+           
             <h5>Contact me on discord at bob#1236 for suggestions, comments or pictures of teapots.</h5>
+            
 
             <p>Check out my comparison of prompt formats.</p>
             <Link to='/resource/ai/prompts'>
               <Button>Prompts</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 229 DALLE-2: 5</p>
+            <p>Teapot Count, MJ: 209 DALLE-2: 5 Prompts Page: 55</p>
           </div>
           <img src='https://s.mj.run/PD_i8SNJkdg' alt='teapot' className='teapotExample'></img>
 
@@ -54,6 +47,22 @@ function AIStylePage(props) {
               <DalleTab></DalleTab>
             </Tab>
           </Tabs>
+
+          <div className='textAICenter'>
+          <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
+            <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo.</p></a>
+            <a href='https://bit.ly/3nAal6T' alt="sincarnate repo"><p>Thanks to Sincarnate#1121 for his artist style comparison repo.</p></a>
+
+            <a href='https://docs.google.com/spreadsheets/d/1j7zaDi_PkndizQ2pL8B_yMcwfKUdE6tSMhL31bYtJNs/edit#gid=0' alt='sheet link'>
+              Useful Excel Sheet
+            </a>
+            <a href='https://arc.tencent.com/en/ai-demos/faceRestoration' alt='face tool link'>
+              Useful Face Fixer
+            </a>
+            <a href='https://sweet-hall-e72.notion.site/A-Traveler-s-Guide-to-the-Latent-Space-85efba7e5e6a40e5bd3cae980f30235f' alt="Traveler's guide latent spaces link">
+              Traveler's guide latent spaces
+            </a>
+          </div>
 
           <div className='footer'>
             <p>Portfolio Website for Rex Wang, Coded in React framework in 2022.</p>

@@ -310,6 +310,27 @@ function TeaAccordian(props) {
                 <TeapotCard img={images["16k.png"]} prompt='Utah Teapot, digital art, 16k' />
               </Row>
 
+              <RowStyleDiv title='Camera Lengths and Views' desc='Camera focal lengths and camera angles.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["lowangle.png"]} prompt='a photo of a utah teapot, low angle' />
+                <TeapotCard img={images["highangle.png"]} prompt='a photo of a utah teapot, high angle' />
+                <TeapotCard img={images["closeup.png"]} prompt='a photo of a utah teapot, close-up' />
+                <TeapotCard img={images["mediumshot.png"]} prompt='a photo of a utah teapot, medium shot' />
+                <TeapotCard img={images["longshot.png"]} prompt='a photo of a utah teapot, long shot' />
+              </Row>
+
+              <Row>
+              <TeapotCard img={images["overtheshoulder.png"]} prompt='a photo of a utah teapot, over the shoulder' />
+                <TeapotCard img={images["ecloseup.png"]} prompt='a photo of a utah teapot, extreme close-up' />
+                <TeapotCard img={images["elongshot.png"]} prompt='a photo of a utah teapot, extreme long-shot' />
+                <TeapotCard img={images["birdseye.png"]} prompt='a photo of a utah teapot, birds eye' />
+                <TeapotCard img={images["tiltangle.png"]} prompt='a photo of a utah teapot, tilt angle' />
+              </Row>
+
+              <Row>
+              <TeapotCard img={images["dutchangle.png"]} prompt='a photo of a utah teapot, dutch angle' />
+              </Row>
+
               <RowStyleDiv title='Camera Effects' desc='Camera related effects and modifiers.'></RowStyleDiv>
               <Row>
 
@@ -394,7 +415,7 @@ function TeaAccordian(props) {
               <RowStyleDiv title='Surrealist' desc='Disdaining rationalism and literary realism, and powerfully influenced by psychoanalysis'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["salvadordali.png"]} prompt='Utah Teapot by Salvador Dali' />
-              
+              <TeapotCard img={images["andremasson.png"]} prompt='Utah Teapot by Andre Masson' />
               </Row>
               <RowStyleDiv title='Impressionist' desc='The Impressionists tried to get down on canvas an “impression” of how a landscape, thing, or person appeared to them at a certain moment in time.'></RowStyleDiv>
               <Row>
@@ -404,24 +425,47 @@ function TeaAccordian(props) {
               <Row>
               <TeapotCard img={images["vangogh.png"]} prompt='Utah Teapot by Van Gogh' />
               </Row>
+
               <RowStyleDiv title='Realist' desc='Realist painters replaced the idealistic images and literary conceits of traditional art with real-life events, giving the margins of society similar weight to grand history paintings and allegories.'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["adolphmenzel.png"]} prompt='Utah Teapot by Adolph Menzel' />
-              
+              <TeapotCard img={images["alexeisavrasov.png"]} prompt='Utah Teapot by Alexei Savrasov' />
+              <TeapotCard img={images["andrewwyeth.png"]} prompt='Utah Teapot by Andrew Wyeth' />
               </Row>
+
               <RowStyleDiv title='Expressionism' desc='Art was now meant to come forth from within the artist, rather than from a depiction of the external visual world, and the standard for assessing the quality of a work of art became the character of the artists feelings rather than an analysis of the composition.'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["affadi.png"]} prompt='Utah Teapot by Affadi' />
-              
+              <TeapotCard img={images["alexejvonjawlensky.png"]} prompt='Utah Teapot by Alexej von Jawlensky' />
+              <TeapotCard img={images["alfredkubin.png"]} prompt='Utah Teapot by Alfred Kubin' />
+              <TeapotCard img={images["aliceneel.png"]} prompt='Utah Teapot by Alice Neel' />
               </Row>
-              <RowStyleDiv title='Modernism/Modern Art' desc='Modernism refers to a global movement in society and culture that from the early decades of the twentieth century sought a new alignment with the experience and values of modern industrial life. Building on late nineteenth-century precedents, artists around the world used new imagery, materials and techniques to create artworks that they felt better reflected the realities and hopes of modern societies.'></RowStyleDiv>
+              <RowStyleDiv title='Art Nouveau' desc='The practitioners of Art Nouveau sought to revive good workmanship, raise the status of craft, and produce genuinely modern design that reflected the utility of the items they were creating.'></RowStyleDiv>
               <Row>
-              <TeapotCard img={images["agneslawrence.png"]} prompt='Utah Teapot by Agnes Lawrence Pelton' />
+              <TeapotCard img={images["alphonsomucha.png"]} prompt='Utah Teapot by Alphonso Mucha' />
               </Row>
+
+              <RowStyleDiv title='Symbolism' desc='Symbolists combined religious mysticism, the perverse, the erotic, and the decadent. Symbolist subject matter is typically characterized by an interest in the occult, the morbid, the dream world, melancholy, evil, and death.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["alyssamonks.png"]} prompt='Utah Teapot by Alyssa Monks' />
+              </Row>
+
+              <RowStyleDiv title='Environmentalism' desc='Environmental artists seek to investigate our human relationship with the environment through embedding their artistic practice within it. This changes the way we think about the site of artistic production; as opposed to using the artists studio as the sole location in which to create, Environmental artists engage the natural world in a much more active and immediate way either by working in new ways outside, or by bringing natural materials into new settings.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["anseladams.png"]} prompt='Utah Teapot by Ansel Adams' />
+              </Row>
+
               <RowStyleDiv title='Luminism' desc=' Luminist paintings do not tend to depict nature as grand and imposing, nor do they strive to convey a sense of spectacular, awe-inspiring sublimity. Instead, Luminist paintings with their smaller size evoke a quiet spirituality based on closely observed natural phenomena, especially the quality of light.'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["albertbierstadt.png"]} prompt='Utah Teapot by Albert Bierstadt' />
               </Row>
+
+              <RowStyleDiv title='Modernism/Modern Art' desc='Modernism refers to a global movement in society and culture that from the early decades of the twentieth century sought a new alignment with the experience and values of modern industrial life. Building on late nineteenth-century precedents, artists around the world used new imagery, materials and techniques to create artworks that they felt better reflected the realities and hopes of modern societies.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["agneslawrence.png"]} prompt='Utah Teapot by Agnes Lawrence Pelton' />
+              <TeapotCard img={images["amedeomodigliani.png"]} prompt='Utah Teapot by Amedeo Modigliani' />
+              </Row>
+
               <RowStyleDiv title='Gothic' desc='The innovations of Gothic architecture were premised on the ideas developed by Abbot Suger that earthly light contained divine light and that the physical edifice of the church needed to make this concept tangible. Revolutionary transformations of flying buttresses and groin vaulting allowed the inclusion of more stained glass windows in the church’s structure, thus transforming the everyday sunlight into a prism of colors that danced over the surfaces of the stone and reminded worshippers of God’s divine presence.'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["albrechtdurer.png"]} prompt='Utah Teapot by Albrecht Durer' />
@@ -429,20 +473,58 @@ function TeaAccordian(props) {
               <RowStyleDiv title='Postmodern' desc='Postmodernism overturned the idea that there was one inherent meaning to a work of art or that this meaning was determined by the artist at the time of creation. Instead, the viewer became an important determiner of meaning, even allowed by some artists to participate in the work as in the case of some performance pieces. Other artists went further by creating works that required viewer intervention to create and/or complete the work.'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["alexgrey.png"]} prompt='Utah Teapot by Alex Grey' />
+              <TeapotCard img={images["amandasage.png"]} prompt='Utah Teapot by Amanda Sage' />
               </Row>
-              <RowStyleDiv title='Modern Artists' desc='Artists for video games, manga, comic books, artstation etc.'></RowStyleDiv>
+
+              <RowStyleDiv title='Academism' desc=' Academism kind of preserved the familiar classical forms and brought them up to the level of an immutable law, to the denial of the artist’s individuality— he was only supposed to imitate his great predecessors.'></RowStyleDiv>
               <Row>
-              <TeapotCard img={images["akihikoyoshida.png"]} prompt='Utah Teapot by Akihiko Yoshida' />
+              <TeapotCard img={images["alexandrecabanel.png"]} prompt='Utah Teapot by Alexandre Cabanel' />
+              </Row>
+
+              <RowStyleDiv title='Pop Art' desc='The Pop Art movement aimed to blur the boundaries between "high" art and "low" culture. The concept that there is no hierarchy of culture and that art may borrow from any source has been one of the most influential characteristics of Pop Art.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["andyworhol.png"]} prompt='Utah Teapot by Andy Worhol' />
+              </Row>
+
+              <RowStyleDiv title='Baroque' desc='Baroque brought images for religious worship back into the public eye after being banned for their glorification of the ethereal and ideal. The movements leaders professed that art should be easily understood and strongly felt by common people with the effect of encouraging piety and an awe for the church.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["annibalecarracci.png"]} prompt='Utah Teapot by Annibale Carracci' />
+              <TeapotCard img={images["anthonyvandyck.png"]} prompt='Utah Teapot by Anthony Van Dyck' />
+              </Row>
+
+              <RowStyleDiv title='Artstation' desc=''></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["antonfadeev.png"]} prompt='Utah Teapot by Annton Fadeev' />
+              <TeapotCard img={images["alenaaenami.png"]} prompt='Utah Teapot by Alena Aenami' />
+              <TeapotCard img={images["andreasrocha.png"]} prompt='Utah Teapot by Andreas Rocha' />
+              </Row>
+
+              <RowStyleDiv title='Comic/Manga' desc=''></RowStyleDiv>
+              <Row>
               <TeapotCard img={images["akaritoriyama.png"]} prompt='Utah Teapot by Akari Toriyama' />
               <TeapotCard img={images["alwilliamson.png"]} prompt='Utah Teapot by Al Williamson' />
+              <TeapotCard img={images["angusmckie.png"]} prompt='Utah Teapot by Angus McKie' />
+              <TeapotCard img={images["antonpieck.png"]} prompt='Utah Teapot by Anton Pieck' />
+              </Row>
+
+              <RowStyleDiv title='Modern Artists' desc='Artists for video games and others etc.'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["akihikoyoshida.png"]} prompt='Utah Teapot by Akihiko Yoshida' />
+              <TeapotCard img={images["annadittmann.png"]} prompt='Utah Teapot by Anna Dittmann' />
+              <TeapotCard img={images["annestokes.png"]} prompt='Utah Teapot by Anne Stokes' />
               <TeapotCard img={images["alanlee.png"]} prompt='Utah Teapot by Alan Lee' />
               <TeapotCard img={images["albertovargas.png"]} prompt='Utah Teapot by Alberto Vargas' />
               </Row>
               <Row>
               <TeapotCard img={images["aleksibriclot.png"]} prompt='Utah Teapot by Aleksi Briclot' />
-              <TeapotCard img={images["alenaaenami.png"]} prompt='Utah Teapot by Alena Aenami' />
               <TeapotCard img={images["alexanderjansson.png"]} prompt='Utah Teapot by Alexander Jansson' />
+              <TeapotCard img={images["antonotto.png"]} prompt='Utah Teapot by Anton Otto' />
+              
               </Row>
+              <Row>
+              
+              </Row>
+
             </Container>
           </Accordion.Body>
         </Accordion.Item>
@@ -454,6 +536,7 @@ function TeaAccordian(props) {
             <RowStyleDiv title='Scultors' desc='Making sculptures.'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["albertogiacometti.png"]} prompt='Utah Teapot by Alberto Giacometti' />
+              <TeapotCard img={images["alexandermilnecalder.png"]} prompt='Utah Teapot by Alexander Milne Calder' />
               </Row>
               
               <RowStyleDiv title='Architects' desc='Temp category'></RowStyleDiv>
@@ -462,7 +545,11 @@ function TeaAccordian(props) {
               </Row>
               <RowStyleDiv title='Photographers' desc='Temp category'></RowStyleDiv>
               <Row>
-
+              <TeapotCard img={images["annegeddes.png"]} prompt='Utah Teapot by Anne Geddes' />
+              </Row>
+              <RowStyleDiv title='Writers' desc='Temp category'></RowStyleDiv>
+              <Row>
+              <TeapotCard img={images["annemccaffrey.png"]} prompt='Utah Teapot by Anne McCaffrey' />
               </Row>
               <RowStyleDiv title='Misc Artists' desc='Temp category'></RowStyleDiv>
               <Row>

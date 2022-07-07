@@ -3,6 +3,7 @@ import SiteNavbar from "../components/SiteNavbar";
 import { Link } from "react-router-dom";
 
 import TeapotCardLarge from "../components/teapotCardLarge";
+import RowStyleDiv from "../components/rowdiv";
 
 function importAll(r) {
   let images = {};
@@ -44,9 +45,7 @@ function AIPromptsPage(props) {
               <Accordion.Header>Seperators and Style Prompting</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                  <Row>
-                    <h3 className='styleDivide'>Baseline</h3>
-                  </Row>
+                 <RowStyleDiv title='Baseline' ></RowStyleDiv>
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_0.png"]} prompt='/imagine Utah Teapot –-ar 16:9 –-seed 1' />
 
@@ -56,43 +55,32 @@ function AIPromptsPage(props) {
                   </Row>
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_3.png"]} prompt='/imagine Utah Teapot -–ar 16:9' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_4.png"]} prompt='/imagine Utah Utah Teapot Wood –-ar 16:9' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_5.png"]} prompt='/imagine Wood –-ar 16:9' />
                   </Row>
-                  <Row>
-                    <h3 className='styleDivide'>Seperators</h3>
-                  </Row>
+                  <RowStyleDiv title='Seperators' ></RowStyleDiv>
+                  
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_6.png"]} prompt='/imagine Utah Teapot Wood --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_7.png"]} prompt='/imagine Utah Teapot Wood --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_8.png"]} prompt='/imagine Utah Teapot Wood --ar 16:9 –-seed 1' />
                   </Row>
 
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_11.png"]} prompt='/imagine utah teapot wood --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_10.png"]} prompt='/imagine Utah Teapot :wood: --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_12.png"]} prompt='/imagine UTAH TEAPOT WOOD --ar 16:9 –-seed 1' />
                   </Row>
 
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_13.png"]} prompt='/imagine Utah Teapot Wood! --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_14.png"]} prompt='/imagine Utah Teapot? Wood --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_15.png"]} prompt='/imagine UtAh TeApOt WoOd --ar 16:9 –-seed 1' />
                   </Row>
 
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_16.png"]} prompt='/imagine Utah Teapot, Wood --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_17.png"]} prompt='/imagine Utah Teapot + Wood --ar 16:9 –-seed 1' />
-
                     <TeapotCardLarge img={images["prompt_woodteapot_18.png"]} prompt='/imagine Utah Teapot - Wood --ar 16:9 –-seed 1' />
                   </Row>
                   <Row>
@@ -130,9 +118,7 @@ function AIPromptsPage(props) {
 
                     <TeapotCardLarge img={images["prompt_woodteapot_36.png"]} prompt='/imagine Utah_Teapot_Wood --ar 16:9 –-seed 1' />
                   </Row>
-                  <Row>
-                    <h3 className='styleDivide'>Style Transfer Statements</h3>
-                  </Row>
+                  <RowStyleDiv title='Style Transfer Statements' ></RowStyleDiv>
                   <Row>
                     <TeapotCardLarge img={images["prompt_woodteapot_30.png"]} prompt='/imagine Utah Teapot in the form of Wood --ar 16:9 –-seed 1' />
 
@@ -152,10 +138,7 @@ function AIPromptsPage(props) {
               <Accordion.Header>Weighting</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                  <Row>
-                    <h3 className='styleDivide'>Weighting</h3>
-                  </Row>
-
+                <RowStyleDiv title='Weighting' ></RowStyleDiv>
                   <Row>
                     <TeapotCardLarge img={images["weighting_woodteapot_0.png"]} prompt='/imagine Utah Teapot::1 Wood::.1 -–ar 16:9 –-seed 1' />
 

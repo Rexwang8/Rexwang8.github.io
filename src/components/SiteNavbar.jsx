@@ -20,8 +20,6 @@ function formBC(url, numb) {
 
 function SiteNavbar(props) {
   let pathParts = props.url.trim().split("/");
-  console.log(pathParts);
-
   let breadcrumbs = [];
 
   for (var i = 0; i < pathParts.length; i++) {

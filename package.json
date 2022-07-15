@@ -4,9 +4,11 @@
   "homepage": "https://rexwang8.github.io",
   "private": true,
   "dependencies": {
+    "@analytics/google-analytics": "^0.5.3",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",
     "@testing-library/user-event": "^13.5.0",
+    "analytics": "^0.8.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.4.0",
     "react-dom": "^18.2.0",

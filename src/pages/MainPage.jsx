@@ -22,10 +22,15 @@ import HomeTab from "./subpage/homeTab";
 import AboutTab from "./subpage/aboutTab";
 import SiteNavbar from "../components/SiteNavbar";
 
+
 function MainPage(props) {
   console.log(props);
   document.title = props.title;
-
+  
+  props.analytics.page({
+    url: 'https://rexwang8.github.io/'
+  })
+  
   return (
     <div className="bg2">
       <div className="aspect">

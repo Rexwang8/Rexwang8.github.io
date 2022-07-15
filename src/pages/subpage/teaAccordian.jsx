@@ -42,10 +42,13 @@ function TeaAccordian(props) {
   var reflections = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.reflections, 5);
   
   var ppmisc = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.misc, 5);
-  var lighting = seperate("Utah Teapot ,  ",'', LDD.lighting, 5);
+  var lighting = seperate("Utah Teapot,  ",'', LDD.lighting, 5);
+  var renderers = seperate("Utah Teapot,  ",' Render', STYLES.renderers, 5);
+  var abstraction = seperate("Utah Teapot,  ",'', STYLES.abstraction, 5);
+  var photosites = seperate("Utah Teapot,  ",' ', STYLES.photosites, 5);
+  var timeframes = seperate("A photo of the Utah Teapot,  ",'', STYLES.timeframes, 5);
 
-
-  
+  //ARTISTS
   var Academism = seperate("Utah Teapot by  ",'', ARTISTS.Academism, 5);
   var ArtsandCrafts = seperate("Utah Teapot by  ",'', ARTISTS.ArtsandCrafts, 5);
   var ArtNouveau = seperate("Utah Teapot by  ",'', ARTISTS.ArtNouveau, 5);
@@ -122,10 +125,21 @@ function TeaAccordian(props) {
         </Accordion.Item>
 
         <Accordion.Item eventKey='3'>
-          <Accordion.Header>Artistic Movements</Accordion.Header>
+          <Accordion.Header>Artistic Movements, Styles, Themes</Accordion.Header>
           <Accordion.Body>
             <Container>
               <RowStyleDiv title='See "Traditional Artists and Movements for more."' desc=''></RowStyleDiv>
+              <RowStyleDiv title='Rendering Engines' desc='Rendering engines, game engines and 3d modeling engines.'></RowStyleDiv>
+              {renderers}
+              <RowStyleDiv title='Photosites' desc='Photosharing and Art sharing sites.'></RowStyleDiv>
+              {photosites}
+
+              <RowStyleDiv title='Timeframes' desc='Different decades and eras.'></RowStyleDiv>
+              {timeframes}
+
+              <RowStyleDiv title='Abstraction/Realism' desc='Levels of abstraction and realism'></RowStyleDiv>
+              {abstraction}
+
               <RowStyleDiv title='-Punk Styles' desc='Most popular are steampunk and cyberpunk.'></RowStyleDiv>
               {punkstyles}
 

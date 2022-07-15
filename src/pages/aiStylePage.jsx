@@ -7,6 +7,9 @@ import DalleTab from "./subpage/DalleTab";
 
 function AIStylePage(props) {
   document.title = props.title;
+  props.analytics.page({
+    url: 'https://rexwang8.github.io/resource/ai/teapot'
+  })
 
   return (
     <div className='bg2'>

@@ -6,12 +6,26 @@ import './bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
 import { BrowserRouter, HashRouter } from 'react-router-dom';
 import RoutingPage from './pages/RoutingPage';
+import Analytics from 'analytics'
+import googleAnalytics from '@analytics/google-analytics'
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const analytics = Analytics({
+  app: 'GHPAGES',
+  plugins: [
+    googleAnalytics({
+      trackingId: 'G-GB4FJFR79W'
+    })
+  ]
+})
+
+
 root.render(
   <React.StrictMode>
     <BrowserRouter  basename=''>
     <ThemeProvider>
-    <RoutingPage />
+    <RoutingPage analytics={analytics}/>
     </ThemeProvider>
     
     </BrowserRouter >

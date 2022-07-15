@@ -16,7 +16,9 @@ function importAll(r) {
 function AIPromptsPage(props) {
   document.title = props.title;
   const images = importAll(require.context("../teapots_prompts", true, /\.(png|jpe?g|svg)$/));
-
+  props.analytics.page({
+    url: 'https://rexwang8.github.io/resource/ai/prompts'
+  })
   return (
     <div className='bg2'>
       <div className='aspect'>

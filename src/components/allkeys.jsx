@@ -126,7 +126,7 @@ export const PHYSICALMEDIUMS = {
     algo: "Algorithmic",
     datamosh: "Data Moshing",
     dynamic: "Dynamic Painting",
-    _3dmodel: "3D Model",
+    n3dmodel: "3D Model",
     logo: "logo",
     icon: "icon",
     digitalphotography: "Digital Photography",
@@ -221,30 +221,30 @@ socialistrealism: "Socialist Realism",
 surreal: "Surreal"
     },
     timeframes: {
-        _2020s: "2020s",
-        _2010s: "2010s",
-        _2000s: "2000s",
-        _1990s: "1990s",
-        _1980s: "1980s",
-        _1970s: "1970s",
-        _1960s: "1960s",
-        _1950s: "1950s",
-        _1940s: "1940s",
-        _1930s: "1930s",
-        _1920s: "1920s",
-        _1910s: "1910s",
-        _1900s: "1900s",
-        _1850s: "1850s",
-        _1800s: "1800s",
-        _1750s: "1750s",
-        _1700s: "1700s",
-        _1600s: "1600s",
-        _1500s: "1500s",
-        _1400s: "1400s",
-        _1300s: "1300s",
-        _1200s: "1200s",
-        _1100s: "1100s",
-        _1000s: "1000s",
+        n2020s: "2020s",
+        n2010s: "2010s",
+        n2000s: "2000s",
+        n1990s: "1990s",
+        n1980s: "1980s",
+        n1970s: "1970s",
+        n1960s: "1960s",
+        n1950s: "1950s",
+        n1940s: "1940s",
+        n1930s: "1930s",
+        n1920s: "1920s",
+        n1910s: "1910s",
+        n1900s: "1900s",
+        n1850s: "1850s",
+        n1800s: "1800s",
+        n1750s: "1750s",
+        n1700s: "1700s",
+        n1600s: "1600s",
+        n1500s: "1500s",
+        n1400s: "1400s",
+        n1300s: "1300s",
+        n1200s: "1200s",
+        n1100s: "1100s",
+        n1000s: "1000s",
     },
   punkstyles: {
     steampunk: "Steampunk",
@@ -276,9 +276,9 @@ surreal: "Surreal"
 
 export const CAMERA = {
 resolution: {
-    _4k: "4k",
-    _8k: "8k",
-    _16k: "16k",
+    n4k: "4k",
+    n8k: "8k",
+    n16k: "16k",
 },
 perspectives: {
     lowangle: "Low Angle",
@@ -531,430 +531,3 @@ clovistrouille: "Clovis Trouille",
 
 };
 
-/*
-Prompt:
-vibe
-vibefast
-illustration
-sketch
-oilPainting
-glassPaint
-
-Result:
-vibe: "vibe",
-vibefast: "vibefast",
-illustration: "illustration",
-sketch: "sketch",
-oilPainting: "oilPainting",
-glassPaint: "glassPaint"
-
-
-
-
-@page "/ptocalendar"
-@page "/illinois/ptocalendar"
-@page "/wisconsin/ptocalendar"
-
-@layout GeneralLayout
-
-@inherits SightGlassComponentBase
-
-@inject IJSRuntime _jsRuntime
-@inject VistaTimeService _vistaTimeService
-
-
-@using Syncfusion.Blazor.Schedule
-@using Marquis.Services.SightGlass
-@using Marquis.Data.SightGlass
-@using Marquis.Services.SightGlass.Models
-@using Blazored.LocalStorage
-@using Marquis.Shared
-@inject ILocalStorageService LocalStorageService
-@attribute [Authorize]
-
-<Subheader PageTitle="PTO Calendar">
-
-    @if (Facility != null)
-    {
-        <BreadcrumbLink Href="@($"/{Facility.Path}")" Text="@($"{Facility.ShortName}")" />
-        <BreadcrumbLink Href="@($"/{Facility.Path}/ptocalendar")" Text="PTO Calendar" />     
-    }
-    else
-    {
-        <BreadcrumbLink Href="/ptocalendar" Text="PTO Calendar" />  
-        
-    }
-</Subheader>
-
-<PageBody>
-    @if (Facility.AppFacilityId == AppFacilityIdentifiers.Illinois)
-    {
-        <div class="kt-portlet">
-            <div class="kt-portlet__body">
-
-                <EditForm Model="@MyCalendarForm">
-                    <div>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMelc" @onclick="@(() => { MyCalendarForm.IsMelc = !MyCalendarForm.IsMelc; DoFilter(); })"/>
-                            Energy
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMgra" @onclick="@(() => { MyCalendarForm.IsMgra = !MyCalendarForm.IsMgra; DoFilter(); })"/>
-                            Grain
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMinc" @onclick="@(() => { MyCalendarForm.IsMinc = !MyCalendarForm.IsMinc; DoFilter(); })"/>
-                            Inc
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMgmt" @onclick="@(() => { MyCalendarForm.IsMgmt = !MyCalendarForm.IsMgmt; DoFilter(); })"/>
-                            Management
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMmar" @onclick="@(() => { MyCalendarForm.IsMmar = !MyCalendarForm.IsMmar; DoFilter(); })"/>
-                            Marine
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMrol" @onclick="@(() => { MyCalendarForm.IsMrol = !MyCalendarForm.IsMrol; DoFilter(); })"/>
-                            Renewable Oils
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMewi" @onclick="@(() => { MyCalendarForm.IsMewi = !MyCalendarForm.IsMewi; DoFilter(); })"/>
-                            Wisconsin
-                        </label>
-                        <label class="mr-3 mb-0">
-                            <input type="checkbox" checked="@MyCalendarForm.IsMext" @onclick="@(() => { MyCalendarForm.IsMext = !MyCalendarForm.IsMext; DoFilter(); })"/>
-                            XT
-                        </label>
-                        <label class="mr-3 mb-0">
-                           <input autoComplete="on" list="suggestions"
-               @oninput="OnInputChanged"
-               @onfocus='() => OnInputChanged(new ChangeEventArgs { Value = "" })'
-               @bind-value="@MyCalendarForm.SearchTerm"
-                placeholder="Search by name"
-                />
-                        </label>
-                        
-                    </div>
-                </EditForm>
-            </div>
-        </div>
-    }
-    else
-    {
-        <div class="kt-portlet">
-            <div class="kt-portlet__body">
-
-                <EditForm Model="@MyCalendarForm">
-                    <div>
-                        <label class="mr-3 mb-0">
-                           <input autoComplete="on" list="suggestions"
-               @oninput="OnInputChanged"
-               @onfocus='() => OnInputChanged(new ChangeEventArgs { Value = "" })'
-               @bind-value="@MyCalendarForm.SearchTerm"
-                placeholder="Search by name"
-                />
-                        </label>
-                        
-                    </div>
-                </EditForm>
-            </div>
-        </div>
-    }
-                    
-    @if (DoneLoading)
-    {
-        <div class="pto-calendar">
-            <SfSchedule TValue="AppointmentData" EnableAutoRowHeight="true" @bind-SelectedDate="@_currentDate" Readonly="true">
-                <ScheduleEventSettings DataSource="@_dataSource"></ScheduleEventSettings>
-                <ScheduleViews>
-                    <ScheduleView Option="View.Month"></ScheduleView>
-                    <ScheduleView Option="View.Agenda"></ScheduleView>
-                </ScheduleViews>
-            </SfSchedule>
-        </div>
-    }
-</PageBody>
-
-
-@code{
-    //<input autoComplete="on" type="text" @bind-value="@MyCalendarForm.SearchTerm" @bind-value:event=oninput placeholder="Search by name" @onchange="@DoFilter"/>
-    private bool DoneLoading { get; set; }
-    private DateTime _currentDate = DateTime.Today;
-    private List<AppointmentData> _dataSource = new();
-    private List<TimeClockEmployeePtoEntry> ptoEntries = new List<TimeClockEmployeePtoEntry>();
-
-
-    private CalendarForm MyCalendarForm = new();
-
-    public class CalendarForm
-    {
-        public bool IsMelc { get; set; }
-        public bool IsMgmt { get; set; }
-        public bool IsMgra { get; set; }
-        public bool IsMinc { get; set; }
-        public bool IsMmar { get; set; }
-        public bool IsMrol { get; set; }
-        public bool IsMewi { get; set; }
-        public bool IsMext { get; set; }
-        public string SearchTerm { get; set; } = "";
-    }
-
-    //Here's what the above function is doing:
-    //1. It's getting the value of the input field and assigning it to the SearchTerm property of the MyCalendarForm object.
-    //2. It's calling the DoFilter() function.
-    private async void OnInputChanged(ChangeEventArgs e)
-    {
-        MyCalendarForm.SearchTerm = e.Value as string;
-        await LocalStorageService.SetItemAsync(LocalStorageKeys.PTODATA.ToString(), MyCalendarForm);
-        DoFilter();
-    }
-
-
-    private void DoFilter()
-    {
-        DoneLoading = false;
-
-        _dataSource = new();
-
-
-        var ptoEntries2 = new List<TimeClockEmployeePtoEntry>();
-
-        if (Facility == null)
-        {
-            return;
-        }
-
-
-        if (Facility.AppFacilityId == AppFacilityIdentifiers.Illinois)
-        {
-            if (MyCalendarForm.IsMelc)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MELC");
-                ptoEntries2.AddRange(temp);
-            }
-            if (MyCalendarForm.IsMgmt)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MGMT").ToList();
-                ptoEntries2.AddRange(temp);
-            }
-            if (MyCalendarForm.IsMgra)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MGRA").ToList();
-                ptoEntries2.AddRange(temp);
-            }    
-            if (MyCalendarForm.IsMinc)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MINC").ToList();
-                ptoEntries2.AddRange(temp);
-            }       
-            if (MyCalendarForm.IsMmar)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MMAR").ToList();
-                ptoEntries2.AddRange(temp);
-            }                       
-            if (MyCalendarForm.IsMrol)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MROL").ToList();
-                ptoEntries2.AddRange(temp);
-            } 
-            if (MyCalendarForm.IsMewi)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MEWI").ToList();
-                ptoEntries2.AddRange(temp);
-            }   
-            if (MyCalendarForm.IsMext)
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MEXT").ToList();
-                ptoEntries2.AddRange(temp);
-            }
-
-            if (!MyCalendarForm.IsMelc && !MyCalendarForm.IsMgmt && !MyCalendarForm.IsMgra && !MyCalendarForm.IsMinc
-                && !MyCalendarForm.IsMmar && !MyCalendarForm.IsMrol && !MyCalendarForm.IsMewi && !MyCalendarForm.IsMext)
-            {
-                ptoEntries2 = ptoEntries;
-            }
-
-            if (!String.IsNullOrEmpty(MyCalendarForm.SearchTerm.Trim().ToLower()))
-            {
-                ptoEntries2 = ptoEntries2.Where(p => p.DisplayName.ToLower().Trim().Contains(MyCalendarForm.SearchTerm.ToLower().Trim())).ToList();
-            }            
-        }
-        if (Facility.AppFacilityId == AppFacilityIdentifiers.Wisconsin)
-        {
-            if (!String.IsNullOrEmpty(MyCalendarForm.SearchTerm.Trim().ToLower()))
-            {
-                var temp2 = ptoEntries.Where(p => p.CompanyCode == "MEWI" || 
-                                                p.EmpNo 
-                                                    is "1176" // Jeff Knutson
-                                                    or "1086" // Bridget Neitzel
-                                                    or "1196" // Howard Boppart
-                                                    or "1106" // Roland Koenig
-                ).ToList().Where(p => p.DisplayName.ToLower().Trim().Contains(MyCalendarForm.SearchTerm.ToLower().Trim())).ToList();
-                ptoEntries2.AddRange(temp2);
-            }
-            else
-            {
-                var temp = ptoEntries.Where(p => p.CompanyCode == "MEWI" || 
-                                                p.EmpNo 
-                                                    is "1176" // Jeff Knutson
-                                                    or "1086" // Bridget Neitzel
-                                                    or "1196" // Howard Boppart
-                                                    or "1106" // Roland Koenig
-                ).ToList();
-                ptoEntries2.AddRange(temp);    
-            }
-
-        }
-
-
-        foreach (var ptoEntry in ptoEntries2.OrderBy(e => e.DisplayName))
-        {
-            if (ptoEntry.IncludeWeekends)
-            {
-                var calendarEntry = new AppointmentData()
-                {
-                    IsAllDay = true,
-                    StartTime = ptoEntry.StartDttm,
-                    EndTime = ptoEntry.EndDttm
-                };
-
-                var hourDiff = (ptoEntry.EndDttm - ptoEntry.StartDttm).TotalHours;
-                if (ptoEntry.NormalHoursWork > 40 && hourDiff < 12)
-                {
-                    calendarEntry.Subject = $"{ptoEntry.DisplayName} ({hourDiff} hours)";
-                }
-                else if (ptoEntry.NormalHoursWork <= 40 && hourDiff < 8)
-                {
-                    calendarEntry.Subject = $"{ptoEntry.DisplayName} ({hourDiff} hours)";
-                }
-                else
-                {
-                    calendarEntry.Subject = ptoEntry.DisplayName;
-                }
-
-                _dataSource.Add(calendarEntry);                
-            }
-            else
-            {
-                var chunked = WorkWeekChunker(ptoEntry.StartDttm, ptoEntry.EndDttm);
-                foreach (var chunk in chunked)
-                {
-                    var (startDttm, endDttm) = chunk;
-                    var calendarEntry = new AppointmentData()
-                    {
-                        IsAllDay = true,
-                        StartTime = startDttm,
-                        EndTime = endDttm,
-                        Color = GetColor(ptoEntry.CompanyCode)
-                    };
-
-                    var hourDiff = (ptoEntry.EndDttm - ptoEntry.StartDttm).TotalHours;
-                    if (ptoEntry.NormalHoursWork > 40 && hourDiff < 12)
-                    {
-                        calendarEntry.Subject = $"{ptoEntry.DisplayName} ({hourDiff} hours)";
-                    }
-                    else if (ptoEntry.NormalHoursWork <= 40 && hourDiff < 8)
-                    {
-                        calendarEntry.Subject = $"{ptoEntry.DisplayName} ({hourDiff} hours)";
-                    }
-                    else
-                    {
-                        calendarEntry.Subject = ptoEntry.DisplayName;
-                    }
-
-                    _dataSource.Add(calendarEntry);     
-                }
-            }
-        }
-
-        DoneLoading = true;   
-    }
-
-
-    protected override async Task OnAfterRenderAsync(bool firstRender)
-    {
-        if (firstRender == true)
-        {
-            await _jsRuntime.InvokeVoidAsync("setActiveItem", "nav-hr");
-        }
-    }    
-
-    protected override async Task OnInitializedAsync()
-    {
-        if(Facility == null)
-        {
-            NavManager.NavigateTo("/illinois/ptocalendar", forceLoad: true);
-        }
-        ptoEntries = await _vistaTimeService.GetPtoCalendarEntries();
-        CalendarForm ptodata = await LocalStorageService.GetItemAsync<CalendarForm?>(LocalStorageKeys.PTODATA.ToString());
-
-        if(ptodata != null)
-        {
-            MyCalendarForm = ptodata;
-            MyCalendarForm.SearchTerm = ptodata.SearchTerm;
-        }
-        
-        DoFilter();
-    }
-
-    private string GetColor(string companyCode)
-    {
-        var color = companyCode switch {
-            "MELC" => "#007bff",
-            "MGRA" => "#FF9632",
-            _ => "#000"
-            };
-
-        return color;
-    }
-
-
-    private List<(DateTime StartDate, DateTime EndDate)> WorkWeekChunker(DateTime startDate, DateTime endDate) 
-    {
-        var outList = new List<(DateTime, DateTime)>();
-        var dateListDictionary = new Dictionary<int, List<DateTime>>();
-        var dateIndex = startDate;
-        while (dateIndex <= endDate) 
-        {
-            if (dateIndex.DayOfWeek != DayOfWeek.Saturday && dateIndex.DayOfWeek != DayOfWeek.Sunday)
-            {
-                var weekNum = System.Globalization.ISOWeek.GetWeekOfYear(dateIndex);
-                if (dateListDictionary.ContainsKey(weekNum)) 
-                {
-                    dateListDictionary[weekNum].Add(dateIndex);
-                }
-                else
-                {
-                    dateListDictionary[weekNum] = new List<DateTime>() { dateIndex };
-                }
-            }
-            dateIndex = dateIndex.AddDays(1);
-        }
-	
-        foreach (var weekNum in dateListDictionary.Keys) 
-        {
-            var minDate = dateListDictionary[weekNum].Min();	
-            var maxDate = dateListDictionary[weekNum].Max();
-            outList.Add((minDate, maxDate));
-        }
-		
-        return outList;
-    }    
-    
-    public class AppointmentData
-    {
-        public int Id { get; set; }
-        public string Subject { get; set; }
-        public string Location { get; set; }
-        public DateTime StartTime { get; set; }
-        public DateTime EndTime { get; set; }
-        public string Description { get; set; }
-        public bool IsAllDay { get; set; }
-        public string RecurrenceRule { get; set; }
-        public string RecurrenceException { get; set; }
-        public Nullable<int> RecurrenceID { get; set; }
-        public string Color { get; set; }
-    }
-}
-*/

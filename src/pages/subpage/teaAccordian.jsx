@@ -1,7 +1,7 @@
 import { Container, Accordion, Row, Col } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
 import RowStyleDiv from "../../components/rowdiv";
-import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS } from "../../components/allkeys";
+import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS } from "../../data/allkeys";
 import TeapotShelf from "../../components/teapotShelf";
 
 
@@ -47,6 +47,8 @@ function TeaAccordian(props) {
   var abstraction = seperate("Utah Teapot,  ",'', STYLES.abstraction, 5);
   var photosites = seperate("Utah Teapot,  ",' ', STYLES.photosites, 5);
   var timeframes = seperate("A photo of the Utah Teapot,  ",'', STYLES.timeframes, 5);
+  var dimensionality = seperate("Utah Teapot,  ",'', LDD.dimensionality, 5);
+
 
   //ARTISTS
   var Academism = seperate("Utah Teapot by  ",'', ARTISTS.Academism, 5);
@@ -194,9 +196,7 @@ function TeaAccordian(props) {
               <RowStyleDiv title='Lighting' desc='Lighting and shadow related keywords'></RowStyleDiv>
               {lighting}
               <RowStyleDiv title='Dimensionality' desc='Dimension related keywords.'></RowStyleDiv>
-              <Row>
-
-              </Row>
+              {dimensionality}
             </Container>
           </Accordion.Body>
         </Accordion.Item>

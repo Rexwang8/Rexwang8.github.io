@@ -37,7 +37,7 @@ function TeaAccordian(props) {
   var wavestyles = seperate("Utah Teapot in the style of ",'', STYLES.wavestyles, 5);
   var resolutions = seperate("Utah Teapot, Digital Art, ",'', CAMERA.resolution, 5);
   var perspectives = seperate("A photo of a utah teapot,   ",'', CAMERA.perspectives, 5);
-  
+  var lens = seperate("A photo of a utah teapot,   ",'', CAMERA.lens, 5);
   var postprocess = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.postprocessing, 5);
   var reflections = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.reflections, 5);
   
@@ -48,7 +48,7 @@ function TeaAccordian(props) {
   var photosites = seperate("Utah Teapot,  ",' ', STYLES.photosites, 5);
   var timeframes = seperate("A photo of the Utah Teapot,  ",'', STYLES.timeframes, 5);
   var dimensionality = seperate("Utah Teapot,  ",'', LDD.dimensionality, 5);
-
+  var complexity = seperate("Utah Teapot,  ",'', STYLES.complexity, 5);
 
   //ARTISTS
   var Academism = seperate("Utah Teapot by  ",'', ARTISTS.Academism, 5);
@@ -131,16 +131,16 @@ function TeaAccordian(props) {
           <Accordion.Body>
             <Container>
               <RowStyleDiv title='See "Traditional Artists and Movements for more."' desc=''></RowStyleDiv>
-              <RowStyleDiv title='Rendering Engines' desc='Rendering engines, game engines and 3d modeling engines.'></RowStyleDiv>
-              {renderers}
-              <RowStyleDiv title='Photosites' desc='Photosharing and Art sharing sites.'></RowStyleDiv>
-              {photosites}
+              
 
               <RowStyleDiv title='Timeframes' desc='Different decades and eras.'></RowStyleDiv>
               {timeframes}
 
               <RowStyleDiv title='Abstraction/Realism' desc='Levels of abstraction and realism'></RowStyleDiv>
               {abstraction}
+
+              <RowStyleDiv title='Complexity' desc='Levels of complexity'></RowStyleDiv>
+              {complexity}
 
               <RowStyleDiv title='-Punk Styles' desc='Most popular are steampunk and cyberpunk.'></RowStyleDiv>
               {punkstyles}
@@ -159,6 +159,7 @@ function TeaAccordian(props) {
               {resolutions}
 
               <RowStyleDiv title='Camera Lengths and Views' desc='Camera focal lengths and camera angles.'></RowStyleDiv>
+              {lens}
               {perspectives}
              
               <RowStyleDiv title='Camera Effects' desc='Camera related effects and modifiers.'></RowStyleDiv>
@@ -444,16 +445,11 @@ function TeaAccordian(props) {
           <Accordion.Header>Art Websites and Game Renderers</Accordion.Header>
           <Accordion.Body>
             <Container>
-              <RowStyleDiv title='Art Websites' desc='Detail level keywords'></RowStyleDiv>
-              <Row>
-              <TeapotCard img={images["cgsociety.png"]} prompt='Utah Teapot by CG Society' />
+            <RowStyleDiv title='Rendering Engines' desc='Rendering engines, game engines and 3d modeling engines.'></RowStyleDiv>
+              {renderers}
+              <RowStyleDiv title='Photo sites' desc='Photosharing and Art sharing sites. Also includes image repositories.'></RowStyleDiv>
+              {photosites}
 
-              </Row>
-              <RowStyleDiv title='Game Renderers' desc='Lighting and shadow related keywords'></RowStyleDiv>
-              <Row>
-
-
-              </Row>
             </Container>
           </Accordion.Body>
         </Accordion.Item>

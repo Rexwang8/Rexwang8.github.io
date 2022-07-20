@@ -80,6 +80,14 @@ function TeaAccordian(props) {
   var Symbolism = seperate("Utah Teapot by  ",'', ARTISTS.Symbolism, 5);
   var HudsonRiver = seperate("Utah Teapot by  ",'', ARTISTS.HudsonRiver, 5);
   var VisionaryArt = seperate("Utah Teapot by  ",'', ARTISTS.VisionaryArt, 5);
+  var Futurism = seperate("Utah Teapot by  ",'', ARTISTS.Futurism, 5);
+  var artistartstation = seperate("Utah Teapot by  ",'', ARTISTS.artistartstation, 5);
+  var artistComicManga = seperate("Utah Teapot by  ",'', ARTISTS.artistComicManga, 5);
+  var artistIllustrator = seperate("Utah Teapot by  ",'', ARTISTS.artistIllustrator, 5);
+  var nartistFilmDirector = seperate("Utah Teapot by  ",'', ARTISTS.nartistFilmDirector, 5);
+  var nartistPhotography = seperate("Utah Teapot by  ",'', ARTISTS.nartistPhotography, 5);
+  var Mannerism = seperate("Utah Teapot by  ",'', ARTISTS.Mannerism, 5);
+  var nartistSculpter = seperate("Utah Teapot by  ",'', ARTISTS.nartistSculpter, 5);
 
   return (
     <div>
@@ -206,6 +214,7 @@ function TeaAccordian(props) {
           <Accordion.Header>Traditional Artists and Movements</Accordion.Header>
           <Accordion.Body>
             <Container>
+            <RowStyleDiv title='' desc='Artists falling under multiple movements are sorted by whatever I see first, dm me on discord if you think it should be changed.'></RowStyleDiv>
               <RowStyleDiv
                 title='Academism'
                 desc=' Academism kind of preserved the familiar classical forms and brought them up to the level of an immutable law, to the denial of the artist’s individuality— he was only supposed to imitate his great predecessors.'></RowStyleDiv>
@@ -247,6 +256,11 @@ function TeaAccordian(props) {
               {Expressionism}
 
               <RowStyleDiv
+                title='Futurism'
+                desc='A key focus of the Futurists was the depiction of movement, or dynamism. The group developed a number of novel techniques to express speed and motion, including blurring, repetition, and the use of lines of force. This last method was adapted from the work of the Cubists and the inclusion of such lines became a feature of Futurist images.'></RowStyleDiv>
+              {Futurism}
+
+              <RowStyleDiv
                 title='Gothic'
                 desc='The innovations of Gothic architecture were premised on the ideas developed by Abbot Suger that earthly light contained divine light and that the physical edifice of the church needed to make this concept tangible. Revolutionary transformations of flying buttresses and groin vaulting allowed the inclusion of more stained glass windows in the church’s structure, thus transforming the everyday sunlight into a prism of colors that danced over the surfaces of the stone and reminded worshippers of God’s divine presence.'></RowStyleDiv>
               {Gothic}
@@ -266,6 +280,11 @@ function TeaAccordian(props) {
                 title='Luminism'
                 desc=' Luminist paintings do not tend to depict nature as grand and imposing, nor do they strive to convey a sense of spectacular, awe-inspiring sublimity. Instead, Luminist paintings with their smaller size evoke a quiet spirituality based on closely observed natural phenomena, especially the quality of light.'></RowStyleDiv>
               {Luminism}
+
+              <RowStyleDiv
+                title='Mannarism'
+                desc='A key element of Mannerism was the use of figurative serpentinata, or "serpentine figure" in depicting human bodies. With extended limbs, elongated forms, and a fluid S-shaped grace, these figures presented an otherworldliness that departed from classical renditions.'></RowStyleDiv>
+              {Mannerism}
 
               <RowStyleDiv
                 title='Modernism/Modern Art'
@@ -326,64 +345,13 @@ function TeaAccordian(props) {
               {VisionaryArt}
 
               <RowStyleDiv title='Artstation/Deviantart' desc='Also Artsy'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["antonfadeev.png"]} prompt='Utah Teapot by Annton Fadeev' />
-                <TeapotCard img={images["alenaaenami.png"]} prompt='Utah Teapot by Alena Aenami' />
-                <TeapotCard img={images["andreasrocha.png"]} prompt='Utah Teapot by Andreas Rocha' />
-                <TeapotCard img={images["charliebowater.png"]} prompt='Utah Teapot by Charlie Bowater' />
-                <TeapotCard img={images["christopherbalaskas.png"]} prompt='Utah Teapot by Christopher Balaskas' />
-              </Row>
-              <Row>
-                <TeapotCard img={images["coryloftis.png"]} prompt='Utah Teapot by Cory Loftis' />
-                <TeapotCard img={images["craola.png"]} prompt='Utah Teapot by Craola' />
-              </Row>
+              {artistartstation}
 
               <RowStyleDiv title='Comic/Manga' desc=''></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["akaritoriyama.png"]} prompt='Utah Teapot by Akari Toriyama' />
-                <TeapotCard img={images["alwilliamson.png"]} prompt='Utah Teapot by Al Williamson' />
-                <TeapotCard img={images["angusmckie.png"]} prompt='Utah Teapot by Angus McKie' />
-                <TeapotCard img={images["antonpieck.png"]} prompt='Utah Teapot by Anton Pieck' />
-                <TeapotCard img={images["artgerm.png"]} prompt='Utah Teapot by Artgerm' />
-              </Row>
-              <Row>
-                <TeapotCard img={images["bentemplesmith.png"]} prompt='Utah Teapot by Ben Templesmith' />
-                <TeapotCard img={images["brianbolland.png"]} prompt='Utah Teapot by Brian Bolland' />
-                <TeapotCard img={images["carlbarks.png"]} prompt='Utah Teapot by Carl Barks' />
-                <TeapotCard img={images["charlesschulz.png"]} prompt='Utah Teapot by Charles M. Schulz' />
-                <TeapotCard img={images["craigdavison.png"]} prompt='Utah Teapot by Craig Davison' />
-              </Row>
+              {artistComicManga}
 
-              <RowStyleDiv title='Illustrator' desc='A person who draws or creates pictures for magazines, books, advertising, etc.'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["arthurrackham.png"]} prompt='Utah Teapot by Arthur Rackham' />
-                <TeapotCard img={images["annestokes.png"]} prompt='Utah Teapot by Anne Stokes' />
-                <TeapotCard img={images["alanlee.png"]} prompt='Utah Teapot by Alan Lee' />
-                <TeapotCard img={images["aleksibriclot.png"]} prompt='Utah Teapot by Aleksi Briclot' />
-                <TeapotCard img={images["alexanderjansson.png"]} prompt='Utah Teapot by Alexander Jansson' />
-              </Row>
-              <Row>
-                <TeapotCard img={images["artspiegelman.png"]} prompt='Utah Teapot by Art Spiegelman' />
-                <TeapotCard img={images["asafhanuka.png"]} prompt='Utah Teapot by Asaf Hanuka' />
-                <TeapotCard img={images["ashleywood.png"]} prompt='Utah Teapot by Ashley Wood' />
-                <TeapotCard img={images["antonotto.png"]} prompt='Utah Teapot by Anton Otto' />
-                <TeapotCard img={images["apolloniasaintclair.png"]} prompt='Utah Teapot by Apollonia Saintclair' />
-              </Row>
-              <Row>
-                <TeapotCard img={images["beatrixpotter.png"]} prompt='Utah Teapot by Beatrix Potter' />
-                <TeapotCard img={images["berniewrightson.png"]} prompt='Utah Teapot by Bernie Wrightson' />
-                <TeapotCard img={images["briandespain.png"]} prompt='Utah Teapot by Brian Despain' />
-                <TeapotCard img={images["briankesinger.png"]} prompt='Utah Teapot by Brian Kesinger' />
-                <TeapotCard img={images["carnegriffiths.png"]} prompt='Utah Teapot by Carne Griffiths' />
-              </Row>
-              <Row>
-                <TeapotCard img={images["charlesblackman.png"]} prompt='Utah Teapot by Charles Blackman' />
-                <TeapotCard img={images["clydecaldwell.png"]} prompt='Utah Teapot by Clyde Caldwell' />
-                <TeapotCard img={images["cobywhitmore.png"]} prompt='Utah Teapot by Coby Whitmore' />
-                <TeapotCard img={images["colesphillips.png"]} prompt='Utah Teapot by Coles Phillips' />
-                <TeapotCard img={images["conradroset.png"]} prompt='Utah Teapot by Conrad Roset' />
-              </Row>
-
+              <RowStyleDiv title='Illustrator' desc='A person who draws or creates pictures for magazines, books, advertising, etc. Sort of a catch-all'></RowStyleDiv>
+              {artistIllustrator}
               <RowStyleDiv title='Videogame Art' desc='Artists and art from video games'></RowStyleDiv>
               <Row>
                 <TeapotCard img={images["akihikoyoshida.png"]} prompt='Utah Teapot by Akihiko Yoshida' />
@@ -404,24 +372,22 @@ function TeaAccordian(props) {
           <Accordion.Body>
             <Container>
               <RowStyleDiv title='Scultors' desc='Making sculptures.'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["albertogiacometti.png"]} prompt='Utah Teapot by Alberto Giacometti' />
-                <TeapotCard img={images["alexandermilnecalder.png"]} prompt='Utah Teapot by Alexander Milne Calder' />
-              </Row>
+              {nartistSculpter}
 
               <RowStyleDiv title='Architects' desc='Temp category'></RowStyleDiv>
               <Row>
               <TeapotCard img={images["bjarkeingels.png"]} prompt='Utah Teapot by Bjarke Ingels' />
               </Row>
               <RowStyleDiv title='Photographers' desc='Temp category'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["annegeddes.png"]} prompt='Utah Teapot by Anne Geddes' />
-                <TeapotCard img={images["claudecahun.png"]} prompt='Utah Teapot by Claude Cahun' />
-              </Row>
+              {nartistPhotography}
+      
               <RowStyleDiv title='Writers' desc='Temp category'></RowStyleDiv>
               <Row>
                 <TeapotCard img={images["annemccaffrey.png"]} prompt='Utah Teapot by Anne McCaffrey' />
               </Row>
+
+              <RowStyleDiv title='Film Directors' desc='Film, Animation, Movies, etc'></RowStyleDiv>
+              {nartistFilmDirector}
 
               <RowStyleDiv title='Designers' desc='Temp category'></RowStyleDiv>
               <Row>

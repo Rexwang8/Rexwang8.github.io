@@ -465,6 +465,7 @@ export const ARTISTS = {
     artemisiagentileschi: "Artemisia Gentileschi",
     caravaggio: "Caravaggio",
     claudelorrain: "Claude Lorrain",
+diegovelazquez: "Diego Velázquez",
   },
 
   Bauhaus: {
@@ -486,6 +487,12 @@ export const ARTISTS = {
     bernardbuffet: "Bernard Buffet",
     chaimsoutine: "Chaim Soutine",
     cunoamiet: "Cuno Amiet",
+    edemshwiller: "Ed Emshwiller",
+    egonschiele: "Egon Schiele",
+    elainedekooning: "Elain de Kooning",
+  },
+  Futurism: {
+    davidburliuk: "David Burliuk",
   },
   Gothic: {
     albrechtdurer: "Albrecht Dürer",
@@ -500,10 +507,15 @@ export const ARTISTS = {
   },
   InstallationArt: {
     chiharushiota: "Chiharu Shiota",
+    danflavin: "Dan Flavin",
   },
 
   Luminism: {
     albertbierstadt: "Albert Bierstadt",
+  },
+
+  Mannerism: {
+    elgreco: "El Greco",
   },
 
   Modernism: {
@@ -525,6 +537,7 @@ export const ARTISTS = {
   PopArt: {
     andyworhol: "Andy Warhol",
     albertovargas: "Alberto Vargas",
+    davidhockney: "David Hockney",
   },
   Postmodern: {
     alexgrey: "Alex Grey",
@@ -536,9 +549,12 @@ export const ARTISTS = {
     andrewwyeth: "Andrew Wyeth",
     arkhipkuindzhi: "Arkhip Kuindzhi",
     clivemadgwick: "Clive Madgwick",
+    danielridgwayknight: "Daniel Ridgway Knight",
+    donatogiancola: "Donato Giancola",
   },
   Romantisism: {
     bobross: "Bob Ross",
+    danielgerhartz: "Daniel Gerhartz",
   },
   ScienceFiction: {
     bastienlecouffedeharme: "Bastien Lecouffe Deharme",
@@ -550,6 +566,8 @@ export const ARTISTS = {
     chesleybonestell: "Chesley Bonestell",
     chrisfoss: "Chris Foss",
     chrismoore: "Chris Moore",
+    deanellis: "Dean Ellis",
+    donmaitz: "Don Maitz",
   },
   StreetArt: {
     banksy: "Banksy",
@@ -562,6 +580,10 @@ export const ARTISTS = {
     camillepierrepambubodo: "Camille Pierrepambubodo",
     chrismars: "Chris Mars",
     clovistrouille: "Clovis Trouille",
+    danielmerriam: "Daniel Merriam",
+    doramaar: "Dora Maar",
+    dorotheatanning: "Dorothea Tanning",
+    edwardweston: "Edward Weston",
   },
   Symbolism: {
     alyssamonks: "Alyssa Monks",
@@ -572,5 +594,74 @@ export const ARTISTS = {
   },
   VisionaryArt: {
     charleseburchfield: "Charles E. Burchfield",
+  },
+  artistartstation: {
+    antonfadeev: "Annton Fadeevi",
+    alenaaenami: "Alena Aenami",
+     andreasrocha: "Andreas Rocha",
+     charliebowater: "Charlie Bowater",
+     christopherbalaskas: "Christopher Balaskas",
+     coryloftis: "Cory Loftis",
+     craola: "Craola",
+  },
+  artistComicManga: {
+    akaritoriyama: "Akari Toriyama",
+alwilliamson: "Al Williamson",
+angusmckie: "Angus McKie",
+antonpieck: "Anton Pieck",
+artgerm: "Artgerm",
+bentemplesmith: "Ben Templesmith",
+ brianbolland: "Brian Bolland",
+ carlbarks: "Carl Barks",
+ charlesschulz: "Charles M. Schulz",
+ craigdavison: "Craig Davison",
+    davegibbons: "Dave Gibbons",
+    davemckean: "Dave McKean",
+    davedorman: "Dave Dorman",
+    dustinnguyen: "Dustin Nguyen",
+    
+  },
+  artistIllustrator: {
+    arthurrackham: "Arthur Rackham",
+    annestokes: "Anne Stokes",
+    alanlee: "Alan Lee",
+    aleksibriclot: "Aleksi Briclot",
+    alexanderjansson: "Alexander Jansson",
+    artspiegelman: "Art Spiegelman",
+ asafhanuka: "Asaf Hanuka",
+ ashleywood: "Ashley Wood",
+ antonotto: "Anton Otto",
+ apolloniasaintclair: "Apollonia Saintclair",
+ beatrixpotter: "Beatrix Potter",
+ berniewrightson: "Bernie Wrightson",
+ briandespain: "Brian Despain",
+ briankesinger: "Brian Kesinger",
+ carnegriffiths: "Carne Griffiths",
+ charlesblackman: "Charles Blackman",
+ clydecaldwell: "Clyde Caldwell",
+ cobywhitmore: "Coby Whitmore",
+ colesphillips: "Coles Phillips",
+ conradroset: "Conrad Roset",
+    danmumford: "Dan Mumford",
+    davidbmattingly: "David B. Mattingly",
+    dorothylathrop: "Dorothy Lathrop",
+    earlnorem: "Earl Norem",
+    drsuess: "Dr. Seuss",
+    edbinkley: "Ed Binkley",
+  },
+  nartistFilmDirector: {
+    donbluth: "Don Bluth",
+    dougchiang: "Doug Chiang",
+
+  },
+  nartistPhotography: {
+    annegeddes: "Anne Geddes",
+    claudecahun: "Claude Cahun",
+    dianearbus: "Diane Arbus",
+  },
+  nartistSculpter: {
+    ellenjewett: "Ellen Jewett",
+    albertogiacometti: "Alberto Giacomettin",
+    alexandermilnecalder: "Alexander Milne Calder",
   },
 };

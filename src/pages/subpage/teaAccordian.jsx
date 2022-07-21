@@ -14,11 +14,11 @@ function TeaAccordian(props) {
   {
     var rows = [];
     for (var i = 0; i < Math.ceil(Object.keys(base).length); i += rowpercol) {
-      rows.push(<TeapotShelf key1={images[`${Object.keys(base)[i]}.png`]} value1={`${prefix}${base[Object.keys(base)[i]]}${suffix}`}
-      key2={images[`${Object.keys(base)[i + 1]}.png`]} value2={`${prefix}${base[Object.keys(base)[i + 1]]}${suffix}`}
-      key3={images[`${Object.keys(base)[i + 2]}.png`]} value3={`${prefix}${base[Object.keys(base)[i + 2]]}${suffix}`}
-      key4={images[`${Object.keys(base)[i + 3]}.png`]} value4={`${prefix}${base[Object.keys(base)[i + 3]]}${suffix}`}
-      key5={images[`${Object.keys(base)[i + 4]}.png`]} value5={`${prefix}${base[Object.keys(base)[i + 4]]}${suffix}`}/>);
+      rows.push(<TeapotShelf key1={images[`${Object.keys(base).sort()[i]}.png`]} value1={`${prefix}${base[Object.keys(base).sort()[i]]}${suffix}`}
+      key2={images[`${Object.keys(base).sort()[i + 1]}.png`]} value2={`${prefix}${base[Object.keys(base).sort()[i + 1]]}${suffix}`}
+      key3={images[`${Object.keys(base).sort()[i + 2]}.png`]} value3={`${prefix}${base[Object.keys(base).sort()[i + 2]]}${suffix}`}
+      key4={images[`${Object.keys(base).sort()[i + 3]}.png`]} value4={`${prefix}${base[Object.keys(base).sort()[i + 3]]}${suffix}`}
+      key5={images[`${Object.keys(base).sort()[i + 4]}.png`]} value5={`${prefix}${base[Object.keys(base).sort()[i + 4]]}${suffix}`}/>);
     }
     
     return rows;
@@ -91,7 +91,7 @@ function TeaAccordian(props) {
 
   return (
     <div>
-      <Accordion defaultActiveKey='0' className='accordCenter'>
+      <Accordion defaultActiveKey='0' className='accordCenter' flush>
         <Accordion.Item eventKey='0'>
           <Accordion.Header>Base prompts</Accordion.Header>
           <Accordion.Body>
@@ -140,7 +140,6 @@ function TeaAccordian(props) {
             <Container>
               <RowStyleDiv title='See "Traditional Artists and Movements for more."' desc=''></RowStyleDiv>
               
-
               <RowStyleDiv title='Timeframes' desc='Different decades and eras.'></RowStyleDiv>
               {timeframes}
 

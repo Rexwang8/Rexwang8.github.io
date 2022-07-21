@@ -13,7 +13,7 @@ export const blogposts = {
         },
         date: "7/18/2022",
         content: "aaaa",
-        path: "/blog/project1",
+        path: "/project1",
 
     },
 }

@@ -107,34 +107,6 @@ function TeaAccordian(props) {
         </Accordion.Item>
 
         <Accordion.Item eventKey='1'>
-          <Accordion.Header>Art Medium</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Physical Mediums' desc='Things that are drawn or printed.'></RowStyleDiv>
-              {physicalmedia}
-              <RowStyleDiv title='Fabric Mediums' desc='Physical things that are knitted, sewn or otherwise made from fabric.'></RowStyleDiv>
-              {fabricmedia}
-              <RowStyleDiv title='Photographic Mediums' desc='Things that are or appear to be photographed.'></RowStyleDiv>
-              {photographicmedia}
-              
-
-              <RowStyleDiv title='Digital Mediums' desc='Things that are drawn or generated digitally.'></RowStyleDiv>
-              {digitalmedia}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
-
-        <Accordion.Item eventKey='2'>
-          <Accordion.Header>Materials</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Materials' desc='Materials that the object is physically made out of.'></RowStyleDiv>
-              {materials}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
-
-        <Accordion.Item eventKey='3'>
           <Accordion.Header>Artistic Movements, Styles, Themes</Accordion.Header>
           <Accordion.Body>
             <Container>
@@ -157,6 +129,36 @@ function TeaAccordian(props) {
             </Container>
           </Accordion.Body>
         </Accordion.Item>
+
+        <Accordion.Item eventKey='2'>
+          <Accordion.Header>Art Medium</Accordion.Header>
+          <Accordion.Body>
+            <Container>
+              <RowStyleDiv title='Physical Mediums' desc='Things that are drawn or printed.'></RowStyleDiv>
+              {physicalmedia}
+              <RowStyleDiv title='Fabric Mediums' desc='Physical things that are knitted, sewn or otherwise made from fabric.'></RowStyleDiv>
+              {fabricmedia}
+              <RowStyleDiv title='Photographic Mediums' desc='Things that are or appear to be photographed.'></RowStyleDiv>
+              {photographicmedia}
+              
+
+              <RowStyleDiv title='Digital Mediums' desc='Things that are drawn or generated digitally.'></RowStyleDiv>
+              {digitalmedia}
+            </Container>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        <Accordion.Item eventKey='3'>
+          <Accordion.Header>Materials</Accordion.Header>
+          <Accordion.Body>
+            <Container>
+              <RowStyleDiv title='Materials' desc='Materials that the object is physically made out of.'></RowStyleDiv>
+              {materials}
+            </Container>
+          </Accordion.Body>
+        </Accordion.Item>
+
+        
 
         <Accordion.Item eventKey='4'>
           <Accordion.Header>Camera properties and effects</Accordion.Header>
@@ -194,14 +196,14 @@ function TeaAccordian(props) {
         </Accordion.Item>
 
         <Accordion.Item eventKey='6'>
-          <Accordion.Header>Lighting, Dimensionality, Design Styles</Accordion.Header>
+          <Accordion.Header>Lighting, Dimensionality</Accordion.Header>
           <Accordion.Body>
             <Container>
               <RowStyleDiv title='Complexity' desc='Detail level keywords'></RowStyleDiv>
               <Row>
 
               </Row>
-              <RowStyleDiv title='Lighting' desc='Lighting and shadow related keywords'></RowStyleDiv>
+              <RowStyleDiv title='Types of Lights' desc='Different types of physical lights.'></RowStyleDiv>
               {lighting}
               <RowStyleDiv title='Dimensionality' desc='Dimension related keywords.'></RowStyleDiv>
               {dimensionality}
@@ -434,8 +436,28 @@ function TeaAccordian(props) {
           </Accordion.Body>
         </Accordion.Item>
 
+        <Accordion.Item eventKey='11'>
+          <Accordion.Header>Colors and Color Palletes</Accordion.Header>
+          <Accordion.Body>
+            <Container>
+              <RowStyleDiv title='placeholder' desc='Detail level keywords'></RowStyleDiv>
+              <Row></Row>
+            </Container>
+          </Accordion.Body>
+        </Accordion.Item>
 
+        <Accordion.Item eventKey='12'>
+          <Accordion.Header>Shapes and Forms</Accordion.Header>
+          <Accordion.Body>
+            <Container>
+              <RowStyleDiv title='placeholder' desc='Detail level keywords'></RowStyleDiv>
+              <Row></Row>
+            </Container>
+          </Accordion.Body>
+        </Accordion.Item>
       </Accordion>
+
+
     </div>
   );
 }

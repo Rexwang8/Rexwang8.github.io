@@ -39,8 +39,8 @@ function AIStylePage(props) {
             </Link>
 
             <p>Teapot Count, MJ: 637 DALLE-2: 5 Prompts Page: 55 Total: 697</p>
+            <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
-          <img src='https://s.mj.run/PD_i8SNJkdg' alt='teapot' className='teapotExample'></img>
 
           <Tabs defaultActiveKey='mj' id='uncontrolled-tab-example' className='mb-3'>
             <Tab eventKey='mj' title='MidJourney'>
@@ -53,7 +53,7 @@ function AIStylePage(props) {
 
           <div className='textAICenter'>
           <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
-            <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo.</p></a>
+            
             <a href='https://bit.ly/3nAal6T' alt="sincarnate repo"><p>Thanks to Sincarnate#1121 for his artist style comparison repo.</p></a>
 
             <a href='https://docs.google.com/spreadsheets/d/1j7zaDi_PkndizQ2pL8B_yMcwfKUdE6tSMhL31bYtJNs/edit#gid=0' alt='sheet link'>

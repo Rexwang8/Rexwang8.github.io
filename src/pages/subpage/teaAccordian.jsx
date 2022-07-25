@@ -1,219 +1,379 @@
-import { Container, Accordion, Row, Col } from "react-bootstrap";
+import { Container, Accordion, Row, Col, Tabs, Tab } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
 import RowStyleDiv from "../../components/rowdiv";
 import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS } from "../../data/allkeys";
 import TeapotShelf from "../../components/teapotShelf";
 
-
-
 function TeaAccordian(props) {
   const images = props.images;
 
-
-  function seperate(prefix, suffix, base, rowpercol)
-  {
+  function seperate(prefix, suffix, base, rowpercol) {
     var rows = [];
-      for (var i = 0; i < Math.ceil(Object.keys(base).sort().length); i += rowpercol) {
-        rows.push(<TeapotShelf key1={images[`${Object.keys(base).sort()[i]}.png`]} col={rowpercol} value1={`${prefix}${base[Object.keys(base).sort()[i]]}${suffix}`}
-        key2={images[`${Object.keys(base).sort()[i + 1]}.png`]} value2={`${prefix}${base[Object.keys(base).sort()[i + 1]]}${suffix}`}
-        key3={images[`${Object.keys(base).sort()[i + 2]}.png`]} value3={`${prefix}${base[Object.keys(base).sort()[i + 2]]}${suffix}`}
-        key4={images[`${Object.keys(base).sort()[i + 3]}.png`]} value4={`${prefix}${base[Object.keys(base).sort()[i + 3]]}${suffix}`}
-        key5={images[`${Object.keys(base).sort()[i + 4]}.png`]} value5={`${prefix}${base[Object.keys(base).sort()[i + 4]]}${suffix}`}/>);
-      }
-    
-    
+    for (var i = 0; i < Math.ceil(Object.keys(base).sort().length); i += rowpercol) {
+      rows.push(
+        <TeapotShelf
+          key1={images[`${Object.keys(base).sort()[i]}.png`]}
+          col={rowpercol}
+          value1={`${prefix}${base[Object.keys(base).sort()[i]]}${suffix}`}
+          key2={images[`${Object.keys(base).sort()[i + 1]}.png`]}
+          value2={`${prefix}${base[Object.keys(base).sort()[i + 1]]}${suffix}`}
+          key3={images[`${Object.keys(base).sort()[i + 2]}.png`]}
+          value3={`${prefix}${base[Object.keys(base).sort()[i + 2]]}${suffix}`}
+          key4={images[`${Object.keys(base).sort()[i + 3]}.png`]}
+          value4={`${prefix}${base[Object.keys(base).sort()[i + 3]]}${suffix}`}
+          key5={images[`${Object.keys(base).sort()[i + 4]}.png`]}
+          value5={`${prefix}${base[Object.keys(base).sort()[i + 4]]}${suffix}`}
+        />
+      );
+    }
+
     return rows;
   }
   let prompt = "Utah Teapot --ar ";
-  var aspectrows = seperate(prompt,'', ASPECTS, 4);
-  var argrows = seperate("Utah Teapot ",'', MJARGUMENTS, 5);
-  var basemodrows = seperate("",'', BASEMODIFICATIONS, 5);
-  var physicalmedia = seperate("Utah Teapot, ",'', PHYSICALMEDIUMS.physicalmediums, 5);
-  var fabricmedia = seperate("Utah Teapot, ",'', PHYSICALMEDIUMS.fabricmediums, 5);
-  var photographicmedia = seperate("Utah Teapot, ",'', PHYSICALMEDIUMS.photographicmediums, 5);
-  var digitalmedia = seperate("Utah Teapot, ",'', PHYSICALMEDIUMS.digitalmediums, 5);
-  var materials = seperate("Utah Teapot made of ",'', MATERIALS.materials, 5);
-  
-  var punkstyles = seperate("Utah Teapot in the style of ",'', STYLES.punkstyles, 5);
-  var wavestyles = seperate("Utah Teapot in the style of ",'', STYLES.wavestyles, 5);
-  var resolutions = seperate("Utah Teapot, Digital Art, ",'', CAMERA.resolution, 5);
-  var perspectives = seperate("A photo of a utah teapot,   ",'', CAMERA.perspectives, 5);
-  var lens = seperate("A photo of a utah teapot,   ",'', CAMERA.lens, 5);
-  var postprocess = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.postprocessing, 5);
-  var reflections = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.reflections, 5);
-  
-  var ppmisc = seperate("Utah Teapot, Digital Art, ",'', POSTPROCESSING.misc, 5);
-  var lighting = seperate("Utah Teapot,  ",'', LDD.lighting, 5);
-  var renderers = seperate("Utah Teapot,  ",' Render', STYLES.renderers, 5);
-  var abstraction = seperate("Utah Teapot,  ",'', STYLES.abstraction, 5);
-  var photosites = seperate("Utah Teapot,  ",' ', STYLES.photosites, 5);
-  var timeframes = seperate("A photo of the Utah Teapot,  ",'', STYLES.timeframes, 5);
-  var dimensionality = seperate("Utah Teapot,  ",'', LDD.dimensionality, 5);
-  var complexity = seperate("Utah Teapot,  ",'', STYLES.complexity, 5);
+  var aspectrows = seperate(prompt, "", ASPECTS, 4);
+  var argrows = seperate("Utah Teapot ", "", MJARGUMENTS, 5);
+  var basemodrows = seperate("", "", BASEMODIFICATIONS, 5);
+  var physicalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.physicalmediums, 5);
+  var fabricmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.fabricmediums, 5);
+  var photographicmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.photographicmediums, 5);
+  var digitalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.digitalmediums, 5);
+
+  //MATERIALS
+  var materials = seperate("Utah Teapot made of ", "", MATERIALS.materials, 5);
+  var gemsStones = seperate("Utah Teapot made of ", "", MATERIALS.gemsStones, 5);
+  var metals = seperate("Utah Teapot made of ", "", MATERIALS.metals, 5);
+
+  var punkstyles = seperate("Utah Teapot in the style of ", "", STYLES.punkstyles, 5);
+  var wavestyles = seperate("Utah Teapot in the style of ", "", STYLES.wavestyles, 5);
+  var resolutions = seperate("Utah Teapot, Digital Art, ", "", CAMERA.resolution, 5);
+  var perspectives = seperate("A photo of a utah teapot,   ", "", CAMERA.perspectives, 5);
+  var lens = seperate("A photo of a utah teapot,   ", "", CAMERA.lens, 5);
+  var postprocess = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.postprocessing, 5);
+  var reflections = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.reflections, 5);
+
+  var ppmisc = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.misc, 5);
+  var lighting = seperate("Utah Teapot,  ", "", LDD.lighting, 5);
+  var renderers = seperate("Utah Teapot,  ", " Render", STYLES.renderers, 5);
+  var abstraction = seperate("Utah Teapot,  ", "", STYLES.abstraction, 5);
+  var photosites = seperate("Utah Teapot,  ", " ", STYLES.photosites, 5);
+  var timeframes = seperate("A photo of the Utah Teapot,  ", "", STYLES.timeframes, 5);
+  var dimensionality = seperate("Utah Teapot,  ", "", LDD.dimensionality, 5);
+  var complexity = seperate("Utah Teapot,  ", "", STYLES.complexity, 5);
 
   //ARTISTS
-  var Academism = seperate("Utah Teapot by  ",'', ARTISTS.Academism, 5);
-  var ArtsandCrafts = seperate("Utah Teapot by  ",'', ARTISTS.ArtsandCrafts, 5);
-  var ArtNouveau = seperate("Utah Teapot by  ",'', ARTISTS.ArtNouveau, 5);
-  
-  var Baroque = seperate("Utah Teapot by  ",'', ARTISTS.Baroque, 5);
-  var Bauhaus = seperate("Utah Teapot by  ",'', ARTISTS.Bauhaus, 5);
-  var BayArea = seperate("Utah Teapot by  ",'', ARTISTS.BayArea, 5);
-  
-  var Environmentalism = seperate("Utah Teapot by  ",'', ARTISTS.Environmentalism, 5);
-  var Expressionism = seperate("Utah Teapot by  ",'', ARTISTS.Expressionism, 5);
+  var Academism = seperate("Utah Teapot by  ", "", ARTISTS.Academism, 5);
+  var ArtsandCrafts = seperate("Utah Teapot by  ", "", ARTISTS.ArtsandCrafts, 5);
+  var ArtNouveau = seperate("Utah Teapot by  ", "", ARTISTS.ArtNouveau, 5);
+
+  var Baroque = seperate("Utah Teapot by  ", "", ARTISTS.Baroque, 5);
+  var Bauhaus = seperate("Utah Teapot by  ", "", ARTISTS.Bauhaus, 5);
+  var BayArea = seperate("Utah Teapot by  ", "", ARTISTS.BayArea, 5);
+
+  var Environmentalism = seperate("Utah Teapot by  ", "", ARTISTS.Environmentalism, 5);
+  var Expressionism = seperate("Utah Teapot by  ", "", ARTISTS.Expressionism, 5);
   console.log(aspectrows);
-  var Gothic = seperate("Utah Teapot by  ",'', ARTISTS.Gothic, 5);
-  var Impressionist = seperate("Utah Teapot by  ",'', ARTISTS.Impressionist, 5);
-  var InstallationArt = seperate("Utah Teapot by  ",'', ARTISTS.InstallationArt, 5);
-  var Luminism = seperate("Utah Teapot by  ",'', ARTISTS.Luminism, 5);
-  var Modernism = seperate("Utah Teapot by  ",'', ARTISTS.Modernism, 5);
-  var Photorealism = seperate("Utah Teapot by  ",'', ARTISTS.Photorealism, 5);
-  var PostImpressionist = seperate("Utah Teapot by  ",'', ARTISTS.PostImpressionist, 5);
-  var PopArt = seperate("Utah Teapot by  ",'', ARTISTS.PopArt, 5);
-  var Postmodern = seperate("Utah Teapot by  ",'', ARTISTS.Postmodern, 5);
-  var Realist = seperate("Utah Teapot by  ",'', ARTISTS.Realist, 5);
-  var Romantisism = seperate("Utah Teapot by  ",'', ARTISTS.Romantisism, 5);
-  var ScienceFiction = seperate("Utah Teapot by  ",'', ARTISTS.ScienceFiction, 5);
-  var StreetArt = seperate("Utah Teapot by  ",'', ARTISTS.StreetArt, 5);
-  var Surrealist = seperate("Utah Teapot by  ",'', ARTISTS.Surrealist, 5);
-  var Symbolism = seperate("Utah Teapot by  ",'', ARTISTS.Symbolism, 5);
-  var HudsonRiver = seperate("Utah Teapot by  ",'', ARTISTS.HudsonRiver, 5);
-  var VisionaryArt = seperate("Utah Teapot by  ",'', ARTISTS.VisionaryArt, 5);
-  var Futurism = seperate("Utah Teapot by  ",'', ARTISTS.Futurism, 5);
-  var artistartstation = seperate("Utah Teapot by  ",'', ARTISTS.artistartstation, 5);
-  var artistComicManga = seperate("Utah Teapot by  ",'', ARTISTS.artistComicManga, 5);
-  var artistIllustrator = seperate("Utah Teapot by  ",'', ARTISTS.artistIllustrator, 5);
-  var nartistFilmDirector = seperate("Utah Teapot by  ",'', ARTISTS.nartistFilmDirector, 5);
-  var nartistPhotography = seperate("Utah Teapot by  ",'', ARTISTS.nartistPhotography, 5);
-  var Mannerism = seperate("Utah Teapot by  ",'', ARTISTS.Mannerism, 5);
-  var nartistSculpter = seperate("Utah Teapot by  ",'', ARTISTS.nartistSculpter, 5);
+  var Gothic = seperate("Utah Teapot by  ", "", ARTISTS.Gothic, 5);
+  var Impressionist = seperate("Utah Teapot by  ", "", ARTISTS.Impressionist, 5);
+  var InstallationArt = seperate("Utah Teapot by  ", "", ARTISTS.InstallationArt, 5);
+  var Luminism = seperate("Utah Teapot by  ", "", ARTISTS.Luminism, 5);
+  var Modernism = seperate("Utah Teapot by  ", "", ARTISTS.Modernism, 5);
+  var Photorealism = seperate("Utah Teapot by  ", "", ARTISTS.Photorealism, 5);
+  var PostImpressionist = seperate("Utah Teapot by  ", "", ARTISTS.PostImpressionist, 5);
+  var PopArt = seperate("Utah Teapot by  ", "", ARTISTS.PopArt, 5);
+  var Postmodern = seperate("Utah Teapot by  ", "", ARTISTS.Postmodern, 5);
+  var Realist = seperate("Utah Teapot by  ", "", ARTISTS.Realist, 5);
+  var Romantisism = seperate("Utah Teapot by  ", "", ARTISTS.Romantisism, 5);
+  var ScienceFiction = seperate("Utah Teapot by  ", "", ARTISTS.ScienceFiction, 5);
+  var StreetArt = seperate("Utah Teapot by  ", "", ARTISTS.StreetArt, 5);
+  var Surrealist = seperate("Utah Teapot by  ", "", ARTISTS.Surrealist, 5);
+  var Symbolism = seperate("Utah Teapot by  ", "", ARTISTS.Symbolism, 5);
+  var HudsonRiver = seperate("Utah Teapot by  ", "", ARTISTS.HudsonRiver, 5);
+  var VisionaryArt = seperate("Utah Teapot by  ", "", ARTISTS.VisionaryArt, 5);
+  var Futurism = seperate("Utah Teapot by  ", "", ARTISTS.Futurism, 5);
+  var artistartstation = seperate("Utah Teapot by  ", "", ARTISTS.artistartstation, 5);
+  var artistComicManga = seperate("Utah Teapot by  ", "", ARTISTS.artistComicManga, 5);
+  var artistIllustrator = seperate("Utah Teapot by  ", "", ARTISTS.artistIllustrator, 5);
+  var nartistFilmDirector = seperate("Utah Teapot by  ", "", ARTISTS.nartistFilmDirector, 5);
+  var nartistPhotography = seperate("Utah Teapot by  ", "", ARTISTS.nartistPhotography, 5);
+  var Mannerism = seperate("Utah Teapot by  ", "", ARTISTS.Mannerism, 5);
+  var nartistSculpter = seperate("Utah Teapot by  ", "", ARTISTS.nartistSculpter, 5);
 
   return (
     <div>
-      <Accordion defaultActiveKey='0' className='accordCenter' flush>
-        <Accordion.Item eventKey='0'>
-          <Accordion.Header>Base prompts</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Aspect Ratio' desc='Different aspect ratios.'></RowStyleDiv>
-            {aspectrows}
+      <Tabs defaultActiveKey='base' id='uncontrolled-tab-example' className='mb-3'>
+        <Tab eventKey='base' title='Base'>
+          <Accordion defaultActiveKey='0' className='accordCenter' flush>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Aspect Ratio</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='Aspect Ratio' desc='Different aspect ratios.'></RowStyleDiv>
+                  {aspectrows}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Prompt Arguments' desc='MJ specific arguments.'></RowStyleDiv>
-              {argrows}
-              <RowStyleDiv title='Base modifications' desc='Modifications of the base prompt used in the following site.'></RowStyleDiv>
-                {basemodrows}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Prompt Arguments</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='Prompt Arguments' desc='MJ specific arguments.'></RowStyleDiv>
+                  {argrows}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='1'>
-          <Accordion.Header>Artistic Movements, Styles, Themes</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='See "Traditional Artists and Movements for more."' desc=''></RowStyleDiv>
-              
-              <RowStyleDiv title='Timeframes' desc='Different decades and eras.'></RowStyleDiv>
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Modifications</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='Base modifications' desc='Modifications of the base prompt used in the following site.'></RowStyleDiv>
+                  {basemodrows}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='theme' title='Movements, Styles, Themes'>
+        <RowStyleDiv title='See "Traditional Artists and Movements for more."' desc=''></RowStyleDiv>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Timeframes</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Timeframes' desc='Different decades and eras.'></RowStyleDiv>
               {timeframes}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Abstraction/Realism' desc='Levels of abstraction and realism'></RowStyleDiv>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Abstraction/Realism</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Abstraction/Realism' desc='Levels of abstraction and realism'></RowStyleDiv>
               {abstraction}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Complexity' desc='Levels of complexity'></RowStyleDiv>
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Complexity</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Complexity' desc='Levels of complexity'></RowStyleDiv>
               {complexity}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='-Punk Styles' desc='Most popular are steampunk and cyberpunk.'></RowStyleDiv>
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>-Punk Styles</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='-Punk Styles' desc='Most popular are steampunk and cyberpunk.'></RowStyleDiv>
               {punkstyles}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='-Wave Styles' desc='Most popular are synthwave and vaporwave.'></RowStyleDiv>
+            <Accordion.Item eventKey='4'>
+              <Accordion.Header>-Wave Styles</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='-Wave Styles' desc='Most popular are synthwave and vaporwave.'></RowStyleDiv>
               {wavestyles}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Tab>
 
-        <Accordion.Item eventKey='2'>
-          <Accordion.Header>Art Medium</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Physical Mediums' desc='Things that are drawn or printed.'></RowStyleDiv>
+        <Tab  eventKey='med' title='Mediums'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Physical Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Physical Mediums' desc='Things that are drawn or printed.'></RowStyleDiv>
               {physicalmedia}
-              <RowStyleDiv title='Fabric Mediums' desc='Physical things that are knitted, sewn or otherwise made from fabric.'></RowStyleDiv>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Fabric Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Fabric Mediums' desc='Physical things that are knitted, sewn or otherwise made from fabric.'></RowStyleDiv>
               {fabricmedia}
-              <RowStyleDiv title='Photographic Mediums' desc='Things that are or appear to be photographed.'></RowStyleDiv>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Photographic Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Photographic Mediums' desc='Things that are or appear to be photographed.'></RowStyleDiv>
               {photographicmedia}
-              
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Digital Mediums' desc='Things that are drawn or generated digitally.'></RowStyleDiv>
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>Digital Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Digital Mediums' desc='Things that are drawn or generated digitally.'></RowStyleDiv>
               {digitalmedia}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Tab>
 
-        <Accordion.Item eventKey='3'>
-          <Accordion.Header>Materials</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Materials' desc='Materials that the object is physically made out of.'></RowStyleDiv>
+        <Tab  eventKey='mat' title='Materials'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Stone/Gemstones</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Stone/Gemstones' desc='Materials that the object is physically made out of, stone, concrete, gemstones etc..'></RowStyleDiv>
+              {gemsStones}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Metals</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Metals' desc='Materials that the object is physically made out of, metals, alloys etc..'></RowStyleDiv>
+              {metals}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Misc Materials</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Misc Materials' desc='Materials that the object is physically made out of.'></RowStyleDiv>
               {materials}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        
+          </Accordion>
+        </Tab>
 
-        <Accordion.Item eventKey='4'>
-          <Accordion.Header>Camera properties and effects</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Resolution' desc='Resolution Keywords'></RowStyleDiv>
+        <Tab  eventKey='cam' title='Camera Properties and effects'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Resolution</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Resolution' desc='Resolution Keywords'></RowStyleDiv>
               {resolutions}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Camera Lengths and Views' desc='Camera focal lengths and camera angles.'></RowStyleDiv>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Camera Lengths and Views</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Camera Lengths and Views' desc='Camera focal lengths and camera angles.'></RowStyleDiv>
               {lens}
               {perspectives}
-             
-              <RowStyleDiv title='Camera Effects' desc='Camera related effects and modifiers.'></RowStyleDiv>
-              <Row></Row>
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='5'>
-          <Accordion.Header>Post Processing</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              
-              <RowStyleDiv title='Post Processing' desc='Common post processing effects like bloom.'></RowStyleDiv>
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Camera Effects</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Camera Effects' desc='Camera related effects and modifiers.'></RowStyleDiv>
+              <Row>WIP</Row>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='pp' title='Post-Processing'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Post Processing</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Post Processing' desc='Common post processing effects like bloom.'></RowStyleDiv>
               {postprocess}
-              <RowStyleDiv title='Reflections' desc='Reflection based effects'></RowStyleDiv>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Reflections</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Reflections' desc='Reflection based effects'></RowStyleDiv>
               {reflections}
-             
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Misc Effects' desc='Unsorted Post-Processing effects.'></RowStyleDiv>
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Misc Effects</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Misc Effects' desc='Unsorted Post-Processing effects.'></RowStyleDiv>
               {ppmisc}
-             
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='6'>
-          <Accordion.Header>Lighting, Dimensionality</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              
-              <RowStyleDiv title='Types of Lights' desc='Different types of physical lights.'></RowStyleDiv>
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='ld' title='Lighting, Dimensionality'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Types of Lights</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Types of Lights' desc='Different types of physical lights.'></RowStyleDiv>
               {lighting}
-              <RowStyleDiv title='Dimensionality' desc='Dimension related keywords.'></RowStyleDiv>
-              {dimensionality}
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='7'>
-          <Accordion.Header>Traditional Artists and Movements</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-            <RowStyleDiv title='' desc='Artists falling under multiple movements are sorted by whatever I see first, dm me on discord if you think it should be changed.'></RowStyleDiv>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Dimensionality</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Dimensionality' desc='Dimension related keywords.'></RowStyleDiv>
+              {dimensionality}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='art' title='All Artists'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Traditional Artists and Movements</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+              <RowStyleDiv title='' desc='Artists falling under multiple movements are sorted by whatever I see first, dm me on discord if you think it should be changed.'></RowStyleDiv>
               <RowStyleDiv
                 title='Academism'
                 desc=' Academism kind of preserved the familiar classical forms and brought them up to the level of an immutable law, to the denial of the artist’s individuality— he was only supposed to imitate his great predecessors.'></RowStyleDiv>
@@ -223,7 +383,6 @@ function TeaAccordian(props) {
                 title='Arts and Crafts'
                 desc='It stood for traditional craftsmanship, and often used medieval, romantic, or folk styles of decoration. It advocated economic and social reform and was anti-industrial in its orientation. It had a strong influence on the arts in Europe until it was displaced by Modernism in the 1930s, and its influence continued among craft makers, designers, and town planners long afterwards.'></RowStyleDiv>
               {ArtsandCrafts}
-
 
               <RowStyleDiv
                 title='Art Nouveau'
@@ -247,7 +406,6 @@ function TeaAccordian(props) {
                 title='Environmentalism'
                 desc='Environmental artists seek to investigate our human relationship with the environment through embedding their artistic practice within it. This changes the way we think about the site of artistic production; as opposed to using the artists studio as the sole location in which to create, Environmental artists engage the natural world in a much more active and immediate way either by working in new ways outside, or by bringing natural materials into new settings.'></RowStyleDiv>
               {Environmentalism}
-
 
               <RowStyleDiv
                 title='Expressionism'
@@ -273,7 +431,6 @@ function TeaAccordian(props) {
                 title='Installation Art'
                 desc='Installation art is an artistic genre of three-dimensional works that are often site-specific and designed to transform the perception of a space.'></RowStyleDiv>
               {InstallationArt}
-
 
               <RowStyleDiv
                 title='Luminism'
@@ -342,8 +499,15 @@ function TeaAccordian(props) {
                 title='Visionary Art'
                 desc='Visionary art isnt so much a movement as it is a theme. The style of the individual artists will vary radically, but their common theme is their attempt to portray the world beyond physical sight and to overlap mystical and spiritual ideas. Visionary art purports to transcend the physical and scientific world and give the audience a virtual vision (hence the name Visionary Art) of what the world might look like if we could see spiritual and mystical things in our every day life. The type of mystical energies portrayed in Visionary Art varies from artist to artist, but the four elements (water, fire, earth and wind), love, lust, holy, unholy, positive and negative forces are all reasonably common. '></RowStyleDiv>
               {VisionaryArt}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-              <RowStyleDiv title='Artstation/Deviantart' desc='Also Artsy'></RowStyleDiv>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Modern Style Artists</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Artstation/Deviantart' desc='Also Artsy'></RowStyleDiv>
               {artistartstation}
 
               <RowStyleDiv title='Comic/Manga' desc=''></RowStyleDiv>
@@ -358,28 +522,30 @@ function TeaAccordian(props) {
 
               <RowStyleDiv title='Unsorted Modern Artists' desc='Unsorted Artists'></RowStyleDiv>
               <Row>
-              <TeapotCard img={images["bobbyerley.png"]} prompt='Utah Teapot by Bob Byerley' />
-              <TeapotCard img={images["carlholsoe.png"]} prompt='Utah Teapot by Carl Holsøe' />
-              <TeapotCard img={images["codexseraphinianus.png"]} prompt='Utah Teapot by Codex Seraphinianus' />
+                <TeapotCard img={images["bobbyerley.png"]} prompt='Utah Teapot by Bob Byerley' />
+                <TeapotCard img={images["carlholsoe.png"]} prompt='Utah Teapot by Carl Holsøe' />
+                <TeapotCard img={images["codexseraphinianus.png"]} prompt='Utah Teapot by Codex Seraphinianus' />
               </Row>
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='8'>
-          <Accordion.Header>Non-Painting Artists</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Scultors' desc='Making sculptures.'></RowStyleDiv>
+          
+
+          <Accordion.Item eventKey='2'>
+              <Accordion.Header>Non-Painting Artists</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Scultors' desc='Making sculptures.'></RowStyleDiv>
               {nartistSculpter}
 
               <RowStyleDiv title='Architects' desc='Temp category'></RowStyleDiv>
               <Row>
-              <TeapotCard img={images["bjarkeingels.png"]} prompt='Utah Teapot by Bjarke Ingels' />
+                <TeapotCard img={images["bjarkeingels.png"]} prompt='Utah Teapot by Bjarke Ingels' />
               </Row>
               <RowStyleDiv title='Photographers' desc='Temp category'></RowStyleDiv>
               {nartistPhotography}
-      
+
               <RowStyleDiv title='Writers' desc='Temp category'></RowStyleDiv>
               <Row>
                 <TeapotCard img={images["annemccaffrey.png"]} prompt='Utah Teapot by Anne McCaffrey' />
@@ -400,60 +566,116 @@ function TeaAccordian(props) {
 
               <RowStyleDiv title='Misc Artists' desc='Temp category'></RowStyleDiv>
               <Row>
-              <TeapotCard img={images["benoitbmandelbrot.png"]} prompt='Utah Teapot by Benoit B. Mandelbrot' />
+                <TeapotCard img={images["benoitbmandelbrot.png"]} prompt='Utah Teapot by Benoit B. Mandelbrot' />
               </Row>
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='9'>
-          <Accordion.Header>Art Websites and Game Renderers</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-            <RowStyleDiv title='Rendering Engines' desc='Rendering engines, game engines and 3d modeling engines.'></RowStyleDiv>
+          </Accordion>
+        </Tab>
+
+      
+        <Tab  eventKey='web' title='Art Websites and Game Renderers'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Rendering Engines</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Rendering Engines' desc='Rendering engines, game engines and 3d modeling engines.'></RowStyleDiv>
               {renderers}
-              <RowStyleDiv title='Photo sites' desc='Photosharing and Art sharing sites. Also includes image repositories.'></RowStyleDiv>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Photo sites</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Photo sites' desc='Photosharing and Art sharing sites. Also includes image repositories.'></RowStyleDiv>
               {photosites}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+          </Accordion>
+        </Tab>
 
-        <Accordion.Item eventKey='10'>
-          <Accordion.Header>Intangible Modifiers</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='Emotions and Qualities' desc='Detail level keywords'></RowStyleDiv>
-              <Row></Row>
-              <RowStyleDiv title='Concepts' desc='Lighting and shadow related keywords'></RowStyleDiv>
-              <Row></Row>
+        <Tab  eventKey='int' title='Intangible Modifiers'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
 
-              <RowStyleDiv title='Dimensionality' desc='Dimension related keywords.'></RowStyleDiv>
-              <Row></Row>
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Emotions and Qualities</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Emotions and Qualities' desc='Detail level keywords'></RowStyleDiv>
+              <Row>WIP</Row>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='11'>
-          <Accordion.Header>Colors and Color Palletes</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='placeholder' desc='Detail level keywords'></RowStyleDiv>
-              <Row></Row>
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Concepts</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Concepts' desc='Lighting and shadow related keywords'></RowStyleDiv>
+              <Row>WIP</Row>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
 
-        <Accordion.Item eventKey='12'>
-          <Accordion.Header>Shapes and Forms</Accordion.Header>
-          <Accordion.Body>
-            <Container>
-              <RowStyleDiv title='placeholder' desc='Detail level keywords'></RowStyleDiv>
-              <Row></Row>
-            </Container>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='col' title='Colors and Color Palletes'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Emotions and Qualities</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Color Palletes' desc='Color Palletes'></RowStyleDiv>
+              <Row>WIP</Row>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='sha' title='Shapes and Forms'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Shapes and Forms</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Shapes and Forms' desc='Shapes and Forms'></RowStyleDiv>
+              <Row>WIP</Row>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Tab>
+
+        <Tab  eventKey='ref' title='Referencing Media'>
+        <Accordion defaultActiveKey='0' className='accordCenter' flush>
+
+            <Accordion.Item eventKey='0'>
+              <Accordion.Header>Games</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Games' desc='Invoking names of famous games.'></RowStyleDiv>
+              <Row>WIP</Row>
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </Tab>
+
+        
+       
+      </Tabs>
 
 
     </div>

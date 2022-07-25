@@ -6,6 +6,7 @@ import AIPromptsPage from "./aiPromptsPage";
 import BlogPage from "./blogPage";
 import {blogposts} from "../data/allblogposts"
 import BlogProjectPage from "./blogProjectPage";
+import PromptGenerationPage from "./promptgenPage";
 
 
 function RoutingPage(props)
@@ -30,6 +31,7 @@ function RoutingPage(props)
         <Route path="/dev" element={<App />} />
         <Route path="/resource/ai/teapot" element={<AIStylePage title="Teapots" analytics={props.analytics}/>} />
         <Route path="/resource/ai/prompts" element={<AIPromptsPage title="Prompts" analytics={props.analytics}/>} />
+        <Route path="/resource/ai/generator" element={<PromptGenerationPage title="Generator" analytics={props.analytics}/>} />
         <Route path="*"  element={<MainPage title="Main" analytics={props.analytics}/>} />
       </Routes>
   );

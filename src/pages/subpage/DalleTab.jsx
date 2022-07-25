@@ -15,8 +15,7 @@ function DalleTab() {
     
     <div>
       <h3>
-        Note: DALLE2 Teapots do not use image prompts, as it will take it as the Initial Image instead of the Prompt Image. DALLE-2 generates 1024x1024 images which I downscaled to 256x256 for space
-        concerns. DALLE2 is free but allows only limited prompts per day, so this page will be empty for a while.
+        Note: DALLE2 does not allow modifications to resolution aspect ratio. NOTE: DALLE2 resouce work shelved now that it is a paid service. If you would like to contribute generations, please DM me.
       </h3>
      <TeaAccordian images={images}>
      </TeaAccordian>

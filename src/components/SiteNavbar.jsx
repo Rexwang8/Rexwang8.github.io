@@ -1,12 +1,4 @@
-import {
-  Navbar,
-  Container,
-  Button,
-  Accordion,
-  Nav,
-  NavDropdown,
-  Breadcrumb,
-} from "react-bootstrap";
+import { Navbar, Container, Nav, NavDropdown, Breadcrumb } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 function formBC(url, numb) {
@@ -33,23 +25,26 @@ function SiteNavbar(props) {
 
   return (
     <div>
-      <Navbar bg="light" expand="lg">
+      <Navbar bg='light' expand='lg'>
         <Container>
           <Link
             to={{
               pathname: "/",
-            }}
-          >
+            }}>
             <Navbar.Brand>Home Page</Navbar.Brand>
           </Link>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-              <Nav.Link href="/resource/ai/teapot">Teapots</Nav.Link>
-              <Nav.Link href="/resource/ai/prompts">Prompts</Nav.Link>
-            
+          <Navbar.Toggle aria-controls='basic-navbar-nav' />
+          <Navbar.Collapse id='basic-navbar-nav'>
+            <Nav className='me-auto'>
+              <NavDropdown title='Teapots and Midjourney' id='basic-nav-dropdown'>
+                <NavDropdown.Item href='/resource/ai/teapot'>Teapots</NavDropdown.Item>
+                <NavDropdown.Item href='/resource/ai/prompts'>Prompts</NavDropdown.Item>
+                <NavDropdown.Item href='/resource/ai/generator'>Generator</NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
           </Navbar.Collapse>
-          
+
           <div>
             <Breadcrumb>{breadcrumbs}</Breadcrumb>
           </div>
@@ -58,20 +53,5 @@ function SiteNavbar(props) {
     </div>
   );
 }
-/*
-  <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
-                </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
-              </NavDropdown>
-              */
 
 export default SiteNavbar;

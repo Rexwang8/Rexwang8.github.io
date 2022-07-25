@@ -24,7 +24,7 @@ function AIStylePage(props) {
             </p>
             <p>
               Midjourney is an AI model for converting Text prompts to images. I am using the Utah Teapot as a base model for a study on modifiers. For consistancy, I will feed this base model in as
-              an image prompt. Aspect Ratio: 16:9 (--ar 16:9) images generated are 448x256, downscaled to 110px height.
+              an image prompt. Aspect Ratio: 16:9 (--ar 16:9) images generated are 448x256, downscaled to 110px height. All images are generated with --version 2 algorithmn unless specified.
               <a href='https://s.mj.run/PD_i8SNJkdg' alt='teapot'>
                 Teapot Image Link
               </a>
@@ -64,6 +64,9 @@ function AIStylePage(props) {
             </a>
             <a href='https://sweet-hall-e72.notion.site/A-Traveler-s-Guide-to-the-Latent-Space-85efba7e5e6a40e5bd3cae980f30235f' alt="Traveler's guide latent spaces link">
               Traveler's guide latent spaces
+            </a>
+            <a href='https://gist.github.com/JustOurStyle/999d20609c78587453d5e2f72e8becd2' alt="Traveler's guide latent spaces link">
+              JustOurStyle#5471 MJ image splitter FFMPEG batch file
             </a>
           </div>
 

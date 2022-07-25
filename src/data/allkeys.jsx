@@ -1,5 +1,7 @@
 export const ASPECTS = {
   base11: "1:1",
+  base21: "2:1",
+  base12: "1:2",
   base169: "16:9",
   base916: "9:16",
   base219: "21:9",
@@ -8,6 +10,20 @@ export const ASPECTS = {
   base32: "3:2",
   base25: "2:5",
   base52: "5:2",
+  base13: "1:3",
+  base31: "3:1",
+  base149: "14:9",
+  base914: "9:14",
+  base53: "5:3",
+  base35: "3:5",
+  base43: "4:3",
+  base34: "3:4",
+  base100143: "1:1.43",
+  base143100: "1.43:1",
+  base100185: "1:1.85",
+  base185100: "1.85:1",
+  base100235: "1:2.35",
+  base235100: "2.35:1",
 };
 
 export const MJARGUMENTS = {
@@ -91,6 +107,8 @@ export const PHYSICALMEDIUMS = {
     woodblock: "Wood Block Print",
     newspaper: "Newspaper",
     isotype: "Isotype",
+    reliefcarving: "Relief Carving",
+    religiousart: "Religious Art"
   },
 
   fabricmediums: {
@@ -153,10 +171,29 @@ export const PHYSICALMEDIUMS = {
 
 export const MATERIALS = {
   materials: {
+    rust: "Rust",
+    sand: "Sand",
+    sulfur: "Sulfur",
+    
+    gravel: "Gravel",
+    jade: "Jade",
+    plywood: "Plywood",
+    rosegold: "Rose Gold",
+    cork: "Cork",
+    gemstone: "Gemstone",
+    graphene: "Graphene",
+    damascussteel: "Damascus Steel",
+    coal: "Coal",
+    chrome: "Chrome",
+    cobblestone: "Cobblestone",
     wood: "Wood",
     glass: "Glass",
     stainedGlass: "Stained Glass",
     concrete: "Concrete",
+    anodizedtitanium: "Anodized Titanium",
+    basalt: "Basalt",
+    brushedaluminum: "Brushed Aluminum",
+    carbonfiber: "Carbon Fiber",
     metal: "Metal",
     boneChina: "Bone China",
     porcelain: "Porcelain",
@@ -184,6 +221,7 @@ export const MATERIALS = {
 
 export const STYLES = {
   renderers: {
+    pbr: "Physicality-based render",
     mentalray: "MentalRay",
     opengl: "OpenGL",
     directx: "DirectX",
@@ -198,6 +236,7 @@ export const STYLES = {
     cinema4d: "Cinema4D",
     houdini: "Houdini",
     cycles: "Cycles",
+    eevee: "Eevee",
     octane: "Octane",
     unreal: "Unreal",
     unity: "Unity",
@@ -338,6 +377,7 @@ export const CAMERA = {
     macro: "Macro View",
     magnification: "Magnification",
     telephoto: "Telephoto",
+    overlookingaerial: "Overlooking Aerial",
   },
   lens: {
     n15mm: "15mm",
@@ -419,6 +459,11 @@ export const LDD = {
     neon: "Neon",
     xenon: "Xenon",
     krypton: "Krypton",
+    dawn: "Dawn",
+    dusk: "Dusk",
+    midnight: "Midnight",
+    noon: "Noon",
+    goldenhour: "Goldenhour",
   },
   dimensionality: {
     n2d: "2d",

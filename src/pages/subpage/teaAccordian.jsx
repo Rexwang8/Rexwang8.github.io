@@ -13,18 +13,19 @@ function TeaAccordian(props) {
   function seperate(prefix, suffix, base, rowpercol)
   {
     var rows = [];
-    for (var i = 0; i < Math.ceil(Object.keys(base).length); i += rowpercol) {
-      rows.push(<TeapotShelf key1={images[`${Object.keys(base).sort()[i]}.png`]} value1={`${prefix}${base[Object.keys(base).sort()[i]]}${suffix}`}
-      key2={images[`${Object.keys(base).sort()[i + 1]}.png`]} value2={`${prefix}${base[Object.keys(base).sort()[i + 1]]}${suffix}`}
-      key3={images[`${Object.keys(base).sort()[i + 2]}.png`]} value3={`${prefix}${base[Object.keys(base).sort()[i + 2]]}${suffix}`}
-      key4={images[`${Object.keys(base).sort()[i + 3]}.png`]} value4={`${prefix}${base[Object.keys(base).sort()[i + 3]]}${suffix}`}
-      key5={images[`${Object.keys(base).sort()[i + 4]}.png`]} value5={`${prefix}${base[Object.keys(base).sort()[i + 4]]}${suffix}`}/>);
-    }
+      for (var i = 0; i < Math.ceil(Object.keys(base).sort().length); i += rowpercol) {
+        rows.push(<TeapotShelf key1={images[`${Object.keys(base).sort()[i]}.png`]} col={rowpercol} value1={`${prefix}${base[Object.keys(base).sort()[i]]}${suffix}`}
+        key2={images[`${Object.keys(base).sort()[i + 1]}.png`]} value2={`${prefix}${base[Object.keys(base).sort()[i + 1]]}${suffix}`}
+        key3={images[`${Object.keys(base).sort()[i + 2]}.png`]} value3={`${prefix}${base[Object.keys(base).sort()[i + 2]]}${suffix}`}
+        key4={images[`${Object.keys(base).sort()[i + 3]}.png`]} value4={`${prefix}${base[Object.keys(base).sort()[i + 3]]}${suffix}`}
+        key5={images[`${Object.keys(base).sort()[i + 4]}.png`]} value5={`${prefix}${base[Object.keys(base).sort()[i + 4]]}${suffix}`}/>);
+      }
+    
     
     return rows;
   }
   let prompt = "Utah Teapot --ar ";
-  var aspectrows = seperate(prompt,'', ASPECTS, 5);
+  var aspectrows = seperate(prompt,'', ASPECTS, 4);
   var argrows = seperate("Utah Teapot ",'', MJARGUMENTS, 5);
   var basemodrows = seperate("",'', BASEMODIFICATIONS, 5);
   var physicalmedia = seperate("Utah Teapot, ",'', PHYSICALMEDIUMS.physicalmediums, 5);
@@ -61,10 +62,9 @@ function TeaAccordian(props) {
   
   var Environmentalism = seperate("Utah Teapot by  ",'', ARTISTS.Environmentalism, 5);
   var Expressionism = seperate("Utah Teapot by  ",'', ARTISTS.Expressionism, 5);
-  console.log("Good til here2");
+  console.log(aspectrows);
   var Gothic = seperate("Utah Teapot by  ",'', ARTISTS.Gothic, 5);
   var Impressionist = seperate("Utah Teapot by  ",'', ARTISTS.Impressionist, 5);
-  console.log("Good til here");
   var InstallationArt = seperate("Utah Teapot by  ",'', ARTISTS.InstallationArt, 5);
   var Luminism = seperate("Utah Teapot by  ",'', ARTISTS.Luminism, 5);
   var Modernism = seperate("Utah Teapot by  ",'', ARTISTS.Modernism, 5);
@@ -98,6 +98,7 @@ function TeaAccordian(props) {
             <Container>
               <RowStyleDiv title='Aspect Ratio' desc='Different aspect ratios.'></RowStyleDiv>
             {aspectrows}
+
               <RowStyleDiv title='Prompt Arguments' desc='MJ specific arguments.'></RowStyleDiv>
               {argrows}
               <RowStyleDiv title='Base modifications' desc='Modifications of the base prompt used in the following site.'></RowStyleDiv>
@@ -199,10 +200,7 @@ function TeaAccordian(props) {
           <Accordion.Header>Lighting, Dimensionality</Accordion.Header>
           <Accordion.Body>
             <Container>
-              <RowStyleDiv title='Complexity' desc='Detail level keywords'></RowStyleDiv>
-              <Row>
-
-              </Row>
+              
               <RowStyleDiv title='Types of Lights' desc='Different types of physical lights.'></RowStyleDiv>
               {lighting}
               <RowStyleDiv title='Dimensionality' desc='Dimension related keywords.'></RowStyleDiv>

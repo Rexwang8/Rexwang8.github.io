@@ -214,6 +214,7 @@ function PromptGenerationPage(props) {
             </Button>{" "}
             <hr></hr>
             <h3>{result}</h3>
+            <hr></hr>
             <p>36 Objects, 94 Jobs, 80 races and ethnicities, 49 buildings, 40 landscapes, 58 landscape modifiers, 139 artists, 227 keywords, 128 physical mediums, 68 materials (919 total)</p>
           </div>
         </div>

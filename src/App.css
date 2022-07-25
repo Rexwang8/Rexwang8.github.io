@@ -37,8 +37,8 @@
     transform: rotate(360deg);
   }
 }
-
-.aspect
+@media only screen and (min-width: 800px) {
+  .aspect
 {
   aspect-ratio: 16/9;
   height: 100vh;
@@ -47,6 +47,19 @@
   margin: auto;
   overflow-x: hidden;
 }
+}
+@media only screen and (max-width: 799px) {
+  .aspect
+  {
+    height: 100vh;
+    width: auto;
+    background-color: wheat;
+    justify-content: center;
+    margin: auto;
+    overflow-x: hidden;
+  }
+}
+
 
 .bg1{
   background-color: wheat;

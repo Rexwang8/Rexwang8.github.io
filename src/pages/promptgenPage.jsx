@@ -2,7 +2,7 @@ import SiteNavbar from "../components/SiteNavbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import { ASPECTS, MATERIALS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, generatorKeys } from "../data/allkeys";
 import { useState } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Container, Row, Col } from "react-bootstrap";
 function PromptGenerationPage(props) {
   document.title = props.title;
 
@@ -157,7 +157,10 @@ function PromptGenerationPage(props) {
           <SiteNavbar url='/resource/ai/generator'></SiteNavbar>
           <div className='textAICenter'>
             <h2>Dynamic Prompt generator</h2>
-            <Dropdown onSelect={handleSubjectSelect}>
+            <Container>
+              <Row>
+                <Col>
+                <Dropdown onSelect={handleSubjectSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Subject
               </Dropdown.Toggle>
@@ -171,7 +174,10 @@ function PromptGenerationPage(props) {
                 <Dropdown.Item eventKey='buildings'>Building</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown onSelect={handleArtistSelect}>
+                </Col>
+
+                <Col>
+                <Dropdown onSelect={handleArtistSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Artists
               </Dropdown.Toggle>
@@ -184,7 +190,10 @@ function PromptGenerationPage(props) {
                 <Dropdown.Item eventKey='3'>3 Artists</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
-            <Dropdown onSelect={handleKeywordSelect}>
+            
+                </Col>
+                <Col>
+                <Dropdown onSelect={handleKeywordSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Keywords
               </Dropdown.Toggle>
@@ -196,8 +205,10 @@ function PromptGenerationPage(props) {
                 <Dropdown.Item eventKey='2'>2 Keywords</Dropdown.Item>
                 <Dropdown.Item eventKey='3'>3 Keywords</Dropdown.Item>
               </Dropdown.Menu>
-            </Dropdown>
-            <Dropdown onSelect={handlematerialSelect}>
+            </Dropdown></Col>
+
+                <Col>
+                <Dropdown onSelect={handlematerialSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Materials and Media
               </Dropdown.Toggle>
@@ -208,6 +219,12 @@ function PromptGenerationPage(props) {
                 <Dropdown.Item eventKey='false'>Don't Use Materials/Media</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+                </Col>
+              </Row>
+            </Container>
+           
+            
+            
             <hr></hr>
             <Button variant='primary' onClick={parseIntoPrompt}>
               Generate Prompt

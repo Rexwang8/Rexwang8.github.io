@@ -2,7 +2,7 @@ import SiteNavbar from "../components/SiteNavbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import { ASPECTS, MATERIALS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, generatorKeys } from "../data/allkeys";
 import { useState } from "react";
-import { Button, Container, Row, Col, ButtonGroup, Form, ToggleButton } from "react-bootstrap";
+import { Button, Container, Row, Col, ButtonGroup, Form } from "react-bootstrap";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import RangeSlider from "react-bootstrap-range-slider";

@@ -4,7 +4,7 @@ import './index.css';
 import ThemeProvider from 'react-bootstrap/ThemeProvider'
 import './bootstrap.min.css';
 import reportWebVitals from './reportWebVitals';
-import { BrowserRouter, HashRouter } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import RoutingPage from './pages/RoutingPage';
 import Analytics from 'analytics'
 import googleAnalytics from '@analytics/google-analytics'

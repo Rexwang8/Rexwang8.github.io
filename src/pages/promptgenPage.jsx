@@ -69,9 +69,11 @@ function PromptGenerationPage(props) {
 
   let allphysical = [];
   Object.keys(PHYSICALMEDIUMS).forEach((key) => {
-    Object.keys(PHYSICALMEDIUMS[key]).forEach((key2) => {
-      allphysical.push(PHYSICALMEDIUMS[key][key2]);
-    });
+    if (key.toString() !== "fabricmediums") {
+      Object.keys(PHYSICALMEDIUMS[key]).forEach((key2) => {
+        allphysical.push(PHYSICALMEDIUMS[key][key2]);
+      });
+    }
   });
 
   let allmaterials = [];
@@ -83,6 +85,7 @@ function PromptGenerationPage(props) {
 
   //#endregion
 
+  //#region Handle selections
   const handleSubjectSelect = (e) => {
     setSubject(e);
   };
@@ -135,22 +138,17 @@ function PromptGenerationPage(props) {
     setresult(res);
   };
 
+  //#endregion
+
   const AddSeperator = () => {
-    if(seperatorOPT === "Commas")
-    {
-      return ', ';
-    }
-    else if(seperatorOPT === "Hyphens")
-    {
-      return '-';
-    }
-    else if (seperatorOPT === "Pluses")
-    {
-      return ' + ';
-    }
-    else if (seperatorOPT === "Colons")
-    {
-      return ':: ';
+    if (seperatorOPT === "Commas") {
+      return ", ";
+    } else if (seperatorOPT === "Hyphens") {
+      return "-";
+    } else if (seperatorOPT === "Pluses") {
+      return " + ";
+    } else if (seperatorOPT === "Colons") {
+      return ":: ";
     }
   };
 
@@ -222,29 +220,22 @@ function PromptGenerationPage(props) {
       aspects = Object.values(generatorKeys.aspectportrait);
       aspect = `--ar ${aspects[Math.floor(Math.random() * aspects.length)]}`;
     }
-    if(aspectOPT === "169")
-    {
+    if (aspectOPT === "169") {
       aspect = `--ar 16:9`;
-    }
-    else if(aspectOPT === "219")
-    {
+    } else if (aspectOPT === "219") {
       aspect = `--ar 21:9`;
-    }
-    else if(aspectOPT === "919")
-    {
+    } else if (aspectOPT === "919") {
       aspect = `--ar 9:19`;
     }
 
     //STYLIZE AND QUALITY
     let stylize = "";
-    if(stylizeUSEOPT)
-    {
+    if (stylizeUSEOPT) {
       stylize = `--s ${stylizeOPT}`;
     }
 
     let quality = "";
-    if(qualityUSEOPT)
-    {
+    if (qualityUSEOPT) {
       quality = `--q ${adjqualityOPT}`;
     }
 
@@ -369,7 +360,6 @@ function PromptGenerationPage(props) {
                       <Dropdown.Item eventKey='219'>21:9</Dropdown.Item>
                       <Dropdown.Item eventKey='portrait'>Portrait Only</Dropdown.Item>
                       <Dropdown.Item eventKey='919'>9:19</Dropdown.Item>
-                      
                     </Dropdown.Menu>
                   </Dropdown>
                 </Col>
@@ -386,7 +376,6 @@ function PromptGenerationPage(props) {
                       <Dropdown.Item eventKey='Hyphens'>Soft - Hyphens</Dropdown.Item>
                       <Dropdown.Item eventKey='Pluses'>Soft - Pluses</Dropdown.Item>
                       <Dropdown.Item eventKey='Colons'>Hard - Colons</Dropdown.Item>
-                      
                     </Dropdown.Menu>
                   </Dropdown>
                 </Col>
@@ -401,21 +390,18 @@ function PromptGenerationPage(props) {
                         step={1}
                         max={5}
                         disabled={!qualityUSEOPT}
-                        tooltip={qualityUSEOPT === false ? 'off' : 'auto'}
+                        tooltip={qualityUSEOPT === false ? "off" : "auto"}
                         tooltipLabel={(qualityOPT) => `Quality: ${initialQualitySteps[Number.parseInt(qualityOPT)]}`}
                       />
                     </Col>
                     <Col xs={3} md={3}>
-                      <Button
-                        className='mb-2'
-                        variant={qualityUSEOPT ? "primary" : "outline-primary"}
-                        onClick={(e) => handleQualUseSelect()}>
+                      <Button className='mb-2' variant={qualityUSEOPT ? "primary" : "outline-primary"} onClick={(e) => handleQualUseSelect()}>
                         Manual Quality
                       </Button>
                     </Col>
                   </Form.Group>
                 </Form>
-<Col></Col>
+                <Col></Col>
                 <Form>
                   <Form.Group as={Row}>
                     <Col xs={7} md={12}>
@@ -425,15 +411,12 @@ function PromptGenerationPage(props) {
                         step={625}
                         max={60000}
                         disabled={!stylizeUSEOPT}
-                        tooltip={stylizeUSEOPT === false ? 'off' : 'auto'}
+                        tooltip={stylizeUSEOPT === false ? "off" : "auto"}
                         tooltipLabel={(style) => `Stylize: ${style}`}
                       />
                     </Col>
                     <Col xs={3} md={3}>
-                      <Button
-                        className='mb-2'
-                        variant={stylizeUSEOPT ? "primary" : "outline-primary"}
-                        onClick={(e) => handleStyleUseSelect()}>
+                      <Button className='mb-2' variant={stylizeUSEOPT ? "primary" : "outline-primary"} onClick={(e) => handleStyleUseSelect()}>
                         Manual Stylize
                       </Button>
                     </Col>

@@ -8,6 +8,9 @@ import { BrowserRouter, HashRouter } from 'react-router-dom';
 import RoutingPage from './pages/RoutingPage';
 import Analytics from 'analytics'
 import googleAnalytics from '@analytics/google-analytics'
+import './bootstrap.min.css'; // or include from a CDN
+import 'react-bootstrap-range-slider/dist/react-bootstrap-range-slider.css';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

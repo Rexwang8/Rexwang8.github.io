@@ -39,9 +39,22 @@ function TeaAccordian(props) {
   var digitalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.digitalmediums, 5);
 
   //MATERIALS
-  var materials = seperate("Utah Teapot made of ", "", MATERIALS.materials, 5);
-  var gemsStones = seperate("Utah Teapot made of ", "", MATERIALS.gemsStones, 5);
-  var metals = seperate("Utah Teapot made of ", "", MATERIALS.metals, 5);
+  var materials = seperate("Utah Teapot made of ", "(v3)", MATERIALS.materials, 5);
+  var gemsStones = seperate("Utah Teapot made of ", "(v3)", MATERIALS.gemsStones, 5);
+  var metals = seperate("Utah Teapot made of ", "(v3)", MATERIALS.metals, 5);
+  var woods = seperate("Utah Teapot made of ", "(v3)", MATERIALS.woods, 5);
+  var plasticFoams = seperate("Utah Teapot made of ", "(v3)", MATERIALS.plasticFoams, 5);
+  var wax = seperate("Utah Teapot made of ", "(v3)", MATERIALS.wax, 5);
+  var rubber = seperate("Utah Teapot made of ", "(v3)", MATERIALS.rubber, 5);
+  var gelSponge = seperate("Utah Teapot made of ", "(v3)", MATERIALS.gelSponge, 5);
+  var waterIce = seperate("Utah Teapot made of ", "(v3)", MATERIALS.waterIce, 5);
+  var liquids = seperate("Utah Teapot made of ", "(v3)", MATERIALS.liquids, 5);
+  var gas = seperate("Utah Teapot made of ", "(v3)", MATERIALS.gas, 5);
+  var organic = seperate("Utah Teapot made of ", "(v3)", MATERIALS.organic, 5);
+  var food = seperate("Utah Teapot made of ", "(v3)", MATERIALS.food, 5);
+  var energy = seperate("Utah Teapot made of ", "(v3)", MATERIALS.energy, 5);
+  var plantFungi = seperate("Utah Teapot made of ", "(v3)", MATERIALS.plantFungi, 5);
+
 
   var punkstyles = seperate("Utah Teapot in the style of ", "", STYLES.punkstyles, 5);
   var wavestyles = seperate("Utah Teapot in the style of ", "", STYLES.wavestyles, 5);
@@ -257,6 +270,126 @@ function TeaAccordian(props) {
             </Accordion.Item>
 
             <Accordion.Item eventKey='2'>
+              <Accordion.Header>Wood</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Wood' desc='Materials that the object is physically made out of, wood, plant, plywood etc..'></RowStyleDiv>
+              {woods}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>Plastic</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Plastic' desc='Materials that the object is physically made out of, plastic, plastic products etc..'></RowStyleDiv>
+              {plasticFoams}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='4'>
+              <Accordion.Header>Gel / Sponge</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Gel / Sponge' desc='Materials that the object is physically made out of Gel or sponge etc..'></RowStyleDiv>
+              {gelSponge}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='5'>
+              <Accordion.Header>Rubber</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Rubber' desc='Materials that the object is physically made out of rubber, plastic products etc..'></RowStyleDiv>
+              {rubber}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='6'>
+              <Accordion.Header>Wax</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Wax' desc='Materials that the object is physically made out of, wax, wax products etc..'></RowStyleDiv>
+              {wax}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='7'>
+              <Accordion.Header>Water / Ice</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Water / Ice' desc='Materials that the object is physically made out of, water/ice etc..'></RowStyleDiv>
+              {waterIce}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='8'>
+              <Accordion.Header>Liquids</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Liquids' desc='Materials that the object is physically made out of liquids etc..'></RowStyleDiv>
+              {liquids}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='9'>
+              <Accordion.Header>Gas</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Gas' desc='Materials that the object is physically made out of gas etc..'></RowStyleDiv>
+              {gas}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='10'>
+              <Accordion.Header>Organic</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Organic' desc='Materials that the object is physically made out of organic materials, etc..'></RowStyleDiv>
+              {organic}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='11'>
+              <Accordion.Header>Energy</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Energy' desc='Materials that the object is physically made out of energy, fire, plasma,  etc..'></RowStyleDiv>
+              {energy}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='12'>
+              <Accordion.Header>Food</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Food' desc='Materials that the object is physically made out of food, food products, etc..'></RowStyleDiv>
+              {food}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='13'>
+              <Accordion.Header>Plants and Fungi</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Plants and Fungi' desc='Materials that the object is physically made out of plants, fungi, similar products, etc..'></RowStyleDiv>
+              {plantFungi}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='14'>
               <Accordion.Header>Misc Materials</Accordion.Header>
               <Accordion.Body>
                 <Container>

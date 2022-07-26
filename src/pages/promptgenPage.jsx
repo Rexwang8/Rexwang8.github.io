@@ -9,10 +9,11 @@ function PromptGenerationPage(props) {
   props.analytics.page({
     url: "https://rexwang8.github.io/resource/ai/generator",
   });
-  const [subject, setSubject] = useState("object");
-  const [material, setMaterial] = useState("true");
+  const [subjectOPT, setSubject] = useState("object");
+  const [materialOPT, setMaterial] = useState("true");
   const [artists, setArtist] = useState(1);
   const [keywords, setkeywords] = useState(1);
+  const [aspectOPT, setAspectOPT] = useState("all");
   const [result, setresult] = useState("Result appears here");
 
   let allartists = [];
@@ -78,25 +79,28 @@ function PromptGenerationPage(props) {
     setkeywords(Number.parseInt(e));
   };
 
+  const handleAspectSelect = (e) => {
+    setAspectOPT(e);
+  };
+
   const parseIntoPrompt = () => {
     let sub = "";
-    console.log(subject);
-    if (subject === "object") {
+    if (subjectOPT === "object") {
       const values = Object.values(generatorKeys.objects);
       sub = values[Math.floor(Math.random() * values.length)];
-    } else if (subject === "person") {
+    } else if (subjectOPT === "person") {
       const values = Object.values(generatorKeys.people_ethnicities);
       const values2 = Object.values(generatorKeys.people_jobs);
       const sub1 = values[Math.floor(Math.random() * values.length)];
       const sub2 = values2[Math.floor(Math.random() * values2.length)];
       sub = `${sub1} ${sub2}`;
-    } else if (subject === "animal") {
+    } else if (subjectOPT === "animal") {
       const values = Object.values(generatorKeys.animal);
       sub = values[Math.floor(Math.random() * values.length)];
-    } else if (subject === "buildings") {
+    } else if (subjectOPT === "buildings") {
       const values = Object.values(generatorKeys.buildings);
       sub = values[Math.floor(Math.random() * values.length)];
-    } else if (subject === "landscape") {
+    } else if (subjectOPT === "landscape") {
       const values = Object.values(generatorKeys.landscapemodifier);
       const values2 = Object.values(generatorKeys.landscape);
       const sub1 = values[Math.floor(Math.random() * values.length)];
@@ -130,12 +134,25 @@ function PromptGenerationPage(props) {
       kw += `, ${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
     }
 
+    //ASPECT RATIO
     let aspect = "";
-    const aspects = Object.values(ASPECTS);
-    aspect = aspects[Math.floor(Math.random() * aspects.length)];
+    let aspects;
+    if (aspectOPT === "all") {
+      aspects = Object.values(ASPECTS);
+    } else if (aspectOPT === "landscape") {
+      aspects = Object.values(generatorKeys.aspectlandscape);
+    } else if (aspectOPT === "portrait") {
+      aspects = Object.values(generatorKeys.aspectportrait);
+    }
+    if(aspectOPT !== "none")
+    {
+      aspect = `--ar ${aspects[Math.floor(Math.random() * aspects.length)]}`;
+    }
+    
 
+    //MATERIALS / MEDIA
     let materialmedia = "";
-    if (material) {
+    if (materialOPT) {
       if (Math.random() > 0.5) {
         //materials
         materialmedia = `, made of ${allmaterials[Math.floor(Math.random() * allmaterials.length)]}`;
@@ -146,7 +163,7 @@ function PromptGenerationPage(props) {
       }
     }
 
-    setresult(`a ${sub}${materialmedia}${artist}${kw} --ar ${aspect}`);
+    setresult(`a ${sub}${materialmedia}${artist}${kw} ${aspect}`);
     console.log(result);
   };
 
@@ -165,8 +182,9 @@ function PromptGenerationPage(props) {
                 Subject
               </Dropdown.Toggle>
 
+
               <Dropdown.Menu>
-                <Dropdown.Header>{subject}</Dropdown.Header>
+                <Dropdown.Header>{subjectOPT}</Dropdown.Header>
                 <Dropdown.Item eventKey='object'>Object</Dropdown.Item>
                 <Dropdown.Item eventKey='person'>Person</Dropdown.Item>
                 <Dropdown.Item eventKey='animal'>Animal</Dropdown.Item>
@@ -214,12 +232,30 @@ function PromptGenerationPage(props) {
               </Dropdown.Toggle>
 
               <Dropdown.Menu>
-                <Dropdown.Header>Use: {material.toString()}</Dropdown.Header>
+                <Dropdown.Header>Use: {materialOPT.toString()}</Dropdown.Header>
                 <Dropdown.Item eventKey='true'>Use Materials/Media</Dropdown.Item>
                 <Dropdown.Item eventKey='false'>Don't Use Materials/Media</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
                 </Col>
+
+                <Col>
+                <Dropdown onSelect={handleAspectSelect}>
+              <Dropdown.Toggle variant='success' id='dropdown-basic'>
+                Aspect Ratio
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                <Dropdown.Header>Use: {aspectOPT.toString()}</Dropdown.Header>
+                <Dropdown.Item eventKey='all'>All Aspects</Dropdown.Item>
+                <Dropdown.Item eventKey='landscape'>Landscape Only</Dropdown.Item>
+                <Dropdown.Item eventKey='portrait'>Portrait Only</Dropdown.Item>
+                <Dropdown.Item eventKey='none'>No Aspect (1:1)</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+                </Col>
+
+
               </Row>
             </Container>
            

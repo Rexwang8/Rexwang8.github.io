@@ -18,7 +18,16 @@ function PromptGenerationPage(props) {
   const [keywords, setkeywords] = useState(1);
   const [aspectOPT, setAspectOPT] = useState("all");
   const [amountOPT, setAmountOPT] = useState(1);
-  const [result, setresult] = useState([<h3>Result Appears Here</h3>]);
+  const [result, setresult] = useState([
+
+    <div>
+<h3>Result Appears Here</h3>
+<hr></hr>
+    </div>
+  
+
+
+]);
 
   let allartists = [];
   Object.keys(ARTISTS).forEach((key) => {
@@ -149,7 +158,7 @@ function PromptGenerationPage(props) {
     let kw = "";
 
     if (keywords >= 1) {
-      kw = ", ";
+      kw = "";
       for (let index = 0; index < keywords; index++) {
         kw += `, ${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
       }
@@ -310,7 +319,6 @@ function PromptGenerationPage(props) {
     
             <hr></hr>
             {result}
-            <hr></hr>
             <p>212 Objects, 94 Jobs, 80 races and ethnicities, 49 buildings, 173 landscapes, 58 landscape modifiers, 139 artists, 227 keywords, 128 physical mediums, 350 materials, 121 concepts (1631 total)</p>
           </div>
         </div>

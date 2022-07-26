@@ -100,13 +100,13 @@ function PromptGenerationPage(props) {
     let sub = "";
     if (subjectOPT === "object") {
       const values = Object.values(generatorKeys.objects);
-      sub = values[Math.floor(Math.random() * values.length)];
+      sub = `A ${values[Math.floor(Math.random() * values.length)]}`;
     } else if (subjectOPT === "person") {
       const values = Object.values(generatorKeys.people_ethnicities);
       const values2 = Object.values(generatorKeys.people_jobs);
       const sub1 = values[Math.floor(Math.random() * values.length)];
       const sub2 = values2[Math.floor(Math.random() * values2.length)];
-      sub = `${sub1} ${sub2}`;
+      sub = `A ${sub1} ${sub2}`;
     } else if (subjectOPT === "animal") {
       const values = Object.values(generatorKeys.animal);
       sub = values[Math.floor(Math.random() * values.length)];
@@ -115,13 +115,19 @@ function PromptGenerationPage(props) {
       const values2 = Object.values(generatorKeys.buildings);
       const sub1 = values[Math.floor(Math.random() * values.length)];
       const sub2 = values2[Math.floor(Math.random() * values2.length)];
-      sub = `${sub1} ${sub2}`;
+      sub = `A ${sub1} ${sub2}`;
     } else if (subjectOPT === "landscape") {
       const values = Object.values(generatorKeys.landscapemodifier);
       const values2 = Object.values(generatorKeys.landscape);
       const sub1 = values[Math.floor(Math.random() * values.length)];
       const sub2 = values2[Math.floor(Math.random() * values2.length)];
-      sub = `${sub1} ${sub2}`;
+      sub = `A ${sub1} ${sub2}`;
+    }
+    else if (subjectOPT === "concept") {
+      const values = Object.values(generatorKeys.concepts);
+      const sub1 = values[Math.floor(Math.random() * values.length)];
+      const sub2 = values[Math.floor(Math.random() * values.length)];
+      sub = `The ${sub1} of ${sub2}`;
     }
 
     let artist = "";
@@ -141,14 +147,11 @@ function PromptGenerationPage(props) {
 
     if (keywords >= 1) {
       kw = ", ";
-      kw += `${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
+      for (let index = 0; index < keywords; index++) {
+        kw += `, ${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
+      }
     }
-    if (keywords >= 2) {
-      kw += `, ${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
-    }
-    if (keywords >= 3) {
-      kw += `, ${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
-    }
+
 
     //ASPECT RATIO
     let aspect = "";
@@ -178,7 +181,7 @@ function PromptGenerationPage(props) {
       }
     }
 
-    return <h3>{`a ${sub}${materialmedia}${artist}${kw} ${aspect}`}</h3>;
+    return <h3>{`${sub}${materialmedia}${artist}${kw} ${aspect}`}</h3>;
   };
 
   return (
@@ -204,6 +207,7 @@ function PromptGenerationPage(props) {
                 <Dropdown.Item eventKey='animal'>Animal</Dropdown.Item>
                 <Dropdown.Item eventKey='landscape'>Landscape</Dropdown.Item>
                 <Dropdown.Item eventKey='buildings'>Building</Dropdown.Item>
+                <Dropdown.Item eventKey='concept'>Concept</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
                 </Col>
@@ -236,6 +240,10 @@ function PromptGenerationPage(props) {
                 <Dropdown.Item eventKey='1'>1 Keywords</Dropdown.Item>
                 <Dropdown.Item eventKey='2'>2 Keywords</Dropdown.Item>
                 <Dropdown.Item eventKey='3'>3 Keywords</Dropdown.Item>
+                <Dropdown.Item eventKey='4'>4 Keywords</Dropdown.Item>
+                <Dropdown.Item eventKey='5'>5 Keywords</Dropdown.Item>
+                <Dropdown.Item eventKey='10'>10 Keywords</Dropdown.Item>
+                <Dropdown.Item eventKey='20'>20 Keywords</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown></Col>
 
@@ -294,7 +302,7 @@ function PromptGenerationPage(props) {
             <hr></hr>
             {result}
             <hr></hr>
-            <p>36 Objects, 94 Jobs, 80 races and ethnicities, 49 buildings, 40 landscapes, 58 landscape modifiers, 139 artists, 227 keywords, 128 physical mediums, 68 materials (919 total)</p>
+            <p>212 Objects, 94 Jobs, 80 races and ethnicities, 49 buildings, 173 landscapes, 58 landscape modifiers, 139 artists, 227 keywords, 128 physical mediums, 350 materials, 121 concepts (1631 total)</p>
           </div>
         </div>
       </div>

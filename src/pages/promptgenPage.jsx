@@ -24,6 +24,7 @@ function PromptGenerationPage(props) {
   const [stylizeOPT, setStylizeOPT] = useState(2500);
   const [qualityUSEOPT, setQualityUSEOPT] = useState(false);
   const [stylizeUSEOPT, setStylizeUSEOPT] = useState(false);
+  const [seperatorOPT, setSeperatorOPT] = useState("Commas");
   const [result, setresult] = useState([
     <div>
       <h3>Result Appears Here</h3>
@@ -122,12 +123,35 @@ function PromptGenerationPage(props) {
     setStylizeUSEOPT(!stylizeUSEOPT);
   };
 
+  const handleSeperatorSelect = (e) => {
+    setSeperatorOPT(e);
+  };
+
   const GeneratePrompts = () => {
     let res = [];
     for (let index = 0; index < amountOPT; index++) {
       res.push(parseIntoPrompt());
     }
     setresult(res);
+  };
+
+  const AddSeperator = () => {
+    if(seperatorOPT === "Commas")
+    {
+      return ', ';
+    }
+    else if(seperatorOPT === "Hyphens")
+    {
+      return '-';
+    }
+    else if (seperatorOPT === "Pluses")
+    {
+      return ' + ';
+    }
+    else if (seperatorOPT === "Colons")
+    {
+      return ':: ';
+    }
   };
 
   const parseIntoPrompt = () => {
@@ -166,7 +190,7 @@ function PromptGenerationPage(props) {
     let artist = "";
 
     if (artists >= 1) {
-      artist = ", by ";
+      artist = `${AddSeperator()}by `;
       artist += `${allartists[Math.floor(Math.random() * allartists.length)]}`;
     }
     if (artists >= 2) {
@@ -181,7 +205,7 @@ function PromptGenerationPage(props) {
     if (keywords >= 1) {
       kw = "";
       for (let index = 0; index < keywords; index++) {
-        kw += `, ${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
+        kw += `${AddSeperator()}${allkeywords[Math.floor(Math.random() * allkeywords.length)]}`;
       }
     }
 
@@ -190,13 +214,25 @@ function PromptGenerationPage(props) {
     let aspects;
     if (aspectOPT === "all") {
       aspects = Object.values(ASPECTS);
+      aspect = `--ar ${aspects[Math.floor(Math.random() * aspects.length)]}`;
     } else if (aspectOPT === "landscape") {
       aspects = Object.values(generatorKeys.aspectlandscape);
+      aspect = `--ar ${aspects[Math.floor(Math.random() * aspects.length)]}`;
     } else if (aspectOPT === "portrait") {
       aspects = Object.values(generatorKeys.aspectportrait);
-    }
-    if (aspectOPT !== "none") {
       aspect = `--ar ${aspects[Math.floor(Math.random() * aspects.length)]}`;
+    }
+    if(aspectOPT === "169")
+    {
+      aspect = `--ar 16:9`;
+    }
+    else if(aspectOPT === "219")
+    {
+      aspect = `--ar 21:9`;
+    }
+    else if(aspectOPT === "919")
+    {
+      aspect = `--ar 9:19`;
     }
 
     //STYLIZE AND QUALITY
@@ -217,10 +253,10 @@ function PromptGenerationPage(props) {
     if (materialOPT !== "none") {
       if (materialOPT === "materials") {
         //materials
-        materialmedia = `, made of ${allmaterials[Math.floor(Math.random() * allmaterials.length)]}`;
+        materialmedia = `${AddSeperator()}made of ${allmaterials[Math.floor(Math.random() * allmaterials.length)]}`;
       } else {
         //physical media
-        materialmedia = `, ${allphysical[Math.floor(Math.random() * allphysical.length)]}`;
+        materialmedia = `${AddSeperator()}${allphysical[Math.floor(Math.random() * allphysical.length)]}`;
       }
     }
 
@@ -297,7 +333,7 @@ function PromptGenerationPage(props) {
                       <Dropdown.Item eventKey='4'>4 Keywords</Dropdown.Item>
                       <Dropdown.Item eventKey='5'>5 Keywords</Dropdown.Item>
                       <Dropdown.Item eventKey='10'>10 Keywords</Dropdown.Item>
-                      <Dropdown.Item eventKey='20'>20 Keywords</Dropdown.Item>
+                      <Dropdown.Item eventKey='20'>20 Keywords (unpredictable)</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </Col>
@@ -327,9 +363,30 @@ function PromptGenerationPage(props) {
                     <Dropdown.Menu>
                       <Dropdown.Header>Use: {aspectOPT.toString()}</Dropdown.Header>
                       <Dropdown.Item eventKey='all'>All Aspects</Dropdown.Item>
-                      <Dropdown.Item eventKey='landscape'>Landscape Only</Dropdown.Item>
-                      <Dropdown.Item eventKey='portrait'>Portrait Only</Dropdown.Item>
                       <Dropdown.Item eventKey='none'>No Aspect (1:1)</Dropdown.Item>
+                      <Dropdown.Item eventKey='landscape'>Landscape Only</Dropdown.Item>
+                      <Dropdown.Item eventKey='169'>16:9</Dropdown.Item>
+                      <Dropdown.Item eventKey='219'>21:9</Dropdown.Item>
+                      <Dropdown.Item eventKey='portrait'>Portrait Only</Dropdown.Item>
+                      <Dropdown.Item eventKey='919'>9:19</Dropdown.Item>
+                      
+                    </Dropdown.Menu>
+                  </Dropdown>
+                </Col>
+
+                <Col xs={12} md={2}>
+                  <Dropdown onSelect={handleSeperatorSelect}>
+                    <Dropdown.Toggle variant='success' id='dropdown-basic'>
+                      Seperator Style
+                    </Dropdown.Toggle>
+
+                    <Dropdown.Menu>
+                      <Dropdown.Header>Seperator Style: {seperatorOPT.toString()}</Dropdown.Header>
+                      <Dropdown.Item eventKey='Commas'>Soft - Commas</Dropdown.Item>
+                      <Dropdown.Item eventKey='Hyphens'>Soft - Hyphens</Dropdown.Item>
+                      <Dropdown.Item eventKey='Pluses'>Soft - Pluses</Dropdown.Item>
+                      <Dropdown.Item eventKey='Colons'>Hard - Colons</Dropdown.Item>
+                      
                     </Dropdown.Menu>
                   </Dropdown>
                 </Col>

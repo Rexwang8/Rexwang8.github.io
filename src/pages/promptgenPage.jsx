@@ -2,7 +2,7 @@ import SiteNavbar from "../components/SiteNavbar";
 import Dropdown from "react-bootstrap/Dropdown";
 import { ASPECTS, MATERIALS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, generatorKeys } from "../data/allkeys";
 import { useState } from "react";
-import { Button, Container, Row, Col } from "react-bootstrap";
+import { Button, Container, Row, Col, ButtonGroup } from "react-bootstrap";
 function PromptGenerationPage(props) {
   document.title = props.title;
 
@@ -14,7 +14,8 @@ function PromptGenerationPage(props) {
   const [artists, setArtist] = useState(1);
   const [keywords, setkeywords] = useState(1);
   const [aspectOPT, setAspectOPT] = useState("all");
-  const [result, setresult] = useState("Result appears here");
+  const [amountOPT, setAmountOPT] = useState(1);
+  const [result, setresult] = useState([<h3>Result Appears Here</h3>]);
 
   let allartists = [];
   Object.keys(ARTISTS).forEach((key) => {
@@ -72,7 +73,7 @@ function PromptGenerationPage(props) {
   };
 
   const handlematerialSelect = (e) => {
-    setMaterial(e === "true");
+    setMaterial(e);
   };
 
   const handleKeywordSelect = (e) => {
@@ -81,6 +82,18 @@ function PromptGenerationPage(props) {
 
   const handleAspectSelect = (e) => {
     setAspectOPT(e);
+  };
+  const handleBulkSelect = (e) => {
+    setAmountOPT(Number.parseInt(e));
+  };
+
+  const GeneratePrompts = () => {
+    let res = [];
+    for (let index = 0; index < amountOPT; index++) {
+      res.push(parseIntoPrompt());
+      
+    }
+    setresult(res);
   };
 
   const parseIntoPrompt = () => {
@@ -98,8 +111,11 @@ function PromptGenerationPage(props) {
       const values = Object.values(generatorKeys.animal);
       sub = values[Math.floor(Math.random() * values.length)];
     } else if (subjectOPT === "buildings") {
-      const values = Object.values(generatorKeys.buildings);
-      sub = values[Math.floor(Math.random() * values.length)];
+      const values = Object.values(generatorKeys.landscapemodifier);
+      const values2 = Object.values(generatorKeys.buildings);
+      const sub1 = values[Math.floor(Math.random() * values.length)];
+      const sub2 = values2[Math.floor(Math.random() * values2.length)];
+      sub = `${sub1} ${sub2}`;
     } else if (subjectOPT === "landscape") {
       const values = Object.values(generatorKeys.landscapemodifier);
       const values2 = Object.values(generatorKeys.landscape);
@@ -152,19 +168,17 @@ function PromptGenerationPage(props) {
 
     //MATERIALS / MEDIA
     let materialmedia = "";
-    if (materialOPT) {
-      if (Math.random() > 0.5) {
+    if (materialOPT !== "none") {
+      if (materialOPT === "materials") {
         //materials
         materialmedia = `, made of ${allmaterials[Math.floor(Math.random() * allmaterials.length)]}`;
       } else {
         //physical media
         materialmedia = `, ${allphysical[Math.floor(Math.random() * allphysical.length)]}`;
-        console.log(allmaterials);
       }
     }
 
-    setresult(`a ${sub}${materialmedia}${artist}${kw} ${aspect}`);
-    console.log(result);
+    return <h3>{`a ${sub}${materialmedia}${artist}${kw} ${aspect}`}</h3>;
   };
 
   return (
@@ -233,8 +247,10 @@ function PromptGenerationPage(props) {
 
               <Dropdown.Menu>
                 <Dropdown.Header>Use: {materialOPT.toString()}</Dropdown.Header>
-                <Dropdown.Item eventKey='true'>Use Materials/Media</Dropdown.Item>
-                <Dropdown.Item eventKey='false'>Don't Use Materials/Media</Dropdown.Item>
+                <Dropdown.Item eventKey='all'>Use Materials/Media</Dropdown.Item>
+                <Dropdown.Item eventKey='materials'>Use Materials</Dropdown.Item>
+                <Dropdown.Item eventKey='media'>Use Media</Dropdown.Item>
+                <Dropdown.Item eventKey='none'>Don't Use Materials/Media</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
                 </Col>
@@ -262,11 +278,21 @@ function PromptGenerationPage(props) {
             
             
             <hr></hr>
-            <Button variant='primary' onClick={parseIntoPrompt}>
-              Generate Prompt
-            </Button>{" "}
+            <Dropdown as={ButtonGroup} onSelect={handleBulkSelect} size="lg">
+      <Button variant="primary" onClick={GeneratePrompts}>Generate</Button>
+
+      <Dropdown.Toggle split variant="primary" id="dropdown-split-basic" />
+
+      <Dropdown.Menu>
+      <Dropdown.Header>{amountOPT}x Generations</Dropdown.Header>
+        <Dropdown.Item eventKey='1'>1x Generations</Dropdown.Item>
+        <Dropdown.Item eventKey='3'>3x Generations</Dropdown.Item>
+        <Dropdown.Item eventKey='5'>5x Generations</Dropdown.Item>
+        <Dropdown.Item eventKey='10'>10x Generations</Dropdown.Item>
+      </Dropdown.Menu>
+    </Dropdown>
             <hr></hr>
-            <h3>{result}</h3>
+            {result}
             <hr></hr>
             <p>36 Objects, 94 Jobs, 80 races and ethnicities, 49 buildings, 40 landscapes, 58 landscape modifiers, 139 artists, 227 keywords, 128 physical mediums, 68 materials (919 total)</p>
           </div>

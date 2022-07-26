@@ -1,4 +1,4 @@
-import { Container, Accordion, Row, Col, Tabs, Tab } from "react-bootstrap";
+import { Container, Accordion, Row, Tabs, Tab } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
 import RowStyleDiv from "../../components/rowdiv";
 import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS } from "../../data/allkeys";

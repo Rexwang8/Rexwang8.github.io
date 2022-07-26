@@ -18,12 +18,12 @@ export const ASPECTS = {
   base35: "3:5",
   base43: "4:3",
   base34: "3:4",
-  base100143: "1:1.43",
-  base143100: "1.43:1",
-  base100185: "1:1.85",
-  base185100: "1.85:1",
-  base100235: "1:2.35",
-  base235100: "2.35:1",
+  base100143: "100:143",
+  base143100: "143:100",
+  base100185: "100:185",
+  base185100: "185:100",
+  base100235: "100:235",
+  base235100: "235:100",
 };
 
 export const MJARGUMENTS = {
@@ -299,7 +299,6 @@ export const MATERIALS = {
     shellac: "Shellac",
     carnubawax: "Carnuba Wax",
     candeliliawax: "Candelilia Wax",
-    wax: "Wax",
   },
   gas: {
     smoke: "Smoke",

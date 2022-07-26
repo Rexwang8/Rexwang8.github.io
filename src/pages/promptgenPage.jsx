@@ -3,6 +3,9 @@ import Dropdown from "react-bootstrap/Dropdown";
 import { ASPECTS, MATERIALS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, generatorKeys } from "../data/allkeys";
 import { useState } from "react";
 import { Button, Container, Row, Col, ButtonGroup } from "react-bootstrap";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faClipboard } from '@fortawesome/free-regular-svg-icons'
+
 function PromptGenerationPage(props) {
   document.title = props.title;
 
@@ -181,7 +184,10 @@ function PromptGenerationPage(props) {
       }
     }
 
-    return <h3>{`${sub}${materialmedia}${artist}${kw} ${aspect}`}</h3>;
+    return <div>
+      <p className="generatorestext">{`${sub}${materialmedia}${artist}${kw} ${aspect}`}</p>
+      <Button variant="info" size="lg" onClick={() => {navigator.clipboard.writeText(`${sub}${materialmedia}${artist}${kw} ${aspect}`)}}><FontAwesomeIcon icon={faClipboard} /> &nbsp;Copy</Button>
+      </div>;
   };
 
   return (
@@ -193,7 +199,7 @@ function PromptGenerationPage(props) {
             <h2>Dynamic Prompt generator</h2>
             <Container>
               <Row>
-                <Col>
+                <Col  xs={12} md={2}>
                 <Dropdown onSelect={handleSubjectSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Subject
@@ -212,7 +218,7 @@ function PromptGenerationPage(props) {
             </Dropdown>
                 </Col>
 
-                <Col>
+                <Col  xs={12} md={2}>
                 <Dropdown onSelect={handleArtistSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Artists
@@ -228,7 +234,7 @@ function PromptGenerationPage(props) {
             </Dropdown>
             
                 </Col>
-                <Col>
+                <Col  xs={12} md={2}>
                 <Dropdown onSelect={handleKeywordSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Keywords
@@ -247,7 +253,7 @@ function PromptGenerationPage(props) {
               </Dropdown.Menu>
             </Dropdown></Col>
 
-                <Col>
+                <Col  xs={12} md={2}>
                 <Dropdown onSelect={handlematerialSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Materials and Media
@@ -263,7 +269,7 @@ function PromptGenerationPage(props) {
             </Dropdown>
                 </Col>
 
-                <Col>
+                <Col  xs={12} md={2}>
                 <Dropdown onSelect={handleAspectSelect}>
               <Dropdown.Toggle variant='success' id='dropdown-basic'>
                 Aspect Ratio
@@ -299,6 +305,8 @@ function PromptGenerationPage(props) {
         <Dropdown.Item eventKey='10'>10x Generations</Dropdown.Item>
       </Dropdown.Menu>
     </Dropdown>
+
+    
             <hr></hr>
             {result}
             <hr></hr>

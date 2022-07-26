@@ -38,7 +38,7 @@ function AIStylePage(props) {
               <Button>Prompts</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 637 DALLE-2: 5 Prompts Page: 55 Total: 697</p>
+            <p>Teapot Count, MJ: 799 DALLE-2: 5 Prompts Page: 55 Total: 859</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 
@@ -52,6 +52,7 @@ function AIStylePage(props) {
           </Tabs>
 
           <div className='textAICenter'>
+            <p>Since last update: +aspect ratio to prompt gen, +materials to end of fungi.</p>
           <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
             
             <a href='https://bit.ly/3nAal6T' alt="sincarnate repo"><p>Thanks to Sincarnate#1121 for his artist style comparison repo.</p></a>

@@ -187,6 +187,7 @@ function PromptGenerationPage(props) {
     return <div>
       <p className="generatorestext">{`${sub}${materialmedia}${artist}${kw} ${aspect}`}</p>
       <Button variant="info" size="lg" onClick={() => {navigator.clipboard.writeText(`${sub}${materialmedia}${artist}${kw} ${aspect}`)}}><FontAwesomeIcon icon={faClipboard} /> &nbsp;Copy</Button>
+      <hr></hr>
       </div>;
   };
 

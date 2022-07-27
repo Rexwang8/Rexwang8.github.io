@@ -14,12 +14,12 @@ function PromptGenerationPage(props) {
     url: "https://rexwang8.github.io/resource/ai/generator",
   });
   const [subjectOPT, setSubject] = useState("object");
-  const [materialOPT, setMaterial] = useState("true");
+  const [materialOPT, setMaterial] = useState("all");
   const [artists, setArtist] = useState(1);
   const [keywords, setkeywords] = useState(1);
   const [aspectOPT, setAspectOPT] = useState("all");
   const [amountOPT, setAmountOPT] = useState(1);
-  const [qualityOPT, setQualityOPT] = useState(3);
+  const [qualityOPT, setQualityOPT] = useState(2);
   const [adjqualityOPT, setadjQualityOPT] = useState(1);
   const [stylizeOPT, setStylizeOPT] = useState(2500);
   const [qualityUSEOPT, setQualityUSEOPT] = useState(false);

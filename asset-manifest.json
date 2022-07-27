@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7985d709.css",
-    "main.js": "/static/js/main.c2f8408c.js",
+    "main.css": "/static/css/main.deaf974f.css",
+    "main.js": "/static/js/main.76576ff6.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/prompt_woodteapot_1.png": "/static/media/prompt_woodteapot_1.41983f91ff0e644d2512.png",
     "static/media/prompt_woodteapot_5.png": "/static/media/prompt_woodteapot_5.3689bee7bbadeed88ffa.png",
@@ -64,6 +64,7 @@
     "static/media/bamboo.png": "/static/media/bamboo.71a1f5becec4ac482221.png",
     "static/media/sponge.png": "/static/media/sponge.77ac70771e87ed8713df.png",
     "static/media/cobblestone.png": "/static/media/cobblestone.1a9a8dc2412cc27db47d.png",
+    "static/media/strawbale.png": "/static/media/strawbale.03d603a10cdb772119d6.png",
     "static/media/basestyle25000.png": "/static/media/basestyle25000.ee9da5d49ffa217a7e6f.png",
     "static/media/pastasauce.png": "/static/media/pastasauce.c6498d8a3ee4b9b44451.png",
     "static/media/silicone.png": "/static/media/silicone.2e0ed5d4a9d0d9870d57.png",
@@ -79,6 +80,7 @@
     "static/media/kevlar.png": "/static/media/kevlar.85afc3f58b39dacff2f1.png",
     "static/media/cells.png": "/static/media/cells.afc0b161acb76a591e02.png",
     "static/media/honeycomb.png": "/static/media/honeycomb.bb78eeb65f5d4148980e.png",
+    "static/media/straw.png": "/static/media/straw.73602c2b974fcebe4e9e.png",
     "static/media/blanket.png": "/static/media/blanket.005676f43ea6c4cb328c.png",
     "static/media/softgel.png": "/static/media/softgel.48a3071be9937acfd00b.png",
     "static/media/mayonaise.png": "/static/media/mayonaise.001bb470137785d69b74.png",
@@ -94,10 +96,13 @@
     "static/media/fondanticing.png": "/static/media/fondanticing.11576549a3e1893318f2.png",
     "static/media/plasticwrap.png": "/static/media/plasticwrap.43f1206a51bca9d815cd.png",
     "static/media/candy.png": "/static/media/candy.d88198dde90e08611417.png",
+    "static/media/thatch.png": "/static/media/thatch.5bae62ae859ff757449f.png",
     "static/media/ferrofluid.png": "/static/media/ferrofluid.6b789b4b734fd1c22202.png",
     "static/media/beans.png": "/static/media/beans.65cfdd2908515c910ece.png",
     "static/media/basequality05.png": "/static/media/basequality05.8e1142e1a61589729437.png",
+    "static/media/haybale.png": "/static/media/haybale.ab3dc310543dcea796f4.png",
     "static/media/royalicing.png": "/static/media/royalicing.75f5f5da0d347993e9d3.png",
+    "static/media/hemp.png": "/static/media/hemp.f7e1451e0fa6af411080.png",
     "static/media/amber.png": "/static/media/amber.a546b20157f83ddae09e.png",
     "static/media/leaves.png": "/static/media/leaves.030946b8c514701c7529.png",
     "static/media/carpet.png": "/static/media/carpet.9856355f38a305e9fa02.png",
@@ -155,6 +160,7 @@
     "static/media/circuits.png": "/static/media/circuits.fc53d0a81a90c594d1c2.png",
     "static/media/antonpieck.png": "/static/media/antonpieck.7b664eec8ab7c9f047ee.png",
     "static/media/lake.png": "/static/media/lake.4e5e95c4419a900e927c.png",
+    "static/media/moss.png": "/static/media/moss.44ca483119f2c2bc2b33.png",
     "static/media/emulsion.png": "/static/media/emulsion.6a61b7cd3f2d7faf483a.png",
     "static/media/linen.png": "/static/media/linen.8f15a622e7070eddb112.png",
     "static/media/apolloniasaintclair.png": "/static/media/apolloniasaintclair.f8bd06c441c30b651e9d.png",
@@ -182,6 +188,7 @@
     "static/media/circuitboard.png": "/static/media/circuitboard.3f4f3816a7fa5c28fe37.png",
     "static/media/anatomical.png": "/static/media/anatomical.7a45dad4dbd130f49cd4.png",
     "static/media/carnubawax.png": "/static/media/carnubawax.e22cb3300feade185268.png",
+    "static/media/fungi.png": "/static/media/fungi.89c4fd4ac67606e84326.png",
     "static/media/pinecones.png": "/static/media/pinecones.e261783785ff6ab20dfd.png",
     "static/media/turpentine.png": "/static/media/turpentine.f1c71060b8fb11b3b715.png",
     "static/media/waxpaper.png": "/static/media/waxpaper.6badd5386f2ed9b186af.png",
@@ -287,6 +294,7 @@
     "static/media/obsidian.png": "/static/media/obsidian.dd7d39dea5c104dbc44b.png",
     "static/media/rayon.png": "/static/media/rayon.d589e89967fb84117745.png",
     "static/media/moleculargastronomy.png": "/static/media/moleculargastronomy.6ee65dd6508027ad4a2b.png",
+    "static/media/acorns.png": "/static/media/acorns.b3353cf9394e3019380e.png",
     "static/media/cinnamon.png": "/static/media/cinnamon.2b7bb26518cdbc15f3c3.png",
     "static/media/ashleywood.png": "/static/media/ashleywood.e42d3a8395c42a589b53.png",
     "static/media/amandasage.png": "/static/media/amandasage.5f8446f0d774a5e4eacd.png",
@@ -320,6 +328,7 @@
     "static/media/n1920s.png": "/static/media/n1920s.93215a3ac10b4bb548d5.png",
     "static/media/crayon.png": "/static/media/crayon.f655c549ab37334f57e7.png",
     "static/media/lego.png": "/static/media/lego.922c6b413f65a6d596dd.png",
+    "static/media/cactus.png": "/static/media/cactus.b6345c3a1d6e20a947c8.png",
     "static/media/sceptredquartz.png": "/static/media/sceptredquartz.b3dc88468b96acc2f7d7.png",
     "static/media/zbrush.png": "/static/media/zbrush.c0e383e7e8f1167def25.png",
     "static/media/bobross.png": "/static/media/bobross.1f96c6aae2f3579d0f94.png",
@@ -861,12 +870,12 @@
     "static/media/colesphillips.png": "/static/media/colesphillips.481aeccccd2be3a1e151.png",
     "static/media/basic.png": "/static/media/basic.2c48b26c26fd87ed689e.png",
     "index.html": "/index.html",
-    "main.7985d709.css.map": "/static/css/main.7985d709.css.map",
-    "main.c2f8408c.js.map": "/static/js/main.c2f8408c.js.map",
+    "main.deaf974f.css.map": "/static/css/main.deaf974f.css.map",
+    "main.76576ff6.js.map": "/static/js/main.76576ff6.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7985d709.css",
-    "static/js/main.c2f8408c.js"
+    "static/css/main.deaf974f.css",
+    "static/js/main.76576ff6.js"
   ]
 }

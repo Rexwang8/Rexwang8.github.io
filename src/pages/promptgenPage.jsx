@@ -31,7 +31,7 @@ function PromptGenerationPage(props) {
       <hr></hr>
     </div>,
   ]);
-  const initialQualitySteps = [0.25, 0.5, 0.75, 1, 2, 5];
+  const initialQualitySteps = [0.25, 0.5, 1, 2, 5];
 
   //#region declare arrays
   let allartists = [];
@@ -329,7 +329,7 @@ function PromptGenerationPage(props) {
                   </Dropdown>
                 </Col>
 
-                <Col xs={12} md={2}>
+                <Col xs={12} md={3}>
                   <Dropdown onSelect={handlematerialSelect}>
                     <Dropdown.Toggle variant='success' id='dropdown-basic'>
                       Materials and Media
@@ -388,7 +388,7 @@ function PromptGenerationPage(props) {
                         value={qualityOPT}
                         onChange={(e) => handleQualSelect(e.target.value)}
                         step={1}
-                        max={5}
+                        max={4}
                         disabled={!qualityUSEOPT}
                         tooltip={qualityUSEOPT === false ? "off" : "auto"}
                         tooltipLabel={(qualityOPT) => `Quality: ${initialQualitySteps[Number.parseInt(qualityOPT)]}`}
@@ -409,6 +409,7 @@ function PromptGenerationPage(props) {
                         value={stylizeOPT}
                         onChange={(e) => handleStyleSelect(e.target.value)}
                         step={625}
+                        min={625}
                         max={60000}
                         disabled={!stylizeUSEOPT}
                         tooltip={stylizeUSEOPT === false ? "off" : "auto"}

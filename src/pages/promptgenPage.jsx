@@ -32,6 +32,8 @@ function PromptGenerationPage(props) {
     </div>,
   ]);
   const initialQualitySteps = [0.25, 0.5, 1, 2, 5];
+  const [hdOPT, setHDOPT] = useState(false);
+  const [uplightOPT, setUplightOPT] = useState(false);
 
   //#region declare arrays
   let allartists = [];
@@ -128,6 +130,14 @@ function PromptGenerationPage(props) {
 
   const handleSeperatorSelect = (e) => {
     setSeperatorOPT(e);
+  };
+
+  const handleHDSelect = (e) => {
+    setHDOPT(!hdOPT);
+  };
+
+  const handleUplightSelect = (e) => {
+    setUplightOPT(!uplightOPT);
   };
 
   const GeneratePrompts = () => {
@@ -239,6 +249,18 @@ function PromptGenerationPage(props) {
       quality = `--q ${adjqualityOPT}`;
     }
 
+    //HD AND UPLIGHT
+    let hd = "";
+    if (hdOPT) {
+      hd = `--hd`;
+    }
+
+    let uplight = "";
+    if (uplightOPT) {
+      uplight = `--uplight`;
+    }
+
+
     //MATERIALS / MEDIA
     let materialmedia = "";
     if (materialOPT !== "none") {
@@ -251,14 +273,17 @@ function PromptGenerationPage(props) {
       }
     }
 
+    var final = `${sub}${materialmedia}${artist}${kw} ${aspect} ${quality} ${stylize} ${hd} ${uplight}`;
+    final = final.trim();
+
     return (
       <div>
-        <p className='generatorestext'>{`${sub}${materialmedia}${artist}${kw} ${aspect} ${quality} ${stylize}`}</p>
+        <p className='generatorestext'>{`${final}`}</p>
         <Button
           variant='info'
           size='lg'
           onClick={() => {
-            navigator.clipboard.writeText(`${sub}${materialmedia}${artist}${kw} ${aspect} ${quality} ${stylize}`);
+            navigator.clipboard.writeText(`${final}`);
           }}>
           <FontAwesomeIcon icon={faClipboard} /> &nbsp;Copy
         </Button>
@@ -375,12 +400,13 @@ function PromptGenerationPage(props) {
                       <Dropdown.Item eventKey='Commas'>Soft - Commas</Dropdown.Item>
                       <Dropdown.Item eventKey='Hyphens'>Soft - Hyphens</Dropdown.Item>
                       <Dropdown.Item eventKey='Pluses'>Soft - Pluses</Dropdown.Item>
-                      <Dropdown.Item eventKey='Colons'>Hard - Colons</Dropdown.Item>
+                      <Dropdown.Item eventKey='Colons'>Hard - Colons (unstable)</Dropdown.Item>
                     </Dropdown.Menu>
                   </Dropdown>
                 </Col>
               </Row>
               <Row>
+                <Col xs={12} md={4}>
                 <Form>
                   <Form.Group as={Row}>
                     <Col xs={7} md={12}>
@@ -401,8 +427,9 @@ function PromptGenerationPage(props) {
                     </Col>
                   </Form.Group>
                 </Form>
-                <Col></Col>
-                <Form>
+                </Col>
+                
+                <Col xs={12} md={4}><Form>
                   <Form.Group as={Row}>
                     <Col xs={7} md={12}>
                       <RangeSlider
@@ -422,7 +449,19 @@ function PromptGenerationPage(props) {
                       </Button>
                     </Col>
                   </Form.Group>
-                </Form>
+                </Form></Col>
+                
+
+              <Col xs={12} md={2}>
+              <Button className='mb-2' variant={uplightOPT ? "primary" : "outline-primary"} onClick={(e) => handleUplightSelect()}>
+                        Light Upscale
+                      </Button>
+
+                      <Button className='mb-2' variant={hdOPT ? "primary" : "outline-primary"} onClick={(e) => handleHDSelect()}>
+                        Abstract HD
+                      </Button>
+              </Col>
+                
               </Row>
             </Container>
 

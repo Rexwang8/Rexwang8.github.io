@@ -6,6 +6,7 @@ import { Button, Container, Row, Col, ButtonGroup, Form } from "react-bootstrap"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 import RangeSlider from "react-bootstrap-range-slider";
+import TeapotFooter from "../components/teapotfooter";
 
 function PromptGenerationPage(props) {
   document.title = props.title;
@@ -488,6 +489,7 @@ function PromptGenerationPage(props) {
               212 Objects, 94 Jobs, 80 races and ethnicities, 49 buildings, 173 landscapes, 58 landscape modifiers, 139 artists, 227 keywords, 128 physical mediums, 350 materials, 121 concepts (1631
               total)
             </p>
+            <TeapotFooter></TeapotFooter>
           </div>
         </div>
       </div>

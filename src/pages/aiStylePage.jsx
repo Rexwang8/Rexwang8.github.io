@@ -4,6 +4,7 @@ import SiteNavbar from "../components/SiteNavbar";
 
 import MJTab from "./subpage/MJTab";
 import DalleTab from "./subpage/DalleTab";
+import TeapotFooter from "../components/teapotfooter";
 
 function AIStylePage(props) {
   document.title = props.title;
@@ -71,9 +72,7 @@ function AIStylePage(props) {
             </a>
           </div>
 
-          <div className='footer'>
-            <p>Portfolio Website for Rex Wang, Coded in React framework in 2022.</p>
-          </div>
+          <TeapotFooter></TeapotFooter>
         </div>
       </div>
     </div>

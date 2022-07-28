@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.7985d709.css",
-    "main.js": "/static/js/main.2f50359b.js",
+    "main.css": "/static/css/main.deaf974f.css",
+    "main.js": "/static/js/main.cfa6348f.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/prompt_woodteapot_1.png": "/static/media/prompt_woodteapot_1.41983f91ff0e644d2512.png",
     "static/media/prompt_woodteapot_5.png": "/static/media/prompt_woodteapot_5.3689bee7bbadeed88ffa.png",
@@ -86,6 +86,7 @@
     "static/media/mayonaise.png": "/static/media/mayonaise.001bb470137785d69b74.png",
     "static/media/macaroni.png": "/static/media/macaroni.c6d4407f4f19d12e7052.png",
     "static/media/crossstitch.png": "/static/media/crossstitch.a12a926a861e839e5a33.png",
+    "static/media/hay.png": "/static/media/hay.c9a9f102e116d487a411.png",
     "static/media/eclair.png": "/static/media/eclair.744fb39682d70cf4293f.png",
     "static/media/bread.png": "/static/media/bread.5852d8ee2e8ddc8f8292.png",
     "static/media/aerogel.png": "/static/media/aerogel.216ee23f8c95f4ea428f.png",
@@ -162,6 +163,8 @@
     "static/media/lake.png": "/static/media/lake.4e5e95c4419a900e927c.png",
     "static/media/moss.png": "/static/media/moss.44ca483119f2c2bc2b33.png",
     "static/media/emulsion.png": "/static/media/emulsion.6a61b7cd3f2d7faf483a.png",
+    "static/media/entolomahochstetteri.png": "/static/media/entolomahochstetteri.0ae2d90d5f7a2ed74ea2.png",
+    "static/media/mold.png": "/static/media/mold.a751cd5f9b62ae0f39f3.png",
     "static/media/linen.png": "/static/media/linen.8f15a622e7070eddb112.png",
     "static/media/apolloniasaintclair.png": "/static/media/apolloniasaintclair.f8bd06c441c30b651e9d.png",
     "static/media/flakypastery.png": "/static/media/flakypastery.76b8a042e04852f047f7.png",
@@ -274,6 +277,7 @@
     "static/media/watercolor.png": "/static/media/watercolor.9b70692912550c847996.png",
     "static/media/block.png": "/static/media/block.378c068a565b2c841b9d.png",
     "static/media/grass.png": "/static/media/grass.2f60b18f6592543e05aa.png",
+    "static/media/amanitamuscaria.png": "/static/media/amanitamuscaria.a7694270f382edd603a3.png",
     "static/media/inkpainting.png": "/static/media/inkpainting.b4b13139c3e6a73f804e.png",
     "static/media/cotton.png": "/static/media/cotton.217fdfeb386306867f01.png",
     "static/media/sourcream.png": "/static/media/sourcream.d47a1aebea547e715a3d.png",
@@ -296,6 +300,7 @@
     "static/media/moleculargastronomy.png": "/static/media/moleculargastronomy.6ee65dd6508027ad4a2b.png",
     "static/media/acorns.png": "/static/media/acorns.b3353cf9394e3019380e.png",
     "static/media/cinnamon.png": "/static/media/cinnamon.2b7bb26518cdbc15f3c3.png",
+    "static/media/mycelium.png": "/static/media/mycelium.215c3d5a0755941bdd57.png",
     "static/media/ashleywood.png": "/static/media/ashleywood.e42d3a8395c42a589b53.png",
     "static/media/amandasage.png": "/static/media/amandasage.5f8446f0d774a5e4eacd.png",
     "static/media/pillow.png": "/static/media/pillow.491ebd3e426c7ff27613.png",
@@ -316,6 +321,7 @@
     "static/media/basequality3.png": "/static/media/basequality3.d538607debfa0c130f42.png",
     "static/media/basestyle1250.png": "/static/media/basestyle1250.a6306f794067b642e836.png",
     "static/media/n1980s.png": "/static/media/n1980s.4fe1e7c0b12451202f4a.png",
+    "static/media/mushrooms.png": "/static/media/mushrooms.699dd1875ef7bcc1f0c2.png",
     "static/media/stamp.png": "/static/media/stamp.29b5b82d2d962cbddb43.png",
     "static/media/kaptontape.png": "/static/media/kaptontape.4358b73e85fb92a7edfc.png",
     "static/media/base13.png": "/static/media/base13.d8f7d070eaa99c6cb26f.png",
@@ -352,6 +358,7 @@
     "static/media/berniewrightson.png": "/static/media/berniewrightson.ed2f18fa69573b1c36fa.png",
     "static/media/alwilliamson.png": "/static/media/alwilliamson.fef8a2b53dc6299abe10.png",
     "static/media/realistic.png": "/static/media/realistic.df6224a52d195dc044b6.png",
+    "static/media/laticedstinkhorn.png": "/static/media/laticedstinkhorn.f3f5c085843440e972ae.png",
     "static/media/postprocess.png": "/static/media/postprocess.582a2be43a47d48a585e.png",
     "static/media/reliefcarving.png": "/static/media/reliefcarving.9900ea34ffe5e00def68.png",
     "static/media/akaritoriyama.png": "/static/media/akaritoriyama.fdff4a44ed8cc68fb951.png",
@@ -870,12 +877,12 @@
     "static/media/colesphillips.png": "/static/media/colesphillips.481aeccccd2be3a1e151.png",
     "static/media/basic.png": "/static/media/basic.2c48b26c26fd87ed689e.png",
     "index.html": "/index.html",
-    "main.7985d709.css.map": "/static/css/main.7985d709.css.map",
-    "main.2f50359b.js.map": "/static/js/main.2f50359b.js.map",
+    "main.deaf974f.css.map": "/static/css/main.deaf974f.css.map",
+    "main.cfa6348f.js.map": "/static/js/main.cfa6348f.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7985d709.css",
-    "static/js/main.2f50359b.js"
+    "static/css/main.deaf974f.css",
+    "static/js/main.cfa6348f.js"
   ]
 }

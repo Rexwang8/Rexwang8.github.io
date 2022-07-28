@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.deaf974f.css",
-    "main.js": "/static/js/main.cfa6348f.js",
+    "main.css": "/static/css/main.7985d709.css",
+    "main.js": "/static/js/main.abafa639.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/prompt_woodteapot_1.png": "/static/media/prompt_woodteapot_1.41983f91ff0e644d2512.png",
     "static/media/prompt_woodteapot_5.png": "/static/media/prompt_woodteapot_5.3689bee7bbadeed88ffa.png",
@@ -877,12 +877,12 @@
     "static/media/colesphillips.png": "/static/media/colesphillips.481aeccccd2be3a1e151.png",
     "static/media/basic.png": "/static/media/basic.2c48b26c26fd87ed689e.png",
     "index.html": "/index.html",
-    "main.deaf974f.css.map": "/static/css/main.deaf974f.css.map",
-    "main.cfa6348f.js.map": "/static/js/main.cfa6348f.js.map",
+    "main.7985d709.css.map": "/static/css/main.7985d709.css.map",
+    "main.abafa639.js.map": "/static/js/main.abafa639.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.deaf974f.css",
-    "static/js/main.cfa6348f.js"
+    "static/css/main.7985d709.css",
+    "static/js/main.abafa639.js"
   ]
 }

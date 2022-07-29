@@ -2,37 +2,22 @@ import { blogposts } from "../data/allblogposts";
 import SiteNavbar from "../components/SiteNavbar";
 import { Container, Row } from "react-bootstrap";
 
-function importAll(r) {
-  let images = {};
-  r.keys().map((item, index) => {
-    images[item.replace("./", "")] = r(item);
-  });
-  return images;
-}
 
-function BlogProjectPage(props) {
-  console.log(props);
+function BlogPostPage(props) {
   document.title = props.title;
-  let path = `/blog/${props.path}`;
+  let path = `/blog/${props.path1}${props.path2}`;
   props.analytics.page({
     url: `https://rexwang8.github.io/${path}`,
   });
-  const images = importAll(require.context("../projectassets", true, /\.(png|jpe?g|svg)$/));
 
 
-  const posts = [];
-
-for (let index = 0; index < Object.keys(props.posts).length; index++) {
-  let p = props.posts[Object.keys(props.posts)[index]];
-  let postpath = `${path}${p.path}`
-  posts.push(<a href={postpath}>{`${p.title}`}</a>)
-}
   return (
     <div className='bg2'>
       <div className='aspect'>
         <div className='bg1'>
           <SiteNavbar url={path}></SiteNavbar>
           <Container>
+
             <Row>
 
               <div>
@@ -50,19 +35,17 @@ for (let index = 0; index < Object.keys(props.posts).length; index++) {
             </Row>
             <Row>
             <div>
-              <a href={props.github}>Check out my project on Github.</a>
+             
              
               </div>
             </Row>
             <Row>
-            <img class="projectpageimg" src={images[`${props.img}.png`]} alt="Project"></img>
+            
             </Row>
             <Row>
               <hr></hr>
             </Row>
-            <Row>
-              {posts}
-            </Row>
+
           </Container>
         </div>
       </div>
@@ -70,4 +53,4 @@ for (let index = 0; index < Object.keys(props.posts).length; index++) {
   );
 }
 
-export default BlogProjectPage;
+export default BlogPostPage;

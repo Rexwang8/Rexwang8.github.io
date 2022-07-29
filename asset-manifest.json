@@ -1,11 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.deaf974f.css",
-    "main.js": "/static/js/main.ab863255.js",
+    "main.css": "/static/css/main.97793c54.css",
+    "main.js": "/static/js/main.dbbcc973.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
+    "static/media/e3.png": "/static/media/e3.5371d7dfb0fcad24bdee.png",
+    "static/media/e2.png": "/static/media/e2.3041da593f4010535be5.png",
     "static/media/prompt_woodteapot_1.png": "/static/media/prompt_woodteapot_1.41983f91ff0e644d2512.png",
     "static/media/prompt_woodteapot_5.png": "/static/media/prompt_woodteapot_5.3689bee7bbadeed88ffa.png",
     "static/media/weighting_woodteapot_14.png": "/static/media/weighting_woodteapot_14.0203d145c31cb9d1aebd.png",
+    "static/media/e1.png": "/static/media/e1.86c8870f34164682a086.png",
     "static/media/casual.png": "/static/media/casual.0fbc5902382734f0a742.png",
     "static/media/pasted image 16.png": "/static/media/pasted image 16.cc94b994f78106c53069.png",
     "static/media/weighting_woodteapot_18.png": "/static/media/weighting_woodteapot_18.cc94b994f78106c53069.png",
@@ -877,12 +880,12 @@
     "static/media/colesphillips.png": "/static/media/colesphillips.481aeccccd2be3a1e151.png",
     "static/media/basic.png": "/static/media/basic.2c48b26c26fd87ed689e.png",
     "index.html": "/index.html",
-    "main.deaf974f.css.map": "/static/css/main.deaf974f.css.map",
-    "main.ab863255.js.map": "/static/js/main.ab863255.js.map",
+    "main.97793c54.css.map": "/static/css/main.97793c54.css.map",
+    "main.dbbcc973.js.map": "/static/js/main.dbbcc973.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.deaf974f.css",
-    "static/js/main.ab863255.js"
+    "static/css/main.97793c54.css",
+    "static/js/main.dbbcc973.js"
   ]
 }

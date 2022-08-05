@@ -1,7 +1,8 @@
 import { Container, Accordion, Row, Tabs, Tab } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
 import RowStyleDiv from "../../components/rowdiv";
-import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS } from "../../data/allkeys";
+import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS,
+   STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, COLORS } from "../../data/allkeys";
 import TeapotShelf from "../../components/teapotShelf";
 
 function TeaAccordian(props) {
@@ -132,6 +133,11 @@ function TeaAccordian(props) {
   var nartistEtcher = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistEtcher, 5);
   var nartistAnimator = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistAnimator, 5);
   var nartistWriter = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistWriter, 5);
+
+//COLORS
+var colors = seperate("Utah Teapot, ", "(v3)",COLORS.colors , 5);
+var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
+
 
 
   return (
@@ -859,12 +865,22 @@ function TeaAccordian(props) {
         <Tab  eventKey='col' title='Colors and Color Palletes'>
         <Accordion defaultActiveKey='0' className='accordCenter' flush>
 
-            <Accordion.Item eventKey='0'>
-              <Accordion.Header>Emotions and Qualities</Accordion.Header>
+        <Accordion.Item eventKey='0'>
+              <Accordion.Header>Basic Colors</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                <RowStyleDiv title='Color Palletes' desc='Color Palletes'></RowStyleDiv>
-              <Row>WIP</Row>
+                <RowStyleDiv title='Basic Colors' desc='Different hues and shades of colors'></RowStyleDiv>
+              {colors}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Color Palletes</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Color Palletes' desc='More advanced combos of colors'></RowStyleDiv>
+              {colorpalletes}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>

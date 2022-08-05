@@ -39,7 +39,7 @@ function AIStylePage(props) {
               <Button>Prompts</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 1283 DALLE-2: 5 Prompts Page: 55 Total: 1343</p>
+            <p>Teapot Count, MJ: 1404 DALLE-2: 5 Prompts Page: 55 Total: 1464</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 
@@ -70,6 +70,8 @@ function AIStylePage(props) {
             <a href='https://gist.github.com/JustOurStyle/999d20609c78587453d5e2f72e8becd2' alt="Traveler's guide latent spaces link">
               JustOurStyle#5471 MJ image splitter FFMPEG batch file
             </a>
+
+            <p>Contributors: Pelletier-esque Weltanschauung#9081</p>
           </div>
 
           <TeapotFooter></TeapotFooter>

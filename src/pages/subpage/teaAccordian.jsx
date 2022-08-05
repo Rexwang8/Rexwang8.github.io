@@ -54,6 +54,7 @@ function TeaAccordian(props) {
   var food = seperate("Utah Teapot made of ", "(v3)", MATERIALS.food, 5);
   var energy = seperate("Utah Teapot made of ", "(v3)", MATERIALS.energy, 5);
   var plantFungi = seperate("Utah Teapot made of ", "(v3)", MATERIALS.plantFungi, 5);
+  var instruments = seperate("Utah Teapot made of ", "(v3)", MATERIALS.instruments, 5);
 
 
   var punkstyles = seperate("Utah Teapot in the style of ", "", STYLES.punkstyles, 5);
@@ -103,13 +104,35 @@ function TeaAccordian(props) {
   var HudsonRiver = seperate("Utah Teapot by  ", "", ARTISTS.HudsonRiver, 5);
   var VisionaryArt = seperate("Utah Teapot by  ", "", ARTISTS.VisionaryArt, 5);
   var Futurism = seperate("Utah Teapot by  ", "", ARTISTS.Futurism, 5);
-  var artistartstation = seperate("Utah Teapot by  ", "", ARTISTS.artistartstation, 5);
-  var artistComicManga = seperate("Utah Teapot by  ", "", ARTISTS.artistComicManga, 5);
-  var artistIllustrator = seperate("Utah Teapot by  ", "", ARTISTS.artistIllustrator, 5);
-  var nartistFilmDirector = seperate("Utah Teapot by  ", "", ARTISTS.nartistFilmDirector, 5);
-  var nartistPhotography = seperate("Utah Teapot by  ", "", ARTISTS.nartistPhotography, 5);
+  var Renaissance = seperate("Utah Teapot by  ", "", ARTISTS.Renaissance, 5);
+  var LowBrow = seperate("Utah Teapot by  ", "", ARTISTS.Lowbrow, 5);
+  var SocialRealism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.SocialRealism, 5);
+  var Landscape = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Landscape, 5);
+  var Orientalism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Orientalism, 5);
+  var Psycadelic = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Psycadelic, 5);
+  var HeiseiEstheticism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.HeiseiEstheticism, 5);
+  var Contemporary = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Contemporary, 5);
+  var Naturalism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Naturalism, 5);
+  var Ukiyoe = seperate("Utah Teapot by  ", "(v3)", ARTISTS.ukiyoe, 5);
+  var Rococo = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Rococo, 5);
+  var ReligiousArt = seperate("Utah Teapot by  ", "(v3)", ARTISTS.ReligiousArt, 5);
+
+
+
+  var artistVideoGames = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistVideoGames, 5);
+  var artistartstation = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistartstation, 5);
+  var artistComicManga = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistComicManga, 5);
+  var artistIllustrator = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistIllustrator, 5);
+  var nartistFilmDirector = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistFilmDirector, 5);
+  var nartistPhotography = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistPhotography, 5);
   var Mannerism = seperate("Utah Teapot by  ", "", ARTISTS.Mannerism, 5);
-  var nartistSculpter = seperate("Utah Teapot by  ", "", ARTISTS.nartistSculpter, 5);
+  var nartistSculpter = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistSculpter, 5);
+  var nartistMusician = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistMusician, 5);
+  var nartistArchitect = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistArchitect, 5);
+  var nartistEtcher = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistEtcher, 5);
+  var nartistAnimator = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistAnimator, 5);
+  var nartistWriter = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistWriter, 5);
+
 
   return (
     <div>
@@ -390,6 +413,16 @@ function TeaAccordian(props) {
             </Accordion.Item>
 
             <Accordion.Item eventKey='14'>
+              <Accordion.Header>Musical Instruments</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Musical Instruments' desc='Materials that the object is physically made out of musical instruments, similar products, etc..'></RowStyleDiv>
+              {instruments}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='15'>
               <Accordion.Header>Misc Materials</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -536,6 +569,12 @@ function TeaAccordian(props) {
               {BayArea}
 
               <RowStyleDiv
+                title='Contemporary'
+                desc='Contemporary art is the art of today, produced in the second half of the 20th century or in the 21st century.'></RowStyleDiv>
+              {Contemporary}
+
+
+              <RowStyleDiv
                 title='Environmentalism'
                 desc='Environmental artists seek to investigate our human relationship with the environment through embedding their artistic practice within it. This changes the way we think about the site of artistic production; as opposed to using the artists studio as the sole location in which to create, Environmental artists engage the natural world in a much more active and immediate way either by working in new ways outside, or by bringing natural materials into new settings.'></RowStyleDiv>
               {Environmentalism}
@@ -554,6 +593,10 @@ function TeaAccordian(props) {
                 title='Gothic'
                 desc='The innovations of Gothic architecture were premised on the ideas developed by Abbot Suger that earthly light contained divine light and that the physical edifice of the church needed to make this concept tangible. Revolutionary transformations of flying buttresses and groin vaulting allowed the inclusion of more stained glass windows in the church’s structure, thus transforming the everyday sunlight into a prism of colors that danced over the surfaces of the stone and reminded worshippers of God’s divine presence.'></RowStyleDiv>
               {Gothic}
+              <RowStyleDiv
+                title='Heisei Estheticism'
+                desc=' a style of art encompassing themes of darkness, bondage, metamorphosis, love and death.'></RowStyleDiv>
+              {HeiseiEstheticism}
 
               <RowStyleDiv
                 title='Impressionist'
@@ -566,9 +609,25 @@ function TeaAccordian(props) {
               {InstallationArt}
 
               <RowStyleDiv
+                title='Landscape'
+                desc='The English Landscape Movement includes gently rolling hills and water, ideally planned against a back drop of forest with groupings of trees in the background. In the 19th century the movement grew to include the addition of shrubs and blooming perennials sweeping in a painterly fashion with winding gravel pathways.'></RowStyleDiv>
+              {Landscape}
+
+              <RowStyleDiv
+                title='Low Brow'
+                desc='Lowbrow Pop Surrealism was a style of art that was heavily inspired by the popular culture of the 1960s and 1970s in America. Commonly referred to as a “retro” style, this movement was most commonly seen in the form of paintings, digital art, sculpture, collage, and even toys.'></RowStyleDiv>
+              {LowBrow}
+
+
+              <RowStyleDiv
                 title='Luminism'
                 desc=' Luminist paintings do not tend to depict nature as grand and imposing, nor do they strive to convey a sense of spectacular, awe-inspiring sublimity. Instead, Luminist paintings with their smaller size evoke a quiet spirituality based on closely observed natural phenomena, especially the quality of light.'></RowStyleDiv>
               {Luminism}
+
+              <RowStyleDiv
+                title='Naturalism'
+                desc='Naturalism is often equated with Realism, but it was only defined some decades later - experiencing its heyday during the 1870-80s - and was more concerned than the older movement with a hyperreal visual compositional precision; and with integrating the human figure into an enveloping landscape or scenario.'></RowStyleDiv>
+              {Naturalism}
 
               <RowStyleDiv
                 title='Mannarism'
@@ -579,6 +638,11 @@ function TeaAccordian(props) {
                 title='Modernism/Modern Art'
                 desc='Modernism refers to a global movement in society and culture that from the early decades of the twentieth century sought a new alignment with the experience and values of modern industrial life. Building on late nineteenth-century precedents, artists around the world used new imagery, materials and techniques to create artworks that they felt better reflected the realities and hopes of modern societies.'></RowStyleDiv>
               {Modernism}
+
+              <RowStyleDiv
+                title='Orientalism'
+                desc='Populating their paintings with snake charmers, veiled women, and courtesans, Orientalist artists created and disseminated fantasy portrayals of the exotic East for European viewers. Although earlier examples exist, Orientalism primarily refers to Western (particularly English and French) painting, architecture and decorative arts of the 19th century that utilize scenes, settings, and motifs drawn from a range of countries including Turkey, Egypt, India, China, and Algeria.'></RowStyleDiv>
+              {Orientalism}
 
               <RowStyleDiv
                 title='Photorealism'
@@ -601,9 +665,30 @@ function TeaAccordian(props) {
               {PopArt}
 
               <RowStyleDiv
+                title='Psychedelic Art'
+                desc='In common parlance "psychedelic art" refers above all to the art movement of the late 1960s counterculture, featuring highly distorted or surreal visuals, bright colors and full spectrums and animation (including cartoons) to evoke, convey, or enhance psychedelic experiences.'></RowStyleDiv>
+              {Psycadelic}
+
+              <RowStyleDiv
                 title='Realist'
                 desc='Realist painters replaced the idealistic images and literary conceits of traditional art with real-life events, giving the margins of society similar weight to grand history paintings and allegories.'></RowStyleDiv>
               {Realist}
+
+              <RowStyleDiv
+                title='Religious Art'
+                desc='Religious art is artistic imagery using religious inspiration and motifs and is often intended to uplift the mind to the spiritual. Sacred art involves the ritual and cultic practices and practical and operative aspects of the path of the spiritual realization within the artists religious tradition.'></RowStyleDiv>
+              {ReligiousArt}
+
+
+              <RowStyleDiv
+                title='Renaissance'
+                desc='Renaissance art, painting, sculpture, architecture, music, and literature produced during the 14th, 15th, and 16th centuries in Europe under the combined influences of an increased awareness of nature, a revival of classical learning, and a more individualistic view of man.'></RowStyleDiv>
+              {Renaissance}
+
+              <RowStyleDiv
+                title='Rococo'
+                desc='Genre paintings were popular ways to represent the Rococo periods bold and joyous lust for life. This included fete galante, or works denoting outdoor pastimes, erotic paintings alive with a sense of whimsical hedonism, Arcadian landscapes, and the "celebrity" portrait, which positioned ordinary people in the roles of notable historical or allegorical characters.'></RowStyleDiv>
+              {Rococo}
 
               <RowStyleDiv
                 title='Romantisism'
@@ -612,6 +697,11 @@ function TeaAccordian(props) {
 
               <RowStyleDiv title='Science Fiction' desc=''></RowStyleDiv>
               {ScienceFiction}
+              <RowStyleDiv
+                title='Social Realism'
+                desc='Social Realism, trend in American art originating in about 1930 and referring in its narrow sense to paintings treating themes of social protest in a naturalistic or quasi-expressionist manner. In a broader sense, the term is sometimes taken to include the more general renderings of American life usually categorized as American Scene painting and Regionalism, which may or may not manifest socially critical comment.'></RowStyleDiv>
+              {SocialRealism}
+
               <RowStyleDiv title='Street Art' desc=''></RowStyleDiv>
               {StreetArt}
 
@@ -627,6 +717,11 @@ function TeaAccordian(props) {
                 title='The Hudson River School'
                 desc='Like Romantic painters in Britain and Germany, Hudson River School artists embraced the landscape as a meaningful subject, precisely as industrialization began to change terrains and reshape mans connection to his environment. The Americans both championed these forces of modernization and lamented what was lost in the name of "progress."'></RowStyleDiv>
               {HudsonRiver}
+
+              <RowStyleDiv
+                title='Ukiyo-e'
+                desc='Produced in their many thousands and hugely popular during the Edo period (1615 – 1868), these colourful woodblock prints, known as ukiyo-e, depicted scenes from everyday Japan. Ukiyo-e literally means pictures of the floating world.'></RowStyleDiv>
+              {Ukiyoe}
 
               <RowStyleDiv
                 title='Visionary Art'
@@ -648,10 +743,10 @@ function TeaAccordian(props) {
 
               <RowStyleDiv title='Illustrator' desc='A person who draws or creates pictures for magazines, books, advertising, etc. Sort of a catch-all'></RowStyleDiv>
               {artistIllustrator}
+              <RowStyleDiv title='Animator' desc='Animators'></RowStyleDiv>
+              {nartistAnimator}
               <RowStyleDiv title='Videogame Art' desc='Artists and art from video games'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["akihikoyoshida.png"]} prompt='Utah Teapot by Akihiko Yoshida' />
-              </Row>
+              {artistVideoGames}
 
               <RowStyleDiv title='Unsorted Modern Artists' desc='Unsorted Artists'></RowStyleDiv>
               <Row>
@@ -672,17 +767,17 @@ function TeaAccordian(props) {
                 <RowStyleDiv title='Scultors' desc='Making sculptures.'></RowStyleDiv>
               {nartistSculpter}
 
-              <RowStyleDiv title='Architects' desc='Temp category'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["bjarkeingels.png"]} prompt='Utah Teapot by Bjarke Ingels' />
-              </Row>
+              <RowStyleDiv title='Architects' desc='Buildings'></RowStyleDiv>
+              {nartistArchitect}
+
               <RowStyleDiv title='Photographers' desc='Temp category'></RowStyleDiv>
               {nartistPhotography}
 
-              <RowStyleDiv title='Writers' desc='Temp category'></RowStyleDiv>
-              <Row>
-                <TeapotCard img={images["annemccaffrey.png"]} prompt='Utah Teapot by Anne McCaffrey' />
-              </Row>
+              <RowStyleDiv title='Writers' desc='Writers'></RowStyleDiv>
+              {nartistWriter}
+
+              <RowStyleDiv title='Mucicians' desc='Mucicians'></RowStyleDiv>
+              {nartistMusician}
 
               <RowStyleDiv title='Film Directors' desc='Film, Animation, Movies, etc'></RowStyleDiv>
               {nartistFilmDirector}
@@ -694,7 +789,7 @@ function TeaAccordian(props) {
 
               <RowStyleDiv title='Etching' desc='Temp category'></RowStyleDiv>
               <Row>
-                <TeapotCard img={images["canaletto.png"]} prompt='Utah Teapot by Canaletto' />
+                {nartistEtcher}
               </Row>
 
               <RowStyleDiv title='Misc Artists' desc='Temp category'></RowStyleDiv>

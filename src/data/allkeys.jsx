@@ -840,7 +840,6 @@ export const CAMERA = {
     nightvision: "Night Vision",
     foodphotography: "Food Photography",
     dronephotography: "Drone Photography",
-    dronephotography: "Drone Photography",
     hyperspectralimaging: "Hyperspectral Imaging",
     multispectralimaging: "Multispectral Imaging",
     schlieren: "Schlieren",

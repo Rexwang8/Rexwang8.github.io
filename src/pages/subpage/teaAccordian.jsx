@@ -2,7 +2,7 @@ import { Container, Accordion, Row, Tabs, Tab } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
 import RowStyleDiv from "../../components/rowdiv";
 import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS,
-   STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, COLORS } from "../../data/allkeys";
+   STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, COLORS, REFERENCEMEDIA, INTANGIBLES } from "../../data/allkeys";
 import TeapotShelf from "../../components/teapotShelf";
 
 function TeaAccordian(props) {
@@ -39,30 +39,50 @@ function TeaAccordian(props) {
   var photographicmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.photographicmediums, 5);
   var digitalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.digitalmediums, 5);
 
+  //physical mediums
+  var drawingtypes = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.drawingtypes, 5);
+  var pencilmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.pencilmediums, 5);
+  var penmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.penmediums, 5);
+  var crayonchalkmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.crayonchalkmediums, 5);
+  var paintmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.paintmediums, 5);
+  var textmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.textmediums, 5);
+  var printedmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.printedmediums, 5);
+
+
   //MATERIALS
-  var materials = seperate("Utah Teapot made of ", "(v3)", MATERIALS.materials, 5);
-  var gemsStones = seperate("Utah Teapot made of ", "(v3)", MATERIALS.gemsStones, 5);
-  var metals = seperate("Utah Teapot made of ", "(v3)", MATERIALS.metals, 5);
-  var woods = seperate("Utah Teapot made of ", "(v3)", MATERIALS.woods, 5);
-  var plasticFoams = seperate("Utah Teapot made of ", "(v3)", MATERIALS.plasticFoams, 5);
-  var wax = seperate("Utah Teapot made of ", "(v3)", MATERIALS.wax, 5);
-  var rubber = seperate("Utah Teapot made of ", "(v3)", MATERIALS.rubber, 5);
-  var gelSponge = seperate("Utah Teapot made of ", "(v3)", MATERIALS.gelSponge, 5);
-  var waterIce = seperate("Utah Teapot made of ", "(v3)", MATERIALS.waterIce, 5);
-  var liquids = seperate("Utah Teapot made of ", "(v3)", MATERIALS.liquids, 5);
-  var gas = seperate("Utah Teapot made of ", "(v3)", MATERIALS.gas, 5);
-  var organic = seperate("Utah Teapot made of ", "(v3)", MATERIALS.organic, 5);
-  var food = seperate("Utah Teapot made of ", "(v3)", MATERIALS.food, 5);
-  var energy = seperate("Utah Teapot made of ", "(v3)", MATERIALS.energy, 5);
-  var plantFungi = seperate("Utah Teapot made of ", "(v3)", MATERIALS.plantFungi, 5);
-  var instruments = seperate("Utah Teapot made of ", "(v3)", MATERIALS.instruments, 5);
+  var materials = seperate("Utah Teapot made of ", "", MATERIALS.materials, 5);
+  var gemsStones = seperate("Utah Teapot made of ", "", MATERIALS.gemsStones, 5);
+  var metals = seperate("Utah Teapot made of ", "", MATERIALS.metals, 5);
+  var woods = seperate("Utah Teapot made of ", "", MATERIALS.woods, 5);
+  var plasticFoams = seperate("Utah Teapot made of ", "", MATERIALS.plasticFoams, 5);
+  var wax = seperate("Utah Teapot made of ", "", MATERIALS.wax, 5);
+  var rubber = seperate("Utah Teapot made of ", "", MATERIALS.rubber, 5);
+  var gelSponge = seperate("Utah Teapot made of ", "", MATERIALS.gelSponge, 5);
+  var waterIce = seperate("Utah Teapot made of ", "", MATERIALS.waterIce, 5);
+  var liquids = seperate("Utah Teapot made of ", "", MATERIALS.liquids, 5);
+  var gas = seperate("Utah Teapot made of ", "", MATERIALS.gas, 5);
+  var organic = seperate("Utah Teapot made of ", "", MATERIALS.organic, 5);
+  var food = seperate("Utah Teapot made of ", "", MATERIALS.food, 5);
+  var energy = seperate("Utah Teapot made of ", "", MATERIALS.energy, 5);
+  var plantFungi = seperate("Utah Teapot made of ", "", MATERIALS.plantFungi, 5);
+  var instruments = seperate("Utah Teapot made of ", "", MATERIALS.instruments, 5);
 
 
   var punkstyles = seperate("Utah Teapot in the style of ", "", STYLES.punkstyles, 5);
   var wavestyles = seperate("Utah Teapot in the style of ", "", STYLES.wavestyles, 5);
+
+  //Camera
   var resolutions = seperate("Utah Teapot, Digital Art, ", "", CAMERA.resolution, 5);
+  var resolutions2 = seperate("A photo of a Utah Teapot, ", "", CAMERA.resolution2, 5);
   var perspectives = seperate("A photo of a utah teapot,   ", "", CAMERA.perspectives, 5);
   var lens = seperate("A photo of a utah teapot,   ", "", CAMERA.lens, 5);
+  var Scenes = seperate("A photo of a utah teapot,   ", "", CAMERA.scenes, 5);
+  var filmtypes = seperate("A photo of a utah teapot,   ", "", CAMERA.filmtypes, 5);
+  var camerasettings = seperate("A photo of a utah teapot,   ", "", CAMERA.camerasettings, 5);
+  var othercamera = seperate("A photo of a utah teapot,   ", "", CAMERA.othercamera, 5);
+
+
+
   var postprocess = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.postprocessing, 5);
   var reflections = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.reflections, 5);
 
@@ -86,7 +106,6 @@ function TeaAccordian(props) {
 
   var Environmentalism = seperate("Utah Teapot by  ", "", ARTISTS.Environmentalism, 5);
   var Expressionism = seperate("Utah Teapot by  ", "", ARTISTS.Expressionism, 5);
-  console.log(aspectrows);
   var Gothic = seperate("Utah Teapot by  ", "", ARTISTS.Gothic, 5);
   var Impressionist = seperate("Utah Teapot by  ", "", ARTISTS.Impressionist, 5);
   var InstallationArt = seperate("Utah Teapot by  ", "", ARTISTS.InstallationArt, 5);
@@ -107,39 +126,50 @@ function TeaAccordian(props) {
   var Futurism = seperate("Utah Teapot by  ", "", ARTISTS.Futurism, 5);
   var Renaissance = seperate("Utah Teapot by  ", "", ARTISTS.Renaissance, 5);
   var LowBrow = seperate("Utah Teapot by  ", "", ARTISTS.Lowbrow, 5);
-  var SocialRealism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.SocialRealism, 5);
-  var Landscape = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Landscape, 5);
-  var Orientalism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Orientalism, 5);
-  var Psycadelic = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Psycadelic, 5);
-  var HeiseiEstheticism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.HeiseiEstheticism, 5);
-  var Contemporary = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Contemporary, 5);
-  var Naturalism = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Naturalism, 5);
-  var Ukiyoe = seperate("Utah Teapot by  ", "(v3)", ARTISTS.ukiyoe, 5);
-  var Rococo = seperate("Utah Teapot by  ", "(v3)", ARTISTS.Rococo, 5);
-  var ReligiousArt = seperate("Utah Teapot by  ", "(v3)", ARTISTS.ReligiousArt, 5);
+  var SocialRealism = seperate("Utah Teapot by  ", "", ARTISTS.SocialRealism, 5);
+  var Landscape = seperate("Utah Teapot by  ", "", ARTISTS.Landscape, 5);
+  var Orientalism = seperate("Utah Teapot by  ", "", ARTISTS.Orientalism, 5);
+  var Psycadelic = seperate("Utah Teapot by  ", "", ARTISTS.Psycadelic, 5);
+  var HeiseiEstheticism = seperate("Utah Teapot by  ", "", ARTISTS.HeiseiEstheticism, 5);
+  var Contemporary = seperate("Utah Teapot by  ", "", ARTISTS.Contemporary, 5);
+  var Naturalism = seperate("Utah Teapot by  ", "", ARTISTS.Naturalism, 5);
+  var Ukiyoe = seperate("Utah Teapot by  ", "", ARTISTS.ukiyoe, 5);
+  var Rococo = seperate("Utah Teapot by  ", "", ARTISTS.Rococo, 5);
+  var ReligiousArt = seperate("Utah Teapot by  ", "", ARTISTS.ReligiousArt, 5);
 
 
 
-  var artistVideoGames = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistVideoGames, 5);
-  var artistartstation = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistartstation, 5);
-  var artistComicManga = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistComicManga, 5);
-  var artistIllustrator = seperate("Utah Teapot by  ", "(v3)", ARTISTS.artistIllustrator, 5);
-  var nartistFilmDirector = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistFilmDirector, 5);
-  var nartistPhotography = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistPhotography, 5);
+  var artistVideoGames = seperate("Utah Teapot by  ", "", ARTISTS.artistVideoGames, 5);
+  var artistartstation = seperate("Utah Teapot by  ", "", ARTISTS.artistartstation, 5);
+  var artistComicManga = seperate("Utah Teapot by  ", "", ARTISTS.artistComicManga, 5);
+  var artistIllustrator = seperate("Utah Teapot by  ", "", ARTISTS.artistIllustrator, 5);
+  var nartistFilmDirector = seperate("Utah Teapot by  ", "", ARTISTS.nartistFilmDirector, 5);
+  var nartistPhotography = seperate("Utah Teapot by  ", "", ARTISTS.nartistPhotography, 5);
   var Mannerism = seperate("Utah Teapot by  ", "", ARTISTS.Mannerism, 5);
-  var nartistSculpter = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistSculpter, 5);
-  var nartistMusician = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistMusician, 5);
-  var nartistArchitect = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistArchitect, 5);
-  var nartistEtcher = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistEtcher, 5);
-  var nartistAnimator = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistAnimator, 5);
-  var nartistWriter = seperate("Utah Teapot by  ", "(v3)", ARTISTS.nartistWriter, 5);
+  var nartistSculpter = seperate("Utah Teapot by  ", "", ARTISTS.nartistSculpter, 5);
+  var nartistMusician = seperate("Utah Teapot by  ", "", ARTISTS.nartistMusician, 5);
+  var nartistArchitect = seperate("Utah Teapot by  ", "", ARTISTS.nartistArchitect, 5);
+  var nartistEtcher = seperate("Utah Teapot by  ", "", ARTISTS.nartistEtcher, 5);
+  var nartistAnimator = seperate("Utah Teapot by  ", "", ARTISTS.nartistAnimator, 5);
+  var nartistWriter = seperate("Utah Teapot by  ", "", ARTISTS.nartistWriter, 5);
 
 //COLORS
-var colors = seperate("Utah Teapot, ", "(v3)",COLORS.colors , 5);
-var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
+var colors = seperate("Utah Teapot, ", "",COLORS.colors , 5);
+var colorpalletes = seperate("Utah Teapot, ", "",COLORS.colorpalletes , 5);
 
 
+//REF MEDIA
+var animestudios = seperate("Utah Teapot, anime, ", "", REFERENCEMEDIA.animestudios , 5);
+var refvideogames = seperate("Utah Teapot, ", "", REFERENCEMEDIA.videogames , 5);
 
+//Intangibles
+var emotions = seperate("Utah Teapot, ", "", INTANGIBLES.emotions , 5);
+var concepts = seperate("Utah Teapot, ", "", INTANGIBLES.concepts , 5);
+var symbols = seperate("Utah Teapot, ", "", INTANGIBLES.symbols , 5);
+var numbers = seperate("Utah Teapot, ", "", INTANGIBLES.numbers , 5);
+var numbersystem = seperate("Utah Teapot, ", "", INTANGIBLES.numbersystem , 5);
+
+console.log(printedmediums);
   return (
     <div>
       <Tabs defaultActiveKey='base' id='uncontrolled-tab-example' className='mb-3'>
@@ -234,17 +264,85 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
 
         <Tab  eventKey='med' title='Mediums'>
         <Accordion defaultActiveKey='0' className='accordCenter' flush>
-            <Accordion.Item eventKey='0'>
-              <Accordion.Header>Physical Mediums</Accordion.Header>
+        <Accordion.Item eventKey='0'>
+              <Accordion.Header>Drawing Types</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                <RowStyleDiv title='Physical Mediums' desc='Things that are drawn or printed.'></RowStyleDiv>
+                <RowStyleDiv title='Drawing Types' desc='Drawing Types'></RowStyleDiv>
+              {drawingtypes}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Pencil Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Pencil Mediums' desc='Pencil Mediums'></RowStyleDiv>
+              {pencilmediums}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Pen Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Pen Mediums' desc='Pen Mediums'></RowStyleDiv>
+              {penmediums}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>Crayon and Chalk Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Crayon and Chalk Mediums' desc='Crayon and Chalk Mediums'></RowStyleDiv>
+              {crayonchalkmediums}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='4'>
+              <Accordion.Header>Paint Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Paint Mediums' desc='Paint Mediums'></RowStyleDiv>
+              {paintmediums}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='5'>
+              <Accordion.Header>Text Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Text Mediums' desc='Text Mediums'></RowStyleDiv>
+              {textmediums}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='6'>
+              <Accordion.Header>Printed Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Printed Mediums' desc='Printed Mediums'></RowStyleDiv>
+              {printedmediums}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='7'>
+              <Accordion.Header>Other Physical Mediums</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Other Physical Mediums' desc='Other Physical Mediums that dont fit into the above catagory'></RowStyleDiv>
               {physicalmedia}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey='1'>
+            <Accordion.Item eventKey='8'>
               <Accordion.Header>Fabric Mediums</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -254,7 +352,7 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey='2'>
+            <Accordion.Item eventKey='9'>
               <Accordion.Header>Photographic Mediums</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -264,7 +362,7 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey='3'>
+            <Accordion.Item eventKey='10'>
               <Accordion.Header>Digital Mediums</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -449,6 +547,7 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
                 <Container>
                 <RowStyleDiv title='Resolution' desc='Resolution Keywords'></RowStyleDiv>
               {resolutions}
+              {resolutions2}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>
@@ -465,14 +564,46 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
             </Accordion.Item>
 
             <Accordion.Item eventKey='2'>
-              <Accordion.Header>Camera Effects</Accordion.Header>
+              <Accordion.Header>Camera Scenes</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                <RowStyleDiv title='Camera Effects' desc='Camera related effects and modifiers.'></RowStyleDiv>
-              <Row>WIP</Row>
+                <RowStyleDiv title='Camera Scenes' desc='Photography words and types of photography.'></RowStyleDiv>
+              {Scenes}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>
+
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>Camera Film Types</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Camera Film Types' desc='Types of film and Cameras'></RowStyleDiv>
+              {filmtypes}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='4'>
+              <Accordion.Header>Camera Settings</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Camera Settings' desc='Settings on the camera itself.'></RowStyleDiv>
+              {camerasettings}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='5'>
+              <Accordion.Header>Other Camera words</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Other Camera words' desc='Other Camera words'></RowStyleDiv>
+              {othercamera}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+
 
           </Accordion>
         </Tab>
@@ -782,7 +913,7 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
               <RowStyleDiv title='Writers' desc='Writers'></RowStyleDiv>
               {nartistWriter}
 
-              <RowStyleDiv title='Mucicians' desc='Mucicians'></RowStyleDiv>
+              <RowStyleDiv title='Musicians' desc='Musicians'></RowStyleDiv>
               {nartistMusician}
 
               <RowStyleDiv title='Film Directors' desc='Film, Animation, Movies, etc'></RowStyleDiv>
@@ -843,8 +974,8 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
               <Accordion.Header>Emotions and Qualities</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                <RowStyleDiv title='Emotions and Qualities' desc='Detail level keywords'></RowStyleDiv>
-              <Row>WIP</Row>
+                <RowStyleDiv title='Emotions and Qualities' desc='Emotions'></RowStyleDiv>
+              {emotions}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>
@@ -853,8 +984,38 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
               <Accordion.Header>Concepts</Accordion.Header>
               <Accordion.Body>
                 <Container>
-                <RowStyleDiv title='Concepts' desc='Lighting and shadow related keywords'></RowStyleDiv>
-              <Row>WIP</Row>
+                <RowStyleDiv title='Concepts' desc='Sizes, and other concepts'></RowStyleDiv>
+              {concepts}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='2'>
+              <Accordion.Header>Symbols</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Symbols' desc='Symbolism'></RowStyleDiv>
+              {symbols}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='3'>
+              <Accordion.Header>Numbers</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Numbers' desc='Latin Number system'></RowStyleDiv>
+              {numbers}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='4'>
+              <Accordion.Header>Number Systems</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Number Systems' desc='Base-systems and similar'></RowStyleDiv>
+              {numbersystem}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>
@@ -910,7 +1071,17 @@ var colorpalletes = seperate("Utah Teapot, ", "(v3)",COLORS.colorpalletes , 5);
               <Accordion.Body>
                 <Container>
                 <RowStyleDiv title='Games' desc='Invoking names of famous games.'></RowStyleDiv>
-              <Row>WIP</Row>
+              {refvideogames}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='1'>
+              <Accordion.Header>Anime Studios</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                <RowStyleDiv title='Anime Studios' desc='Invoking names of famous anime studios.'></RowStyleDiv>
+              {animestudios}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>

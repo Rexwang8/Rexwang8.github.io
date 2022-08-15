@@ -20,10 +20,6 @@ function AIStylePage(props) {
           <div className='textAICenter'>
             <h1>Understanding MidJourney through teapots.</h1>
             <p>
-              This site is my personal react-js portfolio, and is in the middle of a rebuild. I'm a busy college student, don't expect too much. I do plan on adding hundreds of modifiers and artists,
-              grouped into categories eventually.
-            </p>
-            <p>
               Midjourney is an AI model for converting Text prompts to images. I am using the Utah Teapot as a base model for a study on modifiers. For consistancy, I will feed this base model in as
               an image prompt. Aspect Ratio: 16:9 (--ar 16:9) images generated are 448x256, downscaled to 110px height. All images are generated with --version 2 algorithmn unless specified.
               <a href='https://s.mj.run/PD_i8SNJkdg' alt='teapot'>
@@ -38,8 +34,12 @@ function AIStylePage(props) {
             <Link to='/resource/ai/prompts'>
               <Button>Prompts</Button>
             </Link>
+            <p>Check out my random prompt generator.</p>
+            <Link to='/resource/ai/generator'>
+              <Button>Generator</Button>
+            </Link>
 
-            <p>Teapot Count, MJ: 1404 DALLE-2: 5 Prompts Page: 55 Total: 1464</p>
+            <p>Teapot Count, MJ: 1774 DALLE-2: 5 Prompts Page: 55 Total: 1834</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 

@@ -53,7 +53,7 @@ function AIStylePage(props) {
           </Tabs>
 
           <div className='textAICenter'>
-            <p>Since last update: +massive amount of artist and material teapots (like 500 of them)</p>
+            <p>Since last update: +massive amount of physical mediums, colors, intangibles, etc +377 teapots.</p>
           <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
             
             <a href='https://bit.ly/3nAal6T' alt="sincarnate repo"><p>Thanks to Sincarnate#1121 for his artist style comparison repo.</p></a>

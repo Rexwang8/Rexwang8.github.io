@@ -169,7 +169,7 @@ var symbols = seperate("Utah Teapot, ", "", INTANGIBLES.symbols , 5);
 var numbers = seperate("Utah Teapot, ", "", INTANGIBLES.numbers , 5);
 var numbersystem = seperate("Utah Teapot, ", "", INTANGIBLES.numbersystem , 5);
 
-console.log(printedmediums);
+console.log(physicalmedia);
   return (
     <div>
       <Tabs defaultActiveKey='base' id='uncontrolled-tab-example' className='mb-3'>

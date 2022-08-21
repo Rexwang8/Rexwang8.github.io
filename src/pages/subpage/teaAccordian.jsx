@@ -1,7 +1,8 @@
 import { Container, Accordion, Row, Tabs, Tab } from "react-bootstrap";
 import TeapotCard from "../../components/teapotCard";
 import RowStyleDiv from "../../components/rowdiv";
-import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD, ARTISTS, COLORS, REFERENCEMEDIA, INTANGIBLES } from "../../data/allkeys";
+import { ASPECTS, BASEMODIFICATIONS, MATERIALS, MJARGUMENTS, PHYSICALMEDIUMS, STYLES, CAMERA, POSTPROCESSING, LDD,
+   ARTISTS, COLORS, REFERENCEMEDIA, INTANGIBLES, SDARGUMENTS, BASEMODIFICATIONS_sd } from "../../data/allkeys";
 import TeapotShelf from "../../components/teapotShelf";
 
 function TeaAccordian(props) {
@@ -31,8 +32,13 @@ function TeaAccordian(props) {
   }
   let prompt = "Utah Teapot --ar ";
   var aspectrows = seperate(prompt, "", ASPECTS, 4);
+  var aspectrowsSD = seperate("Utah Teapot aspect", "", ASPECTS, 4);
   var argrows = seperate("Utah Teapot ", "", MJARGUMENTS, 5);
+  var argrowsSDcfg = seperate("Utah Teapot ", " -S 754680458", SDARGUMENTS.cfg, 5);
+  var argrowsSDsteps = seperate("Utah Teapot ", " -S 754680458", SDARGUMENTS.steps, 5);
+  var argrowsSDsampler = seperate("Utah Teapot ", " -S 754680458", SDARGUMENTS.sampler, 5);
   var basemodrows = seperate("", "", BASEMODIFICATIONS, 5);
+  var basemodrowsSD = seperate("", "", BASEMODIFICATIONS_sd, 5);
   var physicalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.physicalmediums, 5);
   var fabricmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.fabricmediums, 5);
   var photographicmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.photographicmediums, 5);
@@ -166,7 +172,8 @@ function TeaAccordian(props) {
       <Tabs defaultActiveKey='base' id='uncontrolled-tab-example' className='mb-3'>
         <Tab eventKey='base' title='Base'>
           <Accordion defaultActiveKey='0' className='accordCenter' flush>
-            <Accordion.Item eventKey='0'>
+
+            {props.gen === "mj" ? <Accordion.Item eventKey='0'>
               <Accordion.Header>Aspect Ratio</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -174,7 +181,17 @@ function TeaAccordian(props) {
                   {aspectrows}
                 </Container>
               </Accordion.Body>
-            </Accordion.Item>
+            </Accordion.Item> : <div></div>}
+
+            {props.gen === "sd" ? <Accordion.Item eventKey='0'>
+              <Accordion.Header>Aspect Ratio</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='Aspect Ratio' desc='Different aspect ratios. Replace "aspect" with correct -W and -H arguments.'></RowStyleDiv>
+                  {aspectrowsSD}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item> : <div></div>}
 
 {props.gen === "mj" ? <Accordion.Item eventKey='1'>
               <Accordion.Header>Prompt Arguments</Accordion.Header>
@@ -185,9 +202,22 @@ function TeaAccordian(props) {
                 </Container>
               </Accordion.Body>
             </Accordion.Item> : <div></div>}
-            
 
-            <Accordion.Item eventKey='2'>
+            {props.gen === "sd" ? <Accordion.Item eventKey='1'>
+              <Accordion.Header>Prompt Arguments</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='CFG' desc='Stable Diffusion specific arguments.'></RowStyleDiv>
+                  {argrowsSDcfg}
+                  <RowStyleDiv title='steps' desc='Stable Diffusion specific arguments.'></RowStyleDiv>
+                  {argrowsSDsteps}
+                  <RowStyleDiv title='sampler' desc='Stable Diffusion specific arguments.'></RowStyleDiv>
+                  {argrowsSDsampler}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item> : <div></div>}
+            
+            {props.gen === "mj" ? <Accordion.Item eventKey='2'>
               <Accordion.Header>Modifications</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -195,7 +225,17 @@ function TeaAccordian(props) {
                   {basemodrows}
                 </Container>
               </Accordion.Body>
-            </Accordion.Item>
+            </Accordion.Item> : <div></div>}
+            
+            {props.gen === "sd" ? <Accordion.Item eventKey='2'>
+              <Accordion.Header>Modifications</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='Base modifications' desc='Modifications of the base prompt used in the following site. (STABLE DIFFUSION)'></RowStyleDiv>
+                  {basemodrowsSD}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item> : <div></div>}
           </Accordion>
         </Tab>
 

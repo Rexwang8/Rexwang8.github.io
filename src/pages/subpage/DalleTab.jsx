@@ -14,9 +14,9 @@ function DalleTab() {
   return (
     
     <div>
-      <h3>
+      <h4>
         Note: DALLE2 does not allow modifications to resolution aspect ratio. NOTE: DALLE2 resouce work shelved now that it is a paid service. If you would like to contribute generations, please DM me.
-      </h3>
+      </h4>
      <TeaAccordian images={images} gen={"dalle"}>
      </TeaAccordian>
     </div>

@@ -19,10 +19,10 @@ function AIStylePage(props) {
         <div className='bg1'>
           <SiteNavbar url='/resource/ai/teapot'></SiteNavbar>
           <div className='textAICenter'>
-            <h1>Understanding MidJourney through teapots.</h1>
+            <h1>Understanding MidJourney (and SD) through teapots.</h1>
             <p>
-              Midjourney is an AI model for converting Text prompts to images. I am using the Utah Teapot as a base model for a study on modifiers. For consistancy, I will feed this base model in as
-              an image prompt. Aspect Ratio: 16:9 (--ar 16:9) images generated are 448x256, downscaled to 110px height. All images are generated with --version 2 algorithmn unless specified.
+              Midjourney and Stable Diffusion are both AI models for converting Text prompts to images. I am using the Utah Teapot as a base model for a study on modifiers. For consistancy, I will feed this base model in as
+              an image prompt for midjourney and a seed for stable diffusion. Aspect Ratio: 16:9 (--ar 16:9) (-W 896) images downscaled to 110px height.
               <a href='https://s.mj.run/PD_i8SNJkdg' alt='teapot'>
                 Teapot Image Link
               </a>
@@ -40,7 +40,7 @@ function AIStylePage(props) {
               <Button>Generator</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 12 Total: 1948</p>
+            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 52 Total: 1988</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 
@@ -57,7 +57,7 @@ function AIStylePage(props) {
           </Tabs>
 
           <div className='textAICenter'>
-            <p>Since last update: +118 teapots, mainly physical media.</p>
+            <p>Since last update: +stable diffusion, 52 teapots.</p>
           <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
             
             <a href='https://bit.ly/3nAal6T' alt="sincarnate repo"><p>Thanks to Sincarnate#1121 for his artist style comparison repo.</p></a>

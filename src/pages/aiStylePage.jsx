@@ -5,6 +5,7 @@ import SiteNavbar from "../components/SiteNavbar";
 import MJTab from "./subpage/MJTab";
 import DalleTab from "./subpage/DalleTab";
 import TeapotFooter from "../components/teapotfooter";
+import SDTab from "./subpage/SDTab";
 
 function AIStylePage(props) {
   document.title = props.title;
@@ -39,13 +40,16 @@ function AIStylePage(props) {
               <Button>Generator</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Total: 1948</p>
+            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 12 Total: 1948</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 
           <Tabs defaultActiveKey='mj' id='uncontrolled-tab-example' className='mb-3'>
             <Tab eventKey='mj' title='MidJourney'>
               <MJTab></MJTab>
+            </Tab>
+            <Tab eventKey='sd' title='Stable Diffusion <WIP>'>
+              <SDTab></SDTab>
             </Tab>
             <Tab eventKey='dalle2' title='DALLE-2'>
               <DalleTab></DalleTab>

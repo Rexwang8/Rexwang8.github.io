@@ -9,13 +9,13 @@ function importAll(r) {
   return images;
 }
 
-function MJTab() {
-  const images = importAll(require.context("../../teapots_mj", true, /\.(png|jpe?g|svg)$/));
+function SDTab() {
+  const images = importAll(require.context("../../teapots_sd", true, /\.(png|jpe?g|svg)$/));
   return (
     <div>
-       <TeaAccordian images={images} gen={"mj"}></TeaAccordian>
+       <TeaAccordian images={images} gen={"sd"}></TeaAccordian>
     </div>
   );
 }
 
-export default MJTab;
+export default SDTab;

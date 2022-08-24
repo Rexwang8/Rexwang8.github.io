@@ -84,8 +84,8 @@ export const SDARGUMENTS = {
 };
 
 export const BASEMODIFICATIONS_sd = {
-  basestyle: "!dream \"Utah teapot in the style of \" -S 1179427124",
-  basemade: "!dream \"Utah teapot made of \" -S 1179427124",
+  basestyle: "!dream \"keyword of a Utah Teapot \" -S 1179427124",
+  basemade: "!dream \"Utah teapot made of keyword\" -S 1179427124",
 }
 
 export const BASEMODIFICATIONS = {

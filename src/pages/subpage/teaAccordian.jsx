@@ -33,9 +33,11 @@ function TeaAccordian(props) {
   let prompt = "Utah Teapot --ar ";
 
   let prompthead = "Utah teapot, ";
+  let prompttail = "";
   if(props.gen === "sd")
   {
-    prompthead = "Utah teapot in the style of ";
+    prompthead = "";
+    prompttail = "of a Utah Teapot"
   }
   var aspectrows = seperate(prompt, "", ASPECTS, 4);
   var aspectrowsSD = seperate("Utah Teapot aspect", "", ASPECTS, 4);
@@ -46,10 +48,10 @@ function TeaAccordian(props) {
   var basemodrows = seperate("", "", BASEMODIFICATIONS, 5);
   var basemodrowsSD = seperate("", " -s 15", BASEMODIFICATIONS_sd, 5);
 
-  var physicalmedia = seperate(prompthead, "", PHYSICALMEDIUMS.physicalmediums, 5);
-  var fabricmedia = seperate(prompthead, "", PHYSICALMEDIUMS.fabricmediums, 5);
-  var photographicmedia = seperate(prompthead, "", PHYSICALMEDIUMS.photographicmediums, 5);
-  var digitalmedia = seperate(prompthead, "", PHYSICALMEDIUMS.digitalmediums, 5);
+  var physicalmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.physicalmediums, 5);
+  var fabricmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.fabricmediums, 5);
+  var photographicmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.photographicmediums, 5);
+  var digitalmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.digitalmediums, 5);
 
   //physical mediums
   var drawingtypes = seperate(prompthead, "", PHYSICALMEDIUMS.drawingtypes, 5);

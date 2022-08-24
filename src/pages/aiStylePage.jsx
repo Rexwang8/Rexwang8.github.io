@@ -40,7 +40,7 @@ function AIStylePage(props) {
               <Button>Generator</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 52 Total: 1988</p>
+            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 647 Total: 2595</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 
@@ -51,13 +51,13 @@ function AIStylePage(props) {
             <Tab eventKey='sd' title='Stable Diffusion <WIP>'>
               <SDTab></SDTab>
             </Tab>
-            <Tab eventKey='dalle2' title='DALLE-2'>
+            <Tab eventKey='dalle2' title='DALLE-2 <Abandoned>'>
               <DalleTab></DalleTab>
             </Tab>
           </Tabs>
 
           <div className='textAICenter'>
-            <p>Since last update: +stable diffusion, 52 teapots.</p>
+            <p>Since last update: +stable diffusion, materials and drawing types.</p>
           <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
             
             <a href='https://bit.ly/3nAal6T' alt="sincarnate repo"><p>Thanks to Sincarnate#1121 for his artist style comparison repo.</p></a>

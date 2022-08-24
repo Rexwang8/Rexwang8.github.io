@@ -84,11 +84,9 @@ export const SDARGUMENTS = {
 };
 
 export const BASEMODIFICATIONS_sd = {
-  baseart: "!dream \"a utah teapot \" -W 896 -S 754680458",
-  basephoto: "!dream \"a photo of a utah teapot \" -W 896 -S 1924566619",
-  basemade: "!dream \"a utah teapot made of \" -W 896 -S 4023614813",
-  baseby: "!dream \"a utah teapot by \" -W 896 -S 3001013580",
-};
+  basestyle: "!dream \"Utah teapot in the style of \" -S 1179427124",
+  basemade: "!dream \"Utah teapot made of \" -S 1179427124",
+}
 
 export const BASEMODIFICATIONS = {
   baseart: "https://s.mj.run/PD_i8SNJkdg Utah Teapot, digital art --ar 16:9",

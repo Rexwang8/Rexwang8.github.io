@@ -31,6 +31,12 @@ function TeaAccordian(props) {
     return rows;
   }
   let prompt = "Utah Teapot --ar ";
+
+  let prompthead = "Utah teapot, ";
+  if(props.gen === "sd")
+  {
+    prompthead = "Utah teapot in the style of ";
+  }
   var aspectrows = seperate(prompt, "", ASPECTS, 4);
   var aspectrowsSD = seperate("Utah Teapot aspect", "", ASPECTS, 4);
   var argrows = seperate("Utah Teapot ", "", MJARGUMENTS, 5);
@@ -38,20 +44,26 @@ function TeaAccordian(props) {
   var argrowsSDsteps = seperate("Utah Teapot ", " -S 754680458", SDARGUMENTS.steps, 5);
   var argrowsSDsampler = seperate("Utah Teapot ", " -S 754680458", SDARGUMENTS.sampler, 5);
   var basemodrows = seperate("", "", BASEMODIFICATIONS, 5);
-  var basemodrowsSD = seperate("", "", BASEMODIFICATIONS_sd, 5);
-  var physicalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.physicalmediums, 5);
-  var fabricmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.fabricmediums, 5);
-  var photographicmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.photographicmediums, 5);
-  var digitalmedia = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.digitalmediums, 5);
+  var basemodrowsSD = seperate("", " -s 15", BASEMODIFICATIONS_sd, 5);
+
+  var physicalmedia = seperate(prompthead, "", PHYSICALMEDIUMS.physicalmediums, 5);
+  var fabricmedia = seperate(prompthead, "", PHYSICALMEDIUMS.fabricmediums, 5);
+  var photographicmedia = seperate(prompthead, "", PHYSICALMEDIUMS.photographicmediums, 5);
+  var digitalmedia = seperate(prompthead, "", PHYSICALMEDIUMS.digitalmediums, 5);
 
   //physical mediums
-  var drawingtypes = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.drawingtypes, 5);
-  var pencilmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.pencilmediums, 5);
-  var penmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.penmediums, 5);
-  var crayonchalkmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.crayonchalkmediums, 5);
-  var paintmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.paintmediums, 5);
-  var textmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.textmediums, 5);
-  var printedmediums = seperate("Utah Teapot, ", "", PHYSICALMEDIUMS.printedmediums, 5);
+  var drawingtypes = seperate(prompthead, "", PHYSICALMEDIUMS.drawingtypes, 5);
+  var pencilmediums = seperate(prompthead, "", PHYSICALMEDIUMS.pencilmediums, 5);
+  var penmediums = seperate(prompthead, "", PHYSICALMEDIUMS.penmediums, 5);
+  var crayonchalkmediums = seperate(prompthead, "", PHYSICALMEDIUMS.crayonchalkmediums, 5);
+  var paintmediums = seperate(prompthead, "", PHYSICALMEDIUMS.paintmediums, 5);
+  var textmediums = seperate(prompthead, "", PHYSICALMEDIUMS.textmediums, 5);
+  var printedmediums = seperate(prompthead, "", PHYSICALMEDIUMS.printedmediums, 5);
+
+  if(props.gen === "sd")
+  {
+    prompthead = "Utah teapot made of ";
+  }
 
   //MATERIALS
   var materials = seperate("Utah Teapot made of ", "", MATERIALS.materials, 5);

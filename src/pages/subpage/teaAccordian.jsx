@@ -34,11 +34,7 @@ function TeaAccordian(props) {
 
   let prompthead = "Utah teapot, ";
   let prompttail = "";
-  if(props.gen === "sd")
-  {
-    prompthead = "";
-    prompttail = "of a Utah Teapot"
-  }
+  
   var aspectrows = seperate(prompt, "", ASPECTS, 4);
   var aspectrowsSD = seperate("Utah Teapot aspect", "", ASPECTS, 4);
   var argrows = seperate("Utah Teapot ", "", MJARGUMENTS, 5);
@@ -48,23 +44,30 @@ function TeaAccordian(props) {
   var basemodrows = seperate("", "", BASEMODIFICATIONS, 5);
   var basemodrowsSD = seperate("", " -s 15", BASEMODIFICATIONS_sd, 5);
 
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = "of a Utah Teapot"
+  }
+
   var physicalmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.physicalmediums, 5);
   var fabricmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.fabricmediums, 5);
   var photographicmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.photographicmediums, 5);
   var digitalmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.digitalmediums, 5);
 
   //physical mediums
-  var drawingtypes = seperate(prompthead, "", PHYSICALMEDIUMS.drawingtypes, 5);
-  var pencilmediums = seperate(prompthead, "", PHYSICALMEDIUMS.pencilmediums, 5);
-  var penmediums = seperate(prompthead, "", PHYSICALMEDIUMS.penmediums, 5);
-  var crayonchalkmediums = seperate(prompthead, "", PHYSICALMEDIUMS.crayonchalkmediums, 5);
-  var paintmediums = seperate(prompthead, "", PHYSICALMEDIUMS.paintmediums, 5);
-  var textmediums = seperate(prompthead, "", PHYSICALMEDIUMS.textmediums, 5);
-  var printedmediums = seperate(prompthead, "", PHYSICALMEDIUMS.printedmediums, 5);
+  var drawingtypes = seperate(prompthead, prompttail, PHYSICALMEDIUMS.drawingtypes, 5);
+  var pencilmediums = seperate(prompthead, prompttail, PHYSICALMEDIUMS.pencilmediums, 5);
+  var penmediums = seperate(prompthead, prompttail, PHYSICALMEDIUMS.penmediums, 5);
+  var crayonchalkmediums = seperate(prompthead, prompttail, PHYSICALMEDIUMS.crayonchalkmediums, 5);
+  var paintmediums = seperate(prompthead, prompttail, PHYSICALMEDIUMS.paintmediums, 5);
+  var textmediums = seperate(prompthead, prompttail, PHYSICALMEDIUMS.textmediums, 5);
+  var printedmediums = seperate(prompthead, prompttail, PHYSICALMEDIUMS.printedmediums, 5);
 
   if(props.gen === "sd")
   {
     prompthead = "Utah teapot made of ";
+    prompttail = "";
   }
 
   //MATERIALS

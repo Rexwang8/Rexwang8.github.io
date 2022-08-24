@@ -47,7 +47,7 @@ function TeaAccordian(props) {
   if(props.gen === "sd")
   {
     prompthead = "";
-    prompttail = "of a Utah Teapot"
+    prompttail = " of a Utah Teapot"
   }
 
   var physicalmedia = seperate(prompthead, prompttail, PHYSICALMEDIUMS.physicalmediums, 5);

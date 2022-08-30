@@ -88,30 +88,71 @@ function TeaAccordian(props) {
   var plantFungi = seperate("Utah Teapot made of ", "", MATERIALS.plantFungi, 5);
   var instruments = seperate("Utah Teapot made of ", "", MATERIALS.instruments, 5);
 
-  var punkstyles = seperate("Utah Teapot in the style of ", "", STYLES.punkstyles, 5);
-  var wavestyles = seperate("Utah Teapot in the style of ", "", STYLES.wavestyles, 5);
-
+  
+  prompthead = "Utah Teapot, Digital Art, ";
+  prompttail = "";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = ", photo of a Utah Teapot"
+  }
   //Camera
-  var resolutions = seperate("Utah Teapot, Digital Art, ", "", CAMERA.resolution, 5);
-  var resolutions2 = seperate("A photo of a Utah Teapot, ", "", CAMERA.resolution2, 5);
-  var perspectives = seperate("A photo of a utah teapot,   ", "", CAMERA.perspectives, 5);
-  var lens = seperate("A photo of a utah teapot,   ", "", CAMERA.lens, 5);
-  var Scenes = seperate("A photo of a utah teapot,   ", "", CAMERA.scenes, 5);
-  var filmtypes = seperate("A photo of a utah teapot,   ", "", CAMERA.filmtypes, 5);
-  var camerasettings = seperate("A photo of a utah teapot,   ", "", CAMERA.camerasettings, 5);
-  var othercamera = seperate("A photo of a utah teapot,   ", "", CAMERA.othercamera, 5);
+  var resolutions = seperate(prompthead, prompttail, CAMERA.resolution, 5);
+  if(props.gen !== "sd")
+  {
+    prompthead = "A photo of a Utah Teapot, "
+  }
+  var resolutions2 = seperate(prompthead, prompttail, CAMERA.resolution2, 5);
+  var perspectives = seperate(prompthead, prompttail, CAMERA.perspectives, 5);
+  var lens = seperate(prompthead, prompttail, CAMERA.lens, 5);
+  var Scenes = seperate(prompthead, prompttail, CAMERA.scenes, 5);
+  var filmtypes = seperate(prompthead, prompttail, CAMERA.filmtypes, 5);
+  var camerasettings = seperate(prompthead, prompttail, CAMERA.camerasettings, 5);
+  var othercamera = seperate(prompthead, prompttail, CAMERA.othercamera, 5);
 
-  var postprocess = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.postprocessing, 5);
-  var reflections = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.reflections, 5);
+  prompthead = "Utah Teapot, Digital Art, ";
+  prompttail = "";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = ", photo of a Utah Teapot"
+  }
+  var postprocess = seperate(prompthead, prompttail, POSTPROCESSING.postprocessing, 5);
+  var reflections = seperate(prompthead, prompttail, POSTPROCESSING.reflections, 5);
+  var ppmisc = seperate(prompthead, prompttail, POSTPROCESSING.misc, 5);
+  if(props.gen !== "sd")
+  {
+    prompthead = "Utah Teapot,  ";
+  }
+  var lighting = seperate(prompthead, prompttail, LDD.lighting, 5);
+  var dimensionality = seperate(prompthead, prompttail, LDD.dimensionality, 5);
 
-  var ppmisc = seperate("Utah Teapot, Digital Art, ", "", POSTPROCESSING.misc, 5);
-  var lighting = seperate("Utah Teapot,  ", "", LDD.lighting, 5);
-  var renderers = seperate("Utah Teapot,  ", " Render", STYLES.renderers, 5);
-  var abstraction = seperate("Utah Teapot,  ", "", STYLES.abstraction, 5);
-  var photosites = seperate("Utah Teapot,  ", " ", STYLES.photosites, 5);
-  var timeframes = seperate("A photo of the Utah Teapot,  ", "", STYLES.timeframes, 5);
-  var dimensionality = seperate("Utah Teapot,  ", "", LDD.dimensionality, 5);
-  var complexity = seperate("Utah Teapot,  ", "", STYLES.complexity, 5);
+  prompthead = "Utah Teapot,  ";
+  prompttail = " Render";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = ", photo of a Utah Teapot"
+  }
+  var renderers = seperate(prompthead, prompttail, STYLES.renderers, 5);
+  if(props.gen !== "sd")
+  {
+    prompttail = "";
+  }
+  var abstraction = seperate(prompthead, prompttail, STYLES.abstraction, 5);
+  var photosites = seperate(prompthead, prompttail, STYLES.photosites, 5);
+  var complexity = seperate(prompthead, prompttail, STYLES.complexity, 5);
+  if(props.gen !== "sd")
+  {
+    prompthead = "A photo of the Utah Teapot,  ";
+  }
+  var timeframes = seperate(prompthead, prompttail, STYLES.timeframes, 5);
+  if(props.gen !== "sd")
+  {
+    prompthead = "Utah Teapot in the style of ";
+  }
+  var punkstyles = seperate(prompthead, prompttail, STYLES.punkstyles, 5);
+  var wavestyles = seperate(prompthead, prompttail, STYLES.wavestyles, 5);
 
   //ARTISTS
   var Academism = seperate("Utah Teapot by  ", "", ARTISTS.Academism, 5);

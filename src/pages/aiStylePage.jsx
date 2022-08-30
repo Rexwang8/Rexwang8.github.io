@@ -40,7 +40,7 @@ function AIStylePage(props) {
               <Button>Generator</Button>
             </Link>
 
-            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 647 Total: 2595</p>
+            <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 944 Total: 2892</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
           </div>
 

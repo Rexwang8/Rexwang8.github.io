@@ -154,76 +154,120 @@ function TeaAccordian(props) {
   var punkstyles = seperate(prompthead, prompttail, STYLES.punkstyles, 5);
   var wavestyles = seperate(prompthead, prompttail, STYLES.wavestyles, 5);
 
+
+
   //ARTISTS
-  var Academism = seperate("Utah Teapot by  ", "", ARTISTS.Academism, 5);
-  var ArtsandCrafts = seperate("Utah Teapot by  ", "", ARTISTS.ArtsandCrafts, 5);
-  var ArtNouveau = seperate("Utah Teapot by  ", "", ARTISTS.ArtNouveau, 5);
+  prompthead = "Utah Teapot,  ";
+  prompttail = "";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = ", photo of a Utah Teapot"
+  }
+  var Academism = seperate(prompthead, prompttail, ARTISTS.Academism, 5);
+  var ArtsandCrafts = seperate(prompthead, prompttail, ARTISTS.ArtsandCrafts, 5);
+  var ArtNouveau = seperate(prompthead, prompttail, ARTISTS.ArtNouveau, 5);
 
-  var Baroque = seperate("Utah Teapot by  ", "", ARTISTS.Baroque, 5);
-  var Bauhaus = seperate("Utah Teapot by  ", "", ARTISTS.Bauhaus, 5);
-  var BayArea = seperate("Utah Teapot by  ", "", ARTISTS.BayArea, 5);
+  var Baroque = seperate(prompthead, prompttail, ARTISTS.Baroque, 5);
+  var Bauhaus = seperate(prompthead, prompttail, ARTISTS.Bauhaus, 5);
+  var BayArea = seperate(prompthead, prompttail, ARTISTS.BayArea, 5);
 
-  var Environmentalism = seperate("Utah Teapot by  ", "", ARTISTS.Environmentalism, 5);
-  var Expressionism = seperate("Utah Teapot by  ", "", ARTISTS.Expressionism, 5);
-  var Gothic = seperate("Utah Teapot by  ", "", ARTISTS.Gothic, 5);
-  var Impressionist = seperate("Utah Teapot by  ", "", ARTISTS.Impressionist, 5);
-  var InstallationArt = seperate("Utah Teapot by  ", "", ARTISTS.InstallationArt, 5);
-  var Luminism = seperate("Utah Teapot by  ", "", ARTISTS.Luminism, 5);
-  var Modernism = seperate("Utah Teapot by  ", "", ARTISTS.Modernism, 5);
-  var Photorealism = seperate("Utah Teapot by  ", "", ARTISTS.Photorealism, 5);
-  var PostImpressionist = seperate("Utah Teapot by  ", "", ARTISTS.PostImpressionist, 5);
-  var PopArt = seperate("Utah Teapot by  ", "", ARTISTS.PopArt, 5);
-  var Postmodern = seperate("Utah Teapot by  ", "", ARTISTS.Postmodern, 5);
-  var Realist = seperate("Utah Teapot by  ", "", ARTISTS.Realist, 5);
-  var Romantisism = seperate("Utah Teapot by  ", "", ARTISTS.Romantisism, 5);
-  var ScienceFiction = seperate("Utah Teapot by  ", "", ARTISTS.ScienceFiction, 5);
-  var StreetArt = seperate("Utah Teapot by  ", "", ARTISTS.StreetArt, 5);
-  var Surrealist = seperate("Utah Teapot by  ", "", ARTISTS.Surrealist, 5);
-  var Symbolism = seperate("Utah Teapot by  ", "", ARTISTS.Symbolism, 5);
-  var HudsonRiver = seperate("Utah Teapot by  ", "", ARTISTS.HudsonRiver, 5);
-  var VisionaryArt = seperate("Utah Teapot by  ", "", ARTISTS.VisionaryArt, 5);
-  var Futurism = seperate("Utah Teapot by  ", "", ARTISTS.Futurism, 5);
-  var Renaissance = seperate("Utah Teapot by  ", "", ARTISTS.Renaissance, 5);
-  var LowBrow = seperate("Utah Teapot by  ", "", ARTISTS.Lowbrow, 5);
-  var SocialRealism = seperate("Utah Teapot by  ", "", ARTISTS.SocialRealism, 5);
-  var Landscape = seperate("Utah Teapot by  ", "", ARTISTS.Landscape, 5);
-  var Orientalism = seperate("Utah Teapot by  ", "", ARTISTS.Orientalism, 5);
-  var Psycadelic = seperate("Utah Teapot by  ", "", ARTISTS.Psycadelic, 5);
-  var HeiseiEstheticism = seperate("Utah Teapot by  ", "", ARTISTS.HeiseiEstheticism, 5);
-  var Contemporary = seperate("Utah Teapot by  ", "", ARTISTS.Contemporary, 5);
-  var Naturalism = seperate("Utah Teapot by  ", "", ARTISTS.Naturalism, 5);
-  var Ukiyoe = seperate("Utah Teapot by  ", "", ARTISTS.ukiyoe, 5);
-  var Rococo = seperate("Utah Teapot by  ", "", ARTISTS.Rococo, 5);
-  var ReligiousArt = seperate("Utah Teapot by  ", "", ARTISTS.ReligiousArt, 5);
+  var Environmentalism = seperate(prompthead, prompttail, ARTISTS.Environmentalism, 5);
+  var Expressionism = seperate(prompthead, prompttail, ARTISTS.Expressionism, 5);
+  var Gothic = seperate(prompthead, prompttail, ARTISTS.Gothic, 5);
+  var Impressionist = seperate(prompthead, prompttail, ARTISTS.Impressionist, 5);
+  var InstallationArt = seperate(prompthead, prompttail, ARTISTS.InstallationArt, 5);
+  var Luminism = seperate(prompthead, prompttail, ARTISTS.Luminism, 5);
+  var Modernism = seperate(prompthead, prompttail, ARTISTS.Modernism, 5);
+  var Photorealism = seperate(prompthead, prompttail, ARTISTS.Photorealism, 5);
+  var PostImpressionist = seperate(prompthead, prompttail, ARTISTS.PostImpressionist, 5);
+  var PopArt = seperate(prompthead, prompttail, ARTISTS.PopArt, 5);
+  var Postmodern = seperate(prompthead, prompttail, ARTISTS.Postmodern, 5);
+  var Realist = seperate(prompthead, prompttail, ARTISTS.Realist, 5);
+  var Romantisism = seperate(prompthead, prompttail, ARTISTS.Romantisism, 5);
+  var ScienceFiction = seperate(prompthead, prompttail, ARTISTS.ScienceFiction, 5);
+  var StreetArt = seperate(prompthead, prompttail, ARTISTS.StreetArt, 5);
+  var Surrealist = seperate(prompthead, prompttail, ARTISTS.Surrealist, 5);
+  var Symbolism = seperate(prompthead, prompttail, ARTISTS.Symbolism, 5);
+  var HudsonRiver = seperate(prompthead, prompttail, ARTISTS.HudsonRiver, 5);
+  var VisionaryArt = seperate(prompthead, prompttail, ARTISTS.VisionaryArt, 5);
+  var Futurism = seperate(prompthead, prompttail, ARTISTS.Futurism, 5);
+  var Renaissance = seperate(prompthead, prompttail, ARTISTS.Renaissance, 5);
+  var LowBrow = seperate(prompthead, prompttail, ARTISTS.Lowbrow, 5);
+  var SocialRealism = seperate(prompthead, prompttail, ARTISTS.SocialRealism, 5);
+  var Landscape = seperate(prompthead, prompttail, ARTISTS.Landscape, 5);
+  var Orientalism = seperate(prompthead, prompttail, ARTISTS.Orientalism, 5);
+  var Psycadelic = seperate(prompthead, prompttail, ARTISTS.Psycadelic, 5);
+  var HeiseiEstheticism = seperate(prompthead, prompttail, ARTISTS.HeiseiEstheticism, 5);
+  var Contemporary = seperate(prompthead, prompttail, ARTISTS.Contemporary, 5);
+  var Naturalism = seperate(prompthead, prompttail, ARTISTS.Naturalism, 5);
+  var Ukiyoe = seperate(prompthead, prompttail, ARTISTS.ukiyoe, 5);
+  var Rococo = seperate(prompthead, prompttail, ARTISTS.Rococo, 5);
+  var ReligiousArt = seperate(prompthead, prompttail, ARTISTS.ReligiousArt, 5);
 
-  var artistVideoGames = seperate("Utah Teapot by  ", "", ARTISTS.artistVideoGames, 5);
-  var artistartstation = seperate("Utah Teapot by  ", "", ARTISTS.artistartstation, 5);
-  var artistComicManga = seperate("Utah Teapot by  ", "", ARTISTS.artistComicManga, 5);
-  var artistIllustrator = seperate("Utah Teapot by  ", "", ARTISTS.artistIllustrator, 5);
-  var nartistFilmDirector = seperate("Utah Teapot by  ", "", ARTISTS.nartistFilmDirector, 5);
-  var nartistPhotography = seperate("Utah Teapot by  ", "", ARTISTS.nartistPhotography, 5);
-  var Mannerism = seperate("Utah Teapot by  ", "", ARTISTS.Mannerism, 5);
-  var nartistSculpter = seperate("Utah Teapot by  ", "", ARTISTS.nartistSculpter, 5);
-  var nartistMusician = seperate("Utah Teapot by  ", "", ARTISTS.nartistMusician, 5);
-  var nartistArchitect = seperate("Utah Teapot by  ", "", ARTISTS.nartistArchitect, 5);
-  var nartistEtcher = seperate("Utah Teapot by  ", "", ARTISTS.nartistEtcher, 5);
-  var nartistAnimator = seperate("Utah Teapot by  ", "", ARTISTS.nartistAnimator, 5);
-  var nartistWriter = seperate("Utah Teapot by  ", "", ARTISTS.nartistWriter, 5);
+  var artistVideoGames = seperate(prompthead, prompttail, ARTISTS.artistVideoGames, 5);
+  var artistartstation = seperate(prompthead, prompttail, ARTISTS.artistartstation, 5);
+  
+  var artistIllustrator = seperate(prompthead, prompttail, ARTISTS.artistIllustrator, 5);
+  var nartistFilmDirector = seperate(prompthead, prompttail, ARTISTS.nartistFilmDirector, 5);
+  var nartistPhotography = seperate(prompthead, prompttail, ARTISTS.nartistPhotography, 5);
+  var Mannerism = seperate(prompthead, prompttail, ARTISTS.Mannerism, 5);
+  var nartistSculpter = seperate(prompthead, prompttail, ARTISTS.nartistSculpter, 5);
+  var nartistMusician = seperate(prompthead, prompttail, ARTISTS.nartistMusician, 5);
+  var nartistArchitect = seperate(prompthead, prompttail, ARTISTS.nartistArchitect, 5);
+  var nartistEtcher = seperate(prompthead, prompttail, ARTISTS.nartistEtcher, 5);
+  var nartistAnimator = seperate(prompthead, prompttail, ARTISTS.nartistAnimator, 5);
+  var nartistWriter = seperate(prompthead, prompttail, ARTISTS.nartistWriter, 5);
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = ", manga of a Utah Teapot"
+  }
+  var artistComicManga = seperate(prompthead, prompttail, ARTISTS.artistComicManga, 5);
 
+  
+  prompthead = "Utah Teapot,  ";
+  prompttail = "";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = " color, photo of a Utah Teapot"
+  }
   //COLORS
-  var colors = seperate("Utah Teapot, ", "", COLORS.colors, 5);
-  var colorpalletes = seperate("Utah Teapot, ", "", COLORS.colorpalletes, 5);
+  var colors = seperate(prompthead, prompttail, COLORS.colors, 5);
+  var colorpalletes = seperate(prompthead, prompttail, COLORS.colorpalletes, 5);
 
-  //REF MEDIA
-  var animestudios = seperate("Utah Teapot, anime, ", "", REFERENCEMEDIA.animestudios, 5);
-  var refvideogames = seperate("Utah Teapot, ", "", REFERENCEMEDIA.videogames, 5);
-
+//REF MEDIA
+if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = " style, Utah Teapot"
+  }
+  
+  var refvideogames = seperate(prompthead, prompttail, REFERENCEMEDIA.videogames, 5);
+  prompthead = "Utah Teapot, anime, ";
+  prompttail = "";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = " style, anime of a Utah Teapot"
+  }
+  
+  var animestudios = seperate(prompthead, prompttail, REFERENCEMEDIA.animestudios, 5);
+  
+  prompthead = "Utah Teapot, ";
+  prompttail = "";
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = " photo of a Utah Teapot"
+  }
   //Intangibles
-  var emotions = seperate("Utah Teapot, ", "", INTANGIBLES.emotions, 5);
-  var concepts = seperate("Utah Teapot, ", "", INTANGIBLES.concepts, 5);
-  var symbols = seperate("Utah Teapot, ", "", INTANGIBLES.symbols, 5);
-  var numbers = seperate("Utah Teapot, ", "", INTANGIBLES.numbers, 5);
-  var numbersystem = seperate("Utah Teapot, ", "", INTANGIBLES.numbersystem, 5);
+  var emotions = seperate(prompthead, prompttail, INTANGIBLES.emotions, 5);
+  var concepts = seperate(prompthead, prompttail, INTANGIBLES.concepts, 5);
+  var symbols = seperate(prompthead, prompttail, INTANGIBLES.symbols, 5);
+  var numbers = seperate(prompthead, prompttail, INTANGIBLES.numbers, 5);
+  var numbersystem = seperate(prompthead, prompttail, INTANGIBLES.numbersystem, 5);
 
   return (
     <div>

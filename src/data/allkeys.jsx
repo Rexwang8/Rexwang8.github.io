@@ -87,6 +87,9 @@ export const BASEMODIFICATIONS_sd = {
   basestyle: "!dream \"keyword of a Utah Teapot \" -S 1179427124",
   basephoto: "!dream \"keyword, photo of a Utah Teapot \" -S 1179427124",
   basemade: "!dream \"Utah teapot made of keyword\" -S 1179427124",
+  basecolor: "!dream \"keyword color, photo of a Utah teapot\" -S 1179427124",
+  baseanime: "!dream \"keyword style, anime of a Utah teapot\" -S 1179427124",
+  basegame: "!dream \"keyword style, a Utah teapot\" -S 1179427124",
 }
 
 export const BASEMODIFICATIONS = {

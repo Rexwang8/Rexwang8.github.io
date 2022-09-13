@@ -1,5 +1,5 @@
 import face from "../../assets/images/face.jpg";
-import resume from "../../assets/Wang Resume Software 2022 V4.0.pdf";
+import resume from "../../assets/Wang Resume Software 2022 V4.2.0.pdf";
 
 import { Figure, Button } from "react-bootstrap";
 function HomeTab() {

@@ -109,6 +109,7 @@ function TeaAccordian(props) {
   var filmtypes = seperate(prompthead, prompttail, CAMERA.filmtypes, 5);
   var camerasettings = seperate(prompthead, prompttail, CAMERA.camerasettings, 5);
   var othercamera = seperate(prompthead, prompttail, CAMERA.othercamera, 5);
+  var cameratypescompanies = seperate(prompthead, prompttail, CAMERA.cameratypescompanies, 5);
 
   prompthead = "Utah Teapot, Digital Art, ";
   prompttail = "";
@@ -717,6 +718,16 @@ if(props.gen === "sd")
             </Accordion.Item>
 
             <Accordion.Item eventKey='4'>
+              <Accordion.Header>Camera Formats and Companies</Accordion.Header>
+              <Accordion.Body>
+                <Container>
+                  <RowStyleDiv title='Camera Formats and Companies' desc='Camera Formats and Companies like hasselblad, kodak, medium format, full-frame etc.'></RowStyleDiv>
+                  {cameratypescompanies}
+                </Container>
+              </Accordion.Body>
+            </Accordion.Item>
+
+            <Accordion.Item eventKey='5'>
               <Accordion.Header>Camera Settings</Accordion.Header>
               <Accordion.Body>
                 <Container>
@@ -726,7 +737,7 @@ if(props.gen === "sd")
               </Accordion.Body>
             </Accordion.Item>
 
-            <Accordion.Item eventKey='5'>
+            <Accordion.Item eventKey='6'>
               <Accordion.Header>Other Camera words</Accordion.Header>
               <Accordion.Body>
                 <Container>

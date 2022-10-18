@@ -238,6 +238,14 @@ function TeaAccordian(props) {
   var colors = seperate(prompthead, prompttail, COLORS.colors, 5);
   var colorpalletes = seperate(prompthead, prompttail, COLORS.colorpalletes, 5);
 
+  //shapes
+  if(props.gen === "sd")
+  {
+    prompthead = "";
+    prompttail = ", photo of a Utah Teapot"
+  }
+  var shapes = seperate(prompthead, prompttail, COLORS.shapes, 5);
+
 //REF MEDIA
 if(props.gen === "sd")
   {
@@ -270,6 +278,7 @@ if(props.gen === "sd")
   var numbers = seperate(prompthead, prompttail, INTANGIBLES.numbers, 5);
   var numbersystem = seperate(prompthead, prompttail, INTANGIBLES.numbersystem, 5);
 
+  console.log(shapes);
   return (
     <div>
       <Tabs defaultActiveKey='base' id='uncontrolled-tab-example' className='mb-3'>
@@ -1174,7 +1183,7 @@ if(props.gen === "sd")
               <Accordion.Body>
                 <Container>
                   <RowStyleDiv title='Shapes and Forms' desc='Shapes and Forms'></RowStyleDiv>
-                  <Row>WIP</Row>
+                  {shapes}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>

@@ -37,12 +37,12 @@
     transform: rotate(360deg);
   }
 }
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 769px) {
   .aspect
 {
   aspect-ratio: 16/9;
   height: 100vh;
-  background-color: wheat;
+  background-color: var(--color-main);
   justify-content: center;
   margin: auto;
   overflow-x: hidden;
@@ -52,12 +52,12 @@
   font-size: 2vh;
 }
 }
-@media only screen and (max-width: 799px) {
+@media only screen and (max-width: 768px) {
   .aspect
   {
     height: 100vh;
     width: auto;
-    background-color: wheat;
+    background-color: var(--color-main);
     justify-content: center;
     margin: auto;
     overflow-x: hidden;
@@ -70,7 +70,7 @@
 
 
 .bg1{
-  background-color: wheat;
+  background-color: var(--color-main);
   height: fit-content;
 }
 
@@ -134,10 +134,15 @@
 }
 
 .iconButton{
-  background-color: wheat;
+  background-color: var(--color-accent);
   border-radius: 1vw;
   color: black;
-  margin: 5vw;
+  font-size: 2.5vh;
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  margin: 10%;
+  display: inline-block;
 }
 
 .teapot
@@ -202,4 +207,186 @@
 {
   width: 40vw;
   height: auto;
+}
+
+.home_t1
+{
+  color: var(--color-accent);
+  font-size: 10vh;
+  font-family: "Rubik",sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+
+}
+
+.home_twrap
+{
+  width: 65%;
+  margin: auto;
+  text-decoration: none;
+  
+}
+.home_twrap a {
+  text-decoration: none;
+  color: var(--color-accent);
+}
+
+
+.home_tline
+{
+  display: flex;
+  justify-content: space-between;
+}
+
+.home_tword
+{
+  color: var(--color-accent);
+  font-size: 9vh;
+  font-family: "Rubik",sans-serif;
+  margin: 0;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: opacity 250ms ease;
+}
+#home_twrap:has(.home_tfancyword:hover) .home_tword:not(.home_tfancyword:hover) {
+  opacity: 0.2;
+}
+
+.home_tfancyword:hover{
+  transform: scale(1.06);
+  transition: transform 600ms ease;
+}
+
+.about_h2
+{
+  font-size: 7vh;
+  font-weight: bold;
+  font-family: "Rubik",sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-accent);
+  color: white;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+.about_p
+{
+  font-size: 2vh;
+  font-family: "Rubik",sans-serif;
+  text-decoration: none;
+  color: var(--color-accent);
+  color: white;
+  margin: auto;
+}
+
+.contact_link
+{
+  font-size: 3.5vh;
+  font-family: "Rubik",sans-serif;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--color-accent);
+  color: white;
+  margin: auto;
+  width: 50%;
+  text-align: center;
+}
+
+.style_modalimg
+{
+  width: 320px;
+  height: auto;
+  margin-top: 1%;
+  
+}
+
+.highlight
+{
+  background-color: red;
+}
+
+.modifier_shelf
+{
+  margin: 1vw;
+  width: fit-content;
+}
+
+.modifier_card
+{
+  width: 16vw;
+  height: max-content;
+  font-size: 1.1vw;
+}
+
+.modifier_button
+{
+  width: 10vw;
+  left: 50%;
+
+}
+
+
+
+.modifier_center
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modifier_modal_container
+{
+  height: 70vh;
+  overflow-y: auto;
+}
+
+.modifier_modal_copybutton
+{
+max-width: 20vw;
+white-space: normal;
+margin-bottom: 1%;
+}
+
+.modifier_modalcard
+{
+  border: var(--color-main) 2px solid;
+  margin: 1%;
+  border-radius: 5%;
+}
+
+@media only screen and (max-width: 768px) {
+
+  .modifier_button
+{
+  width: 20vw;
+  font-size: 3vw;
+}
+
+.modifier_card
+{
+  width: 35vw;
+  height: fit-content;
+  font-size: 3vw;
+  display: inline-block;
+}
+
+.modifier_cardTitle
+{
+  font-size: 5vw;
+}
+
+.modifier_shelf
+{
+  margin: 1vw;
+  width: 100vw;
+  
+}
+
+.modifier_modal_copybutton
+{
+max-width: 60vw;
+white-space: normal;
+margin-bottom: 1%;
+}
 }

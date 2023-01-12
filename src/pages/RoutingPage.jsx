@@ -3,11 +3,13 @@ import { Routes, Route } from "react-router-dom";
 import MainPage from "./MainPage";
 import AIStylePage from "./aiStylePage";
 import AIPromptsPage from "./aiPromptsPage";
+import AIModifiersPage from "./AIModifierSheet";
 import BlogPage from "./blogPage";
 import {blogposts} from "../data/allblogposts"
 import BlogProjectPage from "./blogProjectPage";
 import PromptGenerationPage from "./promptgenPage";
 import BlogPostPage from "./blogPostPage";
+import useCheckMobileScreen from "../components/CheckMobile";
 
 
 function RoutingPage(props)
@@ -44,7 +46,7 @@ function RoutingPage(props)
    }
   }
 
-
+  var isMobile = useCheckMobileScreen();
 
   return(
       <Routes>
@@ -56,6 +58,7 @@ function RoutingPage(props)
         
         <Route path="/dev" element={<App />} />
         <Route path="/resource/ai/teapot" element={<AIStylePage title="Teapots" analytics={props.analytics}/>} />
+        <Route path="/resource/ai/modifiers" element={<AIModifiersPage title="Modifiers" analytics={props.analytics} isMobile={isMobile}/>} />
         <Route path="/resource/ai/prompts" element={<AIPromptsPage title="Prompts" analytics={props.analytics}/>} />
         <Route path="/resource/ai/generator" element={<PromptGenerationPage title="Generator" analytics={props.analytics}/>} />
         <Route path="*"  element={<MainPage title="Main" analytics={props.analytics}/>} />

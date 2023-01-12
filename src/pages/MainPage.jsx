@@ -22,6 +22,8 @@ import HomeTab from "./subpage/homeTab";
 import AboutTab from "./subpage/aboutTab";
 import SiteNavbar from "../components/SiteNavbar";
 
+import linkedLogo from "../assets/images/linked (1).png";
+import gitLogo from "../assets/images/github.png";
 
 function MainPage(props) {
   console.log(props);
@@ -50,8 +52,47 @@ function MainPage(props) {
                 <AboutTab />
               </Tab>
               <Tab eventKey="contact" title="Contact">
-                <p>aaa</p>
+                <Container fluid='md'>
+
+                <Row>
+          <Col>
+            <h2 className="about_h2">Contact Me</h2>
+          </Col>
+        </Row>
+
+        <Row>
+          <Col>
+            <p className="contact_link">wang5009@purdue.edu</p>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <p className="contact_link">Discord: bob#1236</p>
+          </Col>
+        </Row>
+                <Row>
+          <Col>
+            <a href='https://github.com/Rexwang8?tab=repositories'>
+              <Button className='iconButton' size="lg">
+                {" "}
+                <img src={gitLogo} size="lg" alt='github'></img> Github{" "}
+              </Button>
+            </a>{" "}
+          </Col>
+          <Col>
+            <a href='https://www.linkedin.com/in/rex-wang-6019b4220/'>
+              <Button className='iconButton' size="lg">
+                {" "}
+                <img src={linkedLogo} size="lg" alt='linkedin'></img> LinkedIn{" "}
+              </Button>
+            </a>{" "}
+          </Col>
+        </Row>
+
+                </Container>
               </Tab>
+              <Tab eventKey="projects" title="Projects" disabled></Tab>
+              <Tab eventKey="devlog" title="Dev Log" disabled></Tab>
             </Tabs>
           </div>
         </div>

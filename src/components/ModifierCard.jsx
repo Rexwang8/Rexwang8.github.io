@@ -50,7 +50,7 @@ function ModifierCard(props) {
                       <Col className="modifier_modalcard">
                       <img className="style_modalimg" src={props.sd} alt="blue" />
                       <p>Stable Diffusion - Teapot</p>
-                      <Button className="modifier_modal_copybutton" variant="primary" id={props.id} onClick={(e) => {navigator.clipboard.writeText(e.target.textContent)}}><FontAwesomeIcon icon={faClipboard} />&nbsp;/imagine: A utah teapot blah blah blah --ar 16:9 --v 3</Button>
+                      <Button className="modifier_modal_copybutton" variant="primary" id={props.id} onClick={(e) => {navigator.clipboard.writeText(e.target.textContent)}}><FontAwesomeIcon icon={faClipboard} />&nbsp;{props.sdprompt}</Button>
                       </Col>
                     </Row>
 

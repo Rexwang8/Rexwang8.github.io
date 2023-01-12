@@ -41,7 +41,7 @@ function SiteNavbar(props) {
                 <NavDropdown.Item href='/resource/ai/teapot'>Teapots</NavDropdown.Item>
                 <NavDropdown.Item href='/resource/ai/prompts'>Prompts</NavDropdown.Item>
                 <NavDropdown.Item href='/resource/ai/generator'>Generator</NavDropdown.Item>
-                <NavDropdown.Item href='/resource/ai/generator'>[NEW] Modifiers</NavDropdown.Item>
+                <NavDropdown.Item href='/resource/ai/modifiers'>[NEW] Modifiers</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

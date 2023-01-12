@@ -314,7 +314,7 @@
 
 .modifier_card
 {
-  width: 16vw;
+  width: 15vw;
   height: max-content;
   font-size: 1.1vw;
 }
@@ -343,7 +343,7 @@
 
 .modifier_modal_copybutton
 {
-max-width: 20vw;
+max-width: 25vw;
 white-space: normal;
 margin-bottom: 1%;
 }

@@ -22,7 +22,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: var(--color-accent);
 }
 
 .App-link {
@@ -293,100 +293,9 @@
   text-align: center;
 }
 
-.style_modalimg
-{
-  width: 320px;
-  height: auto;
-  margin-top: 1%;
-  
-}
+
 
 .highlight
 {
   background-color: red;
-}
-
-.modifier_shelf
-{
-  margin: 1vw;
-  width: fit-content;
-}
-
-.modifier_card
-{
-  width: 15vw;
-  height: max-content;
-  font-size: 1.1vw;
-}
-
-.modifier_button
-{
-  width: 10vw;
-  left: 50%;
-
-}
-
-
-
-.modifier_center
-{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modifier_modal_container
-{
-  height: 70vh;
-  overflow-y: auto;
-}
-
-.modifier_modal_copybutton
-{
-max-width: 25vw;
-white-space: normal;
-margin-bottom: 1%;
-}
-
-.modifier_modalcard
-{
-  border: var(--color-main) 2px solid;
-  margin: 1%;
-  border-radius: 5%;
-}
-
-@media only screen and (max-width: 768px) {
-
-  .modifier_button
-{
-  width: 20vw;
-  font-size: 3vw;
-}
-
-.modifier_card
-{
-  width: 35vw;
-  height: fit-content;
-  font-size: 3vw;
-  display: inline-block;
-}
-
-.modifier_cardTitle
-{
-  font-size: 5vw;
-}
-
-.modifier_shelf
-{
-  margin: 1vw;
-  width: 100vw;
-  
-}
-
-.modifier_modal_copybutton
-{
-max-width: 60vw;
-white-space: normal;
-margin-bottom: 1%;
-}
 }

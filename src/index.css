@@ -7,6 +7,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
   --color-accent: rgb(255, 255, 255);
   --color-main: rgb(37, 37, 37);
+  --color-font: rgb(0, 0, 0);
+  --color-button: rgb(0, 128, 255);
+}
+
+.dark-mode
+{
+  --color-accent: rgb(58, 58, 58);
+  --color-font: rgb(129, 129, 129);
+  --color-button: rgb(157, 0, 255);
 }
 
 code {

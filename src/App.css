@@ -165,6 +165,7 @@
   text-align: center;
   margin-left: 10%;
   margin-right: 10%;
+  color: white;
 }
 
 .styleDivide
@@ -298,4 +299,9 @@
 .highlight
 {
   background-color: red;
+}
+
+.fix_teapots
+{
+  color: white;
 }

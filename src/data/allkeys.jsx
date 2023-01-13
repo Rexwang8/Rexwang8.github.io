@@ -2464,12 +2464,14 @@ export const GROUP_DESCRIPTIONS = {
   colorsSimple: "Simple colors, the basic building blocks of the visual spectrum, a palette of hues that range from the purest whites to the deepest blacks, they are the foundation of light and can evoke a wide range of emotions and feelings. They can be bold and striking or subtle and understated, they can create a sense of warmth or coolness, harmony or contrast, and can be used to create depth and dimension. They are the foundation of art, design, and visual communication, and they can be found everywhere, from the natural world to the man-made. They are the fundamental element of visual art, design and fashion, used to create mood, convey meaning, and evoke emotions. They are also used in design to create a sense of balance and hierarchy, to draw attention and guide the viewer's eye.",
   colorsPalletes: "Color palettes, a curated collection of colors that work together to create a cohesive and harmonious visual experience, they are the artist's toolbox, the designer's arsenal, and the stylist's secret weapon. They are used to evoke emotions, create a sense of mood, and convey meaning. They can be monochromatic, analogous, complementary, or split-complementary, each one with different effects and impact. They can be used to create a sense of warmth or coolness, balance or contrast, and can be used to guide the viewer's eye, leading them through the visual journey. Color palettes are the foundation of art, design, and visual communication, and can be found everywhere, from nature to the man-made world. They can be used to express a certain feeling, style, or era and can be used to create a sense of unity, continuity and consistency in any medium, from graphic design to film.",
   shapesForms: "Shapes and forms, the building blocks of the physical world, a symphony of lines and curves, a dance of light and shadow, a visual language that speaks to the soul, a never-ending exploration of the infinite possibilities of creation. They can be simple or complex, soft or sharp, symmetrical or asymmetrical, yet all of them together create the beauty and diversity of the world we live in. They evoke emotions, and can create a sense of movement, depth, and structure. They are the foundation of art, design, and architecture, and they are everywhere, from the smallest microbe to the largest galaxy.",
+  intangibleEmotions: "Emotions, the internal experiences that shape our perceptions and understanding of the world, they are complex and varied, and can range from positive to negative. They can be triggered by various stimuli, both internal and external and can change rapidly, often in response to different situations. They are a product of the interaction between our thoughts, feelings, and physiological responses. They can be felt physically in the body and can be accompanied by specific actions or behaviors. Emotions play a crucial role in our social interactions, relationships, and decision making, and can be used to express oneself, empathize with others, and navigate through life. They are essential for human experience, and are what makes us human. Emotions can be fleeting, or long-lasting, and can be managed and understood, through different techniques and practices.",
 }
 
 export const GROUP_TITLES = {
   colorsSimple: "Colors - Simple",
   colorsPalletes: "Colors - Palettes",
   shapesForms: "Shapes & Forms",
+  intangibleEmotions: "Intangible - Emotions",
 }
 
 export const INTANGIBLES = {
@@ -2590,17 +2592,17 @@ export const INTANGIBLES = {
 
 export const INTANGIBLES_DESC = {
   emotions: {
-    happy: "Happy",
-    excited: "Excited",
-    sad: "Sad",
-    angry: "Angry",
-    angelic: "Angelic",
-    good: "Good",
-    evil: "Evil",
-    benevolent: "Benevolent",
-    malevolent: "Malevolent",
-    creepy: "Creepy",
-    horror: "Horror",
+    happy: "A warm, golden sunbeam of joy radiating through every inch of the body, filling the mind with a sense of contentment and peace.",
+    excited: "A bubbling cauldron of exhilaration, effervescent energy fizzing through every vein, sparking of anticipation crackling in the air.",
+    sad: "A heavy, leaden weight pressing on the chest, tears like raindrops falling down the cheeks, a sense of overwhelming melancholy.",
+    angry: "A fiery inferno of wrath, molten lava coursing through the bloodstream, fists clenched and jaws tightened in righteous indignation.",
+    angelic: "A celestial light that shines down and illuminates the soul, a sense of purity and goodness, a gentle touch of grace.",
+    good: "A shining beacon of righteousness, a pure and selfless force that brings warmth to the hearts of all it touches.",
+    evil: "A writhing serpent of darkness, a cold and malevolent force that seeks to corrupt and destroy all that is good.",
+    benevolent: "A gentle breeze of kindness, a benevolent force that spreads compassion and generosity like a warm hug.",
+    malevolent: "A ruthless storm of malice, a malevolent force that spreads destruction and chaos wherever it goes.",
+    creepy: "A shivering chill that runs down the spine, a sense of unease and dread that clings to the skin like a thick fog.",
+    horror: "A paralyzing fear that grips the heart and mind, a sense of terror that makes the blood run cold and the hairs stand on end.",
   },
   concepts: {
     infused: "Infused",

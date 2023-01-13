@@ -18,8 +18,8 @@ function AIStylePage(props) {
       <div className='aspect'>
         <div className='bg1'>
           <SiteNavbar url='/resource/ai/teapot'></SiteNavbar>
-          <div className='textAICenter'>
-            <h1>Understanding MidJourney (and SD) through teapots.</h1>
+          <div className='textAICenter fix_teapos'>
+            <h1 className="fix_teapot">Understanding MidJourney (and SD) through teapots.</h1>
             <p>
               Midjourney and Stable Diffusion are both AI models for converting Text prompts to images. I am using the Utah Teapot as a base model for a study on modifiers. For consistancy, I will feed this base model in as
               an image prompt for midjourney and a seed for stable diffusion. Aspect Ratio: 16:9 (--ar 16:9) (-W 896) images downscaled to 110px height.
@@ -42,21 +42,23 @@ function AIStylePage(props) {
 
             <p>Teapot Count, MJ: 1888 DALLE-2: 5 Prompts Page: 55 Stable Diffusion: 944 Total: 2892</p>
             <a href='https://github.com/willwulfken/MidJourney-Styles-and-Keywords' alt="will repo"><p>Thanks to willwulfken#3963 for his sphere comparison repo, it was very helpful for building this site resource.</p></a>
+          
+          <h1>Check out my new rebuild of this page at @ the top dropdown under /modifiers!</h1>
           </div>
 
-          <Tabs defaultActiveKey='mj' id='uncontrolled-tab-example' className='mb-3'>
-            <Tab eventKey='mj' title='MidJourney'>
+          <Tabs defaultActiveKey='mj' id='uncontrolled-tab-example' className='mb-3 fix_teapots'>
+            <Tab eventKey='mj' title='MidJourney' className='fix_teapots'>
               <MJTab></MJTab>
             </Tab>
-            <Tab eventKey='sd' title='Stable Diffusion <WIP>'>
+            <Tab eventKey='sd' title='Stable Diffusion <WIP>' className='fix_teapots'>
               <SDTab></SDTab>
             </Tab>
-            <Tab eventKey='dalle2' title='DALLE-2 <Abandoned>'>
+            <Tab eventKey='dalle2' title='DALLE-2 <Abandoned>' className='fix_teapots'>
               <DalleTab></DalleTab>
             </Tab>
           </Tabs>
 
-          <div className='textAICenter'>
+          <div className='textAICenter fix_teapots'>
             <p>Since last update: +stable diffusion, materials and drawing types.</p>
           <a href='https://docs.google.com/document/d/e/2PACX-1vSIWlr5F6J4yv4jxazaXcZaI-F3MxCsnSq4jwoaO3vaEYC911v2N7JpDgjuhAUVYhq4VmA1SCjF3rdK/pub' alt="Tallah Docs"><p>Thanks to Tallah#0627 for his weights and prompts sheet.</p></a>
             
@@ -78,7 +80,7 @@ function AIStylePage(props) {
             <p>Contributors: Pelletier-esque Weltanschauung#9081</p>
           </div>
 
-          <TeapotFooter></TeapotFooter>
+          <TeapotFooter className="fix_teapots"></TeapotFooter>
         </div>
       </div>
     </div>

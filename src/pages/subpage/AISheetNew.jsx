@@ -278,9 +278,8 @@ if(props.gen === "sd")
   var numbers = seperate(prompthead, prompttail, INTANGIBLES.numbers, 5);
   var numbersystem = seperate(prompthead, prompttail, INTANGIBLES.numbersystem, 5);
 
-  console.log(shapes);
   return (
-    <div>
+    <div >
       <Tabs defaultActiveKey='base' id='uncontrolled-tab-example' className='mb-3'>
         <Tab eventKey='base' title='Base'>
           <Accordion defaultActiveKey='0' className='accordCenter' flush>

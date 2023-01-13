@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import TeapotCardLarge from "../components/teapotCardLarge";
 import RowStyleDiv from "../components/rowdiv";
 
-import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES } from "../data/allkeys.jsx";
+import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC } from "../data/allkeys.jsx";
 import { useState } from "react";
 
 import ModifierCard from "../components/ModifierCard";
@@ -178,18 +178,18 @@ function AIModifiersPage(props) {
   let colorsSimple = [];
   let colorsPalletes = [];
   let shapesForms = [];
-  if(props.isMobile == true)
-  {
-    colorsSimple = expand_mobile(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    colorsPalletes = expand_mobile(GROUP_TITLES[ddval],  COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    shapesForms = expand_mobile(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
+  let intangibleEmotions = [];
+
+  let method = expand;
+  if (props.isMobile == true) {
+    method = expand_mobile;
   }
-  else
-  {
-    colorsSimple = expand(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    colorsPalletes = expand(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    shapesForms = expand(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
-  }
+
+    colorsSimple = method(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    colorsPalletes = method(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    shapesForms = method(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
+    intangibleEmotions = method(GROUP_TITLES[ddval], INTANGIBLES.emotions, INTANGIBLES_DESC.emotions, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+
 
 
   return (
@@ -206,6 +206,7 @@ function AIModifiersPage(props) {
           {ddval == "colorsSimple" ? colorsSimple : <div></div>}
           {ddval == "colorsPalletes" ? colorsPalletes : <div></div>}
           {ddval == "shapesForms" ? shapesForms : <div></div>}
+          {ddval == "intangibleEmotions" ? intangibleEmotions : <div></div>}
           </Container>
        
         </div>

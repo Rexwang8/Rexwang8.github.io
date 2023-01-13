@@ -59,7 +59,7 @@ return(
 
     <Dropdown.Menu as={CustomMenu} >
       <Dropdown.Item eventKey="colorsSimple" >Color - Simple</Dropdown.Item>
-      <Dropdown.Item eventKey="2">Color - something else</Dropdown.Item>
+      <Dropdown.Item eventKey="colorsPalletes">Color - Palletes</Dropdown.Item>
       <Dropdown.Item eventKey="3">
         Flavor?
       </Dropdown.Item>

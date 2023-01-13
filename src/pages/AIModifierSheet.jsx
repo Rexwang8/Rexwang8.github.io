@@ -171,14 +171,20 @@ function AIModifiersPage(props) {
   };
 
   let colorsSimple = [];
+  let colorsPalletes = [];
   if(props.isMobile == true)
   {
     colorsSimple = expand_mobile("Colors(Simple Colors)", COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile, " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    colorsPalletes = expand_mobile("Colors(Palletes)", COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile, " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
   }
   else
   {
     colorsSimple = expand("Colors(Simple Colors)", COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile, " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    colorsPalletes = expand("Colors(Palletes)", COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile, " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
   }
+
+  console.log(colorsPalletes);
+ 
 
 
 // //<ModifierCard id="blue.png" mj={images_mj["blue.png"]} handleShow={handleShow} handleClose={handleClose} show={statesModals["blue.png"]}></ModifierCard>
@@ -198,6 +204,7 @@ const [ddval, setDDVal] = useState("colorsSimple");
 
           <Container fluid className="">
           {ddval == "colorsSimple" ? colorsSimple : <div></div>}
+          {ddval == "colorsPalletes" ? colorsPalletes : <div></div>}
           </Container>
        
         </div>

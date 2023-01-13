@@ -43,12 +43,12 @@ function ModifierCard(props) {
                     <Row><Col><p>{props.desc}</p></Col></Row>
                     <Row>
                       <Col className="modifier_modalcard">
-                      <img className="style_modalimg" src={props.mj} alt="blue" />
+                      <img className="style_modalimg" src={props.mj} alt="Midjourney Image Unavaliable!(Not Generated yet)!" />
                       <p>Midjourney V3 - Teapot</p>
                       <Button className="modifier_modal_copybutton" variant="primary" id={props.id} onClick={(e) => {navigator.clipboard.writeText(e.target.textContent)}}><FontAwesomeIcon icon={faClipboard} />&nbsp;/imagine: {props.mjprompt}</Button>
                       </Col>
                       <Col className="modifier_modalcard">
-                      <img className="style_modalimg" src={props.sd} alt="blue" />
+                      <img className="style_modalimg" src={props.sd} alt="Stable Diffusion Image Unavaliable (Not Generated yet)!" />
                       <p>Stable Diffusion 1.5 - Teapot</p>
                       <Button className="modifier_modal_copybutton" variant="primary" id={props.id} onClick={(e) => {navigator.clipboard.writeText(e.target.textContent)}}><FontAwesomeIcon icon={faClipboard} />&nbsp;{props.sdprompt}</Button>
                       </Col>

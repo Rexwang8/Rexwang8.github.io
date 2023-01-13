@@ -15,6 +15,34 @@
     margin-bottom: 0;
 }
 
+.darkModeText_Description
+{
+    color: var(--color-font_contrast);
+    margin-bottom: 0;
+}
+
+.modifier_descbox
+{
+    color: var(--color-font);
+    border-radius: 0.5vw solid var(--color-main);
+    padding: 2vw;
+    padding-bottom: 0;
+    padding-top: 0;
+    margin: 2vw;
+    margin-bottom: 0;
+    text-overflow: ellipsis;
+    max-width: 80vw;
+}
+
+.modifier_hr
+{
+    border: 1px solid var(--color-font_contrast);
+    margin: 3vw;
+    margin-top: 1.5vw;
+    margin-bottom: 1.5vw;
+    max-width: 90vw;
+}
+
 .modifier_modal_container {
   height: 70vh;
   overflow-y: auto;

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import TeapotCardLarge from "../components/teapotCardLarge";
 import RowStyleDiv from "../components/rowdiv";
 
-import { COLORS, COLORS_DESC } from "../data/allkeys.jsx";
+import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES } from "../data/allkeys.jsx";
 import { useState } from "react";
 
 import ModifierCard from "../components/ModifierCard";
@@ -33,7 +33,6 @@ function getNames(images) {
 //function that takes a list of names, appends .png to the end and returns an array of ModifierCard objects
 function expand(group, names, descs, images_mj, images_sd, handleShow, handleClose, statesModals, isMobile,p_start, p_end, sd_start, sd_end)
 {
-  console.log(names);
   let cards = [];
   let k = Object.keys(names).sort();
   for (var i = 0; i < Math.ceil(k.length); i += 5) {
@@ -126,8 +125,8 @@ handleShow = {handleShow}
 handleClose = {handleClose}
 isMobile = {isMobile}
 group = {group}
+
 ></ModifierShelf>
-    //  <ModifierCard id={k[i] + ".png"} mj={images_mj[k[i] + ".png"]} sd={images_sd[k[i] + ".png"]} handleShow={handleShow} handleClose={handleClose} show={statesModals[k[i] + ".png"]}></ModifierCard>
     );
   }
   return cards;
@@ -170,30 +169,28 @@ function AIModifiersPage(props) {
 
   };
 
+  const [ddval, setDDVal] = useState("colorsSimple");
+
+  const handleSelect=(e)=>{
+    setDDVal(e)
+  }
+
   let colorsSimple = [];
   let colorsPalletes = [];
   let shapesForms = [];
   if(props.isMobile == true)
   {
-    colorsSimple = expand_mobile("Colors(Simple Colors)", COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    colorsPalletes = expand_mobile("Colors(Palletes)", COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    shapesForms = expand_mobile("Shapes(Forms)", COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
+    colorsSimple = expand_mobile(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    colorsPalletes = expand_mobile(GROUP_TITLES[ddval],  COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    shapesForms = expand_mobile(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
   }
   else
   {
-    colorsSimple = expand("Colors(Simple Colors)", COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    colorsPalletes = expand("Colors(Palletes)", COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    shapesForms = expand("Colors(Palletes)", COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
+    colorsSimple = expand(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    colorsPalletes = expand(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    shapesForms = expand(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
   }
 
-
-// //<ModifierCard id="blue.png" mj={images_mj["blue.png"]} handleShow={handleShow} handleClose={handleClose} show={statesModals["blue.png"]}></ModifierCard>
-          
-const [ddval, setDDVal] = useState("colorsSimple");
-
-  const handleSelect=(e)=>{
-    setDDVal(e)
-  }
 
   return (
     <div className='bg2'>
@@ -203,6 +200,9 @@ const [ddval, setDDVal] = useState("colorsSimple");
           <ModifierNavbar url='/resource/ai/modifiers' dark={darkMode} toggleDark={toggleDarkMode} selected={ddval} handleSelect={handleSelect}></ModifierNavbar>
 
           <Container fluid className="">
+          <Row className="modifier_descbox"><Col><h2 className="darkModeText_Description">{GROUP_TITLES[ddval]}</h2></Col></Row>
+            <Row className="modifier_descbox"><Col><p className="darkModeText_Description">{GROUP_DESCRIPTIONS[ddval]}</p></Col></Row>
+          <hr className="modifier_hr"></hr>
           {ddval == "colorsSimple" ? colorsSimple : <div></div>}
           {ddval == "colorsPalletes" ? colorsPalletes : <div></div>}
           {ddval == "shapesForms" ? shapesForms : <div></div>}

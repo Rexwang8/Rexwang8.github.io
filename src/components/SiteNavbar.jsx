@@ -1,5 +1,7 @@
-import { Navbar, Container, Nav, NavDropdown, Breadcrumb } from "react-bootstrap";
+import { Navbar, Container, Col, Row, Button, Nav, NavDropdown, Breadcrumb } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import logo from "../assets/images/result.png";
+import DropdownModifier from "./ModifierDropdown";
 
 function formBC(url, numb) {
   let bc = "";
@@ -23,32 +25,61 @@ function SiteNavbar(props) {
     );
   }
 
+  const handleClick = (e) => {
+    e.preventDefault();
+    props.toggleDark();
+  };
+
+  let darkModeText = props.dark ? "Dark Mode" : "Light Mode";
+  let darkModestr = props.dark ? "dark" : "light";
+
   return (
-    <div>
-      <Navbar bg='light' expand='lg'>
-        <Container>
-          <Link
-            to={{
-              pathname: "/",
-            }}>
-            <Navbar.Brand>Home Page</Navbar.Brand>
-          </Link>
+    <div className='sticky-top'>
+      <Navbar bg={darkModestr} variant={darkModestr} expand='xl'>
+        <Container fluid >
 
-          <Navbar.Toggle aria-controls='basic-navbar-nav' />
-          <Navbar.Collapse id='basic-navbar-nav'>
-            <Nav className='me-auto'>
-              <NavDropdown title='Teapots and Midjourney' id='basic-nav-dropdown'>
-                <NavDropdown.Item href='/resource/ai/teapot'>Teapots</NavDropdown.Item>
-                <NavDropdown.Item href='/resource/ai/prompts'>Prompts</NavDropdown.Item>
-                <NavDropdown.Item href='/resource/ai/generator'>Generator</NavDropdown.Item>
-                <NavDropdown.Item href='/resource/ai/modifiers'>[NEW] Modifiers</NavDropdown.Item>
-              </NavDropdown>
-            </Nav>
-          </Navbar.Collapse>
-
-          <div>
-            <Breadcrumb>{breadcrumbs}</Breadcrumb>
-          </div>
+              <Link
+                to={{
+                  pathname: "/",
+                }}
+                className='NavbarBrand'>
+                <Navbar.Brand className='darkModeText'>
+                  <img alt='Logo' src={logo} width='40' height='40' className='d-inline-block align-top navbarBrand_text' /> {props.brand}
+                </Navbar.Brand>
+              </Link>
+            <Navbar.Toggle aria-controls='basic-navbar-nav' />
+            <Navbar.Collapse id='basic-navbar-nav'>
+            <Row style={{width: '65vw'}}>
+              {props.showMods ? (
+                <Col>
+                  <DropdownModifier selected={props.ddval} handleSelect={props.handleSelect}></DropdownModifier>
+                </Col>
+              ) : (
+                <div></div>
+              )}
+              <Col>
+                <Nav className='me-auto navdropdown_toggle'>
+                  <NavDropdown title='Teapots and Midjourney' menuVariant='dark'>
+                    <NavDropdown.Item href='/resource/ai/teapot'>Teapots</NavDropdown.Item>
+                    <NavDropdown.Item href='/resource/ai/prompts'>Prompts</NavDropdown.Item>
+                    <NavDropdown.Item href='/resource/ai/generator'>Generator</NavDropdown.Item>
+                    <NavDropdown.Item href='/resource/ai/modifiers'>[NEW] Modifiers</NavDropdown.Item>
+                  </NavDropdown>
+                </Nav>
+              </Col>
+              <Col>
+                <Button className='darkModeButton ' onClick={handleClick}>
+                  {darkModeText}
+                </Button>
+              </Col>
+              <Col>
+                <div className="navdropdown_toggle">
+                  <Breadcrumb>{breadcrumbs}</Breadcrumb>
+                </div>
+              </Col>
+              </Row>
+            </Navbar.Collapse>
+          
         </Container>
       </Navbar>
     </div>

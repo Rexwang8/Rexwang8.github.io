@@ -305,3 +305,23 @@
 {
   color: white;
 }
+
+.NavbarBrand
+{
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.navdropdown_toggle
+{
+  font-size: large;
+  margin-bottom: 0.75vw;
+  margin-top: 0.75vw;
+}
+
+.navbarBrand_text
+{
+  font-size: unset;
+  margin-top: 0;
+  margin-bottom: 0;
+}

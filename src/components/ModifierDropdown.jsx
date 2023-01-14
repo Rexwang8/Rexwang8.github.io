@@ -35,7 +35,7 @@ function DropdownModifier(props) {
 
   return (
     
-    <Dropdown onSelect={props.handleSelect}>
+    <Dropdown onSelect={props.handleSelect} className="modifierdropdown_toggle">
       <Dropdown.Toggle as={CustomToggle} id='dropdown-custom-components'>
         Modifier Groups
       </Dropdown.Toggle>

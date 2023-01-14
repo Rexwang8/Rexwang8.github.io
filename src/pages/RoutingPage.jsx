@@ -10,7 +10,7 @@ import BlogProjectPage from "./blogProjectPage";
 import PromptGenerationPage from "./promptgenPage";
 import BlogPostPage from "./blogPostPage";
 import useCheckMobileScreen from "../components/CheckMobile";
-
+import { useState } from "react";
 
 function RoutingPage(props)
 {
@@ -48,9 +48,18 @@ function RoutingPage(props)
 
   var isMobile = useCheckMobileScreen();
 
+  //darkmode
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
   return(
       <Routes>
-        <Route path=""  element={<MainPage title="Main"analytics={props.analytics}/>} />
+        <Route path=""  element={<MainPage title="Main"analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         <Route path="/"  element={<MainPage title="Main"analytics={props.analytics}/>} />
         {allblogprojectpages}
         {allblogpostpages}
@@ -58,7 +67,7 @@ function RoutingPage(props)
         
         <Route path="/dev" element={<App />} />
         <Route path="/resource/ai/teapot" element={<AIStylePage title="Teapots" analytics={props.analytics}/>} />
-        <Route path="/resource/ai/modifiers" element={<AIModifiersPage title="Modifiers" analytics={props.analytics} isMobile={isMobile}/>} />
+        <Route path="/resource/ai/modifiers" element={<AIModifiersPage title="Modifiers" analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         <Route path="/resource/ai/prompts" element={<AIPromptsPage title="Prompts" analytics={props.analytics}/>} />
         <Route path="/resource/ai/generator" element={<PromptGenerationPage title="Generator" analytics={props.analytics}/>} />
         <Route path="*"  element={<MainPage title="Main" analytics={props.analytics}/>} />

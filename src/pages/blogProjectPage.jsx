@@ -19,13 +19,15 @@ function BlogProjectPage(props) {
   });
   const images = importAll(require.context("../projectassets", true, /\.(png|jpe?g|svg)$/));
 
-  const posts = [];
 
+  //Posts
+  const posts = [];
   for (let index = 0; index < Object.keys(props.posts).length; index++) {
     let p = props.posts[Object.keys(props.posts)[index]];
     let postpath = `${path}${p.path}`;
     posts.push(<a href={postpath}>{`${p.title}`}</a>);
   }
+
   return (
     <div className='bg2'>
       <div className='aspect'>

@@ -37,7 +37,7 @@ function MainPage(props) {
     <div className="bg2">
       <div className="aspect">
         <div className="bg1">
-          <SiteNavbar url="/"></SiteNavbar>
+          <SiteNavbar url="/" brand="Rex's Portfolio" showMods={false} dark={props.darkMode} toggleDark={props.toggleDarkMode}></SiteNavbar>
 
           <div>
             <Tabs

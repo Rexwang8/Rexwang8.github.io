@@ -1,7 +1,5 @@
 import { blogposts } from "../data/allblogposts";
 import SiteNavbar from "../components/SiteNavbar";
-import Button from "react-bootstrap/Button";
-import Card from "react-bootstrap/Card";
 import BlogShelf from "../components/BlogShelf";
 import Container from "react-bootstrap/esm/Container";
 
@@ -14,7 +12,7 @@ function importAll(r) {
 }
 
 function BlogPage(props) {
-  console.log(props);
+  
   document.title = props.title;
 
   props.analytics.page({
@@ -24,11 +22,10 @@ function BlogPage(props) {
   
     var allblogprojectpages = [];
   for (var i = 0; i < Math.ceil(Object.keys(blogposts).length); i += 3) {
-
     let b1 = blogposts[Object.keys(blogposts)[i]];
     let b2 = blogposts[Object.keys(blogposts)[0]];
+    let b3 = blogposts[Object.keys(blogposts)[0]];
 
-  let b3 = blogposts[Object.keys(blogposts)[0]];
     if(i < Math.ceil(Object.keys(blogposts).length))
     {
       b2 = blogposts[Object.keys(blogposts)[i + 1]];
@@ -42,14 +39,16 @@ function BlogPage(props) {
 
     allblogprojectpages.push(<BlogShelf title1={`${b1.title}`} 
     content1={`${b1.desc}`} img1={images[`${b1.projectimg}.png`]} 
-    link1={`${b1.path}`} date1={`${b1.date}`}
+    link1={`blog/${b1.path}`} date1={`${b1.date}`}
     title2={`${b2.title}`} 
     content2={`${b2.desc}`} img2={images[`${b2.projectimg}.png`]} 
-    link2={`${b2.path}`}  date2={`${b2.date}`}
+    link2={`blog/${b2.path}`}  date2={`${b2.date}`}
     title3={`${b3.title}`}  content3={`${b3.desc}`} img3={images[`${b3.projectimg}.png`]} 
-    link3={`${b3.path}`}  date3={`${b3.date}`}></BlogShelf>);
+    link3={`blog/${b3.path}`}  date3={`${b3.date}`}></BlogShelf>);
   }
 
+
+  console.log(blogposts);
 
 //<BlogProjectPage title={`${blogposts[Object.keys(blogposts)[i]].title}`} analytics={props.analytics} path={`${blogposts[Object.keys(blogposts)[i]].path}`}/>
   return (

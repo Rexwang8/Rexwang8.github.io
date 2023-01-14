@@ -15,18 +15,17 @@ function BlogProjectPage(props) {
   document.title = props.title;
   let path = `/blog/${props.path}`;
   props.analytics.page({
-    url: `https://rexwang8.github.io/${path}`,
+    url: `https://rexwang8.github.io/blog/${path}`,
   });
   const images = importAll(require.context("../projectassets", true, /\.(png|jpe?g|svg)$/));
 
-
   const posts = [];
 
-for (let index = 0; index < Object.keys(props.posts).length; index++) {
-  let p = props.posts[Object.keys(props.posts)[index]];
-  let postpath = `${path}${p.path}`
-  posts.push(<a href={postpath}>{`${p.title}`}</a>)
-}
+  for (let index = 0; index < Object.keys(props.posts).length; index++) {
+    let p = props.posts[Object.keys(props.posts)[index]];
+    let postpath = `${path}${p.path}`;
+    posts.push(<a href={postpath}>{`${p.title}`}</a>);
+  }
   return (
     <div className='bg2'>
       <div className='aspect'>
@@ -34,35 +33,29 @@ for (let index = 0; index < Object.keys(props.posts).length; index++) {
           <SiteNavbar url={path}></SiteNavbar>
           <Container>
             <Row>
-
               <div>
                 <h2>{props.title}</h2>
                 <hr></hr>
               </div>
-              
-              
             </Row>
             <Row>
-            <div>
-            <p>{props.date}</p>
-              <p>{props.content}</p>
+              <div>
+                <p>{props.date}</p>
+                <p>{props.content}</p>
               </div>
             </Row>
             <Row>
-            <div>
-              <a href={props.github}>Check out my project on Github.</a>
-             
+              <div>
+                <a href={props.github}>Check out my project on Github.</a>
               </div>
             </Row>
             <Row>
-            <img class="projectpageimg" src={images[`${props.img}.png`]} alt="Project"></img>
+              <img class='projectpageimg' src={images[`${props.img}.png`]} alt='Project'></img>
             </Row>
             <Row>
               <hr></hr>
             </Row>
-            <Row>
-              {posts}
-            </Row>
+            <Row>{posts}</Row>
           </Container>
         </div>
       </div>

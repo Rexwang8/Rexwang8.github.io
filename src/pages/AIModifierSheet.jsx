@@ -166,7 +166,6 @@ function AIModifiersPage(props) {
   const handleClose = () => {
     //set all modals to false
     setStatesModals({});
-
   };
 
   const [ddval, setDDVal] = useState("colorsSimple");
@@ -179,6 +178,11 @@ function AIModifiersPage(props) {
   let colorsPalletes = [];
   let shapesForms = [];
   let intangibleEmotions = [];
+  let intangibleConcepts = [];
+  let intangibleSymbols = [];
+  let intangibleZodiac = [];
+  let intangibleNumbers = [];
+  let intangibleNumbersystem = [];
 
   let method = expand;
   if (props.isMobile == true) {
@@ -189,8 +193,11 @@ function AIModifiersPage(props) {
     colorsPalletes = method(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
     shapesForms = method(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
     intangibleEmotions = method(GROUP_TITLES[ddval], INTANGIBLES.emotions, INTANGIBLES_DESC.emotions, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
-
-
+    intangibleConcepts = method(GROUP_TITLES[ddval], INTANGIBLES.concepts, INTANGIBLES_DESC.concepts, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleSymbols = method(GROUP_TITLES[ddval], INTANGIBLES.symbols, INTANGIBLES_DESC.symbols, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleZodiac = method(GROUP_TITLES[ddval], INTANGIBLES.zodiac, INTANGIBLES_DESC.zodiac, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleNumbers = method(GROUP_TITLES[ddval], INTANGIBLES.numbers, INTANGIBLES_DESC.numbers, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleNumbersystem = method(GROUP_TITLES[ddval], INTANGIBLES.numbersystem, INTANGIBLES_DESC.numbersystem, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
 
   return (
     <div className='bg2'>
@@ -207,6 +214,12 @@ function AIModifiersPage(props) {
           {ddval == "colorsPalletes" ? colorsPalletes : <div></div>}
           {ddval == "shapesForms" ? shapesForms : <div></div>}
           {ddval == "intangibleEmotions" ? intangibleEmotions : <div></div>}
+          {ddval == "intangibleSymbols" ? intangibleSymbols : <div></div>}
+          {ddval == "intangibleZodiac" ? intangibleZodiac : <div></div>}
+          {ddval == "intangibleNumbers" ? intangibleNumbers : <div></div>}
+          {ddval == "intangibleNumbersystem" ? intangibleNumbersystem : <div></div>}
+          
+          
           </Container>
        
         </div>

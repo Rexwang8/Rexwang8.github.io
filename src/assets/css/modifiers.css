@@ -73,7 +73,7 @@
 
 .modifier_card {
   width: 15vw;
-  max-width: 220px;
+  max-width: 210px;
   height: max-content;
   font-size: 1.1vw;
   background-color: var(--color-accent);
@@ -84,6 +84,12 @@
   width: 320px;
   height: auto;
   margin-top: 1%;
+}
+
+.modifierdropdown_wrapper
+{
+  overflow-y: auto;
+  max-height: 40vh;
 }
 
 @media only screen and (max-width: 768px) {

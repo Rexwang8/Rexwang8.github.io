@@ -40,8 +40,7 @@ function DropdownModifier(props) {
         Modifier Groups
       </Dropdown.Toggle>
 
-      <Dropdown.Menu as={CustomMenu}>
-      <div className="modifierdropdown_wrapper">
+      <Dropdown.Menu as={CustomMenu} className="modifierdropdown_wrapper">
         <Dropdown.Item eventKey='colorsSimple'>{GROUP_TITLES['colorsSimple']}</Dropdown.Item>
         <Dropdown.Item eventKey='colorsPalletes'>{GROUP_TITLES['colorsPalletes']}</Dropdown.Item>
         <Dropdown.Item eventKey='shapesForms'>{GROUP_TITLES['shapesForms']}</Dropdown.Item>
@@ -51,7 +50,6 @@ function DropdownModifier(props) {
         <Dropdown.Item eventKey='intangibleZodiac'>{GROUP_TITLES['intangibleZodiac']}</Dropdown.Item>
         <Dropdown.Item eventKey='intangibleNumbers'>{GROUP_TITLES['intangibleNumbers']}</Dropdown.Item>
         <Dropdown.Item eventKey='intangibleNumbersystem'>{GROUP_TITLES['intangibleNumbersystem']}</Dropdown.Item>
-        </div>
       </Dropdown.Menu>
       
     </Dropdown>

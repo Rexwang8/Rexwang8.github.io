@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import TeapotCardLarge from "../components/teapotCardLarge";
 import RowStyleDiv from "../components/rowdiv";
 
-import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC } from "../data/allkeys.jsx";
+import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC, REFERENCEMEDIA, REFERENCEMEDIA_DESC, STYLES, STYLES_DESC } from "../data/allkeys.jsx";
 import { useState } from "react";
 
 import ModifierCard from "../components/ModifierCard";
@@ -31,7 +31,7 @@ function getNames(images) {
 }
 
 //function that takes a list of names, appends .png to the end and returns an array of ModifierCard objects
-function expand(group, names, descs, images_mj, images_sd, handleShow, handleClose, statesModals, isMobile,p_start, p_end, sd_start, sd_end)
+function expand(group, names, descs, thumbnailstr, images_mj, images_sd, handleShow, handleClose, statesModals, isMobile,p_start, p_end, sd_start, sd_end)
 {
   let cards = [];
   let k = Object.keys(names).sort();
@@ -87,6 +87,7 @@ handleShow = {handleShow}
 handleClose = {handleClose}
 isMobile = {isMobile}
 group = {group}
+thumbnailstr = {thumbnailstr}
 ></ModifierShelf>
     //  <ModifierCard id={k[i] + ".png"} mj={images_mj[k[i] + ".png"]} sd={images_sd[k[i] + ".png"]} handleShow={handleShow} handleClose={handleClose} show={statesModals[k[i] + ".png"]}></ModifierCard>
     );
@@ -94,7 +95,7 @@ group = {group}
   return cards;
 }
 
-function expand_mobile(group, names, descs, images_mj, images_sd, handleShow, handleClose, statesModals, isMobile,p_start, p_end, sd_start, sd_end)
+function expand_mobile(group, names, descs, thumbnailstr, images_mj, images_sd, handleShow, handleClose, statesModals, isMobile,p_start, p_end, sd_start, sd_end)
 {
   console.log(names);
   let cards = [];
@@ -125,6 +126,7 @@ handleShow = {handleShow}
 handleClose = {handleClose}
 isMobile = {isMobile}
 group = {group}
+thumbnailstr = {thumbnailstr}
 
 ></ModifierShelf>
     );
@@ -176,21 +178,25 @@ function AIModifiersPage(props) {
   let intangibleZodiac = [];
   let intangibleNumbers = [];
   let intangibleNumbersystem = [];
+  let referenceGames = [];
+  let referenceAnimeStudio = [];
 
   let method = expand;
   if (props.isMobile == true) {
     method = expand_mobile;
   }
 
-    colorsSimple = method(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    colorsPalletes = method(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
-    shapesForms = method(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
-    intangibleEmotions = method(GROUP_TITLES[ddval], INTANGIBLES.emotions, INTANGIBLES_DESC.emotions, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
-    intangibleConcepts = method(GROUP_TITLES[ddval], INTANGIBLES.concepts, INTANGIBLES_DESC.concepts, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
-    intangibleSymbols = method(GROUP_TITLES[ddval], INTANGIBLES.symbols, INTANGIBLES_DESC.symbols, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
-    intangibleZodiac = method(GROUP_TITLES[ddval], INTANGIBLES.zodiac, INTANGIBLES_DESC.zodiac, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
-    intangibleNumbers = method(GROUP_TITLES[ddval], INTANGIBLES.numbers, INTANGIBLES_DESC.numbers, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
-    intangibleNumbersystem = method(GROUP_TITLES[ddval], INTANGIBLES.numbersystem, INTANGIBLES_DESC.numbersystem, images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    colorsSimple = method(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    colorsPalletes = method(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
+    shapesForms = method(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
+    intangibleEmotions = method(GROUP_TITLES[ddval], INTANGIBLES.emotions, INTANGIBLES_DESC.emotions, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleConcepts = method(GROUP_TITLES[ddval], INTANGIBLES.concepts, INTANGIBLES_DESC.concepts, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleSymbols = method(GROUP_TITLES[ddval], INTANGIBLES.symbols, INTANGIBLES_DESC.symbols, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleZodiac = method(GROUP_TITLES[ddval], INTANGIBLES.zodiac, INTANGIBLES_DESC.zodiac, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleNumbers = method(GROUP_TITLES[ddval], INTANGIBLES.numbers, INTANGIBLES_DESC.numbers, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    intangibleNumbersystem = method(GROUP_TITLES[ddval], INTANGIBLES.numbersystem, INTANGIBLES_DESC.numbersystem, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+    referenceGames = method(GROUP_TITLES[ddval], REFERENCEMEDIA.videogames, REFERENCEMEDIA_DESC.videogames, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " style, Utah Teapot");
+    referenceAnimeStudio = method(GROUP_TITLES[ddval], REFERENCEMEDIA.animestudios, REFERENCEMEDIA_DESC.animestudios, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, anime ', " --ar 16:9 --v 3", "", " style, anime of a Utah Teapot");
 
   return (
     <div className='bg2'>
@@ -211,6 +217,8 @@ function AIModifiersPage(props) {
           {ddval == "intangibleZodiac" ? intangibleZodiac : <div></div>}
           {ddval == "intangibleNumbers" ? intangibleNumbers : <div></div>}
           {ddval == "intangibleNumbersystem" ? intangibleNumbersystem : <div></div>}
+          {ddval == "referenceGames" ? referenceGames : <div></div>}
+          {ddval == "referenceAnimeStudio" ? referenceAnimeStudio : <div></div>}
           
           
           </Container>

@@ -7,7 +7,7 @@
 .darkModeButton {
   background-color: var(--color-button);
   margin-bottom: 0.75vw;
-  margin-top: 0.75vw;
+  margin-top: 1.1vw;
   font-size: large;
 }
 
@@ -97,10 +97,10 @@
 }
 .modifierdropdown_toggle
 {
-  margin: 1vw;
-  margin-top: 1vw;
-  margin-bottom: 0.75vw;
-  font-size: large;
+  margin: 1.25vw;
+  margin-top: 2vw;
+  margin-bottom: 1vw;
+  font-size: larger;
 }
 
 .modifier_cardTitle {

@@ -206,9 +206,9 @@ function AIModifiersPage(props) {
     referenceAnimeStudio = method(GROUP_TITLES[ddval], REFERENCEMEDIA.animestudios, REFERENCEMEDIA_DESC.animestudios, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, anime ', " --ar 16:9 --v 3", "", " style, anime of a Utah Teapot");
 
   return (
-    <div className='bg2'>
-      <div className='aspect'>
-        <div className='bg1'>
+    <div className='bg2 hideScrollbarX'>
+      <div className='aspect '>
+        <div className='bg1 '>
           <SiteNavbar url='/resource/ai/modifiers' brand="Rex's Modifier Sheet" showMods={true} selected={ddval} handleSelect={handleSelect} dark={props.darkMode} toggleDark={props.toggleDarkMode}></SiteNavbar>
 
           <Container fluid className="">

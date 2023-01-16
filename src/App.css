@@ -325,3 +325,25 @@
   margin-top: 0;
   margin-bottom: 0;
 }
+
+.NavBarBounds
+  {
+    max-width: 85vw;
+  }
+
+@media only screen and (min-width: 769px) {
+
+
+  .NavBarBounds
+  {
+    max-width: 95vw;
+    margin-left: 0;
+    text-align: left;
+    
+  }
+}
+
+@media only screen and (min-width: 1800px) {
+
+}
+

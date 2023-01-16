@@ -36,7 +36,7 @@ function SiteNavbar(props) {
   return (
     <div className='sticky-top'>
       <Navbar bg={darkModestr} variant={darkModestr} expand='xl'>
-        <Container fluid >
+        <Container fluid className="NavBarBounds">
 
               <Link
                 to={{
@@ -49,7 +49,7 @@ function SiteNavbar(props) {
               </Link>
             <Navbar.Toggle aria-controls='basic-navbar-nav' />
             <Navbar.Collapse id='basic-navbar-nav'>
-            <Row style={{width: '65vw'}}>
+            <Row>
               {props.showMods ? (
                 <Col>
                   <DropdownModifier selected={props.ddval} handleSelect={props.handleSelect}></DropdownModifier>

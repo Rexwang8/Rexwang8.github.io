@@ -9,6 +9,12 @@ import { faClipboard } from "@fortawesome/free-regular-svg-icons";
 
 function ModifierCard(props) {
 
+  let thumbnailimg = props.mj;
+
+  if(props.thumb == "mj3"){
+    thumbnailimg = props.mj;
+  }
+
   return (
     /*<Col>
       <div>
@@ -19,7 +25,7 @@ function ModifierCard(props) {
 
     <div>
           <Card className="modifier_card">
-      <Card.Img variant="top" src={props.mj} loading="lazy" ></Card.Img>
+      <Card.Img variant="top" src={thumbnailimg} loading="lazy" ></Card.Img>
       <Card.Body>
         <Card.Title className="modifier_cardTitle">
           <p>{props.name}</p></Card.Title>

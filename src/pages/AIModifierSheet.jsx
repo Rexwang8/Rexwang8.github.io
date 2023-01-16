@@ -169,6 +169,10 @@ function AIModifiersPage(props) {
     setDDVal(e)
   }
 
+  let stylesPhotosites = [];
+  let stylesTimeframes = [];
+  let stylesAbstractions = [];
+  let stylesRenderer = [];
   let colorsSimple = [];
   let colorsPalletes = [];
   let shapesForms = [];
@@ -185,7 +189,10 @@ function AIModifiersPage(props) {
   if (props.isMobile == true) {
     method = expand_mobile;
   }
-
+  stylesPhotosites = method(GROUP_TITLES[ddval], STYLES.photosites, STYLES_DESC.photosites, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  stylesTimeframes = method(GROUP_TITLES[ddval], STYLES.timeframes, STYLES_DESC.timeframes, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'A photo of a Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  stylesAbstractions = method(GROUP_TITLES[ddval], STYLES.abstraction, STYLES_DESC.abstraction, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  stylesRenderer = method(GROUP_TITLES[ddval], STYLES.renderers, STYLES_DESC.renderers, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', "renderer --ar 16:9 --v 3", "", " photo of a Utah Teapot");
     colorsSimple = method(GROUP_TITLES[ddval], COLORS.colors, COLORS_DESC.colors, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
     colorsPalletes = method(GROUP_TITLES[ddval], COLORS.colorpalletes, COLORS_DESC.colorpalletes, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " color, photo of a Utah Teapot");
     shapesForms = method(GROUP_TITLES[ddval], COLORS.shapes, COLORS_DESC.shapes, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " shape, photo of a Utah Teapot");
@@ -208,6 +215,10 @@ function AIModifiersPage(props) {
           <Row className="modifier_descbox"><Col><h2 className="darkModeText_Description">{GROUP_TITLES[ddval]}</h2></Col></Row>
             <Row className="modifier_descbox"><Col><p className="darkModeText_Description">{GROUP_DESCRIPTIONS[ddval]}</p></Col></Row>
           <hr className="modifier_hr"></hr>
+          {ddval == "stylesPhotosites" ? stylesPhotosites : <div></div>}
+          {ddval == "stylesTimeframes" ? stylesTimeframes : <div></div>}
+          {ddval == "stylesAbstractions" ? stylesAbstractions : <div></div>}
+          {ddval == "stylesRenderer" ? stylesRenderer : <div></div>}
           {ddval == "colorsSimple" ? colorsSimple : <div></div>}
           {ddval == "colorsPalletes" ? colorsPalletes : <div></div>}
           {ddval == "shapesForms" ? shapesForms : <div></div>}

@@ -41,6 +41,10 @@ function DropdownModifier(props) {
       </Dropdown.Toggle>
 
       <Dropdown.Menu as={CustomMenu} className="modifierdropdown_wrapper">
+      <Dropdown.Item eventKey='stylesRenderer'>{GROUP_TITLES['stylesRenderer']}</Dropdown.Item>
+      <Dropdown.Item eventKey='stylesPhotosites'>{GROUP_TITLES['stylesPhotosites']}</Dropdown.Item>
+        <Dropdown.Item eventKey='stylesTimeframes'>{GROUP_TITLES['stylesTimeframes']}</Dropdown.Item>
+        <Dropdown.Item eventKey='stylesAbstractions'>{GROUP_TITLES['stylesAbstractions']}</Dropdown.Item>
         <Dropdown.Item eventKey='colorsSimple'>{GROUP_TITLES['colorsSimple']}</Dropdown.Item>
         <Dropdown.Item eventKey='colorsPalletes'>{GROUP_TITLES['colorsPalletes']}</Dropdown.Item>
         <Dropdown.Item eventKey='shapesForms'>{GROUP_TITLES['shapesForms']}</Dropdown.Item>
@@ -50,6 +54,8 @@ function DropdownModifier(props) {
         <Dropdown.Item eventKey='intangibleZodiac'>{GROUP_TITLES['intangibleZodiac']}</Dropdown.Item>
         <Dropdown.Item eventKey='intangibleNumbers'>{GROUP_TITLES['intangibleNumbers']}</Dropdown.Item>
         <Dropdown.Item eventKey='intangibleNumbersystem'>{GROUP_TITLES['intangibleNumbersystem']}</Dropdown.Item>
+        <Dropdown.Item eventKey='referenceGames'>{GROUP_TITLES['referenceGames']}</Dropdown.Item>
+        <Dropdown.Item eventKey='referenceAnimeStudio'>{GROUP_TITLES['referenceAnimeStudio']}</Dropdown.Item>
       </Dropdown.Menu>
       
     </Dropdown>

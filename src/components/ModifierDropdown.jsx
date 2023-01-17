@@ -45,6 +45,9 @@ function DropdownModifier(props) {
       <Dropdown.Item eventKey='stylesPhotosites'>{GROUP_TITLES['stylesPhotosites']}</Dropdown.Item>
         <Dropdown.Item eventKey='stylesTimeframes'>{GROUP_TITLES['stylesTimeframes']}</Dropdown.Item>
         <Dropdown.Item eventKey='stylesAbstractions'>{GROUP_TITLES['stylesAbstractions']}</Dropdown.Item>
+        <Dropdown.Item eventKey='stylesComplexity'>{GROUP_TITLES['stylesComplexity']}</Dropdown.Item>
+        <Dropdown.Item eventKey='stylesPunk'>{GROUP_TITLES['stylesPunk']}</Dropdown.Item>
+        <Dropdown.Item eventKey='stylesWave'>{GROUP_TITLES['stylesWave']}</Dropdown.Item>
         <Dropdown.Item eventKey='colorsSimple'>{GROUP_TITLES['colorsSimple']}</Dropdown.Item>
         <Dropdown.Item eventKey='colorsPalletes'>{GROUP_TITLES['colorsPalletes']}</Dropdown.Item>
         <Dropdown.Item eventKey='shapesForms'>{GROUP_TITLES['shapesForms']}</Dropdown.Item>

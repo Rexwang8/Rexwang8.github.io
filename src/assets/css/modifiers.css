@@ -76,7 +76,7 @@
 
 .modifier_card {
   width: 15vw;
-  max-width: 210px;
+  max-width: 200px;
   height: max-content;
   font-size: 1.1vw;
   background-color: var(--color-accent);
@@ -139,7 +139,7 @@
 @media only screen and (min-width: 1100px) {
   .modifier_card {
     width: 15vw;
-    max-width: 230px;
+    max-width: 220px;
     font-size: 1vw;
   }
 
@@ -150,8 +150,8 @@
 
 @media only screen and (min-width: 1400px) {
   .modifier_card {
-    width: 15vw;
-    max-width: 240px;
+    width: 14vw;
+    max-width: 230px;
     font-size: 0.9vw;
   }
 
@@ -162,8 +162,8 @@
 
 @media only screen and (min-width: 1800px) {
   .modifier_card {
-    width: 15vw;
-    max-width: 250px;
+    width: 14vw;
+    max-width: 240px;
     font-size: 0.75vw;
   }
 

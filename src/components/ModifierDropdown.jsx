@@ -41,6 +41,8 @@ function DropdownModifier(props) {
       </Dropdown.Toggle>
 
       <Dropdown.Menu as={CustomMenu} className="modifierdropdown_wrapper">
+      <Dropdown.Item eventKey='materialsMetals'>{GROUP_TITLES['materialsMetals']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsGemstones'>{GROUP_TITLES['materialsGemstones']}</Dropdown.Item>
       <Dropdown.Item eventKey='stylesRenderer'>{GROUP_TITLES['stylesRenderer']}</Dropdown.Item>
       <Dropdown.Item eventKey='stylesPhotosites'>{GROUP_TITLES['stylesPhotosites']}</Dropdown.Item>
         <Dropdown.Item eventKey='stylesTimeframes'>{GROUP_TITLES['stylesTimeframes']}</Dropdown.Item>

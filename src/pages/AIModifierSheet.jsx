@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import TeapotCardLarge from "../components/teapotCardLarge";
 import RowStyleDiv from "../components/rowdiv";
 
-import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC, REFERENCEMEDIA, REFERENCEMEDIA_DESC, STYLES, STYLES_DESC } from "../data/allkeys.jsx";
+import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC, REFERENCEMEDIA, REFERENCEMEDIA_DESC, STYLES, STYLES_DESC, MATERIALS, MATERIALS_DESC } from "../data/allkeys.jsx";
 import { useState } from "react";
 
 import ModifierCard from "../components/ModifierCard";
@@ -169,6 +169,8 @@ function AIModifiersPage(props) {
     setDDVal(e)
   }
 
+  let materialsMetals = [];
+  let materialsGemstones = [];
   let stylesPhotosites = [];
   let stylesTimeframes = [];
   let stylesAbstractions = [];
@@ -192,6 +194,8 @@ function AIModifiersPage(props) {
   if (props.isMobile == true) {
     method = expand_mobile;
   }
+  materialsMetals = method(GROUP_TITLES[ddval], MATERIALS.metals, MATERIALS_DESC.metals, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsGemstones = method(GROUP_TITLES[ddval], MATERIALS.gemsStones, MATERIALS_DESC.gemsStones, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
   stylesPhotosites = method(GROUP_TITLES[ddval], STYLES.photosites, STYLES_DESC.photosites, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
   stylesTimeframes = method(GROUP_TITLES[ddval], STYLES.timeframes, STYLES_DESC.timeframes, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'A photo of a Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
   stylesAbstractions = method(GROUP_TITLES[ddval], STYLES.abstraction, STYLES_DESC.abstraction, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
@@ -221,6 +225,9 @@ function AIModifiersPage(props) {
           <Row className="modifier_descbox"><Col><h2 className="darkModeText_Description">{GROUP_TITLES[ddval]}</h2></Col></Row>
             <Row className="modifier_descbox"><Col><p className="darkModeText_Description">{GROUP_DESCRIPTIONS[ddval]}</p></Col></Row>
           <hr className="modifier_hr"></hr>
+          {ddval == "materialsMetals" ? materialsMetals : <div></div>}
+          {ddval == "materialsGemstones" ? materialsGemstones : <div></div>}
+          
           {ddval == "stylesPhotosites" ? stylesPhotosites : <div></div>}
           {ddval == "stylesTimeframes" ? stylesTimeframes : <div></div>}
           {ddval == "stylesAbstractions" ? stylesAbstractions : <div></div>}

@@ -11,13 +11,14 @@ body {
   --color-font: rgb(0, 0, 0);
   --color-font_contrast: rgb(255, 255, 255);
   --color-button: rgb(0, 128, 255);
+  --color-main-light: rgb(54, 54, 54);
 }
 
 .dark-mode
 {
   --color-accent: rgb(58, 58, 58);
   --color-font: rgb(129, 129, 129);
-  --color-font_constrast: rgb(129, 129, 129);
+  --color-font_contrast: rgb(129, 129, 129);
   --color-button: rgb(157, 0, 255);
 }
 

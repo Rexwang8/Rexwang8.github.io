@@ -11,6 +11,7 @@ import PromptGenerationPage from "./promptgenPage";
 import BlogPostPage from "./blogPostPage";
 import useCheckMobileScreen from "../components/CheckMobile";
 import { useState } from "react";
+import AIResourceMainPage from "./AIResourceMainPage";
 
 function RoutingPage(props)
 {
@@ -70,6 +71,7 @@ function RoutingPage(props)
         <Route path="/resource/ai/modifiers" element={<AIModifiersPage title="Modifiers" analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         <Route path="/resource/ai/prompts" element={<AIPromptsPage title="Prompts" analytics={props.analytics}/>} />
         <Route path="/resource/ai/generator" element={<PromptGenerationPage title="Generator" analytics={props.analytics}/>} />
+        <Route path="/resource/ai" element={<AIResourceMainPage title="AI Resources" analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         <Route path="*"  element={<MainPage title="Main" analytics={props.analytics}/>} />
       </Routes>
   );

@@ -90,6 +90,8 @@ function MainPage(props) {
         </Row>
 
                 </Container>
+
+                
               </Tab>
               <Tab eventKey="projects" title="Projects" disabled></Tab>
               <Tab eventKey="devlog" title="Dev Log" disabled></Tab>

@@ -55,9 +55,7 @@ function AboutTab() {
         </Row>
         
       </Container>
-      <div className='mainPDFW'>
-        <embed src={resume} type='application/pdf' width='100%' height='1000px'></embed>
-      </div>
+      
     </div>
   );
 }

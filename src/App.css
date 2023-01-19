@@ -338,6 +338,71 @@
   overflow-y: auto;
 }
 
+.AIPageCenter
+{
+  justify-content: center;
+  margin: auto;
+  text-align: center;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  color: white;
+}
+
+.AIPageBorder
+{
+  border: 1px solid white;
+  border-radius: 1vw;
+  padding: 1vw;
+  margin: 1vw;
+}
+
+.AIPageBG1
+{
+  background-color: var(--color-main-light);
+  color: white;
+}
+
+.AIPageBigText
+{
+  color:white;
+  font-size: larger;
+}
+
+.AIPageResponsive
+{
+  width: 75vw;
+  max-width: 1200px;
+  height: auto;
+}
+
+
+.AIPageImgSize
+{
+  max-width: 15vw;
+  min-width: 128px;
+}
+
+.AIPageWidth1
+{
+  width: 20vw;
+}
+
+.HomePageDivider
+{
+  height: 60vh;
+}
+
+.HomePageMargin5
+{
+  margin-left: 5vw;
+  margin-right: 5vw;
+}
+
+.AIPageDark
+{
+  color: var(--color-font_contrast);
+}
+
 @media only screen and (min-width: 769px) {
 
 

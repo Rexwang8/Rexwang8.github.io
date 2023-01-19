@@ -60,8 +60,7 @@ function SiteNavbar(props) {
               <Col>
                 <Nav className='me-auto navdropdown_toggle'>
                   <NavDropdown title='Teapots and Midjourney' menuVariant='dark'>
-                    <NavDropdown.Item href='/resource/ai/teapot'>Teapots</NavDropdown.Item>
-                    <NavDropdown.Item href='/resource/ai/prompts'>Prompts</NavDropdown.Item>
+                    <NavDropdown.Item href='/resource/ai/'>[NEW] AI Home</NavDropdown.Item>
                     <NavDropdown.Item href='/resource/ai/generator'>Generator</NavDropdown.Item>
                     <NavDropdown.Item href='/resource/ai/modifiers'>[NEW] Modifiers</NavDropdown.Item>
                   </NavDropdown>

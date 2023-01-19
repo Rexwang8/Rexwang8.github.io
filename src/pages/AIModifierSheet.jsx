@@ -11,6 +11,7 @@ import { useState } from "react";
 import ModifierCard from "../components/ModifierCard";
 import ModifierShelf from "../components/ModifierShelf";
 import ModifierNavbar from "../components/ModifierNavbar";
+import TeapotFooter from "../components/teapotfooter";
 
 function importAll(r) {
   let images = {};
@@ -247,7 +248,7 @@ function AIModifiersPage(props) {
           {ddval == "referenceGames" ? referenceGames : <div></div>}
           {ddval == "referenceAnimeStudio" ? referenceAnimeStudio : <div></div>}
           
-          
+          <Row><Col><TeapotFooter></TeapotFooter></Col></Row>
           </Container>
        
         </div>

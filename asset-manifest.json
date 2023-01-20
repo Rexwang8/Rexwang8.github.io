@@ -1,11 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.aeb7c407.css",
-    "main.js": "/static/js/main.9aed76bd.js",
+    "main.js": "/static/js/main.d6738726.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/scifiteapot.png": "/static/media/scifiteapot.de73ac74581ab6a0fb52.png",
+    "static/media/Drummerflummed_te.png": "/static/media/Drummerflummed_te.db6d86473fc8184a33fc.png",
     "static/media/e3.png": "/static/media/e3.5371d7dfb0fcad24bdee.png",
+    "static/media/Drummerflummed_tea.png": "/static/media/Drummerflummed_tea.d638acdfd36c56e1d754.png",
+    "static/media/Chromie_a_nice_looking.png": "/static/media/Chromie_a_nice_looking.1eb6ffab6a2c2b375d28.png",
     "static/media/e2.png": "/static/media/e2.3041da593f4010535be5.png",
+    "static/media/Drummerflummed_teap.png": "/static/media/Drummerflummed_teap.0c44094f7fc854a83a3a.png",
     "static/media/basephoto.png": "/static/media/basephoto.c8d7e8bfac03f233d26e.png",
     "static/media/prompt_woodteapot_1.png": "/static/media/prompt_woodteapot_1.41983f91ff0e644d2512.png",
     "static/media/prompt_woodteapot_5.png": "/static/media/prompt_woodteapot_5.3689bee7bbadeed88ffa.png",
@@ -65,6 +69,13 @@
     "static/media/prompt_woodteapot_3.png": "/static/media/prompt_woodteapot_3.c6bcd2adaaca1b923b60.png",
     "static/media/prompt_woodteapot_10.png": "/static/media/prompt_woodteapot_10.72a62bc8536bddfbbf98.png",
     "static/media/weighting_woodteapot_13.png": "/static/media/weighting_woodteapot_13.53fdc8839628ca6eda72.png",
+    "static/media/01807-2290092296-a_close_up_of_a_t.png": "/static/media/01807-2290092296-a_close_up_of_a_t.9de06383639b244abdbb.png",
+    "static/media/01808-2290092297.png": "/static/media/01808-2290092297.177efab95c63971e466c.png",
+    "static/media/01809-2290092298.png": "/static/media/01809-2290092298.6eb006efbcd7ac2d4ab8.png",
+    "static/media/01935-804792027-a_close_up_of.png": "/static/media/01935-804792027-a_close_up_of.407676707a378c0c78ef.png",
+    "static/media/01949-804792041-a_close_.png": "/static/media/01949-804792041-a_close_.8a36cfd1a3909725d8c0.png",
+    "static/media/png": "/static/media/c2f2ffecd5d844a2b93325f8eed46247.ed5bc7eb9da11dc04bc4.png",
+    "static/media/e55124181f6246.png": "/static/media/e55124181f6246.31e8bb6387e2f5486486.png",
     "static/media/base31.png": "/static/media/base31.fbb069eb471bb7f1b4f5.png",
     "static/media/base52.png": "/static/media/base52.b9c57284bc224c2a97f5.png",
     "static/media/pointillism.png": "/static/media/pointillism.8d39c7c85d54365284a3.png",
@@ -2133,11 +2144,11 @@
     "static/media/basestop50.png": "/static/media/basestop50.489bb4f63750a5e0c015.png",
     "index.html": "/index.html",
     "main.aeb7c407.css.map": "/static/css/main.aeb7c407.css.map",
-    "main.9aed76bd.js.map": "/static/js/main.9aed76bd.js.map",
+    "main.d6738726.js.map": "/static/js/main.d6738726.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.aeb7c407.css",
-    "static/js/main.9aed76bd.js"
+    "static/js/main.d6738726.js"
   ]
 }

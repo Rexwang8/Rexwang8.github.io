@@ -15,6 +15,17 @@ import AIResourceMainPage from "./AIResourceMainPage";
 
 function RoutingPage(props)
 {
+  var isMobile = useCheckMobileScreen();
+
+  //darkmode
+  const [darkMode, setDarkMode] = useState(false);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
   var postcount = 0;
   var allblogprojectpages = [];
   var allblogpostpages = [];
@@ -24,13 +35,13 @@ function RoutingPage(props)
 
     postcount += Object.keys(pposts).length;
     
-    allblogprojectpages.push(<Route path={`/blog/${project.path}`} element={<BlogProjectPage content={`${project.content}`} 
-    title={`${project.title}`} analytics={props.analytics} 
+    allblogprojectpages.push(<Route path={`/${project.path}`} element={<BlogProjectPage content={`${project.content}`} analytics={props.analytics} 
     path={`${project.path}`}
     github={`${project.github}`}
     img={`${project.projectimg}`}
-    date={`${project.date}`}
     posts={project.blogposts}
+    project={project}
+    isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}
     />
    } />)
 
@@ -47,27 +58,18 @@ function RoutingPage(props)
    }
   }
 
-  var isMobile = useCheckMobileScreen();
-
-  //darkmode
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    var element = document.body;
-    element.classList.toggle("dark-mode");
-  };
+  
 
   return(
       <Routes>
         <Route path=""  element={<MainPage title="Main"analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
-        <Route path="/"  element={<MainPage title="Main"analytics={props.analytics}/>} />
+        <Route path="/"  element={<MainPage title="Main"analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         {allblogprojectpages}
         {allblogpostpages}
-        <Route path="/blog" element={<BlogPage title="DevBlog"analytics={props.analytics}/>} />
+        <Route path="/blog" element={<BlogPage title="DevBlog"analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         
         <Route path="/dev" element={<App />} />
-        <Route path="/resource/ai/teapot" element={<AIStylePage title="Teapots" analytics={props.analytics}/>} />
+        <Route path="/resource/ai/teapot" element={<AIStylePage title="Teapots" analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         <Route path="/resource/ai/modifiers" element={<AIModifiersPage title="Modifiers" analytics={props.analytics} isMobile={isMobile} darkMode={darkMode} toggleDarkMode={toggleDarkMode}/>} />
         <Route path="/resource/ai/prompts" element={<AIPromptsPage title="Prompts" analytics={props.analytics}/>} />
         <Route path="/resource/ai/generator" element={<PromptGenerationPage title="Generator" analytics={props.analytics}/>} />

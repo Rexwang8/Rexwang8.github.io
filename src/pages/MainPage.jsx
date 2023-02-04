@@ -93,8 +93,19 @@ function MainPage(props) {
 
                 
               </Tab>
-              <Tab eventKey="projects" title="Projects" disabled></Tab>
-              <Tab eventKey="devlog" title="Dev Log" disabled></Tab>
+              <Tab eventKey="projects" title="Projects">
+
+                <Container fluid='md'>
+                  <Row className="MainPageCenter">
+                    <Col>
+                    <Button href="blog" size="lg">Go to Blogs</Button>
+                    </Col>
+                  </Row>
+                  </Container>
+             
+
+              </Tab>
+              
             </Tabs>
           </div>
         </div>

@@ -108,4 +108,35 @@ export const blogposts = {
         tech: "Huggingface, Coreweave Cloud GPUs, Transformers, Pytorch, Python, GPT-J-6B, Webnovel Data"
 
     },
+    epub: {
+        title: "GolangFast Epub Converter",
+        id: 4,
+        blogposts: {
+            
+                post1: {
+                title: "Blazingly fast epub converter",
+                id: 1,
+                date: "2/5/2023",
+                content: `I needed to write a fast epub to .txt converter for my work during my Coreweave internship. I came up with this, with some help from my supervisor and online resources. It's blazingly fast and can convert a 1000 page book in under 1 seconds. Written with golang!
+                `,
+                path: "/end",
+                surl1: "/end",
+                surl2: "/end",
+                simg1: "epubweb",
+                simg2: "/end",
+                },
+            
+        },
+        date: "2/5/2023",
+        content: "Super fast Golang epub to txt converter written for my Coreweave internship.",
+        desc: "Golang Fast Epub Converter",
+        path: "blog/epub",
+        pathToProj: "epub",
+        github: "https://github.com/Rexwang8/fast-epubtotxt",
+        huggingface: "https://huggingface.co/Rexwang8/qilin-lit-6b",
+        gh_hf:"gh",
+        projectimg: "epubweb",
+        tech: "Golang, Coreweave"
+
+    },
 }

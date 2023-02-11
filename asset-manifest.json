@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.aeb7c407.css",
-    "main.js": "/static/js/main.d6738726.js",
+    "main.css": "/static/css/main.69ac0c6b.css",
+    "main.js": "/static/js/main.6085c2d4.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/scifiteapot.png": "/static/media/scifiteapot.de73ac74581ab6a0fb52.png",
     "static/media/Drummerflummed_te.png": "/static/media/Drummerflummed_te.db6d86473fc8184a33fc.png",
@@ -16,6 +16,7 @@
     "static/media/weighting_woodteapot_14.png": "/static/media/weighting_woodteapot_14.0203d145c31cb9d1aebd.png",
     "static/media/e1.png": "/static/media/e1.86c8870f34164682a086.png",
     "static/media/casual.png": "/static/media/casual.0fbc5902382734f0a742.png",
+    "static/media/qilinthumb.png": "/static/media/qilinthumb.c7670f77cd3da36f080f.png",
     "static/media/pasted image 16.png": "/static/media/pasted image 16.cc94b994f78106c53069.png",
     "static/media/weighting_woodteapot_18.png": "/static/media/weighting_woodteapot_18.cc94b994f78106c53069.png",
     "static/media/weighting_woodteapot_12.png": "/static/media/weighting_woodteapot_12.942f4d00c13ed992e763.png",
@@ -63,6 +64,7 @@
     "static/media/weighting_woodteapot_1.png": "/static/media/weighting_woodteapot_1.8a275f562b2895000c34.png",
     "static/media/prompt_woodteapot_2.png": "/static/media/prompt_woodteapot_2.52151919f14afd386ecb.png",
     "static/media/weighting_woodteapot_0.png": "/static/media/weighting_woodteapot_0.7d83207ed5ec81e22891.png",
+    "static/media/website.png": "/static/media/website.fe5b7a56acceb1cfe754.png",
     "static/media/prompt_woodteapot_17.png": "/static/media/prompt_woodteapot_17.136f75ff5b75b76783f1.png",
     "static/media/weighting_woodteapot_2.png": "/static/media/weighting_woodteapot_2.7d537e03c0e809617115.png",
     "static/media/prompt_woodteapot_0.png": "/static/media/prompt_woodteapot_0.1f5e44b9104ff708bcd2.png",
@@ -2130,6 +2132,7 @@
     "static/media/magnification.png": "/static/media/magnification.c62ba726f50b908a967f.png",
     "static/media/equilateralpolygon.png": "/static/media/equilateralpolygon.1f72c8b21c77c4565cc8.png",
     "static/media/pixel.png": "/static/media/pixel.2b921ec4b6d3c9cc2ea2.png",
+    "static/media/epubweb.png": "/static/media/epubweb.f1cbdab25b53a8461e3f.png",
     "static/media/basestop60.png": "/static/media/basestop60.fe1e2973a82e2dbc2640.png",
     "static/media/stonepunk.png": "/static/media/stonepunk.c955dff3b394a0f4ceea.png",
     "static/media/nanopunk.png": "/static/media/nanopunk.28a212e3141952f5d763.png",
@@ -2143,12 +2146,12 @@
     "static/media/basestop80.png": "/static/media/basestop80.b4cccd9a8b4fbb888afc.png",
     "static/media/basestop50.png": "/static/media/basestop50.489bb4f63750a5e0c015.png",
     "index.html": "/index.html",
-    "main.aeb7c407.css.map": "/static/css/main.aeb7c407.css.map",
-    "main.d6738726.js.map": "/static/js/main.d6738726.js.map",
+    "main.69ac0c6b.css.map": "/static/css/main.69ac0c6b.css.map",
+    "main.6085c2d4.js.map": "/static/js/main.6085c2d4.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.aeb7c407.css",
-    "static/js/main.d6738726.js"
+    "static/css/main.69ac0c6b.css",
+    "static/js/main.6085c2d4.js"
   ]
 }

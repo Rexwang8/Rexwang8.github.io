@@ -43,6 +43,22 @@ function DropdownModifier(props) {
       <Dropdown.Menu as={CustomMenu} className="modifierdropdown_wrapper">
       <Dropdown.Item eventKey='materialsMetals'>{GROUP_TITLES['materialsMetals']}</Dropdown.Item>
       <Dropdown.Item eventKey='materialsGemstones'>{GROUP_TITLES['materialsGemstones']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsWood'>{GROUP_TITLES['materialsWood']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsPlastic'>{GROUP_TITLES['materialsPlastic']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsWax'>{GROUP_TITLES['materialsWax']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsRubber'>{GROUP_TITLES['materialsRubber']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsWater'>{GROUP_TITLES['materialsWater']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsLiquid'>{GROUP_TITLES['materialsLiquid']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsGas'>{GROUP_TITLES['materialsGas']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsOrganic'>{GROUP_TITLES['materialsOrganic']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsEnergy'>{GROUP_TITLES['materialsEnergy']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsFood'>{GROUP_TITLES['materialsFood']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsPlantsFungi'>{GROUP_TITLES['materialsPlantsFungi']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsMusical'>{GROUP_TITLES['materialsMusical']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsGel'>{GROUP_TITLES['materialsGel']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsGlue'>{GROUP_TITLES['materialsGlue']}</Dropdown.Item>
+      <Dropdown.Item eventKey='materialsMiscellaneous'>{GROUP_TITLES['materialsMiscellaneous']}</Dropdown.Item>
+
       <Dropdown.Item eventKey='stylesRenderer'>{GROUP_TITLES['stylesRenderer']}</Dropdown.Item>
       <Dropdown.Item eventKey='stylesPhotosites'>{GROUP_TITLES['stylesPhotosites']}</Dropdown.Item>
         <Dropdown.Item eventKey='stylesTimeframes'>{GROUP_TITLES['stylesTimeframes']}</Dropdown.Item>

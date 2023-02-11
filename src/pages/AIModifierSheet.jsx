@@ -172,6 +172,22 @@ function AIModifiersPage(props) {
 
   let materialsMetals = [];
   let materialsGemstones = [];
+  let materialsWood = [];
+  let materialsPlastic = [];
+  let materialsWax = [];
+  let materialsRubber = [];
+  let materialsWater = [];
+  let materialsLiquid = [];
+  let materialsGas = [];
+  let materialsOrganic = [];
+  let materialsEnergy = [];
+  let materialsPlantsFungi = [];
+  let materialsFood = [];
+  let materialsMusical = [];
+  let materialsMiscellaneous = [];
+  let materialsGel = [];
+  let materialsGlue = [];
+
   let stylesPhotosites = [];
   let stylesTimeframes = [];
   let stylesAbstractions = [];
@@ -197,6 +213,22 @@ function AIModifiersPage(props) {
   }
   materialsMetals = method(GROUP_TITLES[ddval], MATERIALS.metals, MATERIALS_DESC.metals, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
   materialsGemstones = method(GROUP_TITLES[ddval], MATERIALS.gemsStones, MATERIALS_DESC.gemsStones, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsWood = method(GROUP_TITLES[ddval], MATERIALS.woods, MATERIALS_DESC.woods, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsPlastic = method(GROUP_TITLES[ddval], MATERIALS.plasticFoams, MATERIALS_DESC.plasticFoams, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsWax = method(GROUP_TITLES[ddval], MATERIALS.wax, MATERIALS_DESC.wax, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsRubber = method(GROUP_TITLES[ddval], MATERIALS.rubber, MATERIALS_DESC.rubber, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsWater = method(GROUP_TITLES[ddval], MATERIALS.waterIce, MATERIALS_DESC.waterIce, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsLiquid = method(GROUP_TITLES[ddval], MATERIALS.liquids, MATERIALS_DESC.liquids, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsGas = method(GROUP_TITLES[ddval], MATERIALS.gas, MATERIALS_DESC.gas, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsOrganic = method(GROUP_TITLES[ddval], MATERIALS.organic, MATERIALS_DESC.organic, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsFood = method(GROUP_TITLES[ddval], MATERIALS.food, MATERIALS_DESC.food, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsEnergy = method(GROUP_TITLES[ddval], MATERIALS.energy, MATERIALS_DESC.energy, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsPlantsFungi = method(GROUP_TITLES[ddval], MATERIALS.plantFungi, MATERIALS_DESC.plantFungi, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsMusical = method(GROUP_TITLES[ddval], MATERIALS.instruments, MATERIALS_DESC.instruments, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsMiscellaneous = method(GROUP_TITLES[ddval], MATERIALS.materials, MATERIALS_DESC.materials, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsGel = method(GROUP_TITLES[ddval], MATERIALS.gelSponge, MATERIALS_DESC.gelSponge, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+  materialsGlue = method(GROUP_TITLES[ddval], MATERIALS.glue, MATERIALS_DESC.glue, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
+
   stylesPhotosites = method(GROUP_TITLES[ddval], STYLES.photosites, STYLES_DESC.photosites, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
   stylesTimeframes = method(GROUP_TITLES[ddval], STYLES.timeframes, STYLES_DESC.timeframes, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'A photo of a Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
   stylesAbstractions = method(GROUP_TITLES[ddval], STYLES.abstraction, STYLES_DESC.abstraction, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
@@ -228,6 +260,21 @@ function AIModifiersPage(props) {
           <hr className="modifier_hr"></hr>
           {ddval == "materialsMetals" ? materialsMetals : <div></div>}
           {ddval == "materialsGemstones" ? materialsGemstones : <div></div>}
+          {ddval == "materialsWood" ? materialsWood : <div></div>}
+          {ddval == "materialsPlastic" ? materialsPlastic : <div></div>}
+          {ddval == "materialsWax" ? materialsWax : <div></div>}
+          {ddval == "materialsRubber" ? materialsRubber : <div></div>}
+          {ddval == "materialsWater" ? materialsWater : <div></div>}
+          {ddval == "materialsLiquid" ? materialsLiquid : <div></div>}
+          {ddval == "materialsGas" ? materialsGas : <div></div>}
+          {ddval == "materialsOrganic" ? materialsOrganic : <div></div>}
+          {ddval == "materialsFood" ? materialsFood : <div></div>}
+          {ddval == "materialsPlantsFungi" ? materialsPlantsFungi : <div></div>}
+          {ddval == "materialsEnergy" ? materialsEnergy : <div></div>}
+          {ddval == "materialsMusical" ? materialsMusical : <div></div>}
+          {ddval == "materialsGel" ? materialsGel : <div></div>}
+          {ddval == "materialsGlue" ? materialsGlue : <div></div>}
+          {ddval == "materialsMiscellaneous" ? materialsMiscellaneous : <div></div>}
           
           {ddval == "stylesPhotosites" ? stylesPhotosites : <div></div>}
           {ddval == "stylesTimeframes" ? stylesTimeframes : <div></div>}

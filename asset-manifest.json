@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.69ac0c6b.css",
-    "main.js": "/static/js/main.6085c2d4.js",
+    "main.css": "/static/css/main.4f66fc9d.css",
+    "main.js": "/static/js/main.f83dba5b.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/scifiteapot.png": "/static/media/scifiteapot.de73ac74581ab6a0fb52.png",
     "static/media/Drummerflummed_te.png": "/static/media/Drummerflummed_te.db6d86473fc8184a33fc.png",
@@ -2130,6 +2130,7 @@
     "static/media/godrays.png": "/static/media/godrays.871f56a9fc3a6d707cd2.png",
     "static/media/base11.png": "/static/media/base11.ebc4a34a04fcc74076d7.png",
     "static/media/magnification.png": "/static/media/magnification.c62ba726f50b908a967f.png",
+    "static/media/packagesloc.png": "/static/media/packagesloc.e5ed37e4d41e6efd5d64.png",
     "static/media/equilateralpolygon.png": "/static/media/equilateralpolygon.1f72c8b21c77c4565cc8.png",
     "static/media/pixel.png": "/static/media/pixel.2b921ec4b6d3c9cc2ea2.png",
     "static/media/epubweb.png": "/static/media/epubweb.f1cbdab25b53a8461e3f.png",
@@ -2146,12 +2147,12 @@
     "static/media/basestop80.png": "/static/media/basestop80.b4cccd9a8b4fbb888afc.png",
     "static/media/basestop50.png": "/static/media/basestop50.489bb4f63750a5e0c015.png",
     "index.html": "/index.html",
-    "main.69ac0c6b.css.map": "/static/css/main.69ac0c6b.css.map",
-    "main.6085c2d4.js.map": "/static/js/main.6085c2d4.js.map",
+    "main.4f66fc9d.css.map": "/static/css/main.4f66fc9d.css.map",
+    "main.f83dba5b.js.map": "/static/js/main.f83dba5b.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.69ac0c6b.css",
-    "static/js/main.6085c2d4.js"
+    "static/css/main.4f66fc9d.css",
+    "static/js/main.f83dba5b.js"
   ]
 }

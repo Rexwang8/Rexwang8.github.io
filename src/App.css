@@ -111,11 +111,32 @@
   background-color: #282c34;
   margin-top: 10vh;
   margin-bottom: 10vh;
+  width: 95vw;
+  max-width: 100%;
   
+}
+
+.mainPDFW2
+{
+  width: 95vw;
+  max-width: 100%;
+  height: 1000px;
 }
 
 .profileW{
   margin: 1.5vw;
+}
+
+@media screen and (max-width: 768px) {
+  .profileW{
+    margin: 1.5vw;
+    width: 75vw;
+  }
+}
+
+.profileW2{
+  margin: 1.5vw;
+  width: 30vw;
 }
 
 .aboutMeW
@@ -123,6 +144,26 @@
   margin-top: 10vh;
   margin-right: 10vw;
   line-height: 3.2vh;
+  color: var(--color-font_contrast);
+  font-size: 5vw;
+}
+
+.about_subheader1
+{
+  font-size: 4vh;
+  color: var(--color-font_contrast);
+  font-weight: bold;
+  font-family: "Rubik",sans-serif;
+  text-align: center;
+}
+
+.about_p
+{
+  font-size: 2vh;
+  font-family: "Rubik",sans-serif;
+  text-decoration: none;
+  color: var(--color-font_contrast);
+  margin: auto;
 }
 
 .accordion-button
@@ -217,7 +258,8 @@
 
 .home_twrap
 {
-  width: 65%;
+  width: 65vw;
+  max-width: 900px;
   margin: auto;
   text-decoration: none;
   
@@ -237,7 +279,7 @@
 .home_tword
 {
   color: var(--color-accent);
-  font-size: 9vh;
+  font-size: min(9vh, 7vw);
   font-family: "Rubik",sans-serif;
   margin: 0;
   text-transform: uppercase;
@@ -255,26 +297,17 @@
 
 .about_h2
 {
-  font-size: 7vh;
+  font-size: min(9vh, 7vw);
   font-weight: bold;
   font-family: "Rubik",sans-serif;
   text-transform: uppercase;
   text-decoration: none;
-  color: var(--color-accent);
-  color: white;
+  color: var(--color-font_contrast);
   margin: auto;
-  width: 50%;
+  width: 50vw;
   text-align: center;
 }
-.about_p
-{
-  font-size: 2vh;
-  font-family: "Rubik",sans-serif;
-  text-decoration: none;
-  color: var(--color-accent);
-  color: white;
-  margin: auto;
-}
+
 
 .contact_link
 {
@@ -402,6 +435,19 @@
 {
   margin: 2vw;
 }
+
+.blogPostsTitle
+{
+  font-size: 3vh;
+  color: var(--color-font_contrast);
+}
+
+.blogPostsParagraph
+{
+  font-size: 2vh;
+  color: var(--color-font_contrast);
+}
+
 
 .MainPageCenter
 {

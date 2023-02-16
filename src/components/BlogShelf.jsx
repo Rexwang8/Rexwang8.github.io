@@ -12,7 +12,7 @@ function BlogShelf(props) {
         <Card.Text>
           {props.obj1.desc}
         </Card.Text>
-            <Button variant="primary" href={`${props.obj1.pathToProj}`}>To Project Page</Button>
+            <Button variant="primary" href={`blog/${props.obj1.pathToProj}`}>To Project Page</Button>
       </Card.Body>
     </Card>  : null}
 
@@ -23,7 +23,7 @@ function BlogShelf(props) {
         <Card.Text>
           {props.obj2.desc}
         </Card.Text>
-            <Button variant="primary" href={`${props.obj2.pathToProj}`}>To Project Page</Button>
+            <Button variant="primary" href={`blog/${props.obj2.pathToProj}`}>To Project Page</Button>
       </Card.Body>
     </Card>  : null}
 
@@ -34,7 +34,7 @@ function BlogShelf(props) {
         <Card.Text>
           {props.obj3.desc}
         </Card.Text>
-            <Button variant="primary" href={`${props.obj3.pathToProj}`}>To Project Page</Button>
+            <Button variant="primary" href={`blog/${props.obj3.pathToProj}`}>To Project Page</Button>
       </Card.Body>
     </Card>  : null}
 

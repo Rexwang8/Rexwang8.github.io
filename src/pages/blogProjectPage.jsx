@@ -35,7 +35,7 @@ function BlogProjectPage(props) {
   //map posts to jsx
   for (let index = uskeys.length; index > 0; index--) {
     let p = sortedPosts[index];
-    let postpath = `${path}${p.path}`;
+    let postpath = `${props.project.pathToProj}${p.path}`;
     posts.push(<div><a href={postpath}>{`${p.title} - ${p.date}`}</a><br></br></div>);
   }
 

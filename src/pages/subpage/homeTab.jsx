@@ -42,7 +42,7 @@ function HomeTab() {
     <Row><Col><p className="AIPageDark HomePageMargin5">Spring 2021 <br></br> ECE 20002 - Electrical Engineering Fundamentals II<br></br> ECE 264 - Advanced C Programming <br></br> ECE 270 - Introduction to Digital System Design <br></br> </p></Col></Row>
     <Row><Col><p className="AIPageDark HomePageMargin5">Fall 2021 <br></br> ECE 20001 - Electrical Engineering Fundamentals I<br></br>  </p></Col></Row>
     <Row><Col><div className='mainPDFW' id="resume">
-        <embed src={resume} type='application/pdf' width='100%' height='1000px'></embed>
+        <embed src={resume} type='application/pdf' className="mainPDFW2"></embed>
       </div></Col></Row>
     </div>
   );

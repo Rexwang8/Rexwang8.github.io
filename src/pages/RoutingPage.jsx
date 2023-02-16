@@ -46,14 +46,15 @@ function RoutingPage(props)
    } />)
 
    for (let index = 0; index < Object.keys(pposts).length; index++) {
-    allblogpostpages.push(<Route path={`/blog/${project.path}${pposts[Object.keys(pposts)[index]].path}`}
+    allblogpostpages.push(<Route path={`/blog/${project.pathToProj}${pposts[Object.keys(pposts)[index]].path}`}
     element={<BlogPostPage
-    path1={`${project.path}`}
+    path1={`${project.pathToProj}`}
     path2={`${pposts[Object.keys(pposts)[index]].path}`}
     title={`${pposts[Object.keys(pposts)[index]].title}`}
     analytics={props.analytics} 
     content={`${pposts[Object.keys(pposts)[index]].content}`}
     date={`${pposts[Object.keys(pposts)[index]].date}`}
+    obj={pposts[Object.keys(pposts)[index]]}
     ></BlogPostPage>}></Route>);
    }
   }

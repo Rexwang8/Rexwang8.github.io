@@ -12,11 +12,11 @@ export const blogposts = {
                 I would like to mention my supervisor, Paul Trotter, for guiding me through the experience and always answering my questions.
                 I learned a lot about c#, sql, azure, react and other tech stacks. I have linked a github repo of some of my work during the internship below.
                 `,
-                path: "/end",
-                surl1: "/end",
-                surl2: "/end",
-                simg1: "/end",
-                simg2: "/end",
+                path: "/1",
+                surl1: "/1",
+                surl2: "/1",
+                simg1: "",
+                simg2: "",
                 },
                
             
@@ -31,7 +31,7 @@ export const blogposts = {
         gh_hf:"gh",
         projectimg: "e1",
         tech: "C#, SQL, Azure, React, React-Bootstrap, React-Router, Azure Edgeless Functions, Azure AD, Python, Blazor",
-
+        status: "Completed"
     },
 
     website: {
@@ -45,12 +45,25 @@ export const blogposts = {
                 date: "2/4/2023",
                 content: `Welcome to the first official devlog post for my website (I actually made this part last, so most of the content is already on the website). Whoops.
                 `,
-                path: "/end",
-                surl1: "/end",
-                surl2: "/end",
+                path: "/1",
+                surl1: "/1",
+                surl2: "/1",
                 simg1: "website",
-                simg2: "/end",
-                }
+                simg2: "/1",
+                },
+                post2: {
+                    title: "Blog Improvements",
+                    id: 2,
+                    date: "2/15/2023",
+                    content: `Working on the blog and devlog section of the website mainly. It's a bit tricky since I am working on dynamically generating this entire section from a JSON file.
+                    I'm just getting it working first before coming back to make it look nice. I'm also working on the project page and the AI resources page.
+                    `,
+                    path: "/2",
+                    surl1: "/2",
+                    surl2: "/2",
+                    simg1: "",
+                    simg2: "/2",
+                    }
             
         },
         date: "1/1/2022",
@@ -62,7 +75,8 @@ export const blogposts = {
         huggingface: "https://huggingface.co/Rexwang8",
         gh_hf:"gh",
         projectimg: "website",
-        tech: "React, Github Page, gh-pages, Bootstrap, React-Bootstrap, React-Router"
+        tech: "React, Github Page, gh-pages, Bootstrap, React-Bootstrap, React-Router",
+        status: "In Progress"
 
     },
     qilin: {
@@ -88,11 +102,11 @@ export const blogposts = {
                     date: "1/1/2023",
                     content: `A few challenges I faced during the finetuning process were: Tokens were improperly shuffled, the model was overfitting, the model referenced names too much. I'm attempting to fix these issues in the future by finetuning the model on more data and modifying the tokenizer.
                     `,
-                    path: "/end",
-                    surl1: "/end",
-                    surl2: "/end",
-                    simg1: "/end",
-                    simg2: "/end",
+                    path: "/2",
+                    surl1: "/2",
+                    surl2: "/2",
+                    simg1: "",
+                    simg2: "",
                     }
             
         },
@@ -105,7 +119,8 @@ export const blogposts = {
         huggingface: "https://huggingface.co/Rexwang8/qilin-lit-6b",
         gh_hf:"hf",
         projectimg: "qilinthumb",
-        tech: "Huggingface, Coreweave Cloud GPUs, Transformers, Pytorch, Python, GPT-J-6B, Webnovel Data"
+        tech: "Huggingface, Coreweave Cloud GPUs, Transformers, Pytorch, Python, GPT-J-6B, Webnovel Data",
+        status: "In Progress"
 
     },
     epub: {
@@ -119,11 +134,11 @@ export const blogposts = {
                 date: "2/5/2023",
                 content: `I needed to write a fast epub to .txt converter for my work during my Coreweave internship. I came up with this, with some help from my supervisor and online resources. It's blazingly fast and can convert a 1000 page book in under 1 seconds. Written with golang!
                 `,
-                path: "/end",
-                surl1: "/end",
-                surl2: "/end",
+                path: "/1",
+                surl1: "/1",
+                surl2: "/1",
                 simg1: "epubweb",
-                simg2: "/end",
+                simg2: "",
                 },
             
         },
@@ -136,7 +151,40 @@ export const blogposts = {
         huggingface: "https://huggingface.co/Rexwang8/qilin-lit-6b",
         gh_hf:"gh",
         projectimg: "epubweb",
-        tech: "Golang, Coreweave"
+        tech: "Golang, Coreweave",
+        status: "Completed"
 
+    },
+    packagemanager: {
+        title: "ECE 461 Package Manager",
+        id: 5,
+        blogposts: {
+            
+                post1: {
+                title: "CLI Package Manager",
+                id: 1,
+                date: "2/13/2023",
+                content: `This is a CLI package manager that I built for my ECE 461 Software Engineering class. It's built with C# and python. It's a work in progress, but it's functional. I worked on the project with 3 other members
+                The plan is to build a CLI in 5 weeks, then swap code with another group and build a GUI in 5 weeks. I'm currently working on the GUI.
+                `,
+                path: "/1",
+                surl1: "/1",
+                surl2: "/1",
+                simg1: "packagesloc",
+                simg2: "",
+                },
+            
+        },
+        date: "2/13/2023",
+        content: "ECE 461 - Software Engineering Package Manager project for NPM. Phase 1 built with C# and python.",
+        desc: "ECE 461 - Software Engineering Package Manager.",
+        path: "blog/packagemanager",
+        pathToProj: "packagemanager",
+        github: "https://github.com/Rexwang8/ECE461SoftwareEngineeringProject",
+        huggingface: "https://huggingface.co/Rexwang8/qilin-lit-6b",
+        gh_hf:"gh",
+        projectimg: "packagesloc",
+        tech: "python, c#, dotnet, npm",
+        status: "In Progress"
     },
 }

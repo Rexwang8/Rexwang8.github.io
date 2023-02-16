@@ -29,14 +29,12 @@ function BlogPage(props) {
     .forEach(function (key) {
       blogpostsSorted[key] = blogposts[key];
     });
-  //console.log(blogpostsSorted);
 
   for (var i = 0; i < Math.ceil(Object.keys(blogpostsSorted).length); i += 3) {
     let b1 = blogpostsSorted[Object.keys(blogpostsSorted)[i]];
     let b2 = blogpostsSorted[Object.keys(blogpostsSorted)[0]];
     let b3 = blogpostsSorted[Object.keys(blogpostsSorted)[0]];
 
-    //console.log(i, Math.ceil(Object.keys(blogpostsSorted).length))
     if (i < Math.ceil(Object.keys(blogpostsSorted).length - 1)) {
       b2 = blogpostsSorted[Object.keys(blogpostsSorted)[i + 1]];
     }
@@ -53,7 +51,7 @@ function BlogPage(props) {
     <div className='bg2'>
       <div className='aspect'>
         <div className='bg1'>
-          <SiteNavbar url='/blog'></SiteNavbar>
+          <SiteNavbar url='/blog' brand="Rex's Projects" showMods={false} dark={props.darkMode} toggleDark={props.toggleDarkMode}></SiteNavbar>
           <div>
             <h2>Page for Devblog dynamic (WIP)</h2>
           </div>

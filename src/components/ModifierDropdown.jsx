@@ -41,6 +41,27 @@ function DropdownModifier(props) {
       </Dropdown.Toggle>
 
       <Dropdown.Menu as={CustomMenu} className="modifierdropdown_wrapper">
+      <Dropdown.Item eventKey='mediumsDrawing'>{GROUP_TITLES['mediumsDrawing']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsPencil'>{GROUP_TITLES['mediumsPencil']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsPen'>{GROUP_TITLES['mediumsPen']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsCrayon'>{GROUP_TITLES['mediumsCrayon']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsPaint'>{GROUP_TITLES['mediumsPaint']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsText'>{GROUP_TITLES['mediumsText']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsPrint'>{GROUP_TITLES['mediumsPrint']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsFabric'>{GROUP_TITLES['mediumsFabric']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsPhotography'>{GROUP_TITLES['mediumsPhotography']}</Dropdown.Item>
+      <Dropdown.Item eventKey='mediumsDigital'>{GROUP_TITLES['mediumsDigital']}</Dropdown.Item>
+      <Dropdown.Item eventKey='physicalmediums'>{GROUP_TITLES['physicalmediums']}</Dropdown.Item>
+
+      <Dropdown.Item eventKey='cameraResolution'>{GROUP_TITLES['cameraResolution']}</Dropdown.Item>
+      <Dropdown.Item eventKey='cameraPerspective'>{GROUP_TITLES['cameraPerspective']}</Dropdown.Item>
+      <Dropdown.Item eventKey='cameraLens'>{GROUP_TITLES['cameraLens']}</Dropdown.Item>
+      <Dropdown.Item eventKey='cameraScene'>{GROUP_TITLES['cameraScene']}</Dropdown.Item>
+      <Dropdown.Item eventKey='cameraFilms'>{GROUP_TITLES['cameraFilms']}</Dropdown.Item>
+      <Dropdown.Item eventKey='cameraCompanies'>{GROUP_TITLES['cameraCompanies']}</Dropdown.Item>
+      <Dropdown.Item eventKey='camerasettings'>{GROUP_TITLES['camerasettings']}</Dropdown.Item>
+      <Dropdown.Item eventKey='cameraOther'>{GROUP_TITLES['cameraOther']}</Dropdown.Item>
+
       <Dropdown.Item eventKey='materialsMetals'>{GROUP_TITLES['materialsMetals']}</Dropdown.Item>
       <Dropdown.Item eventKey='materialsGemstones'>{GROUP_TITLES['materialsGemstones']}</Dropdown.Item>
       <Dropdown.Item eventKey='materialsWood'>{GROUP_TITLES['materialsWood']}</Dropdown.Item>

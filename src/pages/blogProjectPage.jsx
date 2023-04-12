@@ -24,7 +24,6 @@ function BlogProjectPage(props) {
   let uskeys = Object.keys(unsortedPosts);
   let sortedPosts = {};
   //sort blogposts by id, with highest being iterated on last
-  console.log(unsortedPosts);
   for (let index = uskeys.length; index > 0; index--) {
     let k = uskeys[index-1];
     let p = unsortedPosts[k];
@@ -84,8 +83,8 @@ function BlogProjectPage(props) {
             <Row>
               <hr></hr>
             </Row>
-            <Row><Col><p>Devlog posts</p></Col></Row>
-            <Row><Col>{posts}</Col></Row>
+            <Row><Col>{props.project.blogs == true ? <p>Devlog posts</p> : <div></div>} </Col></Row>
+            <Row><Col>{props.project.blogs == true ? posts : <div></div>}</Col></Row>
           </Container>
         </div>
       </div>

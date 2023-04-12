@@ -62,6 +62,13 @@ function DropdownModifier(props) {
       <Dropdown.Item eventKey='camerasettings'>{GROUP_TITLES['camerasettings']}</Dropdown.Item>
       <Dropdown.Item eventKey='cameraOther'>{GROUP_TITLES['cameraOther']}</Dropdown.Item>
 
+      <Dropdown.Item eventKey='postprocessing'>{GROUP_TITLES['postprocessing']}</Dropdown.Item>
+      <Dropdown.Item eventKey='postprocessingreflections'>{GROUP_TITLES['postprocessingreflections']}</Dropdown.Item>
+      <Dropdown.Item eventKey='postprocessingmisc'>{GROUP_TITLES['postprocessingmisc']}</Dropdown.Item>
+
+      <Dropdown.Item eventKey='lddLighting'>{GROUP_TITLES['lddLighting']}</Dropdown.Item>
+      <Dropdown.Item eventKey='ldddimensionality'>{GROUP_TITLES['ldddimensionality']}</Dropdown.Item>
+
       <Dropdown.Item eventKey='materialsMetals'>{GROUP_TITLES['materialsMetals']}</Dropdown.Item>
       <Dropdown.Item eventKey='materialsGemstones'>{GROUP_TITLES['materialsGemstones']}</Dropdown.Item>
       <Dropdown.Item eventKey='materialsWood'>{GROUP_TITLES['materialsWood']}</Dropdown.Item>
@@ -98,6 +105,59 @@ function DropdownModifier(props) {
         <Dropdown.Item eventKey='intangibleNumbersystem'>{GROUP_TITLES['intangibleNumbersystem']}</Dropdown.Item>
         <Dropdown.Item eventKey='referenceGames'>{GROUP_TITLES['referenceGames']}</Dropdown.Item>
         <Dropdown.Item eventKey='referenceAnimeStudio'>{GROUP_TITLES['referenceAnimeStudio']}</Dropdown.Item>
+
+
+        <Dropdown.Item eventKey='artistAcademism'>{GROUP_TITLES['artistAcademism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistArtsandCrafts'>{GROUP_TITLES['artistArtsandCrafts']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistArtNouveau'>{GROUP_TITLES['artistArtNouveau']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistBaroque'>{GROUP_TITLES['artistBaroque']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistBauhaus'>{GROUP_TITLES['artistBauhaus']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistBayArea'>{GROUP_TITLES['artistBayArea']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistContemporary'>{GROUP_TITLES['artistContemporary']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistEnvironmentalism'>{GROUP_TITLES['artistEnvironmentalism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistExpressionism'>{GROUP_TITLES['artistExpressionism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistFuturism'>{GROUP_TITLES['artistFuturism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistGothic'>{GROUP_TITLES['artistGothic']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistHeiseiEstheticism'>{GROUP_TITLES['artistHeiseiEstheticism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistImpressionist'>{GROUP_TITLES['artistImpressionist']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistInstallationArt'>{GROUP_TITLES['artistInstallationArt']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistLandscape'>{GROUP_TITLES['artistLandscape']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistLowbrow'>{GROUP_TITLES['artistLowbrow']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistLuminism'>{GROUP_TITLES['artistLuminism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistNaturalism'>{GROUP_TITLES['artistNaturalism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistMannerism'>{GROUP_TITLES['artistMannerism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistModernism'>{GROUP_TITLES['artistModernism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistOrientalism'>{GROUP_TITLES['artistOrientalism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistPhotorealism'>{GROUP_TITLES['artistPhotorealism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistPostImpressionist'>{GROUP_TITLES['artistPostImpressionist']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistPopArt'>{GROUP_TITLES['artistPopArt']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistPostmodern'>{GROUP_TITLES['artistPostmodern']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistPsycadelic'>{GROUP_TITLES['artistPsycadelic']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistRealist'>{GROUP_TITLES['artistRealist']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistReligiousArt'>{GROUP_TITLES['artistReligiousArt']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistRenaissance'>{GROUP_TITLES['artistRenaissance']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistRococo'>{GROUP_TITLES['artistRococo']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistRomantisism'>{GROUP_TITLES['artistRomantisism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistScienceFiction'>{GROUP_TITLES['artistScienceFiction']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistSocialRealism'>{GROUP_TITLES['artistSocialRealism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistStreetArt'>{GROUP_TITLES['artistStreetArt']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistSurrealist'>{GROUP_TITLES['artistSurrealist']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistSymbolism'>{GROUP_TITLES['artistSymbolism']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistHudsonRiver'>{GROUP_TITLES['artistHudsonRiver']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistukiyoe'>{GROUP_TITLES['artistukiyoe']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistVisionaryArt'>{GROUP_TITLES['artistVisionaryArt']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistartistartstation'>{GROUP_TITLES['artistartistartstation']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistartistVideoGames'>{GROUP_TITLES['artistartistVideoGames']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistartistComicManga'>{GROUP_TITLES['artistartistComicManga']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistartistIllustrator'>{GROUP_TITLES['artistartistIllustrator']}</Dropdown.Item>
+        <Dropdown.Item eventKey='artistnartistFilmDirector'>{GROUP_TITLES['artistnartistFilmDirector']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistMusician'>{GROUP_TITLES['nartistMusician']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistEtcher'>{GROUP_TITLES['nartistEtcher']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistArchitect'>{GROUP_TITLES['nartistArchitect']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistAnimator'>{GROUP_TITLES['nartistAnimator']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistPhotography'>{GROUP_TITLES['nartistPhotography']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistSculpter'>{GROUP_TITLES['nartistSculpter']}</Dropdown.Item>
+        <Dropdown.Item eventKey='nartistWriter'>{GROUP_TITLES['nartistWriter']}</Dropdown.Item>
       </Dropdown.Menu>
       
     </Dropdown>

@@ -5,13 +5,15 @@ import { Link } from "react-router-dom";
 import TeapotCardLarge from "../components/teapotCardLarge";
 import RowStyleDiv from "../components/rowdiv";
 
-import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC, REFERENCEMEDIA, REFERENCEMEDIA_DESC, STYLES, STYLES_DESC, MATERIALS, MATERIALS_DESC, PHYSICALMEDIUMS, PHYSICALMEDIUMS_DESC, CAMERA, CAMERA_DESC } from "../data/allkeys.jsx";
+import { COLORS, COLORS_DESC, GROUP_DESCRIPTIONS, GROUP_TITLES, INTANGIBLES, INTANGIBLES_DESC, REFERENCEMEDIA, REFERENCEMEDIA_DESC, STYLES, STYLES_DESC, MATERIALS, MATERIALS_DESC, PHYSICALMEDIUMS, PHYSICALMEDIUMS_DESC, CAMERA, CAMERA_DESC, POSTPROCESSING, POSTPROCESSING_DESC, LDD, LDD_DESC, ARTISTS, ARTISTS_DESC } from "../data/allkeys.jsx";
 import { useState } from "react";
 
 import ModifierCard from "../components/ModifierCard";
 import ModifierShelf from "../components/ModifierShelf";
 import ModifierNavbar from "../components/ModifierNavbar";
 import TeapotFooter from "../components/teapotfooter";
+
+//#region functions
 
 function importAll(r) {
   let images = {};
@@ -134,7 +136,7 @@ thumbnailstr = {thumbnailstr}
   }
   return cards;
 }
-
+//#endregion
 
 
 function AIModifiersPage(props) {
@@ -166,6 +168,8 @@ function AIModifiersPage(props) {
     setDDVal(e)
   }
 
+  //#region dropdowns
+
   let mediumsDrawing = [];
   let mediumsPencil = [];
   let mediumsPen = [];
@@ -186,6 +190,13 @@ function AIModifiersPage(props) {
   let cameraCompanies = [];
   let camerasettings = [];
   let cameraOther = [];
+
+  let postprocessing = [];
+  let postprocessingmisc = [];
+  let postprocessingreflections = [];
+
+  let lddLighting = [];
+  let ldddimensionality = [];
 
   let materialsMetals = [];
   let materialsGemstones = [];
@@ -223,11 +234,71 @@ function AIModifiersPage(props) {
   let intangibleNumbersystem = [];
   let referenceGames = [];
   let referenceAnimeStudio = [];
+  //#endregion
+
+  //#region dropdowns - artists
+
+  let artistAcademism = [];
+  let artistArtsandCrafts = [];
+  let artistArtNouveau = [];
+  let artistBaroque = [];
+  let artistBauhaus = [];
+  let artistBayArea = [];
+  let artistContemporary = [];
+  let artistEnvironmentalism = [];
+  let artistExpressionism = [];
+  let artistFuturism = [];
+  let artistGothic = [];
+  let artistHeiseiEstheticism = [];
+  let artistImpressionist = [];
+  let artistInstallationArt = [];
+  let artistLandscape = [];
+  let artistLowbrow = [];
+  let artistLuminism = [];
+  let artistNaturalism = [];
+  let artistMannerism = [];
+  let artistModernism = [];
+  let artistOrientalism = [];
+  let artistPhotorealism = [];
+  let artistPostImpressionist = [];
+  let artistPopArt = [];
+  let artistPostmodern = [];
+  let artistPsycadelic = [];
+  let artistRealist = [];
+  let artistReligiousArt = [];
+  let artistRenaissance = [];
+  let artistRococo = [];
+  let artistScienceFiction = [];
+  let artistSocialRealism = [];
+  let artistRomantisism = [];
+  let artistStreetArt = [];
+  let artistSurrealist = [];
+  let artistSymbolism = [];
+  let artistHudsonRiver = [];
+  let artistukiyoe = [];
+  let artistVisionaryArt = [];
+  let artistartistartstation = [];
+  let artistartistVideoGames = [];
+  let artistartistComicManga = [];
+  let artistartistIllustrator = [];
+  let artistnartistFilmDirector = [];
+  let nartistMusician = [];
+  let nartistEtcher = [];
+  let nartistArchitect = [];
+  let nartistAnimator = [];
+  let nartistPhotography = [];
+  let nartistSculpter = [];
+  let nartistWriter = [];
+
+  //#endregion
+
 
   let method = expand;
   if (props.isMobile == true) {
     method = expand_mobile;
   }
+
+  //#region populate dropdowns
   mediumsDrawing = method(GROUP_TITLES[ddval], PHYSICALMEDIUMS.drawingtypes, PHYSICALMEDIUMS_DESC.drawingtypes, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
   mediumsPencil = method(GROUP_TITLES[ddval], PHYSICALMEDIUMS.pencilmediums, PHYSICALMEDIUMS_DESC.pencilmediums, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
   mediumsPen = method(GROUP_TITLES[ddval], PHYSICALMEDIUMS.penmediums, PHYSICALMEDIUMS_DESC.penmediums, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
@@ -248,6 +319,12 @@ function AIModifiersPage(props) {
   cameraCompanies = method(GROUP_TITLES[ddval], CAMERA.cameratypescompanies, CAMERA_DESC.cameratypescompanies, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
   camerasettings = method(GROUP_TITLES[ddval], CAMERA.camerasettings, CAMERA_DESC.camerasettings, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
   cameraOther = method(GROUP_TITLES[ddval], CAMERA.othercamera, CAMERA_DESC.othercamera, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
+
+  postprocessing = method(GROUP_TITLES[ddval], POSTPROCESSING.postprocessing, POSTPROCESSING_DESC.postprocessing, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
+  postprocessingmisc = method(GROUP_TITLES[ddval], POSTPROCESSING.misc, POSTPROCESSING_DESC.misc, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
+  postprocessingreflections = method(GROUP_TITLES[ddval], POSTPROCESSING.reflections, POSTPROCESSING_DESC.reflections, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
+  lddLighting = method(GROUP_TITLES[ddval], LDD.lighting, LDD_DESC.lighting, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
+  ldddimensionality = method(GROUP_TITLES[ddval], LDD.dimensionality, LDD_DESC.dimensionality, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", "of a Utah Teapot");
 
   materialsMetals = method(GROUP_TITLES[ddval], MATERIALS.metals, MATERIALS_DESC.metals, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
   materialsGemstones = method(GROUP_TITLES[ddval], MATERIALS.gemsStones, MATERIALS_DESC.gemsStones, "mj3",images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot made of ', " --ar 16:9 --v 3", "Utah Teapot made of ", "");
@@ -285,6 +362,66 @@ function AIModifiersPage(props) {
     intangibleNumbersystem = method(GROUP_TITLES[ddval], INTANGIBLES.numbersystem, INTANGIBLES_DESC.numbersystem, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
     referenceGames = method(GROUP_TITLES[ddval], REFERENCEMEDIA.videogames, REFERENCEMEDIA_DESC.videogames, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " style, Utah Teapot");
     referenceAnimeStudio = method(GROUP_TITLES[ddval], REFERENCEMEDIA.animestudios, REFERENCEMEDIA_DESC.animestudios, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, anime ', " --ar 16:9 --v 3", "", " style, anime of a Utah Teapot");
+  //#endregion
+
+  //#region populate dropdowns - artists
+
+  artistAcademism = method(GROUP_TITLES[ddval], ARTISTS.Academism, ARTISTS_DESC.Academism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistArtNouveau = method(GROUP_TITLES[ddval], ARTISTS.ArtNouveau, ARTISTS_DESC.ArtNouveau, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistArtsandCrafts = method(GROUP_TITLES[ddval], ARTISTS.ArtsandCrafts, ARTISTS_DESC.ArtsandCrafts, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistBaroque = method(GROUP_TITLES[ddval], ARTISTS.Baroque, ARTISTS_DESC.Baroque, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistBauhaus = method(GROUP_TITLES[ddval], ARTISTS.Bauhaus, ARTISTS_DESC.Bauhaus, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistBayArea = method(GROUP_TITLES[ddval], ARTISTS.BayArea, ARTISTS_DESC.BayArea, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistContemporary = method(GROUP_TITLES[ddval], ARTISTS.Contemporary, ARTISTS_DESC.Contemporary, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistEnvironmentalism = method(GROUP_TITLES[ddval], ARTISTS.Environmentalism, ARTISTS_DESC.Environmentalism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistExpressionism = method(GROUP_TITLES[ddval], ARTISTS.Expressionism, ARTISTS_DESC.Expressionism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistFuturism = method(GROUP_TITLES[ddval], ARTISTS.Futurism, ARTISTS_DESC.Futurism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistGothic = method(GROUP_TITLES[ddval], ARTISTS.Gothic, ARTISTS_DESC.Gothic, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistHeiseiEstheticism = method(GROUP_TITLES[ddval], ARTISTS.HeiseiEstheticism, ARTISTS_DESC.HeiseiEstheticism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistImpressionist = method(GROUP_TITLES[ddval], ARTISTS.Impressionist, ARTISTS_DESC.Impressionist, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistInstallationArt = method(GROUP_TITLES[ddval], ARTISTS.InstallationArt, ARTISTS_DESC.InstallationArt, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistLandscape = method(GROUP_TITLES[ddval], ARTISTS.Landscape, ARTISTS_DESC.Landscape, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistLowbrow = method(GROUP_TITLES[ddval], ARTISTS.Lowbrow, ARTISTS_DESC.Lowbrow, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistLuminism = method(GROUP_TITLES[ddval], ARTISTS.Luminism, ARTISTS_DESC.Luminism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistNaturalism = method(GROUP_TITLES[ddval], ARTISTS.Naturalism, ARTISTS_DESC.Naturalism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistMannerism = method(GROUP_TITLES[ddval], ARTISTS.Mannerism, ARTISTS_DESC.Mannerism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistModernism = method(GROUP_TITLES[ddval], ARTISTS.Modernism, ARTISTS_DESC.Modernism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistOrientalism = method(GROUP_TITLES[ddval], ARTISTS.Orientalism, ARTISTS_DESC.Orientalism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistPhotorealism = method(GROUP_TITLES[ddval], ARTISTS.Photorealism, ARTISTS_DESC.Photorealism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistPostImpressionist = method(GROUP_TITLES[ddval], ARTISTS.PostImpressionist, ARTISTS_DESC.PostImpressionist, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistPopArt = method(GROUP_TITLES[ddval], ARTISTS.PopArt, ARTISTS_DESC.PopArt, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistPostmodern = method(GROUP_TITLES[ddval], ARTISTS.Postmodern, ARTISTS_DESC.Postmodern, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistPsycadelic = method(GROUP_TITLES[ddval], ARTISTS.Psycadelic, ARTISTS_DESC.Psycadelic, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistRealist = method(GROUP_TITLES[ddval], ARTISTS.Realist, ARTISTS_DESC.Realist, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistReligiousArt = method(GROUP_TITLES[ddval], ARTISTS.ReligiousArt, ARTISTS_DESC.ReligiousArt, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistRenaissance = method(GROUP_TITLES[ddval], ARTISTS.Renaissance, ARTISTS_DESC.Renaissance, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistRococo = method(GROUP_TITLES[ddval], ARTISTS.Rococo, ARTISTS_DESC.Rococo, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistRomantisism = method(GROUP_TITLES[ddval], ARTISTS.Romantisism, ARTISTS_DESC.Romantisism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistScienceFiction = method(GROUP_TITLES[ddval], ARTISTS.ScienceFiction, ARTISTS_DESC.ScienceFiction, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistSocialRealism = method(GROUP_TITLES[ddval], ARTISTS.SocialRealism, ARTISTS_DESC.SocialRealism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistStreetArt = method(GROUP_TITLES[ddval], ARTISTS.StreetArt, ARTISTS_DESC.StreetArt, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistSurrealist = method(GROUP_TITLES[ddval], ARTISTS.Surrealist, ARTISTS_DESC.Surrealist, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistSymbolism = method(GROUP_TITLES[ddval], ARTISTS.Symbolism, ARTISTS_DESC.Symbolism, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistHudsonRiver = method(GROUP_TITLES[ddval], ARTISTS.HudsonRiver, ARTISTS_DESC.HudsonRiver, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistukiyoe = method(GROUP_TITLES[ddval], ARTISTS.ukiyoe, ARTISTS_DESC.ukiyoe, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistVisionaryArt = method(GROUP_TITLES[ddval], ARTISTS.VisionaryArt, ARTISTS_DESC.VisionaryArt, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistartistartstation = method(GROUP_TITLES[ddval], ARTISTS.artistartstation, ARTISTS_DESC.artistartstation, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistartistVideoGames = method(GROUP_TITLES[ddval], ARTISTS.artistVideoGames, ARTISTS_DESC.artistVideoGames, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistartistComicManga = method(GROUP_TITLES[ddval], ARTISTS.artistComicManga, ARTISTS_DESC.artistComicManga, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistartistIllustrator = method(GROUP_TITLES[ddval], ARTISTS.artistIllustrator, ARTISTS_DESC.artistIllustrator, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  artistnartistFilmDirector = method(GROUP_TITLES[ddval], ARTISTS.nartistFilmDirector, ARTISTS_DESC.nartistFilmDirector, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistMusician = method(GROUP_TITLES[ddval], ARTISTS.nartistMusician, ARTISTS_DESC.nartistMusician, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistEtcher = method(GROUP_TITLES[ddval], ARTISTS.nartistEtcher, ARTISTS_DESC.nartistEtcher, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistArchitect = method(GROUP_TITLES[ddval], ARTISTS.nartistArchitect, ARTISTS_DESC.nartistArchitect, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistAnimator = method(GROUP_TITLES[ddval], ARTISTS.nartistAnimator, ARTISTS_DESC.nartistAnimator, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistPhotography = method(GROUP_TITLES[ddval], ARTISTS.nartistPhotography, ARTISTS_DESC.nartistPhotography, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistSculpter = method(GROUP_TITLES[ddval], ARTISTS.nartistSculpter, ARTISTS_DESC.nartistSculpter, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  nartistWriter = method(GROUP_TITLES[ddval], ARTISTS.nartistWriter, ARTISTS_DESC.nartistWriter, "mj3", images_mj, images_sd, handleShow, handleClose, statesModals, props.isMobile,'Utah Teapot, ', " --ar 16:9 --v 3", "", " photo of a Utah Teapot");
+  
+  
+  //#endregion
+
+
 
   return (
     <div className='bg2 hideScrollbarX'>
@@ -316,6 +453,12 @@ function AIModifiersPage(props) {
           {ddval == "cameraCompanies" ? cameraCompanies : <div></div>}
           {ddval == "camerasettings" ? camerasettings : <div></div>}
           {ddval == "cameraOther" ? cameraOther : <div></div>}
+
+          {ddval == "postprocessing" ? postprocessing : <div></div>}
+          {ddval == "postprocessingmisc" ? postprocessingmisc : <div></div>}
+          {ddval == "postprocessingreflections" ? postprocessingreflections : <div></div>}
+          {ddval == "lddLighting" ? lddLighting : <div></div>}
+          {ddval == "ldddimensionality" ? ldddimensionality : <div></div>}
 
           {ddval == "materialsMetals" ? materialsMetals : <div></div>}
           {ddval == "materialsGemstones" ? materialsGemstones : <div></div>}
@@ -353,7 +496,60 @@ function AIModifiersPage(props) {
           {ddval == "intangibleNumbersystem" ? intangibleNumbersystem : <div></div>}
           {ddval == "referenceGames" ? referenceGames : <div></div>}
           {ddval == "referenceAnimeStudio" ? referenceAnimeStudio : <div></div>}
-          
+
+          {ddval == "artistAcademism" ? artistAcademism : <div></div>}
+          {ddval == "artistArtsandCrafts" ? artistArtsandCrafts : <div></div>}
+          {ddval == "artistArtNouveau" ? artistArtNouveau : <div></div>}
+          {ddval == "artistBaroque" ? artistBaroque : <div></div>}
+          {ddval == "artistBauhaus" ? artistBauhaus : <div></div>}
+          {ddval == "artistBayArea" ? artistBayArea : <div></div>}
+          {ddval == "artistContemporary" ? artistContemporary : <div></div>}
+          {ddval == "artistEnvironmentalism" ? artistEnvironmentalism : <div></div>}
+          {ddval == "artistExpressionism" ? artistExpressionism : <div></div>}
+          {ddval == "artistFuturism" ? artistFuturism : <div></div>}
+          {ddval == "artistGothic" ? artistGothic : <div></div>}
+          {ddval == "artistHeiseiEstheticism" ? artistHeiseiEstheticism : <div></div>}
+          {ddval == "artistImpressionist" ? artistImpressionist : <div></div>}
+          {ddval == "artistInstallationArt" ? artistInstallationArt : <div></div>}
+          {ddval == "artistLandscape" ? artistLandscape : <div></div>}
+          {ddval == "artistLowbrow" ? artistLowbrow : <div></div>}
+          {ddval == "artistLuminism" ? artistLuminism : <div></div>}
+          {ddval == "artistNaturalism" ? artistNaturalism : <div></div>}
+          {ddval == "artistMannerism" ? artistMannerism : <div></div>}
+          {ddval == "artistModernism" ? artistModernism : <div></div>}
+          {ddval == "artistOrientalism" ? artistOrientalism : <div></div>}
+          {ddval == "artistPhotorealism" ? artistPhotorealism : <div></div>}
+          {ddval == "artistPostImpressionist" ? artistPostImpressionist : <div></div>}
+          {ddval == "artistPopArt" ? artistPopArt : <div></div>}
+          {ddval == "artistPostmodern" ? artistPostmodern : <div></div>}
+          {ddval == "artistPsycadelic" ? artistPsycadelic : <div></div>}
+          {ddval == "artistRealist" ? artistRealist : <div></div>}
+          {ddval == "artistReligiousArt" ? artistReligiousArt : <div></div>}
+          {ddval == "artistRenaissance" ? artistRenaissance : <div></div>}
+          {ddval == "artistRococo" ? artistRococo : <div></div>}
+          {ddval == "artistRomantisism" ? artistRomantisism : <div></div>}
+          {ddval == "artistScienceFiction" ? artistScienceFiction : <div></div>}
+          {ddval == "artistSocialRealism" ? artistSocialRealism : <div></div>}
+          {ddval == "artistStreetArt" ? artistStreetArt : <div></div>}
+          {ddval == "artistSurrealist" ? artistSurrealist : <div></div>}
+          {ddval == "artistSymbolism" ? artistSymbolism : <div></div>}
+          {ddval == "artistHudsonRiver" ? artistHudsonRiver : <div></div>}
+          {ddval == "artistukiyoe" ? artistukiyoe : <div></div>}
+          {ddval == "artistVisionaryArt" ? artistVisionaryArt : <div></div>}
+          {ddval == "artistartistartstation" ? artistartistartstation : <div></div>}
+          {ddval == "artistartistVideoGames" ? artistartistVideoGames : <div></div>}
+          {ddval == "artistartistComicManga" ? artistartistComicManga : <div></div>}
+          {ddval == "artistartistIllustrator" ? artistartistIllustrator : <div></div>}
+          {ddval == "artistnartistFilmDirector" ? artistnartistFilmDirector : <div></div>}
+          {ddval == "nartistMusician" ? nartistMusician : <div></div>}
+          {ddval == "nartistEtcher" ? nartistEtcher : <div></div>}
+          {ddval == "nartistArchitect" ? nartistArchitect : <div></div>}
+          {ddval == "nartistAnimator" ? nartistAnimator : <div></div>}
+          {ddval == "nartistPhotography" ? nartistPhotography : <div></div>}
+          {ddval == "nartistSculpter" ? nartistSculpter : <div></div>}
+          {ddval == "nartistWriter" ? nartistWriter : <div></div>}
+
+
           <Row><Col><TeapotFooter></TeapotFooter></Col></Row>
           </Container>
        

@@ -187,4 +187,37 @@ export const blogposts = {
         tech: "python, c#, dotnet, npm",
         status: "In Progress"
     },
+    stellardiffusion: {
+        title: "Stellar DIffusion",
+        id: 6,
+        blogposts: {
+            
+                post1: {
+                title: "CLI Package Manager",
+                id: 1,
+                date: "2/13/2023",
+                content: `This is a CLI package manager that I built for my ECE 461 Software Engineering class. It's built with C# and python. It's a work in progress, but it's functional. I worked on the project with 3 other members
+                The plan is to build a CLI in 5 weeks, then swap code with another group and build a GUI in 5 weeks. I'm currently working on the GUI.
+                `,
+                path: "/1",
+                surl1: "/1",
+                surl2: "/1",
+                simg1: "packagesloc",
+                simg2: "",
+                },
+            
+        },
+        blogs: false,
+        date: "3/1/2023",
+        content: "Stellar Diffusion - A finetuned model based on stable diffusion 1.5 finetuned on NASA data. (Mainly hubble)",
+        desc: "Stable Diffusion for stars",
+        path: "blog/stellardiff",
+        pathToProj: "stellardiff",
+        github: "https://github.com/Rexwang8/ECE461SoftwareEngineeringProject",
+        huggingface: "https://huggingface.co/Rexwang8/stellar-diffusion",
+        gh_hf:"hf",
+        projectimg: "stellardiff",
+        tech: "python, hugginface, coreweave, stable diffusion 1.5, nasa api",
+        status: "Completed"
+    },
 }

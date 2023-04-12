@@ -102,7 +102,6 @@ function TeaAccordian(props) {
   {
     prompthead = "A photo of a Utah Teapot, "
   }
-  var resolutions2 = seperate(prompthead, prompttail, CAMERA.resolution2, 5);
   var perspectives = seperate(prompthead, prompttail, CAMERA.perspectives, 5);
   var lens = seperate(prompthead, prompttail, CAMERA.lens, 5);
   var Scenes = seperate(prompthead, prompttail, CAMERA.scenes, 5);
@@ -690,7 +689,6 @@ if(props.gen === "sd")
                 <Container>
                   <RowStyleDiv title='Resolution' desc='Resolution Keywords'></RowStyleDiv>
                   {resolutions}
-                  {resolutions2}
                 </Container>
               </Accordion.Body>
             </Accordion.Item>

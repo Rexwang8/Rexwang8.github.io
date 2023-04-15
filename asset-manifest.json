@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4f66fc9d.css",
-    "main.js": "/static/js/main.d0dc5b3c.js",
+    "main.js": "/static/js/main.d102b8b1.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/scifiteapot.png": "/static/media/scifiteapot.de73ac74581ab6a0fb52.png",
     "static/media/Drummerflummed_te.png": "/static/media/Drummerflummed_te.db6d86473fc8184a33fc.png",
@@ -19,6 +19,7 @@
     "static/media/qilinthumb.png": "/static/media/qilinthumb.c7670f77cd3da36f080f.png",
     "static/media/pasted image 16.png": "/static/media/pasted image 16.cc94b994f78106c53069.png",
     "static/media/weighting_woodteapot_18.png": "/static/media/weighting_woodteapot_18.cc94b994f78106c53069.png",
+    "static/media/stellardiff.png": "/static/media/stellardiff.fe7062de63a6d34ccbd5.png",
     "static/media/weighting_woodteapot_12.png": "/static/media/weighting_woodteapot_12.942f4d00c13ed992e763.png",
     "static/media/prompt_woodteapot_35.png": "/static/media/prompt_woodteapot_35.cf8ec83a6efc038dca53.png",
     "static/media/weighting_woodteapot_11.png": "/static/media/weighting_woodteapot_11.7171ac72df251cabfd67.png",
@@ -2148,11 +2149,11 @@
     "static/media/basestop50.png": "/static/media/basestop50.489bb4f63750a5e0c015.png",
     "index.html": "/index.html",
     "main.4f66fc9d.css.map": "/static/css/main.4f66fc9d.css.map",
-    "main.d0dc5b3c.js.map": "/static/js/main.d0dc5b3c.js.map",
+    "main.d102b8b1.js.map": "/static/js/main.d102b8b1.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f66fc9d.css",
-    "static/js/main.d0dc5b3c.js"
+    "static/js/main.d102b8b1.js"
   ]
 }

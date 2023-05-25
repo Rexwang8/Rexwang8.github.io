@@ -173,6 +173,18 @@ export const blogposts = {
                 simg1: "packagesloc",
                 simg2: "",
                 },
+                post2: {
+                    title: "Google Cloud",
+                    id: 2,
+                    date: "5/25/2023",
+                    content: `We have finished our semester project to create the package manager, it took a long time, ~150 hours per person over the duration of 15 weeks, but we are all pretty happy with how the project turned out.
+                    `,
+                    path: "/2",
+                    surl1: "/2",
+                    surl2: "/2",
+                    simg1: "packagesloc",
+                    simg2: "",
+                    },
             
         },
         date: "2/13/2023",
@@ -180,12 +192,12 @@ export const blogposts = {
         desc: "ECE 461 - Software Engineering Package Manager.",
         path: "blog/packagemanager",
         pathToProj: "packagemanager",
-        github: "https://github.com/Rexwang8/ECE461SoftwareEngineeringProject",
+        github: "https://github.com/Rexwang8/ECE461Phase2",
         huggingface: "https://huggingface.co/Rexwang8/qilin-lit-6b",
         gh_hf:"gh",
         projectimg: "packagesloc",
-        tech: "python, c#, dotnet, npm",
-        status: "In Progress"
+        tech: "python, c#, dotnet, npm, github actions, google cloud, bigquery, cloud endpoints",
+        status: "Completed"
     },
     stellardiffusion: {
         title: "Stellar DIffusion",

@@ -43,11 +43,12 @@ function MainPage(props) {
                   <Row>
                     <Col>
                       <p className='contact_link'>wang5009@purdue.edu</p>
+                      <p className='contact_link'>rexkingsbackyard@gmail.com</p>
                     </Col>
                   </Row>
                   <Row>
                     <Col>
-                      <p className='contact_link'>Discord: bob#1236</p>
+                      <p className='contact_link'>Discord: bts_bighit</p>
                     </Col>
                   </Row>
                   <Row>

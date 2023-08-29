@@ -232,4 +232,38 @@ export const blogposts = {
         tech: "python, hugginface, coreweave, stable diffusion 1.5, nasa api",
         status: "Completed"
     },
+    coinflow: {
+        title: "CoinFlow",
+        id: 7,
+        blogposts: {
+            
+                post1: {
+                title: "Use-case",
+                id: 1,
+                date: "8/29/2023",
+                content: `As I grow up, I find that I actually need to start caring about where and how my money moves. 
+                I found that the existing tools were too clunky or limiting for my specific use-case, thus, I decided to build my own.
+                Focus was placed on making it easy to use, with low technical debt and low maintaince costs. I decided on processing already existing data from financial statements.
+                `,
+                path: "/1",
+                surl1: "/1",
+                surl2: "/1",
+                simg1: "coinflow1",
+                simg2: "",
+                },
+            
+        },
+        blogs: true,
+        date: "3/1/2023",
+        content: "Coinflow - A Dearpygui app that tracks your finances directly from bank statements.",
+        desc: "Local Finance Manager",
+        path: "blog/coinflow",
+        pathToProj: "coinflow",
+        github: "",
+        huggingface: "https://huggingface.co/Rexwang8/stellar-diffusion",
+        gh_hf:"gh",
+        projectimg: "coinflow1",
+        tech: "python, dearpygui, pyplot",
+        status: "In Progress"
+    },
 }

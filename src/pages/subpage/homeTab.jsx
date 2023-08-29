@@ -37,6 +37,7 @@ function HomeTab() {
     </Row>
     <Row className="HomePageDivider"><Col><p>Divider</p></Col></Row>
     <Row><Col><p className="AIPageDark HomePageMargin5">Classes</p></Col></Row>
+    <Row><Col><p className="AIPageDark HomePageMargin5">Fall 2023 <br></br> ECE 570 - AI<br></br> ECE 369 - Discrete Math <br></br> ECE 30834 - Computer Graphics <br></br></p></Col></Row>
     <Row><Col><p className="AIPageDark HomePageMargin5">Spring 2022 <br></br> ECE 461 - Software Engineering<br></br> ECE 302 - Probability for Electrical and Computer Engineering <br></br> ECE 404 - Cybersecurity <br></br></p></Col></Row>
     <Row><Col><p className="AIPageDark HomePageMargin5">Fall 2022 <br></br> ECE 301 - Signals and Systems<br></br> ECE 368 - Datastructures <br></br> ECE 20875 - Python for Data Science <br></br> ECE 362 - Microprocessor Systems and Interfacing <br></br> ECE 39595 - Object oriented programming with C++ <br></br></p></Col></Row>
     <Row><Col><p className="AIPageDark HomePageMargin5">Spring 2021 <br></br> ECE 20002 - Electrical Engineering Fundamentals II<br></br> ECE 264 - Advanced C Programming <br></br> ECE 270 - Introduction to Digital System Design <br></br> </p></Col></Row>

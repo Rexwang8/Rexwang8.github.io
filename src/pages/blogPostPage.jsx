@@ -43,8 +43,8 @@ function BlogPostPage(props) {
             </Row>
             <Row>
               <div>
-                {props.obj.simg1 != "" ? <img src={images[`${props.obj.simg1}.png`]} className='blogPostsImage'></img> : <div></div>}
-                {props.obj.simg2 != "" ? <img src={images[`${props.obj.simg2}.png`]} className='blogPostsImage'></img> : <div></div>}
+                {props.obj.simg1 != "" ? <img style={{maxWidth: 65 + 'vw'}} src={images[`${props.obj.simg1}.png`]} className='blogPostsImage'></img> : <div></div>}
+                {props.obj.simg2 != "" ? <img style={{maxWidth: 65 + 'vw'}} src={images[`${props.obj.simg2}.png`]} className='blogPostsImage'></img> : <div></div>}
               </div>
             </Row>
             <Row></Row>

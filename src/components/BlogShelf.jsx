@@ -3,9 +3,11 @@ import { Link } from "react-router-dom";
 
 
 function BlogShelf(props) {
+
+
   return (
     <Row >
-        {props.obj1 != undefined ? <Card className="blogBlogCard" style={{ width: '17rem' }}>
+        {props.obj1 != undefined && props.obj1 != null ? <Card className="blogBlogCard" style={{ width: '17rem' }}>
       <Card.Img variant="top" src={props.img1} />
       <Card.Body>
         <Card.Title>{props.obj1.title} - {props.obj1.date}</Card.Title>
@@ -16,7 +18,7 @@ function BlogShelf(props) {
       </Card.Body>
     </Card>  : null}
 
-    {props.obj2 != undefined ? <Card className="blogBlogCard" style={{ width: '17rem' }}>
+    {props.obj2 != undefined && props.obj2 != null && props.showB2 == true ? <Card className="blogBlogCard" style={{ width: '17rem' }}>
       <Card.Img variant="top" src={props.img2} />
       <Card.Body>
         <Card.Title>{props.obj2.title} - {props.obj2.date}</Card.Title>
@@ -27,7 +29,7 @@ function BlogShelf(props) {
       </Card.Body>
     </Card>  : null}
 
-    {props.obj3 != undefined ? <Card className="blogBlogCard" style={{ width: '17rem' }}>
+    {props.obj3 != undefined && props.obj3 != null && props.showB3 == true ? <Card className="blogBlogCard" style={{ width: '17rem' }}>
       <Card.Img variant="top" src={props.img3} />
       <Card.Body>
         <Card.Title>{props.obj3.title} - {props.obj3.date}</Card.Title>

@@ -34,16 +34,24 @@ function BlogPage(props) {
     let b1 = blogpostsSorted[Object.keys(blogpostsSorted)[i]];
     let b2 = blogpostsSorted[Object.keys(blogpostsSorted)[0]];
     let b3 = blogpostsSorted[Object.keys(blogpostsSorted)[0]];
+    let showB2 = false;
+    let showB3 = false;
 
+    //if there is a second and third blogpost, set them to b2 and b3
     if (i < Math.ceil(Object.keys(blogpostsSorted).length - 1)) {
       b2 = blogpostsSorted[Object.keys(blogpostsSorted)[i + 1]];
+      showB2 = true;
     }
 
+    //if there is a third blogpost, set it to b3
     if (i < Math.ceil(Object.keys(blogpostsSorted).length - 2)) {
       b3 = blogpostsSorted[Object.keys(blogpostsSorted)[i + 2]];
+      showB3 = true;
     }
 
-    allblogprojectpages.push(<BlogShelf img1={images[`${b1.projectimg}.png`]} obj1={b1} img2={images[`${b2.projectimg}.png`]} obj2={b2} img3={images[`${b3.projectimg}.png`]} obj3={b3}></BlogShelf>);
+    allblogprojectpages.push(
+    <BlogShelf img1={images[`${b1.projectimg}.png`]} obj1={b1} img2={images[`${b2.projectimg}.png`]}
+     obj2={b2} img3={images[`${b3.projectimg}.png`]} obj3={b3} showB2={showB2} showB3={showB3}></BlogShelf>);
   }
 
 

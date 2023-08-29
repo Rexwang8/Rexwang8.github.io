@@ -26,10 +26,10 @@ function AboutTab() {
             <div className='aboutMeW'>
               <p className='about_subheader1'>Background</p>
               <p className='about_p'>
-                Meet Rex Wang, a Computer Engineering junior at Purdue University, with an impressive background that paved the way to his pursuit of technology. Rex was born in St. Joseph, Michigan,
+                Meet Rex Wang, a Computer Engineering senior at Purdue University, with an impressive background that paved the way to his pursuit of technology. Rex was born in St. Joseph, Michigan,
                 to a father who is a celebrated PhD in mathematical modeling of physiology and the director of technology at Broad Ocean Motors, Jizhong Wang, and a mother who is a renowned architect
                 from China, Fengxia Wang. At a young age, Rex developed a fascination with technology and computers, which was further fueled by the resources available through his father's work.
-                After moving to Bolingbrook, Illinois, shortly after 6th grade, he attended Neuqua Valley High School (D204), where he continued to develop his skills and knowledge. Now, as a junior
+                After moving to Bolingbrook, Illinois, shortly after 6th grade, he attended Neuqua Valley High School (D204), where he continued to develop his skills and knowledge. Now, as a senior
                 at Purdue University, Rex continues to pursue his passion for technology through his major in Computer Engineering.
               </p>
 
@@ -42,7 +42,11 @@ function AboutTab() {
                 especially strategy and 4x games, where I get to flex my strategic thinking and problem-solving skills. Whether I'm playing a classic like Civilization or diving into something new and
                 challenging, gaming is a way for me to learn and grow while having fun. When it comes to media, I enjoy reading Chinese webnovels and watching slice of life and romance anime. These
                 genres offer a glimpse into everyday life and relationships, providing insight into different cultures and perspectives. I also like to dabble in game development using Unity and have
-                created some projects that can be found in the projects tab. Currently, I'm also learning Japanese and hope to improve my language skills through practice and immersion.
+                created some projects that can be found in the projects tab. Currently, I'm also learning Japanese (2nd year) and hope to improve my language skills through practice and immersion.
+
+                <br></br><br></br>
+
+                Over the summer of 2023, I've picked up a hobby of finance and investing. I've been reading books and watching videos on the topic, and I've been investing in stocks and options.
               </p>
 
               <hr></hr>
@@ -52,7 +56,8 @@ function AboutTab() {
                 In pursuit of practical experience, I have completed several internships in technology-related fields. One of my most notable internships was with a focused on creating the
                 "Qilin-Lit-6B" Large Language Model, which was derived from the "GPT-J-6B" LLM and trained on web novels. In this role, I utilized fine-tuning techniques to enhance the model's
                 capabilities and improve its overall performance. Additionally, I collaborated on the containerization of Bittensor, a machine learning tool for blockchain applications, learning more
-                about cutting-edge technology and the intricacies of software development. 
+                about cutting-edge technology and the intricacies of software development. Later in this internship, I worked with supercomputer compute clusters through Slurm/SUNK and collaborated with <a href="https://goose.ai/"> Goose.ai </a> 
+                to help improve their User Interface.
                 <br></br><br></br>
                 Another summer internship I completed was at Marquis Energy in Hennepin, IL, where I designed and implemented
                 five dashboards using React-JS and REST API. These dashboards were integrated with Azure AD authentication and C# Azure Functions for the backend, which was powered by Azure SQL. In

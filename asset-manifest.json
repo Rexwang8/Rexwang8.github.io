@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.4f66fc9d.css",
-    "main.js": "/static/js/main.5ce52ceb.js",
+    "main.js": "/static/js/main.787e4359.js",
     "static/js/787.12483566.chunk.js": "/static/js/787.12483566.chunk.js",
     "static/media/scifiteapot.png": "/static/media/scifiteapot.de73ac74581ab6a0fb52.png",
     "static/media/Drummerflummed_te.png": "/static/media/Drummerflummed_te.db6d86473fc8184a33fc.png",
@@ -2144,16 +2144,17 @@
     "static/media/basestop70.png": "/static/media/basestop70.5d66f40bc6ba6ef02a6d.png",
     "static/media/quatrefoil.png": "/static/media/quatrefoil.b0d902ce27581b086c65.png",
     "static/media/basevibe.png": "/static/media/basevibe.afed84c65ae60eef4e45.png",
+    "static/media/coinflow1.png": "/static/media/coinflow1.899d23cc40bfe858dea9.png",
     "static/media/basevibefast.png": "/static/media/basevibefast.9bc341a79cce9217579d.png",
     "static/media/basestop80.png": "/static/media/basestop80.b4cccd9a8b4fbb888afc.png",
     "static/media/basestop50.png": "/static/media/basestop50.489bb4f63750a5e0c015.png",
     "index.html": "/index.html",
     "main.4f66fc9d.css.map": "/static/css/main.4f66fc9d.css.map",
-    "main.5ce52ceb.js.map": "/static/js/main.5ce52ceb.js.map",
+    "main.787e4359.js.map": "/static/js/main.787e4359.js.map",
     "787.12483566.chunk.js.map": "/static/js/787.12483566.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.4f66fc9d.css",
-    "static/js/main.5ce52ceb.js"
+    "static/js/main.787e4359.js"
   ]
 }
